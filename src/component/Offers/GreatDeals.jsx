@@ -53,55 +53,52 @@ const deals = [
 
 const GreatDeals = () => {
   return (
-    <section className="great-deals">
+    <section className="great-deals-modern">
       <Container>
-        {/*======= TITTLE =========*/}
-        <div className="tittle">
-          <h3>great deals of the day</h3>
+        {/* Section Header */}
+        <div className="section-header-modern text-center mb-5">
+          <h3 className="section-title-modern">
+            Great Deals of the <span className="highlight-text">Day</span>
+          </h3>
+          <p className="section-subtitle-modern">
+            Discover handpicked exclusive travel discounts, hotel deals, and limited-time promo codes.
+          </p>
         </div>
-        <div className="coupon">
-          <Row>
+
+        <div className="coupon-grid-wrapper">
+          <Row className="g-4">
             {deals.map((deal) => (
-              <Col sm={4} key={deal.id} className='li'>
-                <div className="coupon-inner">
-                  <div className="top-tag">
-                    <span className="ribn-red">
-                      <span>{deal.ribbon}</span>
+              <Col md={4} sm={6} key={deal.id}>
+                <div className="coupon-card-modern">
+                  <div className="card-top-badges">
+                    <span className={`ribbon-badge ribbon-${deal.ribbon}`}>
+                      {deal.ribbon}
                     </span>
-                    <span className="star">
-                      <FaRegStar/>
-                    </span>
+                    <button className="favorite-btn" aria-label="Save deal">
+                      <FaRegStar />
+                    </button>
                   </div>
-                  <div className="c-img">
+
+                  <div className="card-media-wrapper">
                     <img
-                      className="img-responsive offer_img"
+                      className="offer-image"
                       src={deal.imgSrc}
                       alt={deal.title}
                     />
-                    <a className="head" href="#">
-                      {deal.title}
-                    </a>
-                    <p style={{paddingInline:"10px"}}>Expires On : {deal.expiresOn}</p>
-                    <div className="text-center">
-                      <Button href="#" className="btn">
-                        get coupon code
-                      </Button>
-                    </div>
                   </div>
-                  <ul className="btm-info">
-                    <li className="col-xs-4">
-                      <FiCheckSquare/>Verified
-                    </li>
-                    <li className="col-xs-3">
-                      <i className="fa fa-bookmark"></i> Save
-                    </li>
-                    <li className="col-xs-2">
-                      <i className="fa fa-share"></i> Share
-                    </li>
-                    <li className="col-xs-3">
-                      <i className="fa fa-comments"></i> Discuss
-                    </li>
-                  </ul>
+
+                  <div className="card-content-body">
+                    <h4 className="deal-title">
+                      {deal.title}
+                    </h4>
+                    <div className="deal-expiry">
+                      <FiCheckSquare className="verified-icon" />
+                      <span>Expires: {deal.expiresOn}</span>
+                    </div>
+                    <Button className="btn-get-coupon">
+                      Get Coupon Code
+                    </Button>
+                  </div>
                 </div>
               </Col>
             ))}

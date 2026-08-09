@@ -212,7 +212,7 @@ const TopCities = () => {
         {/* =================================================================
             1. DOMESTIC FLASH DEALS SECTION
             ================================================================= */}
-        <div className="flash-deals-group">
+        {/* <div className="flash-deals-group">
           <div className="flash-deals-header">
             <div className="flash-deals-title-wrap">
               <h2 className="flash-deals-main-title">
@@ -262,7 +262,6 @@ const TopCities = () => {
                 className="flight-deal-capsule-card"
                 onClick={() => handleCardClick(item)}
               >
-                {/* Left: Airline Logo & Origin Station */}
                 <div className="deal-left-info">
                   <AirlineLogo code={item.code} name={item.airline} />
                   <div className="route-station-meta">
@@ -274,14 +273,12 @@ const TopCities = () => {
                   </div>
                 </div>
 
-                {/* Center: Flight Trajectory Animation */}
                 <div className="deal-center-flight-path">
                   <div className="plane-motion-icon-wrap">
                     <FaPlane />
                   </div>
                 </div>
 
-                {/* Destination Station */}
                 <div className="deal-destination-info">
                   <div className="route-station-meta">
                     <div className="station-code-city">
@@ -292,14 +289,13 @@ const TopCities = () => {
                   </div>
                 </div>
 
-                {/* Right: Vibrant Flash Price Badge */}
                 <div className="deal-price-action-pill">
                   {item.price}
                 </div>
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
         {/* =================================================================
             2. INTERNATIONAL FLASH DEALS SECTION

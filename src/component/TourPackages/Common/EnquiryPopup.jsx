@@ -106,8 +106,10 @@ const EnquiryPopup = ({ destination }) => {
     <>
       <div className="whatsapp-button">
         <a
-          href="https://api.whatsapp.com/send?phone=7618608"
+          href="https://api.whatsapp.com/send?phone=919646747171"
           className="wa-widget-send-button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

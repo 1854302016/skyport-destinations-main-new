@@ -14,16 +14,16 @@ const PrivacyPolicy = () => {
       <section className="section_padding">
         <Container>
           <p>
-            SkyPort Destinations (“SkyPort,” “we,” “us,” or “our”) is committed to protecting the privacy and confidentiality of all users who interact with our digital platforms and services. This Privacy Policy explains in a legally comprehensive, transparent, and structured manner how SkyPort collects, processes, discloses, retains, and safeguards personal information in accordance with applicable data protection laws in Guyana and relevant international standards including the General Data Protection Regulation (EU) 2016/679 (GDPR), where applicable. <br />
+            Trade Fare Destinations (“Trade Fare,” “we,” “us,” or “our”) is committed to protecting the privacy and confidentiality of all users who interact with our digital platforms and services. This Privacy Policy explains in a legally comprehensive, transparent, and structured manner how Trade Fare collects, processes, discloses, retains, and safeguards personal information in accordance with applicable data protection laws in Guyana and relevant international standards including the General Data Protection Regulation (EU) 2016/679 (GDPR), where applicable. <br />
             This document is intended to ensure full legal compliance and to provide users with all necessary information regarding their rights, responsibilities, and the manner in which their data is managed.
 
           </p>
           <div className="terms_item">
             <h2>1. Scope and Applicability</h2>
             <p>
-              This Privacy Policy governs the collection and use of personal data by SkyPort Destinations through its website, mobile applications, affiliated booking systems, customer service channels, and any digital or offline interaction directly involving SkyPort. It applies to all users regardless of geographic location and covers
+              This Privacy Policy governs the collection and use of personal data by Trade Fare Destinations through its website, mobile applications, affiliated booking systems, customer service channels, and any digital or offline interaction directly involving Trade Fare. It applies to all users regardless of geographic location and covers
               <ul>
-                <li>Individuals making bookings via SkyPort</li>
+                <li>Individuals making bookings via Trade Fare</li>
                 <li>Visitors interacting with our platforms (with or without registration)</li>
                 <li>Customers receiving transactional, promotional, or support communications</li>
                 <li>Individuals participating in surveys, promotions, or contests</li>
@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>2. Data Categories Collected</h2>
             <p>
-              SkyPort collects personal information that is necessary for the provision of travel booking services and legal compliance. The types of personal data collected are outlined below. <br />
+              Trade Fare collects personal information that is necessary for the provision of travel booking services and legal compliance. The types of personal data collected are outlined below. <br />
               <strong>a. Personal Identification Information -</strong> Full name, date of birth, gender - National ID/passport number, travel document details<br />
               <strong>b. Contact and Account Information -</strong> Email address, telephone number, residential address - Account credentials (username, hashed passwords) <br />
               <strong>c. Payment and Financial Information -</strong> Visa cardholder name, tokenized card details, billing address - Transaction amounts and payment confirmations (we do not store full card numbers)<br />
@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>3. Legal Grounds for Processing</h2>
             <p>
-              SkyPort processes your personal data based on the following lawful bases, as prescribed by Guyana’s data protection laws and international best practices: <br />
+              Trade Fare processes your personal data based on the following lawful bases, as prescribed by Guyana’s data protection laws and international best practices: <br />
               <ul>
                 <li><strong>Contractual Necessity:</strong> For the provision of flight bookings and confirmation services.</li>
                 <li><strong>Legal Obligation:</strong> Compliance with travel-related regulations (e.g., immigration, customs, tax, and anti-money laundering laws).</li>
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>4. Purpose of Data Processing</h2>
             <p>
-              SkyPort uses personal information exclusively for the purposes outlined below, each of which is supported by a lawful basis:<br />
+              Trade Fare uses personal information exclusively for the purposes outlined below, each of which is supported by a lawful basis:<br />
               <ul>
                 <li>Facilitate flight bookings, cancellations, modifications, and confirmations</li>
                 <li>Process payments via authorized Visa payment gateways</li>
@@ -84,13 +84,13 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>5. Automated Decision-Making and Profiling</h2>
             <p>
-              SkyPort may implement limited profiling or automated decision-making mechanisms in areas such as fraud detection, promotional targeting, and booking pattern analysis. These systems are designed to:<br />
+              Trade Fare may implement limited profiling or automated decision-making mechanisms in areas such as fraud detection, promotional targeting, and booking pattern analysis. These systems are designed to:<br />
               <ul>
                 <li>Detect abnormal or potentially malicious activity</li>
                 <li>Ensure secure access to customer accounts</li>
                 <li>Customize user experiences (e.g., remembering user preferences)</li>
               </ul><br />
-              SkyPort ensures all automated decisions with material consequences are subject to human oversight. You may request a manual review where such automated processing affects you legally or significantly.
+              Trade Fare ensures all automated decisions with material consequences are subject to human oversight. You may request a manual review where such automated processing affects you legally or significantly.
 
             </p>
           </div>
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>6.  Data Sharing and Third-Party Disclosures</h2>
             <p>
-              SkyPort does not sell, trade, or lease personal data. However, we may disclose data to the following categories of authorized third parties:<br />
+              Trade Fare does not sell, trade, or lease personal data. However, we may disclose data to the following categories of authorized third parties:<br />
               <table className="table-auto border-collapse border border-gray-300 w-full text-sm">
                 <thead>
                   <tr className="bg-gray-100">
@@ -177,15 +177,15 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>7.  International Data Transfers</h2>
             <p>
-              Where personal data is transferred to service providers or affiliates located outside Guyana, SkyPort ensures: - Compliance with data export laws of Guyana - Implementation of Standard Contractual Clauses (SCCs) - Data transfer impact assessments (DTIAs), if required - Technical security measures such as encryption and geo-fencing<br />
-              SkyPort will not transfer data to jurisdictions lacking adequate data protection frameworks unless appropriate legal safeguards are in place.
+              Where personal data is transferred to service providers or affiliates located outside Guyana, Trade Fare ensures: - Compliance with data export laws of Guyana - Implementation of Standard Contractual Clauses (SCCs) - Data transfer impact assessments (DTIAs), if required - Technical security measures such as encryption and geo-fencing<br />
+              Trade Fare will not transfer data to jurisdictions lacking adequate data protection frameworks unless appropriate legal safeguards are in place.
 
             </p>
           </div>
           <div className="terms_item">
             <h2>8.  Data Retention and Archiving</h2>
             <p>
-              SkyPort retains personal data only for the duration necessary to achieve the purposes for which it was collected, or as required by applicable laws and industry standards.<br />
+              Trade Fare retains personal data only for the duration necessary to achieve the purposes for which it was collected, or as required by applicable laws and industry standards.<br />
               <table className="table-auto border-collapse border border-gray-300 w-full text-sm">
                 <thead>
                   <tr className="bg-gray-100">
@@ -270,7 +270,7 @@ const PrivacyPolicy = () => {
                 <li><strong>Right to Lodge a Complaint:</strong> Submit a complaint to Guyana’s Data Protection Commissioner</li>
 
               </ul><br />
-              All requests should be submitted in writing to <a href="mailto:privacy@skyportdestinations.com">privacy@skyportdestinations.com</a> with proof of identity. SkyPort will respond within the legally mandated timeframe.
+              All requests should be submitted in writing to <a href="mailto:privacy@Trade Faredestinations.com">privacy@Trade Faredestinations.com</a> with proof of identity. Trade Fare will respond within the legally mandated timeframe.
 
 
 
@@ -279,7 +279,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>10. Data Security and Safeguards</h2>
             <p>
-              SkyPort employs best-in-class data security protocols, including: - Transport Layer Security (TLS 1.2+) - Role-based access controls and least-privilege policies - Secure hosting infrastructure with DDoS mitigation - Automated vulnerability scanning and patch management - Regular third-party penetration testing - Employee confidentiality training and access restrictions<br />
+              Trade Fare employs best-in-class data security protocols, including: - Transport Layer Security (TLS 1.2+) - Role-based access controls and least-privilege policies - Secure hosting infrastructure with DDoS mitigation - Automated vulnerability scanning and patch management - Regular third-party penetration testing - Employee confidentiality training and access restrictions<br />
               Breach notification protocols are in place and comply with applicable legal timelines for disclosure.
 
             </p>
@@ -287,14 +287,14 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>11. Children’s Privacy</h2>
             <p>
-              SkyPort does not knowingly collect or process personal data from individuals under the age of 16 without verifiable parental consent. Where such data is discovered, it is immediately deleted. Users must confirm their eligibility before proceeding with bookings.
+              Trade Fare does not knowingly collect or process personal data from individuals under the age of 16 without verifiable parental consent. Where such data is discovered, it is immediately deleted. Users must confirm their eligibility before proceeding with bookings.
 
             </p>
           </div>
           <div className="terms_item">
             <h2>12. Cookies and Tracking Technologies</h2>
             <p>
-              SkyPort uses cookies and equivalent tracking technologies for the following:<br />
+              Trade Fare uses cookies and equivalent tracking technologies for the following:<br />
               <ul>
                 <li>Session authentication and site navigation</li>
                 <li>Preference storage and interface personalization</li>
@@ -308,7 +308,7 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>13. Marketing Communications</h2>
             <p>
-              SkyPort may send marketing communications to users who have provided prior consent. This includes: - Flight offers, fare reductions, and seasonal promotions - Loyalty programs and referral bonuses - Newsletters and updates on service features<br />
+              Trade Fare may send marketing communications to users who have provided prior consent. This includes: - Flight offers, fare reductions, and seasonal promotions - Loyalty programs and referral bonuses - Newsletters and updates on service features<br />
               Users may withdraw consent or opt-out at any time by clicking the unsubscribe link or contacting support.
 
             </p>
@@ -316,30 +316,30 @@ const PrivacyPolicy = () => {
           <div className="terms_item">
             <h2>14. External Links and Third-Party Services</h2>
             <p>
-              The SkyPort platform may contain links to third-party websites (e.g., airline portals, payment platforms). SkyPort is not responsible for the privacy practices, data handling, or content of those entities. Users are advised to review external privacy policies before submitting data.
+              The Trade Fare platform may contain links to third-party websites (e.g., airline portals, payment platforms). Trade Fare is not responsible for the privacy practices, data handling, or content of those entities. Users are advised to review external privacy policies before submitting data.
 
             </p>
           </div>
           <div className="terms_item">
             <h2>15. Limitation of Liability</h2>
             <p>
-              SkyPort shall not be held liable for: - Data misuse due to user negligence (e.g., shared passwords) - Actions of third-party processors acting outside of agreed scope - Force majeure events including internet outages, natural disasters, or cyberattacks - Data inaccuracies arising from user-provided information
+              Trade Fare shall not be held liable for: - Data misuse due to user negligence (e.g., shared passwords) - Actions of third-party processors acting outside of agreed scope - Force majeure events including internet outages, natural disasters, or cyberattacks - Data inaccuracies arising from user-provided information
 
             </p>
           </div>
           <div className="terms_item">
             <h2>16. Policy Amendments</h2>
             <p>
-              SkyPort reserves the right to modify this Privacy Policy at any time. Revisions will be effective upon posting with an updated effective date. Where significant changes occur, users will be notified through prominent notices or direct communications.
+              Trade Fare reserves the right to modify this Privacy Policy at any time. Revisions will be effective upon posting with an updated effective date. Where significant changes occur, users will be notified through prominent notices or direct communications.
             </p>
           </div>
           <div className="terms_item">
             <h2>17. Contact and Complaints</h2>
             <p>
               <strong>Data Protection Officer</strong><br />
-              SkyPort Destinations<br />
+              Trade Fare Destinations<br />
               Georgetown, Guyana<br />
-              Email: <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a>
+              Email: <a href="mailto:explore@Trade Faredestinations.com">explore@Trade Faredestinations.com</a>
             </p>
           </div>
         </Container>

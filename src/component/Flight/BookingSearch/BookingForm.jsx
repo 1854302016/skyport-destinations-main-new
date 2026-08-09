@@ -610,8 +610,7 @@ const BookingForm = () => {
   const [searchedAirport, setSearchedAirport] = useState(
     "GEO, Cheddi Jagan International Airport"
   );
-  const [searchedAirport2, setSearchedAirport2] =
-    useState("Please select city");
+  const [searchedAirport2, setSearchedAirport2] = useState("");
   const handleCitySelect = (city) => {
     setDestinationCity(`${city["CITYNAME"]} (${city["AIRPORTCODE"]})`);
     setSearchedAirport(`${city["CITYCODE"]},${city["AIRPORTNAME"]}`);
@@ -658,7 +657,7 @@ const BookingForm = () => {
 
   // const [searchInput, setSearchInput] = useState();
   const [searchInput, setSearchInput] = useState("Georgetown (GEO)");
-  const [searchInput2, setSearchInput2] = useState("Please select city");
+  const [searchInput2, setSearchInput2] = useState("");
   const [cities2, setCities2] = useState([]);
   const [cities22, setCities22] = useState([]);
   const [staticAirportsData, setStaticAirportsData] = useState([]);
@@ -1026,17 +1025,31 @@ const BookingForm = () => {
 
   console.log("CACHE DATAaaa", cacheData);
   const handleSwapCities = () => {
-    // Swap the input values
+    // Save current From values
     const tempSearchInput = searchInput;
     const tempSearchedAirport = searchedAirport;
+    const tempDestinationCity = destinationCity;
+    const tempSelectedCityCode = selectedCityCode;
+    const tempDestination1 = destination1;
+    const tempIsItemSelected = isItemSelected;
 
+    // Swap From with To values
     setSearchInput(searchInput2);
     setSearchedAirport(searchedAirport2);
+    setDestinationCity(destinationCity2);
+    setSelectedCityCode(selectedCityCode2);
+    setDestination1(destination2);
+    setIsItemSelected(isItemSelected2);
 
+    // Swap To with saved From values
     setSearchInput2(tempSearchInput);
     setSearchedAirport2(tempSearchedAirport);
+    setDestinationCity2(tempDestinationCity);
+    setSelectedCityCode2(tempSelectedCityCode);
+    setDestination2(tempDestination1);
+    setIsItemSelected2(tempIsItemSelected);
 
-    // Optional: also reset selection flags if needed
+    // Close any open city suggestion popups
     SetClickDestination(false);
     SetClickDestination2(false);
   };
@@ -1170,18 +1183,7 @@ const BookingForm = () => {
                       <div
                         className="cityselect"
                         style={{
-                          position: "absolute",
-                          color: "black",
-                          backgroundColor: "white",
-                          border: "1px solid #cdcdcd",
                           display: clickDestination ? "block" : "none",
-                          zIndex: 1100,
-                          top: "-42px",
-                          maxHeight: 300,
-                          overflow: "auto",
-                          scrollbarWidth: "thin",
-                          padding: "10px",
-                          width: "320px",
                         }}
                       >
                         {cities2.length !== 0 ? (
@@ -1295,7 +1297,7 @@ const BookingForm = () => {
                         id="toCity"
                         type="text"
                         className="fsw_inputField"
-                        placeholder="Please select city"
+                        placeholder="Where to?"
                         autoComplete="off"
                         value={searchInput2}
                         onFocus={() => {
@@ -1310,9 +1312,9 @@ const BookingForm = () => {
                         }}
                         onChange={(e) => handleInputChange2(e.target.value)}
                       />
-                      <p className="code makeRelative" title="Please select city">
+                      <p className="code makeRelative" title={searchedAirport2 || "Choose destination airport"}>
                         <span data-cy="defaultToValue" className="truncate airPortName">
-                          {searchedAirport2 || "Please select city"}
+                          {searchedAirport2 || "Choose destination airport"}
                         </span>
                       </p>
                     </label>
@@ -1320,19 +1322,7 @@ const BookingForm = () => {
                       <div
                         className="cityselect"
                         style={{
-                          position: "absolute",
-                          color: "black",
-                          backgroundColor: "white",
-                          border: "1px solid #cdcdcd",
                           display: clickDestination2 ? "block" : "none",
-                          // width: "100%",
-                          zIndex: 9,
-                          top: "-42px",
-                          maxHeight: 300,
-                          overflow: "auto",
-                          scrollbarWidth: "thin",
-                          padding: "10px",
-                          width: "320px",
                         }}
                       >
                         {cities22.length !== 0 ? (

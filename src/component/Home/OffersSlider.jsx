@@ -78,7 +78,7 @@ const OffersSlider = () => {
                         spaceBetween={20}
                         loop={true}
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
-                        pagination={{ clickable: true, dynamicBullets: true }}
+                        pagination={{ clickable: true }}
                         navigation={{
                             prevEl: '.offers-prev',
                             nextEl: '.offers-next',

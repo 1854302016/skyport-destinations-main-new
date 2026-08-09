@@ -172,7 +172,7 @@ const PopularDestinations = () => {
                         <p className="subtitle">Curated world-class destinations with exceptional fares and luxury stays</p>
                     </div>
                     <div className="v2-tabs-wrap">
-                        {["ALL DESTINATIONS", "INTERNATIONAL", "DOMESTIC"].map((tab) => (
+                        {["ALL DESTINATIONS", "INTERNATIONAL"/* , "DOMESTIC" */].map((tab) => (
                             <button 
                                 key={tab}
                                 className={`v2-tab ${activeCategory === tab ? "is-active" : ""}`}
@@ -265,18 +265,32 @@ const PopularDestinations = () => {
                         </motion.div>
 
                         <div className="v2-controls">
-                            <button className="v2-nav-btn prev" onClick={() => {
-                                const currentFiltered = activeCategory === "ALL DESTINATIONS" ? destinationsData : destinationsData.filter(d => d.category.toUpperCase() === activeCategory.toUpperCase());
-                                const currentIndex = currentFiltered.findIndex(d => d.id === activeId);
-                                const prevIndex = (currentIndex - 1 + currentFiltered.length) % currentFiltered.length;
-                                setActiveId(currentFiltered[prevIndex].id);
-                            }}><FaChevronLeft /></button>
-                            <button className="v2-nav-btn next active" onClick={() => {
-                                const currentFiltered = activeCategory === "ALL DESTINATIONS" ? destinationsData : destinationsData.filter(d => d.category.toUpperCase() === activeCategory.toUpperCase());
-                                const currentIndex = currentFiltered.findIndex(d => d.id === activeId);
-                                const nextIndex = (currentIndex + 1) % currentFiltered.length;
-                                setActiveId(currentFiltered[nextIndex].id);
-                            }}><FaChevronRight /></button>
+                            <button 
+                                className="v2-nav-btn prev" 
+                                title="Previous Destination"
+                                aria-label="Previous Destination"
+                                onClick={() => {
+                                    const currentFiltered = activeCategory === "ALL DESTINATIONS" ? destinationsData : destinationsData.filter(d => d.category.toUpperCase() === activeCategory.toUpperCase());
+                                    const currentIndex = currentFiltered.findIndex(d => d.id === activeId);
+                                    const prevIndex = (currentIndex - 1 + currentFiltered.length) % currentFiltered.length;
+                                    setActiveId(currentFiltered[prevIndex].id);
+                                }}
+                            >
+                                <FaChevronLeft />
+                            </button>
+                            <button 
+                                className="v2-nav-btn next" 
+                                title="Next Destination"
+                                aria-label="Next Destination"
+                                onClick={() => {
+                                    const currentFiltered = activeCategory === "ALL DESTINATIONS" ? destinationsData : destinationsData.filter(d => d.category.toUpperCase() === activeCategory.toUpperCase());
+                                    const currentIndex = currentFiltered.findIndex(d => d.id === activeId);
+                                    const nextIndex = (currentIndex + 1) % currentFiltered.length;
+                                    setActiveId(currentFiltered[nextIndex].id);
+                                }}
+                            >
+                                <FaChevronRight />
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -283,14 +283,11 @@ const NewFooter = () => {
         <div className="container">
           <div className="row">
             <p>
-              SKYPORT DESTINATIONS, with its registered office located in
-              Guyana, is an IATA-accredited travel agency. We are proud to
-              operate in accordance with the professional standards of the
-              International Air Transport Association (IATA) to promote and sell
-              international air passenger transportation. For any inquiries, you
-              can reach us at +761-8608 or email us at
-              explore@skyportdestinations.com. © Copyright 2025
-              SkyportDestinations.com
+              YOUR FRIEND / TRUSTED FARE, with its Head Office located at
+              GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201
+              and Canada Office at Unit 201-7743 128 street West newton, surrey Bc V3w1L4.
+              For any inquiries, you can reach us at +91-9646747171 / +1-778-240-4599 or email us at
+              explore@skyportdestinations.com.
             </p>
             <p>
               All users agree to SKYPORT DESTINATIONS's{" "}

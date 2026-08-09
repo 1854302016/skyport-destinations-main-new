@@ -148,7 +148,7 @@ const ModernBannerSection = () => {
                       Travel. Relax. Discover.
                     </h1>
                     <p className="modern-banner-subtitle">
-                      Plan Your Dream Vacation With SkyPort Destinations
+                      Plan Your Dream Vacation With Trusted Fare
                     </p>
 
                     {/* Modern Search Box */}

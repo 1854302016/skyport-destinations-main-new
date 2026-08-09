@@ -220,21 +220,21 @@ const Navbars = () => {
         <Container className="navbar-container-inner">
           {/* Left: Hamburger Icon (Leftmost) and Logo (Right next to it) */}
           <div className="navbar-left-group">
-            <div
+            {/* <div
               className="topnav_menuIcon ripple"
               onClick={handleAccountClick}
               title="Open Navigation Menu"
             >
               <RiMenu2Line size={20} className="desk-icon-menu" />
-            </div>
+            </div> */}
 
             <Navbar.Brand as={Link} to="/" className="navbar-brand-clean">
-              <img className="logo-main" src="/Images/logo.svg" alt="Trusted Fare Logo" />
+              <img className="logo-main" src="/Images/TF_logo_horizontal.png" alt="Trusted Fare Logo" />
             </Navbar.Brand>
           </div>
 
           {/* Right: In-Person Booking & My Account chip buttons (No Country Select) */}
-          <div className="navbar-right-group">
+          {/* <div className="navbar-right-group">
             <Link to="/in-person-booking" className="btn-inperson" type="button">
               <span className="icon_blue">
                 <IoPersonCircleOutline size={19} />
@@ -273,7 +273,7 @@ const Navbars = () => {
                 </ul>
               </div>
             </button>
-          </div>
+          </div> */}
         </Container>
       </Navbar>
 

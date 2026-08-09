@@ -41,7 +41,9 @@ function ContactUs() {
                 <div className="contact-item-content">
                   <p className="contact-us">CALL US 24*7</p>
                   <h6>
-                    <a href="tel:+5927618608">+7618608</a>
+                    <a href="tel:+919646747171">+91-9646747171</a>
+                    <br />
+                    <a href="tel:+17782404599" style={{ fontSize: "14px", color: "#666" }}>+1-778-240-4599</a>
                   </h6>
                 </div>
               </div>
@@ -93,9 +95,9 @@ function ContactUs() {
                   </svg>
                 </div>
                 <div className="contact-item-content">
-                  <p className="contact-us">WORK STATION</p>
-                  <h6>
-                    Guyana
+                  <p className="contact-us">HEAD OFFICE</p>
+                  <h6 style={{ fontSize: "13px", lineHeight: "1.4" }}>
+                    GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201
                   </h6>
                 </div>
               </div>

@@ -35,12 +35,13 @@
 }
 
 .fli-tab:hover {
-  color: #053355;
+  color: #0066FF;
 }
 
 .fli-tab.active {
-  color: #053355;
-  border-bottom-color: #053355;
+  color: #0066FF;
+  border-bottom-color: #0066FF;
+  font-weight: 800;
 }
 
 /* ---------- Tab Content ---------- */
@@ -298,7 +299,7 @@
   gap: 8px;
   font-size: 13px;
   font-weight: 700;
-  color: #f2bc06;
+  color: #38BDF8;
   margin-bottom: 14px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -354,7 +355,7 @@
 .fli-fare-amount {
   font-size: 15px;
   font-weight: 800;
-  color: #f2bc06;
+  color: #38BDF8;
 }
 
 .fli-fare-total {

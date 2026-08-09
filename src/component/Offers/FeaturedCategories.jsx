@@ -62,10 +62,15 @@ const FeaturedCategories = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="featured">
+    <section className="featured-categories-modern">
       <Container style={{ position: "relative" }}>
-        <div className="tittle">
-          <h3>featured categories</h3>
+        <div className="section-header-modern text-center mb-5">
+          <h3 className="section-title-modern">
+            Featured <span className="highlight-text">Categories</span>
+          </h3>
+          <p className="section-subtitle-modern">
+            Explore exciting deals across all our flight, hotel, and tour categories.
+          </p>
         </div>
         <Swiper
           slidesPerView={1}

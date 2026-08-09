@@ -4571,3 +4571,96 @@ label {
         min-width: 350px;
   }
 }
+
+/* ==========================================================================
+   TRUSTED FARE - MODERN FLIGHT DETAIL & REVIEW LUXURY UPGRADE
+   Color Scheme: Deep Midnight Navy (#0B2545) & Electric Blue (#0066FF)
+   ========================================================================== */
+
+.flightBookingMainMain,
+.flight-detail-page-wrapper {
+  background-color: #F8FAFC !important;
+  min-height: 100vh;
+}
+
+/* Flight Details Summary Card */
+.flightBookingMainContainer,
+.flight-itinerary-card,
+.traveller-info-card {
+  background: #FFFFFF !important;
+  border-radius: 22px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  box-shadow: 0 8px 30px rgba(11, 37, 69, 0.05) !important;
+  padding: 24px !important;
+  margin-bottom: 22px !important;
+}
+
+/* Sticky Price Summary Sidebar */
+.flightBookingsecDiv,
+.price-summary-sidebar-card {
+  background: #FFFFFF !important;
+  border-radius: 22px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  box-shadow: 0 10px 35px rgba(11, 37, 69, 0.06) !important;
+  padding: 24px !important;
+}
+
+.price-summary-sidebar-card h4,
+.flightBookingSecDivRow3 {
+  color: #0B2545 !important;
+  font-weight: 800 !important;
+}
+
+/* Form Input Styling */
+.traveller-input-group input,
+.traveller-input-group select,
+.custom-form-input {
+  border-radius: 12px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  color: #0B2545 !important;
+  transition: all 0.25s ease !important;
+}
+
+.traveller-input-group input:focus,
+.traveller-input-group select:focus,
+.custom-form-input:focus {
+  border-color: #0066FF !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.12) !important;
+  outline: none !important;
+}
+
+/* Primary Action Buttons */
+.payment_confirm_btn,
+.continue-booking-btn,
+.btn-proceed-payment {
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 14px 28px !important;
+  box-shadow: 0 4px 18px rgba(0, 102, 255, 0.32) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+.payment_confirm_btn:hover,
+.continue-booking-btn:hover,
+.btn-proceed-payment:hover {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%) !important;
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.45) !important;
+  transform: translateY(-2px) !important;
+  color: #FFFFFF !important;
+}
+
+/* Addon Tabs & Badges */
+.ssr-tab-btn.active,
+.trip-secure-badge {
+  background: #EEF5FF !important;
+  color: #0066FF !important;
+  border-color: #CCE2FF !important;
+  font-weight: 800 !important;
+}

@@ -2666,3 +2666,161 @@
     margin-bottom: 30px;
   }
 }
+
+/* ==========================================================================
+   TRUSTED FARE - MODERN FLIGHT LIST LUXURY UPGRADE
+   Color Scheme: Deep Midnight Navy (#0B2545, #061A33) & Electric Blue (#0066FF)
+   ========================================================================== */
+
+.flightListPage {
+  background-color: #F8FAFC !important;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.flightSearchMain,
+.flightSearchMain2 {
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  box-shadow: 0 8px 30px rgba(11, 37, 69, 0.05) !important;
+}
+
+/* Filter Sidebar Modern Luxury */
+.filterDiv,
+.filter-sidebar-premium {
+  background: #FFFFFF !important;
+  border-radius: 22px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(11, 37, 69, 0.05) !important;
+  padding: 24px !important;
+}
+
+.filterDiv h5,
+.filterDiv h6,
+.filter-sidebar-premium h5,
+.filter-sidebar-premium h6 {
+  color: #0B2545 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+
+.filterDiv input[type="checkbox"],
+.filter-sidebar-premium input[type="checkbox"] {
+  accent-color: #0066FF !important;
+  cursor: pointer;
+}
+
+/* Flight List Cards - Modern Frosted Luxury */
+.flight-card-premium {
+  background: #FFFFFF !important;
+  border-radius: 22px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  box-shadow: 0 6px 24px rgba(11, 37, 69, 0.04) !important;
+  margin-bottom: 18px !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.flight-card-premium:hover {
+  border-color: #0066FF !important;
+  box-shadow: 0 16px 40px rgba(0, 102, 255, 0.12), 0 2px 6px rgba(11, 37, 69, 0.04) !important;
+  transform: translateY(-4px) !important;
+}
+
+.airline-name {
+  color: #0B2545 !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+}
+
+.time-display {
+  color: #061A33 !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  letter-spacing: -0.02em;
+}
+
+.city-name {
+  color: #0B2545 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+.duration-pill {
+  background: #EEF5FF !important;
+  color: #0066FF !important;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  border-radius: 50px !important;
+  padding: 4px 14px !important;
+  border: 1px solid #CCE2FF !important;
+  display: inline-block;
+}
+
+.path-icon {
+  color: #0066FF !important;
+  font-size: 18px !important;
+}
+
+.origin-dot,
+.dest-dot {
+  background: #0066FF !important;
+}
+
+.line-connector {
+  background: #CBD5E1 !important;
+}
+
+.final-price {
+  color: #0B2545 !important;
+  font-weight: 900 !important;
+  font-size: 26px !important;
+  letter-spacing: -0.02em;
+}
+
+.final-price .currency-symbol {
+  color: #0066FF !important;
+  font-weight: 800;
+  margin-right: 2px;
+}
+
+.premium-btn-book {
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 14.5px !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.32) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+.premium-btn-book:hover {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%) !important;
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.45) !important;
+  transform: translateY(-2px) !important;
+  color: #FFFFFF !important;
+}
+
+.card-footer-luxury {
+  background: #F8FAFC !important;
+  border-top: 1px solid #F1F5F9 !important;
+  border-radius: 0 0 20px 20px !important;
+}
+
+.fare-rules-trigger,
+.flight-details-btn {
+  color: #0066FF !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fare-rules-trigger:hover,
+.flight-details-btn:hover {
+  color: #0047B3 !important;
+  text-decoration: underline;
+}
+
