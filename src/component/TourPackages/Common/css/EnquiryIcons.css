@@ -1,0 +1,205 @@
+.conct-bar {
+  display: none;
+}
+
+@media (max-width:650px) {
+  .conct-bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    box-shadow: 0 0 20px 3px #ffffff;
+    z-index: 13;
+    left: 0;
+  }
+
+  .cncrd {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .whst {
+    padding: 0px;
+    width: 100%;
+    background: #2AA81A;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #fff;
+    min-width: fit-content;
+    height: 50px;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  .qrybx {
+    padding: 0;
+    width: 100%;
+    background: #053355;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #fff;
+    min-width: fit-content;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .modal_er {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    width: 100%;
+  }
+
+  .modal-content-er {
+    background-color: #fff;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .pd15n {
+    padding: 15px;
+  }
+
+  .ppflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .ppttl {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .close_er {
+    position: absolute;
+    cursor: pointer;
+    right: 45%;
+    top: -58px;
+    font-size: 26px;
+    color: #fff;
+    background: #000;
+    z-index: 9;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+
+  .wd48p {
+    width: 100%;
+  }
+
+  .wd80p {
+    width: 81% !important;
+  }
+
+  .inp_n input,
+  .inp_n select {
+    width: 100%;
+    border: 1px solid #C9C6C6;
+    margin-bottom: 5px;
+    padding: 14px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    background: #fff;
+  }
+
+  .inp_n select {
+    padding: 10px 0;
+    height: 52px;
+    outline: 0;
+  }
+
+  #Button2,
+  .sub_qu {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    /* background: #ff2828;
+    border: 1px solid #ff2828; */
+    border-radius: 40px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(20deg, #f73030 20%, #053355);
+  }
+
+  #Button2,
+  .sub_qu:hover {
+    background: linear-gradient(20deg, #053355 20%, #f73030);
+  }
+
+  .errorfrmmm {
+    color: #ff2828;
+    font-size: 11px;
+    background: #ffeaee;
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+  }
+
+  .jsb {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .mflex {
+    display: flex;
+  }
+
+  .clr {
+    clear: both;
+  }
+
+
+}
+
+.conct-bar  .spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #555;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

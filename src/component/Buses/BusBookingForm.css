@@ -1,0 +1,12 @@
+ .time_pickingError{
+    opacity: 1 !important;
+ }
+ .busSearchForm{
+   padding: 0px;
+ }
+ .busSearchForm-ToCity{
+   padding-left: 0px !important;
+ }
+ .busSearchForm-Date label{
+       padding: 10px 0px !important;
+ }

@@ -1,0 +1,77 @@
+
+.cabListing-boardingPointsWrap {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.cabListing-boardingPointsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cabListing-boardingPointsHeader h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.cabListing-boardingPointsToggle {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cabListing-boardingPointsToggle.open {
+  transform: rotate(180deg);
+}
+
+.cabListing-boardingPointsSearch {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.cabListing-boardingPointsSearch input {
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.cabListing-boardingPointsSearch input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.cabListing-boardingPointsSearchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.cabListing-boardingPointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+  padding-right: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cabListing-boardingPointItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4;
+}

@@ -1,0 +1,32 @@
+.amenities {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0px;
+}
+.free_amenities {
+  background-color: rgb(233, 233, 233);
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.coupon {
+  background: aquamarine;
+  position: relative;
+}
+.coupon_code {
+  position: absolute;
+  top: 35px;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 400;
+  background: linear-gradient(20deg, #f730308c 20%, #053355ad);
+}
+.couponcode_icon {
+  font-size: 20px;
+  margin-right: 6px;
+}
+.hotelling_btn {
+  background: #053355 ;
+}

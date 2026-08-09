@@ -1,0 +1,342 @@
+.busSeatLayout {
+  display: flex;
+  gap: 20px;
+  padding: 8px;
+  font-family: sans-serif;
+}
+
+.busSeatLayout-left {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 480px;
+  box-shadow: 0 0 5px 0 rgb(0, 0, 0, .10);
+}
+.busSeatLayout-right{
+   flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 320px;
+  box-shadow: 0 0 5px 0 rgb(0, 0, 0, .10);
+
+}
+
+.busSeatLayout-stepTitle {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.busSeatLayout-stepTitle .step {
+  color: green;
+  background: #e6ffe6;
+  border-radius: 50%;
+  padding: 4px 10px;
+  margin-right: 5px;
+}
+
+/* .busSeatLayout-legend {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  background: #E7E7E7;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.busSeatLayout-legend {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  background: #E7E7E7;
+  font-size: 12px;
+  padding: 8px; 
+  border-radius: 6px; 
+}
+.busSeatLayout-legend div {
+  display: flex;
+  align-items: center;
+}
+
+
+.legend {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 4px;
+}
+
+.legend.ladies { background: #f5c2e7; }
+.legend.selected { background: #34d399; }
+.legend.available { background: #f8f9fa; border: 1px solid #ccc; }
+.legend.booked { background: #adb5bd; }
+
+.busSeatLayout-prices {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-filter {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.price-filter.active {
+  background: #007bff;
+  color: white;
+}
+
+.busSeatLayout-bus {
+  display: flex;
+  gap: 20px;
+  max-width: 200px;
+}
+
+.seat-section {
+  flex: 1;
+  min-width: 215px;
+  border-radius: 8px;
+}
+
+.seat-section-title {
+  background: #e2ecff;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  /* margin-bottom: 10px; */
+  justify-content: center;
+  display: flex;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #D5DEE4;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.busSteeringWheel{
+  display: flex;
+  align-items: center;
+  margin: 2px;
+}
+
+.busSeatLayout-seats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background: #EFF7FF;
+  padding: 15px;
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid #D5DEE4;
+  border-top: none !important;
+}
+.busSeatLayout-seats.lower-deck .seat {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f9fa;
+  font-size: 9px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 17px;
+}
+.busSeatLayout-seats.upper-deck .seat {
+  width: 40px;
+  height: 70px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f9fa;
+  font-size: 9px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 17px;
+}
+.seat-name{
+  border-bottom: 1px solid rgb(199, 199, 199);
+  padding: 0 12px;
+}
+
+.seat.booked {
+  background: #adb5bd;
+  cursor: not-allowed;
+  color: #fff;
+}
+
+.seat.ladies {
+  background: #f5c2e7;
+}
+.busSeatLayout-seats.lower-deck .seat.selected,
+.busSeatLayout-seats.upper-deck .seat.selected {
+  background: #34d399;
+  color: white;;
+}
+
+
+.busSeatLayout-right {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.busSeatLayout-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.busSeatLayout-tabs button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  background: #f1f1f1;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.busSeatLayout-tabs button.active {
+  background: white;
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+}
+
+.busSeatLayout-points {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.busSeatLayout-pointOption {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.continueBtn {
+  background: linear-gradient(90deg, #053355 0%, #3f51b5 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: auto;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+.busSeatLayout-points .busSeatLayout-stepTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.busSeatLayout-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.busSeatLayout-summaryItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.boardingDetails{
+  font-size: 12px;
+}
+
+.changeBtn {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.changeBtn:hover {
+  background: #007bff;
+  color: white;
+}
+.busSeatLayout-grandTotal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.busSeatLayout-grandTotalSeatSelected{
+  color: grey;
+  font-size: 14px;
+}
+.busgrandTotalSeatSelected{
+  color: black;
+  font-weight: 600;
+}
+.busSeatLayout-busgrandTotal{
+  font-size: 15px;
+  font-weight: 600;
+}
+.busSeatLayout-grandTotalPrice{
+  text-align: right;
+  color: #f73030;
+  font-size: 22px;
+}
+.Buslisting-card {
+  position: relative; 
+}
+
+.Buslisting-seatLayout-wrapper {
+  position: relative; /* or remove it entirely */
+  width: 100%;
+  /* margin-top: 16px; */
+  padding: 16px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  /* border-radius: 8px; */
+  margin-bottom: 16px;
+  /* box-shadow: 0 0 5px 0 rgb(0, 0, 0, .10); */
+
+}
+
+.busSeatLayout-seatContainer {
+  display: flex;
+  flex-direction: row; /* horizontal by default */
+  gap: 16px;
+  width: 100%;
+}

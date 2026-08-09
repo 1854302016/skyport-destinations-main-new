@@ -1,0 +1,98 @@
+.hdrMenu_user {
+    background: #053355;
+    color: #fff !important;
+    padding: 30px;
+    border-bottom:1px solid #f0f0f0;
+}.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}.hdrMenu_list, .hdrMenu_user {
+    border-bottom: 1px solid #f0f0f0 !important;
+}.hdrMenu_link {
+    color: #000;
+    display: block;
+    font-size: 16px;
+    padding: 15px 20px 15px 5px;
+}.ripple {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+}.hdrMenu_icon {
+    margin-right: 15px;
+    width: 40px;
+}.menu-icon-home{
+    background-position: -442px 0;
+    height: 16px;
+    width: 16px;
+}
+.sidebar .hdrMenu ul{
+    margin: 0px !important;
+}
+.sidebar .hdrMenu li {
+    padding: 0px !important;
+    cursor: pointer;
+}.float-right {
+    float: right !important;
+}
+.sidebar .hdrMenu .services{
+    height: 54px;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease-in-out;
+}.sidebar .hdrMenu .services.open{
+    height: auto;
+    overflow: visible;
+    transition: height 0.3s ease-in-out;
+}.hdrMenu_link:hover {
+    background: #fafbfe;
+    color: #666;}
+.transition-transform {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.sidebar .hdrMenu .ripple:after {
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(10);
+    transition: transform .5s ease-out, opacity 1s ease-out;
+    width: 100%;
+}.sidebar .hdrMenu .ripple:active:after {
+    opacity: .15;
+    transform: scale(0);
+    transition: 0s;
+}
+.hdrMenu_quickLink{
+    padding: 15px 60px;
+}
+.hdrMenu_quickLink-title{
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0px !important;
+}
+.hdrMenu_quickLink-title:after, .hdrMenu_quickLink-title:before {
+    border-bottom: 1px solid #e1e1e1;
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
+.hdrMenu_quickLink-title:before {
+    left: 0;
+}
+.hdrMenu_quickLink-title:after {
+    right: 0;
+}

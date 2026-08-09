@@ -1,0 +1,157 @@
+.busModifysearch-Main .busModifysearch {
+  width: 100%;
+  height: 160px; 
+  background: linear-gradient(20deg, #f73030 20%, #053355);
+  display: flex;
+  gap: 30px;
+  align-items: flex-start; 
+  justify-content: center;
+  color: white;
+  padding: 0 80px;
+  position: relative; 
+  z-index: 1;
+  padding-top: 30px;
+}
+
+
+.busModifysearchinputs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.busModifyinputstyling {
+  border: none;
+  border-bottom: 1px solid rgba(226, 226, 226, 0.22);
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.busModifylabelstyling {
+  font-size: 0.71429rem;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.busModifyinputstyling::placeholder {
+  color: white;
+  font-size: 16px;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.busModifyinputstyling:focus::-webkit-datetime-edit {
+  color: #ffffff;
+}
+
+.busModifyinputstyling::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+}
+
+.busModifysearch-btn {
+  padding: 8px 22px 10px 22px;
+  height: 38px;
+  width: 137.45px;
+  box-shadow: 0 2px 4px 0 #4d264c;
+  border-radius: 4px;
+  border: none;
+  background-color: white;
+}
+
+.busModifydropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 200px;
+  font-family: sans-serif;
+}
+
+.busModifyselect {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.busModifydropdown_main {
+  display: flex;
+  padding: 0px 80px;
+}
+
+.hotelavailbility {
+  align-items: center;
+  justify-items: end;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dropdown_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 4px 4px 10px #0000001a;
+}
+
+.busModifyinputs_wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.busModifyinput {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.busModifyselect {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.busModifyinput {
+  padding: 8px 10px 8px 32px;
+  margin-top: 0;
+  font-size: 14px;
+  border: none;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  font-weight: 400;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #0000001a;
+}
+.busModify-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.busModify-suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.busModify-suggestion-item:hover {
+  background-color: #f0f0f0;
+}

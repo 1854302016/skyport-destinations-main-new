@@ -1,0 +1,7 @@
+Primary: #0B2545
+Accent: #0066FF
+Highlight: #38BDF8
+Surface: #F8FAFC
+Text: #0F172A
+Brand: TRUSTED FARE
+Tagline: TRUSTED JOURNEYS, BETTER FARES

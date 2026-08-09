@@ -1,0 +1,68 @@
+/* --- Deals Section Refined Design --- */
+:root {
+  --deal-blue: #0B2545;
+  --deal-accent: #0066FF;
+  --deal-cyan: #38BDF8;
+  --deal-grey: #64748B;
+  --card-shadow: 0 4px 15px rgba(11, 37, 69, 0.05);
+}
+
+.deals-refined-section {
+  padding: 60px 0;
+  background: #F8FAFC;
+}
+
+/* Header & Timer Layout */
+.deals-header-refined {
+  margin-bottom: 25px;
+}
+
+.title-area h2 {
+  font-size: 24px;
+  font-weight: 850;
+  color: var(--deal-blue);
+  margin-bottom: 5px;
+}
+
+.flash-text {
+  color: var(--deal-accent);
+}
+
+.location-info {
+  color: var(--deal-blue);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+/* Timer Pill */
+.timer-pill-box {
+  background: #FFFFFF;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.06);
+  margin: 20px 0;
+  max-width: 100%;
+  border: 1px solid rgba(11, 37, 69, 0.08);
+}
+
+.timer-label {
+  font-size: 10px;
+  font-weight: 900;
+  color: #64748B;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.timer-pill {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0066FF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

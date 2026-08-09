@@ -1,0 +1,343 @@
+.detail-page-header {
+    background: #fff;
+    padding-top: 20px;
+}
+
+.header-breadcrumbs {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.crumb.active {
+    color: #efbf04;
+    font-weight: 600;
+}
+
+.badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.package-badge {
+    background: #efbf04;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.package-id {
+    color: #bbb;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.main-package-title {
+    font-size: 3rem;
+    font-weight: 850;
+    color: #053355;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.header-meta-stylish {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: #f8f9fa;
+    border-radius: 100px;
+    border: 1px solid #eee;
+    color: #444;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.meta-pill:hover {
+    background: #fff;
+    border-color: #efbf04;
+    box-shadow: 0 5px 15px rgba(239, 191, 4, 0.15);
+    transform: translateY(-2px);
+}
+
+.meta-pill svg {
+    color: #efbf04;
+    font-size: 1.3rem;
+}
+
+.meta-pill.price-display {
+    background: #053355;
+    color: #fff;
+    border-color: #053355;
+}
+
+.detail-gallery-container {
+    width: 100%;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.main-gallery-swiper {
+    padding: 20px 0 !important;
+}
+
+.gallery-slide {
+    width: 100%;
+    height: 275px;
+    border-radius: 25px; /* Perfect pill shape rounding */
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-slide:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-slide:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.detail-content-wrapper {
+    background: #fdfdfd;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+    .gallery-slide {
+        height: 350px;
+        border-radius: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-package-title {
+        font-size: 1.8rem;
+    }
+    .gallery-slide {
+        height: 280px;
+        border-radius: 60px;
+    }
+    .main-gallery-swiper {
+        padding: 10px 0 !important;
+    }
+    .header-meta {
+        font-size: 0.9rem;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-slide {
+        height: 220px;
+        border-radius: 40px;
+    }
+}
+
+.detailCardMainDiv p {
+    margin: 0px;
+}
+
+.detailCardMainDiv {
+    /* background-color: #efbf04; */
+    background: url(https://triprex.egenslab.com/wp-content/plugins/triprex-core//inc/theme-options/images/breadcrumb/inner-banner-bg.jpg);
+    background-position: center;
+    height: 6.5 rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px 30px 100px;
+}
+
+.detailCardMainDivInner1 {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.detailCardMainDivInner1 h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.detailCardMainDivInner1para1 {
+    font-size: 14px;
+    color: white;
+}
+
+.detailCardMainDivInner1para2 {
+    font-size: 18px;
+    color: #fff;
+    width: max-content;
+    /* background-color: white; */
+    /* padding: 1px 8px 4px 8px; */
+}
+
+.detailCardMainDivInner2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: white;
+    align-items: end;
+    font-weight: 500;
+}
+
+.detailCardMainDivInner2p1 {
+    font-size: 14px;
+}
+
+.detailCardMainDivInner2p2 {
+    font-size: 24px;
+}
+
+.detailCardMainDivInner2p3 {
+    font-size: 16px;
+}
+
+.detailCardMainDivInner3 {
+    background-color: #336d850d;
+    padding: 16px 120px;
+
+    margin-bottom: 80px;
+}
+
+.detailCardMainDivInner3head {
+    /* font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px; */
+    margin-top: 50px;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.heading-ribbon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main_RESUSEA .swiper-wrapper {
+    margin: 0 auto;
+    display: contents;
+}
+
+/* .heading-ribbon svg {
+  overflow: hidden;
+  vertical-align: middle;
+} */
+.detailCardMainDivInner3head .text-b {
+    color: #053355;
+}
+
+@media (max-width: 1200px) {
+    .detailCardMainDiv {
+        padding: 10px 50px 10px 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .detailCardMainDiv {
+        padding: 10px 10px 10px 10px !important;
+    }
+
+    .detailCardMainDivInner1para2 {
+        /* margin-left: 50px !important; */
+        padding: 2px 2px 2px 2px;
+    }
+
+    .detailCardMainDivInner2p3 {
+        margin-left: 50px !important;
+    }
+}
+
+@media (max-width: 786px) {
+    .detailCardMainDiv {
+        padding: 10px 50px 10px 50px;
+    }
+}
+
+@media (max-width: 1351px) {
+    .detailCardMainDivInner3 {
+        padding: 0px 0px;
+    }
+}
+
+@media(max-width:575.98px) {
+    .detailCardMainDivInner1 h2 {
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .detailCardMainDivInner1para1,
+    .detailCardMainDivInner1para2,
+    .detailCardMainDivInner2p1,
+    .detailCardMainDivInner2p3 {
+        font-size: 12px;
+    }
+
+    .detailCardMainDivInner2p2 {
+        font-size: 22px;
+    }
+
+    .detailCardMainDiv {
+        padding: 30px 10px 30px 10px !important;
+    }
+
+
+    .detailCardMainDiv {
+        position: relative;
+        overflow: hidden;
+        /* Ensure overlay doesn't overflow */
+    }
+
+    .detailCardMainDiv::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        /* semi-transparent black */
+        z-index: 1;
+        /* Make sure it's below the tab */
+    }
+
+    .detailCardMainDiv .detailCardMainDivInner1 {
+        position: relative;
+        z-index: 2;
+        /* Bring tab above the overlay */
+    }
+
+    .detailCardMainDiv .detailCardMainDivInner2 {
+        position: relative;
+        z-index: 2;
+        /* Bring tab above the overlay */
+    }
+
+}

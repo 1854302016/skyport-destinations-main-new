@@ -1,0 +1,609 @@
+.section-space--sm {
+  padding-top: clamp(2rem, 3.25vw + 1rem, 3.75rem);
+  padding-bottom: clamp(2rem, 3.25vw + 1rem, 3.75rem);
+}
+.my_account_mains{
+    margin-top: -120px;
+}
+.my_account_mains .bg-neutral-900 {
+  background-color: hsl(218 76% 15%);
+}
+.my_account_mains .h-30 {
+  height: 7.5rem;
+}
+.my_account_mains .end-0 {
+  right: 0 !important;
+}
+.my_account_mains .start-0 {
+  left: 0 !important;
+}
+.my_account_mains .top-0 {
+  top: 0 !important;
+}
+.my_account_mains .position-absolute {
+  position: absolute !important;
+}
+.my_account_mains .box-shadow {
+  box-shadow: 0 0.25rem 0.75rem hsl(0 0% 0% / 0.07);
+}
+.my_account_mains .rounded-4 {
+  border-radius: 1rem !important;
+}
+.my_account_mains .p-6 {
+  padding: 1.5rem !important;
+}
+.my_account_mains .w-30 {
+  width: 7.5rem;
+}
+.my_account_mains .h-24 {
+  height: 6rem;
+}
+.my_account_mains .w-24 {
+  width: 6rem;
+}
+.my_account_mains .rounded-circle {
+  border-radius: 50% !important;
+}
+.my_account_mains .bg-primary-300 {
+  background-color: hsl(239 84% 57%);
+}
+.my_account_mains .h-8 {
+  height: 2rem;
+}
+.my_account_mains .w-8 {
+  width: 2rem;
+}
+.my_account_mains .border-neutral {
+  --bs-border-color: hsl(0 0% 100%);
+}
+.my_account_mains .place-content-center {
+  place-content: center;
+}
+.my_account_mains .rounded-circle {
+  border-radius: 50% !important;
+}
+.my_account_mains .border {
+  border: 2px solid hsl(238 84% 75%) !important;
+}
+.my_account_mains .bottom-0 {
+  bottom: 0 !important;
+}
+.my_account_mains .material-symbols-outlined {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-grid;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+.my_account_mains .clr-neutral-0 {
+  color: hsl(0 0% 100%);
+}
+.my_account_mains .mb-10 {
+  margin-block-end: 2.5rem !important;
+}
+.my_account_mains .clr-neutral-500 {
+    color: hsl(218 25% 34%);
+}
+.my_account_mains .mb-0 {
+    margin-block-end: 0 !important;
+}.my_account_mains .clr-neutral-400 {
+    color: hsl(218 20% 39%);
+}.my_account_mains .fs-12 {
+    font-size: .75rem;
+}.my_account_mains .mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.my_account_mains .d-block {
+    display: block !important;
+}
+
+.my_account_mains .list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}.my_account_mains .gap-3 {
+    gap: .75rem !important;
+}.my_account_mains .gap-2 {
+    gap: .5rem !important;
+}.my_account_mains .active-clr {
+    color: hsl(239 84% 57%) !important;
+}.my_account_mains .link {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.my_account_mains .fs-20 {
+    font-size: 1.25rem;
+}.my_account_mains .fw-medium {
+    font-weight: 500 !important;
+}
+.my_account_mains .d-block {
+    display: block !important;
+}
+
+.my_account_mains .bg-neutral-0 {
+    background-color: hsl(0 0% 100%);
+}
+
+.my_account_mains .box-shadow {
+    box-shadow: 0 .25rem .75rem hsl(0 0% 0% / .07);
+}.my_account_mains .border-primary-100 {
+    --bs-border-color: hsl(238 84% 75%);
+}
+.my_account_mains .hr-line {
+    height: 1px;
+    background-image: linear-gradient(to right, hsl(214 12% 89%), hsl(214 12% 89%));
+    background-position: bottom;
+    background-size: .75rem 1px;
+    background-repeat: repeat-x;
+}
+.my_account_mains .border {
+    border: 2px solid hsl(238 84% 75%) !important;
+}
+.my_account_mains .rounded-4 {
+    border-radius: 1rem !important;
+}
+.my_account_mains .booking-tab {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-inline: 1rem;
+    gap: 1rem;
+
+}.my_account_mains .border-neutral-40 {
+    --bs-border-color: hsl(214 12% 89%);
+}
+.my_account_mains .my-6 {
+    margin-block: 1.5rem !important;
+}.my_account_mains .booking-tab__btn {
+    display: inline-flex
+;
+    align-items: center;
+    gap: .25rem;
+    padding: 8px;
+    color: hsl(218 25% 34%);
+    font-weight: 500;
+    border:none;
+    background:#fff;
+}.my_account_mains .booking-tab__btn.active {
+    position: relative;
+    isolation: isolate;
+    color: hsl(239 84% 57%);
+}.my_account_mains .d-inline-block {
+    display: inline-block !important;
+}.my_account_mains .booking-tab__btn.active::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: 1px;
+    background-color: hsl(239 84% 57%);
+    z-index: -1;
+}
+
+.my_account_mains .border {
+    border: 1px solid hsl(214 12% 89%) !important;
+}
+
+.my_account_mains .p-4 {
+    padding: 1rem !important;
+}
+@media (min-width: 576px) {
+    .my_account_mains .p-sm-6 {
+        padding: 1.5rem !important;
+    }
+}@media (min-width: 1200px) {
+    .my_account_mains .p-xl-8 {
+        padding: 2rem !important;
+    }
+}.my_account_mains .gap-4 {
+    gap: 1rem !important;
+}.my_account_mains .flex-wrap {
+    flex-wrap: wrap !important;
+}.my_account_mains .box-shadow {
+    box-shadow: 0 .25rem .75rem hsl(0 0% 0% / .07);
+}.my_account_mains .h-12 {
+    height: 3rem;
+}
+
+.my_account_mains .w-12 {
+    width: 3rem;
+}.my_account_mains .h-10 {
+    height: 2.5rem;
+}
+
+.my_account_mains .w-10 {
+    width: 2.5rem;
+}.my_account_mains .clr-primary-300 {
+    color: hsl(239 84% 57%);
+}.my_account_mains .bg-primary-50 {
+    background-color: #f730301c;
+}.my_account_mains .flex-grow-1 {
+    flex-grow: 1 !important;
+}.my_account_mains .mb-1 {
+    margin-bottom: .25rem !important;
+}
+.my_account_mains .listttt {
+    --direction: column;
+    display: flex;
+    flex-direction: var(--direction);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}.my_account_mains .list-row {
+    --direction: row;
+}.my_account_mains .fs-14, small {
+    font-size: .875rem;
+}
+
+.my_account_mains .d-inline-block {
+    display: inline-block !important;
+}
+.my_account_mains .clr-neutral-700 {
+    color: hsl(218 41% 24%);
+}
+.my_account_mains .list-divider-half-xs>li+li::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background-color: hsl(218 25% 34%);
+}.my_account_mains .list-divider-half-xs>li+li {
+    padding-inline-start: .5rem;  
+    margin-inline-start: .5rem;
+    position: relative;
+    isolation: isolate;
+}.my_account_mains .hr-dashed {
+    height: 1px;
+    background-image: linear-gradient(to right, hsl(219 13% 79%) 33%, transparent 0);
+    background-position: bottom;
+    background-size: .75rem 1px;
+    background-repeat: repeat-x;
+}.my_account_mains .mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.my_account_mains .my_account_col_shadow{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+
+/* SIde Base  */
+.my_account_mains .avatar-upload {
+    position: relative;
+    max-width: 200px;
+}.my_account_mains .avatar-upload__edit {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 1;
+}.my_account_mains .avatar-upload__input {
+    display: none;
+}.my_account_mains .avatar-upload__label {
+    display: grid
+;
+    place-content: center;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(238 84% 75% / .75);
+    cursor: pointer;
+    font-weight: 400;
+    transition: all .2s ease-in-out;
+}.my_account_mains .avatar-upload__label:after {
+   
+    color: hsl(239 84% 64%);
+    text-align: center;
+    margin: auto;
+    transition: all .2s ease-in-out;
+}.my_account_mains .avatar-upload__preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid hsl(240 82% 96% / .5);
+    box-shadow: 0 2px 4px 0 hsl(0 0% 0% / .1);
+}
+.my_account_mains .avatar-upload__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    .form_profile_basis .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #dee2e6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}.form_profile_basis .px-6 {
+    padding-inline: 1.5rem !important;
+}
+.form_profile_basis .py-3 {
+    padding-block: .75rem !important;
+}.form_profile_basis .py-3 {
+    padding-top: 1.4rem !important;
+    padding-bottom: 1.4rem !important;
+}
+.form_profile_basis label{
+    margin-bottom: 0px !important;
+}
+
+.gap-6 {
+    gap: 1.5rem !important;
+}.form_profile_basis .list {
+
+    display: flex
+;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.my_account_mains .custom-radio {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}.my_account_mains .custom-radio--primary-300 {
+    accent-color: hsl(239 84% 57%);
+}
+
+.form_profile_basis .custom-checkbox {
+    position: relative;
+    border: 1px solid hsl(219 13% 79%);
+    border-radius: 2px;
+    background: 0 0;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    width: 1.25rem;
+    height: 1.25rem;
+    -webkit-appearance: none;
+    opacity: .75;
+}.form_profile_basis .custom-checkbox--rounded {
+    border-radius: 50%;
+}.form_profile_basis .flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+.clr-neutral-500 {
+    color: hsl(218 25% 34%);
+}
+
+.form_profile_basis .inner_profile_btn .py-3 {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+}
+.collapse_profile_container{
+    border-radius: 1rem !important; 
+    box-shadow: 0 6px 30px hsl(0 0% 0% / .04) !important;
+}
+@media (min-width: 1200px) {
+    .property-search__col:last-child {
+        width: auto;
+    }
+}
+
+.profile_deletee.bg-tertiary-300 {
+    background-color: hsl(39 100% 64%);
+}
+.profile_deletee.px-6 {
+    padding-inline: 1.5rem !important;
+}
+
+.profile_deletee.py-3 {
+    padding-block: .75rem !important;
+}
+.profile_deletee.rounded-pill {
+    border-radius: 50rem !important;
+}
+.profile_deletee_upr.mb-8 {
+    -webkit-margin-after: 2rem !important;
+    margin-block-end: 2rem !important;
+}
+.Password_flex-column{
+    flex-direction: column !important;
+    margin-left: 20px !important;
+}
+.sidebar_profile_main li{
+    cursor: pointer ;
+}
+.save-changes_tg_booking{
+    border: none !important;
+        background: linear-gradient(20deg, rgb(247 48 48) 20%, rgb(29 72 159) 100%) !important;
+}
+
+/* NEW STYLING  */
+/* --- Main Category Tabs --- */
+.booking-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  /* background: #f9f9f9; */
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  /* margin-bottom: 20px; */
+}
+
+.booking-tab__btn {
+  /* padding: 10px 20px; */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-tab__btn:hover {
+  background-color: #eef1f4;
+  cursor: pointer;
+}
+
+.booking-tab__btn.active {
+  /* background-color: #007bff; */
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* --- Sub Tabs (Complete, Cancelled, Pending) --- */
+.sub-tab-buttons {
+  display: flex;
+  gap: 12px;
+  margin:0px 0px 20px 0px;
+  /* margin: 20px 0; */
+  flex-wrap: wrap;
+}
+
+.sub-tab-buttons button {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.sub-tab-buttons button.active {
+  background-color: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
+
+.sub-tab-buttons button:hover {
+  background-color: #e8f5e9;
+}
+
+/* --- Booking Card --- */
+.booking-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.booking-card h5 {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.booking-card p {
+  margin: 0 0 8px;
+  color: #555;
+}
+
+.booking-card .btn {
+  margin-top: 8px;
+}
+
+/* Responsive Utilities (Optional) */
+@media (max-width: 768px) {
+  .booking-tab {
+    flex-direction: column;
+  }
+
+  .sub-tab-buttons {
+    flex-direction: column;
+  }
+}
+
+
+
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+/* Loading  */
+    .letter:nth-child(1){
+            animation-delay: .1s;
+        }
+        .letter:nth-child(2){
+            animation-delay: .2s;
+        }
+        .letter:nth-child(3){
+            animation-delay: .3s;
+        }
+        .letter:nth-child(4){
+            animation-delay: .4s;
+        }
+        .letter:nth-child(5){
+            animation-delay: .5s;
+        }
+        .letter:nth-child(6){
+            animation-delay: .6s;
+        }
+        .letter:nth-child(7){
+            animation-delay: .7s;
+        }
+        .letter:nth-child(8){
+            animation-delay: .8s;
+        }
+        .letter:nth-child(9){
+            animation-delay: .9s;
+        }
+        .letter{
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1d489f;
+            animation: bounce 1s ease-in-out infinite;
+            transform-origin: bottom;
+            /* font-family: "Sour Gummy", sans-serif; */
+  font-optical-sizing: auto;
+        }
+        @keyframes bounce{
+            0%,80%,100%{
+                transform: translateY(0px);
+            }
+            30%{
+                transform: translateY(-20px);
+            }
+            60%{
+                transform: translateY(10px);
+            }
+        }

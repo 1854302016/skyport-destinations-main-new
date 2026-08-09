@@ -1,0 +1,35 @@
+.heading_flight_list .airline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.heading_flight_list .airline-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heading_flight_list .airline-left img {
+  width: 35px;
+  height: auto;
+}
+
+.heading_flight_list .airline-name {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.heading_flight_list .airline-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.heading_flight_list .airline-price {
+  font-weight: bold;
+  font-size: 1rem;
+}

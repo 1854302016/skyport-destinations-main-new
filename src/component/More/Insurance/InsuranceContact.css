@@ -1,0 +1,47 @@
+.insurance_container {
+  background: transparent;
+  padding: 0px;
+}
+.contact-area-page .contact-bg {
+  /* background: #ffffff7a; */
+  /* margin-bottom: 10px; */
+  padding: 26px 30px;
+}
+.contact-area-page .contact_items {
+  margin-bottom: 10px;
+  background: #ffffffa3;
+}
+
+@media (max-width: 767px) {
+  .contact-area-page .contact-bg {
+    padding: 15px;
+    font-size: medium;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-area-page .contact_items {
+    gap: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-area-page .contact-bg h6 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 420px) {
+  .contact-area-page .icon-size {
+    width: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .contact-area-page .contact-us-text {
+    font-size: small;
+  }
+}
+@media (max-width: 420px) {
+  .contact-area-page .contact-us-address {
+    font-size: small !important;
+  }
+}

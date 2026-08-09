@@ -1,0 +1,198 @@
+.ajax-modal-container {
+  /* position: fixed;
+  top: 0;
+  right: -550px;
+  width: 550px;
+  height: 100%; */
+  /* z-index: 119; */
+  /* overflow: hidden;
+  overflow-y: auto; */
+  /* opacity: 0; */
+  /* background: #fff; */
+}
+
+/* #ajax-modal {
+  overflow: hidden;
+  background: #fff;
+} */
+
+/* .ajax-modal-close {
+  position: absolute;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  top: 25px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 40px;
+  z-index: 20;
+  background: #18458b;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+
+.ajax-modal-container .fl-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.ajax-modal-container .ajax-modal-close {
+  position: absolute;
+  padding: unset;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  z-index: 20;
+  background: #18458b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ajax-modal-container .ajax-modal-media {
+  border-radius: 20px 0 0 0;
+}
+
+.ajax-modal-container img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+.ajax-modal-container .ajax-modal-media img {
+  width: 100%;
+  height: auto;
+}
+
+.ajax-modal-container .ajax-modal-title {
+  color: #fff;
+  padding: 20px 0 25px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.ajax-modal-container .section-title-separator {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto 10px;
+}
+
+.ajax-modal-container .ajax-modal-photos-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+  background: #18458b;
+  font-size: 11px;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.ajax-modal-container .ajax-modal-photos-btn span {
+  padding: 0 4px;
+}
+
+.ajax-modal-container .ajax-modal-list {
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+.ajax-modal-container .ajax-modal-list li {
+  float: left;
+  width: 25%;
+  padding: 12px 0;
+  border-left: 1px solid #e2e2e2;
+  box-sizing: border-box;
+}
+
+.ajax-modal-container .ajax-modal-details {
+  padding: 30px 45px;
+  margin-top: 20px;
+}
+
+.ajax-modal-container .ajax-modal-details-box {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.ajax-modal-container .ajax-modal-details h3 {
+  text-align: left;
+  color: #334e6f;
+  padding-bottom: 26px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ajax-modal-container p {
+  font-size: 13px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  color: #878c9f;
+}
+
+.ajax-modal-container .ajax-modal-details p {
+  text-align: left;
+}
+
+.ajax-modal-container .ajax-modal-details-box {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.ajax-modal-container .ajax-modal-details h3 {
+  text-align: left;
+  color: #334e6f;
+  padding-bottom: 26px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ajax-modal-container .listing-features li {
+  float: left;
+  width: 33.3%;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #888da0;
+  font-weight: 600;
+  position: relative;
+  padding-left: 30px;
+}
+
+.ajax-modal-container .btn.float-btn {
+  float: left;
+  margin: 10px 0 0;
+}
+
+.ajax-modal-container .features_list .feature{
+  text-align: center;
+}
+
+.ajax-modal-container .features_list .feature h5{
+  font-size: 12px;
+}
+
+.ajax-modal-container .ajax-modal-close2{
+  left: 100px;
+  /* margin-inline: auto; */
+  width: 75px;
+}

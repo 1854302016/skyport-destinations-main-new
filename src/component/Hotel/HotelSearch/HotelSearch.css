@@ -1,0 +1,91 @@
+.hotel_page .custom_service {
+    background: #fff;
+    margin-top: 0px;
+}
+
+.hotel_page .custom_service .section-content {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    clear: both;
+}
+
+.hotel_page .card {
+    border: none;
+}
+
+.hotel_page .custom_service .box-service-1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: center;
+    border-radius: 10px;
+    min-height: 160px;
+    justify-content: center;
+}
+
+.hotel_page .custom_service .box-service-1 .box-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 24px;
+    margin: 0 10px 0 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    border-radius: 999px;
+    transition: all 0.4s;
+}
+
+.hotel_page .custom_service .box-service-1 .box-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel_page .custom_service .box-info .box-content .card-title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #333;
+    margin: 0px;
+}
+
+.hotel_page .custom_service .box-info .box-content .card-title a,
+.hotel_page .custom_service .box-info .box-content .card-title a:hover {
+    cursor: default;
+    color: #333;
+}
+
+@media (max-width: 767px) {
+    .hotel_page .box_col_5 {
+        width: 50%;
+        padding: 0px 10px;
+        float: left;
+        margin: 0px 0px 15px;
+    }
+
+    .hotel_page .box_col_5:last-child {
+        width: 100%;
+        padding: 0px 10px;
+        float: none;
+        clear: both;
+    }
+}
+
+@media (min-width: 768px) {
+    .hotel_page .box_col_5 {
+        width: 20%;
+        padding: 0px 10px;
+        float: left;
+    }
+}
+.hotel_page{
+    position: relative;
+    z-index: 1;
+}

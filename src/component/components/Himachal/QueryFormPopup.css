@@ -1,0 +1,54 @@
+.uttarakhand-formContainerBelowBgBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.uttarakhand-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.uttarakhand-formContainerBelowPopup {
+  position: relative;
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 600px;
+  z-index: 1002;
+  background: linear-gradient(to top, #000000, #031843);
+}
+.uttarakhand-formContainerBelowPopup {
+  position: relative;
+  /* Existing styles can stay */
+}
+
+.uttarakhand-closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+.uttarakhand-tripFormPopup h2, .uttarakhand-tripFormPopup p{
+    color:white;
+}

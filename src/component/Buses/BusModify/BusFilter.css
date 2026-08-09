@@ -1,0 +1,266 @@
+.busFilterDiv{
+  background-color: white !important;
+  padding: 10px !important;
+}
+.busFilter-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.busFilter-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #001f5d;
+  margin-bottom: 16px;
+}
+
+.busFilter-clear {
+  color: #053355;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.busFilter-section {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.busFilter-section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.busFilter-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.busFilter-icon {
+  margin-right: 6px;
+}
+
+.busFilter-slider {
+  margin: 10px 0;
+}
+
+.busFilter-slider-values {
+  font-weight: bold;
+}
+
+.busFilter-time-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.busFilter-time {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.busFilter-time:hover {
+  background: #fef3f3;
+}
+
+.busFilter-showall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.busFilter-stops {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.busFilter-stop {
+  flex: 1;
+  background: #f15b2a;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 12px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.busFilter-stop.active {
+  background: #b71c1c;
+}
+
+.busFilter-stop:hover {
+  opacity: 0.9;
+}
+/* .busFilter-Seats{
+  display: flex !important;
+  justify-content: center !important;
+      width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    float: left;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 5px;
+}
+.busFilter-seatSleeper{
+      width: 25%;
+    float: left;
+    cursor: pointer;
+}
+.busFilter-Seats1{
+      width: 25%;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    cursor: pointer;
+
+}
+.busFilter-seatSleeper{
+      width: 100%;
+    float: left;
+    padding: 4px 0;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+.busFilter-Sleeper{
+      width: 100%;
+    float: left;
+    color: #737373;
+    font-size: 10px;
+
+} */
+
+/* Parent: the box */
+.busFilter-Seats {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden; /* removes unwanted overflow */
+}
+
+/* Each side (wrapper for each option) */
+.busFilter-Seats1 {
+  flex: 1; /* make them equal width */
+  border-right: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.busFilter-Seats1:last-child {
+  border-right: none; /* remove right border on last item */
+}
+
+/* Option content: icon + text */
+.busFilter-seatSleeper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.busFilter-seatSleeper img {
+  width: 40px;
+  height: auto;
+}
+
+/* Label */
+.busFilter-Sleeper {
+  color: #737373;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Buslisting-boardingPointsWrap {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.Buslisting-boardingPointsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Buslisting-boardingPointsHeader h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.Buslisting-boardingPointsSearch {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.Buslisting-boardingPointsSearch input {
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.Buslisting-boardingPointsSearch input::placeholder {
+  color: #999; 
+  opacity: 1;  
+}
+
+
+.Buslisting-boardingPointsSearchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.Buslisting-boardingPointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+    padding: inherit;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Buslisting-boardingPointItem {
+  display: flex;
+  align-items: flex-start;  /* pin checkbox to top */
+  gap: 10px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4; /* enough spacing for multi-line */
+}
+
+.Buslisting-boardingPointItem input[type="checkbox"] {
+  accent-color: #007bff;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;   /* prevent shrinking */
+  margin-top: 3px;  /* slight tweak if needed */
+}
+

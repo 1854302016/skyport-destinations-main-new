@@ -1,0 +1,394 @@
+.hotelsearchmobile .cont_pnl {
+  float: left;
+  width: 100%;
+}
+
+.hotelsearchmobile .pd20_n {
+  background: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+
+.hotelsearchmobile .wid46 {
+  width: 48%;
+  float: right;
+}
+
+.hotelsearchmobile .fl {
+  float: left;
+}
+
+.hotelsearchmobile .m_rel {
+  position: relative;
+}
+
+.hotelsearchmobile .mb_title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 4px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.hotelsearchmobile .chkbtn {
+  float: right;
+  right: 0px;
+  top: -11px;
+  border: 1px solid #f73030;
+  border-top: 0;
+  color: #000;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  background: #f1f7fa;
+}
+
+.hotelsearchmobile .hgt93 {
+  height: 93px;
+}
+
+.hotelsearchmobile .mgt13 {
+  margin-top: 13px;
+}
+
+.hotelsearchmobile .lb_bg {
+  padding: 10px;
+  border: 1px solid #f73030;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(230, 230, 255) 100%
+  );
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  float: left;
+  width: 100%;
+}
+
+.hotelsearchmobile .top_block {
+  width: 100%;
+  text-align: center;
+}
+
+.hotelsearchmobile .inpttl {
+  font-size: 12px;
+  color: #3f3f3f;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.hotelsearchmobile .origin_cd {
+  width: 100%;
+  float: left;
+  border: 0;
+  font-size: 34px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hotelsearchmobile .origin_cd {
+  line-height: 39px;
+}
+
+.hotelsearchmobile #lblDeparture {
+  display: inline-block !important;
+}
+
+.hotelsearchmobile .origin_full {
+  width: 100%;
+  float: left;
+  border: 0;
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hotelsearchmobile #lblDepart {
+  display: inline-block !important;
+}
+
+.hotelsearchmobile .swap_icn {
+  width: 41px;
+  height: 41px;
+  display: inline-block;
+  position: absolute;
+  background: url(https://www.easemytrip.com/images/mob-web/swap-icon-new.svg)
+    no-repeat 0 0;
+  background-size: 41px 41px;
+  top: 39px;
+  right: -27px;
+}
+
+.hotelsearchmobile .inpttl2 {
+  font-size: 12px;
+  color: #3f3f3f;
+  text-transform: uppercase;
+  display: block;
+}
+
+.hotelsearchmobile .hl-input2 {
+  width: 100%;
+  float: left;
+  border: 0;
+  font-size: 15px;
+  /* font-weight: 600 !important; */
+  color: #000;
+  outline: 0;
+  font-weight: 600;
+  -webkit-appearance: none;
+  padding: 6px 6px 6px 34px;
+  background: url(https://www.easemytrip.com/images/mob-web/calender-hotel-icon.png)
+    no-repeat 0 5px;
+  background-size: 23px 23px;
+  /* font-family: 'Lato', sans-serif; */
+}
+
+.hotelsearchmobile .clr {
+  clear: both;
+}
+
+.hotelsearchmobile #rdateFade {
+  position: relative;
+}
+
+.hotelsearchmobile .crs2 {
+  cursor: pointer;
+  z-index: 9;
+}
+
+.hotelsearchmobile .cross_i {
+  width: 13px;
+  height: 14px;
+  background: url(https://www.easemytrip.com/images/mob-web/flight-hp-sprite.png)
+    no-repeat -50px -4px;
+  background-size: 65px 21px;
+  display: inline-block;
+  position: absolute;
+  left: 82%;
+  top: 11px;
+}
+
+.hotelsearchmobile .trvsc {
+  width: 100%;
+  float: left;
+  margin-top: 4px;
+}
+
+.hotelsearchmobile .mid_title {
+  font-size: 14px;
+  color: #282727;
+  font-weight: bold;
+  width: auto;
+  float: left;
+}
+
+.hotelsearchmobile .dw_tringle {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  right: 12px;
+  top: 33px;
+}
+
+.hotelsearchmobile .optclss {
+  width: 100%;
+  float: left;
+}
+
+.hotelsearchmobile .optclss select {
+  background: none;
+  border: 0;
+  font-size: 14px;
+  padding: 0;
+  outline: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000;
+  font-weight: 600;
+  height: unset;
+  line-height: unset;
+  margin-top: 4px;
+  /* font-family: 'Lato'; */
+}
+
+.hotelsearchmobile .form-control:disabled {
+  background-color: unset;
+  opacity: 1;
+}
+
+.hotelsearchmobile .hg12 {
+  height: 20px;
+}
+
+.hotelsearchmobile .container_lgn {
+  display: inline-block;
+  position: relative;
+  /* padding-left: 25px; */
+  /* margin: 0 0 15px 0; */
+  cursor: pointer;
+  font-size: 13px;
+  color: #000;
+  user-select: none;
+  line-height: 20px;
+  float: left;
+  margin-right: 14px;
+}
+
+/* .container_lgn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+} */
+
+/* .checkmark_lgn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    border-radius: 3px;
+    border: 1px solid #c3c3c3;
+} */
+
+.hotelsearchmobile .section_padding {
+  padding: 0px;
+}
+
+@media (max-width: 525px) {
+  .hotelsearchmobile .lb_bg {
+    padding: 10px;
+    border-bottom: 1px solid #f9dad9 !important;
+    /* background: radial-gradient(circle, rgb(255 255 255 / 9%) 0%, rgb(230 230 255 / 29%) 100%); */
+    border-radius: 4px;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    float: left;
+    width: 100%;
+    border: none;
+  }
+  .sfp-change-trip {
+    position: relative;
+    /* width: 318px; */
+            max-width: 100%;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* margin: auto; */
+    padding: 4px;
+    background-color: #f0f0ff;
+    background: linear-gradient(20deg, rgb(247 48 48 / 55%) 20%, rgb(29 72 159 / 68%) 100%);
+    /* background: linear-gradient(
+      20deg,
+      rgb(247 48 48 / 14%) 20%,
+      rgb(29 72 159 / 55%) 100%
+    ); */
+    display: flex;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    /* margin-bottom: 20px; */
+  }
+  .sfp-change-trip .sfp-trip.active {
+    font-weight: 700;
+    color: #d32f2f;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.2s linear;
+  }
+  .hotelsearchmobile .pd20_n {
+    background: #fff;
+    padding: 10px 10px;
+    display: block;
+  }
+  .hotelsearchmobile .fs_btn {
+    background: linear-gradient(
+      20deg,
+      rgb(240 45 45) 14%,
+      rgb(0 52 158) 80%
+    ) !important;
+    /* background: linear-gradient(20deg, rgb(247 48 48 / 14%) 20%, rgb(29 72 159 / 55%) 100%) !important; */
+    border-radius: 5px !important;
+    color: #fff !important;
+  }
+  .hotelsearchmobile .origin_cd {
+    line-height: 22px;
+    font-size: 22px;
+  }
+  .hotelsearchmobile .mgt13 {
+    margin-top: 10px;
+  }
+  .hotelsearchmobile .hgt93 {
+    height: 80px;
+  }
+  .hotelsearchmobile .lb_bg {
+    padding: 10px 10px;
+  }
+  .hotelsearchmobile .swap_icn {
+    top: 30px;
+  }
+}
+
+.search-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 15px;
+}
+.search-filter {
+  padding-left: 0;
+}
+.search-filter .filter-list {
+  margin-bottom: 5px;
+  flex: 1;
+}
+.search-filter a {
+  color: #333;
+}
+.ico-checkbox,
+.ico-checkbox-checked {
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: -1px 5px 0;
+  width: 19px;
+  height: 19px;
+  position: relative;
+  vertical-align: middle;
+}
+.ico-checkbox {
+  background-position: 0 -18px;
+  margin-left: 0;
+}
+.ico-checkbox-checked {
+  background-position: 0 0;
+}
+.wrapper-snipe input {
+  outline: none !important;
+}
+.mobile_video_formSearch {
+  margin-top: 15px;
+}
+
+
+.mobile_search_container_list .pd20_n {
+  background-color: #fff !important;
+}

@@ -1,0 +1,692 @@
+.Buslisting-wrapper{
+   position: relative;
+  z-index: 2;
+  margin-top: -50px;
+}
+.Buslisting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500
+}
+
+.Buslisting-header-section {
+  display: flex;
+  align-items: center;
+}
+
+.Buslisting-header-times {
+  gap: 50px; /* adjust to match your .Buslisting-times spacing */
+}
+
+.Buslisting-header-operator {
+  flex: 1; 
+  justify-content: center;
+}
+
+.Buslisting-header-price {
+  min-width: 120px;
+  justify-content: flex-end;
+}
+
+.Buslisting-header p {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+.Buslisting-card {
+  border: 1px solid #eee;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 20px 0; 
+  /* margin: 16px 0; */
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.Buslisting-main {
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+.Buslisting-times {
+  display: flex;
+  /* align-items: center; */
+  gap: 40px;
+}
+
+.Buslisting-time-block {
+  text-align: left;
+}
+
+.Buslisting-time {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1d2951;
+}
+
+.Buslisting-city {
+  font-size: 14px;
+  color: #555;
+}
+
+.Buslisting-seats {
+  font-size: 12px;
+  color: #d9534f;
+  margin-top: 15px;
+}
+
+.Buslisting-duration {
+  position: relative;
+  text-align: center;
+}
+
+.Buslisting-dotted {
+  border-top: 2px dashed #ccc;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.Buslisting-dot {
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Buslisting-duration-text {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333;
+}
+
+.Buslisting-operator {
+  text-align: left;
+  max-width: 250px;
+}
+
+.Buslisting-operator-name {
+  font-weight: bold;
+  font-size: 17px;
+  color: #1a1a1a;
+}
+
+.Buslisting-operator-type {
+  font-size: 13px;
+  color: #d2691e;
+  margin: 4px 0;
+}
+
+.Buslisting-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+
+}
+
+.Buslisting-rating-badge {
+  background: #28a745;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.Buslisting-icons {
+  font-size: 15px;
+}
+.Buslisting-icons img {
+  margin: 2px;
+}
+.Buslisting-extra {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.Buslisting-price {
+  text-align: right;
+}
+
+.Buslisting-price-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.Buslisting-price-strike {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.Buslisting-price-final {
+  color: #d9534f;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.Buslisting-button {
+  background: linear-gradient(90deg, #053355 0%, #3f51b5 100%);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s ease;
+}
+
+.Buslisting-button:hover {
+  opacity: 0.9;
+}
+
+.Buslisting-belowItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #ccc;
+  margin-top: 12px;
+  padding-top: 8px;
+  flex-wrap: wrap; 
+}
+
+.Buslisting-belowItems-left {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.Buslisting-belowItems-right {
+  display: flex;
+}
+
+.Buslisting-belowItems-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;   /* remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.Buslisting-belowItems-item {
+  font-size: 12px;
+  color: #007bff;
+  position: relative;
+  padding-left: 10px; /* space for custom bullet */
+}
+
+.Buslisting-belowItems-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+/* Below items container (tabs row) */
+.Buslisting-belowItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.Buslisting-belowItems-left {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #007bff;
+  gap: 6px;
+}
+
+.Buslisting-belowItems-left img {
+  width: 16px;
+  height: auto;
+}
+
+/* Tab list */
+.Buslisting-belowItems-list {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Buslisting-belowItems-item {
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 4px;
+  font-size: 14px;
+  padding-left: 10px; /* space for custom bullet */
+  font-weight: 500;
+}
+
+.Buslisting-belowItems-item:hover {
+  color: #007bff;
+}
+
+.Buslisting-belowItems-item.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Boarding & Dropping Points container */
+.Buslisting-boardingPoints {
+  display: flex;
+  gap: 40px;
+  margin-top: 12px;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  /* border-radius: 6px; */
+}
+
+.Buslisting-boarding-column {
+  flex: 1;
+}
+
+.Buslisting-boarding-column h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 700;
+}
+
+.Buslisting-boarding-column ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.Buslisting-boarding-column li {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+/* =============================
+   AMENITIES SECTION
+   ============================= */
+
+.Buslisting-amenities {
+  margin-top: 12px;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  /* border-radius: 6px; */
+}
+
+.Buslisting-amenities h4 {
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #333;
+  font-weight: 700;
+}
+
+.Buslisting-amenities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Buslisting-amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  flex: 0 1 calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.Buslisting-amenity-item img {
+  width: 20px;
+  height: 20px;
+}
+.Buslisting-AmenitiesIcon {
+  color: #12AD2B;
+  font-size: 20px !important;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.Buslisting-cancellation {
+  display: flex;
+  gap: 40px;
+  margin-top: 12px;
+  padding: 16px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  /* border-radius: 6px; */
+  flex-wrap: wrap;
+}
+
+.Buslisting-cancellation-left {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.Buslisting-cancellation-right {
+  flex: 1;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.Buslisting-cancellation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.Buslisting-cancellation-table th,
+.Buslisting-cancellation-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.Buslisting-cancellation-table th {
+  background: #555;
+  color: #fff;
+}
+
+
+
+/* Default: hide mobile layout on desktop */
+
+.Buslisting{
+  display: block;
+}
+.BuslistingMobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .Buslisting{
+  display: none;
+}
+.BuslistingMobile{
+  display: block;
+}
+  .BuslistingMobile-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px;
+    background: white;
+    display: block;
+  }
+
+  .BuslistingMobile-topHeader {
+    padding: 12px;
+    font-family: 'Arial', sans-serif;
+    background: white;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .BuslistingMobile-headerRoute {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:15px;
+    background-color: #ffffff;
+  }
+    .BuslistingMobile-routeInfo {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+
+  .BuslistingMobile-backArrow {
+    font-size: 22px;
+    color: #1e60d1;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+   .BuslistingMobile-route {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+
+ .BuslistingMobile-date {
+    font-size: 13px;
+    color: #777;
+    margin-top: 2px;
+  }
+
+  .BuslistingMobile-icons {
+    display: flex;
+    gap: 12px;
+    font-size: 20px;
+    color: #555;
+    flex-shrink: 0;
+  }
+  
+  .BuslistingMobile-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .BuslistingMobile-sortTabs {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5d6d7e;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 12px;
+  }
+
+  .BuslistingMobile-sortTabs > div {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 8px;
+    cursor: pointer;
+  }
+
+  .BuslistingMobile-sortTabs > .active {
+    color: #1e60d1;
+    border-bottom: 2px solid #1e60d1;
+  }
+
+  .BuslistingMobile-resultsFilterRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .BuslistingMobile-busCount {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .BuslistingMobile-toggleWrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .BuslistingMobile-toggle {
+    width: 38px;
+    height: 22px;
+    border-radius: 15px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    position: relative;
+  }
+
+  .BuslistingMobile-toggle-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #555;
+    position: absolute;
+    right: 2px;
+  }
+
+  .BuslistingMobile-filterChips {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .BuslistingMobile-chip {
+    padding: 6px 12px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+  }
+
+  /* Responsive visibility rules */
+  .BuslistingMobile {
+    display: block;
+  }
+
+  .Buslisting {
+    display: none !important;
+  }
+
+  .BuslistingMobile-recommended {
+    background: #e6efff;
+    color: #195ecb;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .BuslistingMobile-cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .BuslistingMobile-operator {
+    font-size: 15px;
+  }
+
+  .BuslistingMobile-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 13px;
+  }
+
+  .BuslistingMobile-star {
+    background: #1dbf73;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+
+  .BuslistingMobile-priceSection {
+    text-align: right;
+    font-size: 13px;
+  }
+
+  .BuslistingMobile-startingFrom {
+    color: #333;
+    font-weight: 500;
+  }
+
+  .BuslistingMobile-price {
+    color: #de1c22;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .BuslistingMobile-seatsLeft {
+    color: #195ecb;
+    font-weight: 500;
+  }
+
+  .BuslistingMobile-timings {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 8px;
+    font-size: 15px;
+  }
+
+  .BuslistingMobile-duration {
+    color: #888;
+    font-size: 13px;
+  }
+
+  .BuslistingMobile-iconsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .BuslistingMobile-iconsRow img {
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .BuslistingMobile-seatsCount {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+  .BuslistingMobile-liveTracking {
+    display: flex;
+    align-items: center;
+    color: #195ecb;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .BuslistingMobile-liveTracking img {
+    height: 16px;
+    margin-right: 5px;
+  }
+
+  .BuslistingMobile-footer {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+
+  .BuslistingMobile-dot {
+    height: 7px;
+    width: 7px;
+    background-color: #195ecb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+  }
+}
+

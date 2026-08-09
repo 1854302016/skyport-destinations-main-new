@@ -1,0 +1,1047 @@
+.busPreBook {
+  display: block;
+}
+.busPreBooking_MainBg {
+  background: linear-gradient(
+    20deg,
+    rgb(247, 48, 48) 20%,
+    #053355  100%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.busPreBooking_Main {
+  position: relative;
+  width: 100%;
+}
+.busPreBooking_Containers {
+  padding-top: 12px;
+}
+.busPreBooking_ReviewBooking {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 18px;
+}
+.busPreBooking_reviewBook {
+  display: flex;
+  align-items: center;
+}
+.busPreBooking_reviewBook h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 !important;
+}
+.busPreBooking_reviewBook h4 {
+  font-size: 13px;
+  margin: 0 !important;
+}
+.busPreBooking_busContainor {
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+}
+.busPreBooking_busDetails {
+  background-color: #f9fdfd;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  color: black;
+  position: relative;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+.busPreBooking-name {
+  max-width: 100%;
+  white-space: normal;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  /* cursor: pointer; */
+}
+
+.busPreBooking_rowCols {
+  margin-top: 10px;
+  padding: 10px;
+}
+.busPreBooking-route {
+  display: flex;
+  gap: 10px;
+  /* align-items: center; */
+}
+
+.busPreBooking-busIcon {
+  font-size: 35px;
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5px;
+}
+
+.busPreBooking-routeTitle {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.busPreBooking-dateTag {
+  background-color: #f6f2e7;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.busPreBooking-timeBlock {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 8px;
+}
+
+.busPreBooking-timeItem {
+  text-align: center;
+}
+
+.busPreBooking-timeLabel {
+  font-size: 12px;
+  color: #777;
+  font-weight: 500;
+}
+
+.busPreBooking-timeValue {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.busPreBooking-routeVisualBlock {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.busPreBooking-lineWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 6px; */
+}
+
+.busPreBooking-circle {
+  width: 6px;
+  height: 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+.busPreBooking-line {
+  width: 50px;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.busPreBooking-busIconInline {
+  font-size: 16px;
+  color: #000;
+}
+
+.busPreBooking-duration {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.busPreBooking-seatTag {
+  padding: 2px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f7f3;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.busPreBooking-addressBlock {
+  background: #f9f9f9;
+  border-left: 3px solid #ddd;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.busPreBooking-addressTimeLabel {
+  color: #666;
+  font-size: 12px;
+  background: #e3edf5;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.busPreBooking-addressRow {
+  padding: 10px;
+  margin: 5px;
+}
+.busPreBooking-address {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+  display: block;
+  width: 82%;
+  margin-bottom: 10px;
+}
+.busPreBooking-busOperatorCol {
+  /* flex-basis: 35%; */
+  flex-grow: 0;
+  max-width: 35%;
+  margin-top: 12px;
+  border-left: 1px solid #e4e4e4;
+  padding-left: 20px;
+}
+.busPreBooking-time {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  display: block;
+  margin-right: 6px;
+}
+.busPreBooking_GSTInfo {
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  padding: 16px;
+}
+.busPreBooking_GSTContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.busPreBooking_boldFont {
+  font-weight: 500;
+}
+.busPreBooking_gstFields {
+  margin-top: 15px;
+}
+.busPreBooking_adultItemRow {
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.busPreBooking_label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+input.busPreBooking_input {
+  padding: 0 15px;
+  width: 100%;
+  height: 40px;
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.2s;
+  background-color: #fff;
+  color: #222;
+}
+
+.busPreBooking_insurance-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+}
+
+.busPreBooking_insurance-header {
+  /* background: linear-gradient(20deg, rgb(247, 48, 48) 20%, #053355  100%); */
+  background: #e3edf5;
+  /* color: white; */
+  width: 100%;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.busPreBooking_insurance-title {
+  font-size: 15px;
+  font-weight: 600;
+  /* color: white; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.busPreBooking_insurance-icon {
+  font-size: 20px;
+}
+
+.busPreBooking_insurance-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.busPreBooking_insurance-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.busPreBooking_chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.busPreBooking_chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.busPreBooking_insurance-body {
+  margin-top: 15px;
+}
+
+.busPreBooking_insurance-terms {
+  font-size: 13px;
+  color: #666;
+  margin: 5px 0 15px;
+}
+
+.busPreBooking_insurance-terms a {
+  color: #5b42d4;
+  text-decoration: underline;
+}
+
+.busPreBooking_insurance-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.busPreBooking_insurance-card {
+  /* background: #fff; */
+  background-color: #f5f5f57c;
+
+  border: 1px solid #ddd;
+  flex: 1 1 155px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  min-width: 150px;
+}
+
+.busPreBooking_insurance-card-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.busPreBooking_insurance-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.busPreBooking_insurance-card-value {
+  font-size: 12px;
+  color: #333;
+}
+
+.busPreBooking_insurance-card-sub {
+  font-size: 11px;
+  color: #999;
+  margin-top: 3px;
+}
+
+.busPreBooking_insurance-options label {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  gap: 10px;
+}
+
+.busPreBooking_insurance-radio-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.busPreBooking_insurance-highlight {
+  background: #d4f4d2;
+  font-size: 12px;
+  color: #2d7037;
+  padding: 6px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.busPreBooking_continue-btn {
+  width: 30%;
+  font-size: 18px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 40px;
+  display: block;
+  margin: 30px auto;
+  color: #ffffff;
+  background: linear-gradient(
+    20deg,
+    rgb(247, 48, 48) 20%,
+    #053355  100%
+  );
+  cursor: pointer;
+  border: none !important;
+}
+
+.busPreBooking_busPreBooking-InsurancePadding {
+  padding: 15px;
+}
+.busPreBooking_InsurancePadding {
+  padding: 0 20px;
+}
+.busPreBook {
+  display: block;
+}
+.busPreBookMobile-wrapper {
+  display: none;
+}
+.busTravellerDetails-container {
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: sans-serif;
+  background: #fff;
+  /* max-width: 860px; */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.busTravellerDetails-header {
+  background-color: #e6f0ff;
+  padding: 10px 15px;
+  border-radius: 6px 6px 0 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.busTravellerDetails-note {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.busTravellerDetails-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.busTravellerDetails-label {
+  font-weight: bold;
+  width: 50px;
+}
+
+.busTravellerDetails-input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.busTravellerDetails-title {
+  width: 80px;
+}
+
+.busTravellerDetails-age {
+  width: 60px;
+}
+
+.busTravellerDetails-seat {
+  background-color: #fdebed;
+  color: #c4455c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.busTravellerDetails-agree {
+  font-size: 13px;
+  color: #333;
+}
+
+.busTravellerDetails-agree input {
+  margin-right: 6px;
+}
+
+.busTravellerDetails-agree a {
+  color: #007bff;
+  margin: 0 3px;
+  text-decoration: none;
+}
+.busTravellerDetails-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.busTravellerDetails-mobileWrapper,
+.busPreBooking_email-section {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.busTravellerDetails-mobileWrapper {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.busTravellerDetails-mobileWrapper p {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.busTravellerDetails-mobileInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  gap: 8px;
+  background: #f9f9f9;
+}
+
+.busTravellerDetails-mobileInput i {
+  color: #555;
+  font-size: 16px;
+}
+
+.busTravellerDetails-mobileInput input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
+}
+
+.busPreBooking_email-label {
+  font-weight: 500 !important;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 0 !important;
+}
+
+.busPreBooking_email-info {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.busPreBooking_email-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Modal backdrop (dimming background) */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal-box {
+  background: #fff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Heading and paragraph */
+.modal-box h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #222;
+}
+
+.modal-box p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #555;
+}
+
+/* Seat info section */
+.seat-details {
+  margin-bottom: 20px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.seat-info {
+  margin-bottom: 8px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Buttons container */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Buttons */
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #ddd;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #218838;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .busPreBookMobile-wrapper {
+    padding: 16px;
+    background: #f5f8fc;
+    display: block;
+  }
+  .busPreBook {
+    display: none;
+  }
+  .busPreBookMobile-header {
+    margin-bottom: 8px;
+  }
+  .busback-icon {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  .busPreBookMobile-headerText {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .busPreBookMobile-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .busPreBookMobile-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .busPreBookMobile-date {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .busPreBookMobile-boardCard {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  .busPreBookMobile-boardTimeRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .busPreBookMobile-timeColumn {
+    flex: 1;
+    text-align: center;
+  }
+  .busPreBookMobile-city {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+  }
+
+  .busPreBookMobile-time {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .busPreBookMobile-point {
+    font-size: 13px;
+    color: #555;
+    margin-top: 2px;
+  }
+  .busPreBookMobile-durationWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12px;
+  }
+  .busPreBookMobile-durationLine {
+    width: 40px;
+    height: 1px;
+    background-color: #ccc;
+    position: relative;
+    top: 14px;
+  }
+
+  .busPreBookMobile-duration {
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .busPreBookMobile-dotLine {
+    width: 50px;
+    height: 1px;
+    background: #ccc;
+    margin: 4px auto;
+    position: relative;
+  }
+
+  .busPreBookMobile-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2d72d9;
+    border-radius: 50%;
+    margin: 6px 0;
+  }
+  .busPreBookMobile-durationText {
+    font-size: 12px;
+    color: #444;
+    margin-top: 4px;
+  }
+
+  .busPreBookMobile-points {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .busPreBookMobile-pickDrop {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .busPreBookMobile-pickDrop p {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #7c7c7c;
+  }
+  .busPreBookMobile-operatorCard {
+    border: 1px solid #1976d2;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  .busPreBookMobile-operatorRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .busPreBookMobile-busType {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .busPreBookMobile-travellerInfo h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .busPreBookMobile-note {
+    background: #e6f0fc;
+    color: #1976d2;
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .busPreBookMobile-passengerCard {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .busPreBookMobile-gender {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .busPreBookMobile-gender button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .busPreBookMobile-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #1a1a2e;
+    color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-top: 16px;
+  }
+
+  .busPreBookMobile-seatInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .busPreBookMobile-seat {
+    font-size: 14px;
+    color: #ff9999;
+  }
+
+  .busPreBookMobile-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .busPreBookMobile-btn {
+    background: #ff6b00;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+  }
+  .busPreBookMobile-travellerSection {
+    padding: 16px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .busPreBookMobile-travellerTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .busPreBookMobile-travellerNote {
+    background: #eaf6ff;
+    font-size: 12px;
+    color: #007bc1;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .busPreBookMobile-travellerNoteIcon {
+    font-size: 16px;
+  }
+
+  .busPreBookMobile-travellerCard {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .busPreBookMobile-adultHeader {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .busPreBookMobile-seatTag {
+    font-size: 13px;
+    background: #fff1f1;
+    color: #ff5e5e;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+
+  .busPreBookMobile-genderSelector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .busPreBookMobile-genderBtn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    background: #f5f5f5;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .busPreBookMobile-inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+
+  .busPreBookMobile-inputGroup label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .busPreBookMobile-inputGroup input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .busPreBookMobile-nameAgeRow {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+  }
+
+  .busPreBookMobile-nameAgeRow > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .busPreBookMobile-nameAgeRow label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .busPreBookMobile-nameAgeRow input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  .busPreBookMobile-priceBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    z-index: 10;
+  }
+
+  .busPreBookMobile-guestInfo {
+    font-size: 14px;
+    color: #ececec;
+    margin-bottom: 4px;
+  }
+
+  .busPreBookMobile-priceBar button {
+    background: #053355 ;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+  }
+}

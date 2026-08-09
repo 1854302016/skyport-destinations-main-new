@@ -1,0 +1,137 @@
+/* ============================================================ */
+/* CLEAN COMPACT MOSAIC - INTERNATIONAL DESTINATIONS */
+/* ============================================================ */
+
+.compact-intl-section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.compact-intl-header {
+    margin-bottom: 30px;
+}
+
+.compact-intl-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #053355;
+    margin: 0;
+}
+
+/* Mosaic Grid Layout */
+.mosaic-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.mosaic-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none !important;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Row 1: 1/4, 2/4, 1/4 */
+.mosaic-card:nth-child(1) { grid-column: span 1; }
+.mosaic-card:nth-child(2) { grid-column: span 2; }
+.mosaic-card:nth-child(3) { grid-column: span 1; }
+
+/* Row 2: 2/4, 2/4 */
+.mosaic-card:nth-child(4) { grid-column: span 2; }
+.mosaic-card:nth-child(5) { grid-column: span 2; }
+
+.mosaic-card .img-box {
+    width: 100%;
+    height: 100%;
+}
+
+.mosaic-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mosaic-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.mosaic-card .card-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: capitalize;
+}
+
+/* Hover Effect */
+.mosaic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.mosaic-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer Button */
+.mosaic-explore-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mosaic-explore-btn {
+    padding: 10px 30px;
+    border: 1px solid #053355;
+    border-radius: 25px;
+    color: #053355;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.mosaic-explore-btn:hover {
+    background: #053355;
+    color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .mosaic-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+    .mosaic-card:nth-child(n) { grid-column: span 1; }
+    .mosaic-card:nth-child(2),
+    .mosaic-card:nth-child(4),
+    .mosaic-card:nth-child(5) { grid-column: span 2; }
+}
+
+@media (max-width: 575px) {
+    .mosaic-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .mosaic-card {
+        height: 180px;
+    }
+    .compact-intl-header h2 {
+        font-size: 24px;
+    }
+}

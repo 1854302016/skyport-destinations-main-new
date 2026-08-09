@@ -1,0 +1,140 @@
+.destination-section_HOTEl_TG {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.modern_tabs_container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.modern_tab_btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px 24px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab_icon_circle {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.modern_tab_btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.modern_tab_btn.active {
+  background: #053355;
+  color: white;
+  border-color: #053355;
+  box-shadow: 0 10px 20px rgba(5, 51, 85, 0.2);
+}
+
+.modern_tab_btn.active .tab_icon_circle {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modern_tab_btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+.modern_dest_card {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 380px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dest_image_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dest_image_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.modern_dest_card:hover .dest_image_box img {
+  transform: scale(1.1);
+}
+
+.dest_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 1;
+}
+
+.dest_meta {
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+}
+
+.modern_dest_card:hover .dest_meta {
+  transform: translateY(0);
+}
+
+.dest_category {
+  color: #f2bc06;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.dest_name {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.dest_reviews {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+@media (max-width: 576px) {
+  .modern_tabs_container {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 10px 2px;
+    scrollbar-width: none;
+  }
+  .modern_tabs_container::-webkit-scrollbar { display: none; }
+  .modern_tab_btn { padding: 8px 18px; font-size: 13px; }
+  .modern_dest_card { height: 300px; }
+}
+

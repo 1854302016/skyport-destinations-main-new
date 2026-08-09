@@ -1,0 +1,452 @@
+/* ==========================================================================
+   POPULAR FLIGHT ROUTES - EXTRAORDINARY MOTION GRAPHICS LUXURY DEALS
+   Color Theme: Deep Midnight Navy (#0B2545, #061A33) & Electric Blue (#0066FF)
+   ========================================================================== */
+
+.popular-flight-routes-section {
+  padding: 80px 0 100px 0;
+  background: #F8FAFC;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Ambient Lighting */
+.popular-flight-routes-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.04) 0%, rgba(248, 250, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flash-deals-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Group Block */
+.flash-deals-group {
+  margin-bottom: 56px;
+}
+
+.flash-deals-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Header with Interactive Origin Selector */
+.flash-deals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.flash-deals-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.flash-deals-main-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #061A33;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.02em;
+}
+
+/* Animated Lightning Bolt */
+.flash-bolt-icon {
+  color: #0066FF;
+  font-size: 22px;
+  animation: flashPulse 1.8s infinite ease-in-out;
+  display: inline-flex;
+}
+
+@keyframes flashPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(0, 102, 255, 0.4));
+  }
+  50% {
+    transform: scale(1.22);
+    filter: drop-shadow(0 0 8px rgba(0, 102, 255, 0.8));
+  }
+}
+
+/* Interactive Origin Dropdown Badge */
+.origin-select-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0066FF;
+  cursor: pointer;
+  padding: 4px 14px;
+  border-radius: 14px;
+  background: #EEF5FF;
+  border: 1.5px solid #CCE2FF;
+  font-weight: 800;
+  font-size: 24px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.origin-select-badge:hover {
+  background: #0066FF;
+  border-color: #0066FF;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.origin-select-badge:hover .chevron-icon {
+  color: #FFFFFF !important;
+}
+
+.origin-select-badge .chevron-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: #0066FF;
+}
+
+.origin-select-badge .chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Origin Dropdown Menu */
+.origin-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(11, 37, 69, 0.16);
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  padding: 8px;
+  min-width: 180px;
+  z-index: 100;
+  animation: dropdownFade 0.2s ease-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.origin-dropdown-item {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0B2545;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.origin-dropdown-item:hover,
+.origin-dropdown-item.active {
+  background: #F0F7FF;
+  color: #0066FF;
+}
+
+/* View More Deals Subtitle Pill */
+.flash-deals-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: #EEF5FF;
+  border: 1px solid #CCE2FF;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0066FF;
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.06);
+}
+
+/* ==========================================================================
+   FLIGHT ROUTE CARDS GRID & PILL CAPSULE DESIGN
+   ========================================================================== */
+
+.flash-routes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+/* Horizontal Capsule Card */
+.flight-deal-capsule-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 8px 10px 8px 12px;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(11, 37, 69, 0.04);
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.flight-deal-capsule-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 102, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.flight-deal-capsule-card:hover {
+  transform: translateY(-3px) scale(1.008);
+  border-color: #0066FF;
+  box-shadow: 0 14px 32px rgba(0, 102, 255, 0.14), 0 2px 6px rgba(11, 37, 69, 0.04);
+}
+
+.flight-deal-capsule-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Left Section: Airline Logo & Origin */
+.deal-left-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1.1;
+  min-width: 0;
+}
+
+/* Airline Emblem Box */
+.airline-emblem-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.flight-deal-capsule-card:hover .airline-emblem-box {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.airline-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Origin & Destination Text Details */
+.route-station-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.station-code-city {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0B2545;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.station-code-city .code-bold {
+  font-weight: 900;
+  color: #061A33;
+}
+
+.station-code-city .city-name {
+  font-weight: 600;
+  color: #475569;
+  font-size: 13px;
+}
+
+.station-sub-meta {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748B;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* Center Flight Trajectory Area with Motion Plane */
+.deal-center-flight-path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.plane-motion-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #EEF5FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0066FF;
+  font-size: 18px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.12);
+}
+
+.flight-deal-capsule-card:hover .plane-motion-icon-wrap {
+  background: #0066FF;
+  color: #FFFFFF;
+  transform: translateX(4px) scale(1.12);
+  box-shadow: 0 6px 16px rgba(0, 102, 255, 0.35);
+}
+
+/* Card Right Destination */
+.deal-destination-info {
+  display: flex;
+  align-items: center;
+  flex: 1.1;
+  min-width: 0;
+  padding-left: 6px;
+}
+
+/* Right Price Action Capsule Button (Electric Royal Blue & Deep Navy Gradient) */
+.deal-price-action-pill {
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%);
+  color: #FFFFFF !important;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.32);
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  min-width: 105px;
+}
+
+.deal-price-action-pill::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 80%
+  );
+  transform: rotate(25deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.flight-deal-capsule-card:hover .deal-price-action-pill {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.45);
+  transform: scale(1.03);
+}
+
+.flight-deal-capsule-card:hover .deal-price-action-pill::after {
+  transform: rotate(25deg) translateY(100%);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .flash-routes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .flash-routes-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .popular-flight-routes-section {
+    padding: 50px 0 70px 0;
+  }
+
+  .flash-deals-main-title {
+    font-size: 22px;
+  }
+
+  .origin-select-badge {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flight-deal-capsule-card {
+    border-radius: 24px;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .deal-left-info, .deal-destination-info {
+    flex: auto;
+  }
+
+  .deal-price-action-pill {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .airline-emblem-box {
+    width: 40px;
+    height: 40px;
+  }
+}

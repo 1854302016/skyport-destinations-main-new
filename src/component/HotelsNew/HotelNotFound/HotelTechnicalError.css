@@ -1,0 +1,46 @@
+.technicalErrorContainer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.technicalErrorIcon {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.technicalErrorTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.technicalErrorMessage {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.technicalErrorActions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.technicalErrorButton {
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.technicalErrorButton.secondary {
+  background: #6c757d;
+}

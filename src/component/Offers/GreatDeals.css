@@ -1,0 +1,173 @@
+.great-deals {
+    padding: 30px 0;
+    padding-top: 30px;
+}
+
+.great-deals .tittle {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.great-deals .tittle h3 {
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.great-deals .coupon .li {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.great-deals .coupon-inner {
+    /* padding: 30px 0; */
+    padding-bottom: 0px;
+    border: 1px solid #e9e9e9;
+    position: relative;
+    float: left;
+    width: 100%;
+    /* display: inline-block; */
+    top: 0px;
+    overflow: hidden;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+.great-deals .coupon-inner .top-tag {
+    /* display: inline-block; */
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+
+.great-deals .coupon-inner .ribn-red {
+    width: 115px;
+    float: left;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background: url("https://demoxml.com/html/comre/images/ribn-red.png") right no-repeat;
+    padding-right: 15px;
+}
+
+.great-deals .coupon-inner .ribn-red span {
+    background: #f01b3b;
+    line-height: 24px;
+    display: inline-block;
+    width: 100%;
+}
+
+.great-deals .coupon-inner .star {
+    float: right;
+    margin-top: -5px;
+    font-size: 26px;
+    color: #ef203f;
+    margin-right: 25px;
+}
+
+.great-deals .coupon-inner .c-img {
+    /* display: inline-block; */
+    width: 100%;
+    position: relative;
+    top: 0px;
+    /* padding: 0 25px; */
+    /* margin-top: 10px; */
+}
+
+.great-deals .coupon-inner .c-img .offer_img{
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+.great-deals .coupon-inner .head {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #222222;
+    line-height: 26px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-inline: 10px;
+}
+
+.great-deals p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Lato', sans-serif;
+}
+
+.great-deals .text-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.great-deals .coupon-inner .btn {
+    background: #002b5e;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0px;
+    display: inline-block;
+    padding: 6px 25px;
+    /* margin: 0 auto;
+    margin-top: 15px; */
+}
+
+.great-deals .btm-info {
+    display: inline-block;
+    width: 100%;
+    background: #f7f7f7;
+    height: 50px;
+    margin-top: 35px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -5px;
+    display: none;
+}
+
+.great-deals .btm-info li {
+    padding: 0px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #777777;
+    font-size: 11px;
+    border-left: 1px solid #e5e5e5;
+    padding-bottom: 5px;
+}
+
+.great-deals .coupon li {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.great-deals .btm-info li:nth-child(1) {
+    text-transform: none;
+    color: #222222;
+    font-size: 14px;
+    line-height: 50px;
+    border: none;
+}
+
+.great-deals .btm-info li svg {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    margin-right: 5px;
+    /* margin-top: 10px; */
+}
+
+.great-deals .btm-info li:nth-child(1) svg {
+    width: auto;
+    color: #002b5e;
+}

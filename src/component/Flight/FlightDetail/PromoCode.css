@@ -1,0 +1,236 @@
+.offer_promoContainers_desktop {
+  display: block;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1) !important;
+  margin-top: 20px;
+}
+.offer_promoContainers_mobile {
+  display: none;
+}
+
+@media (max-width: 767.9px) {
+  .offer_promoContainers_desktop {
+    display: none;
+  }
+  .offer_promoContainers_mobile {
+    display: block;
+  }
+}
+
+.offer_promoContainers_mobile .prmo_bxaht {
+  border-radius: 15px !important;
+  box-shadow: 0px 3px 6px #363c580d !important;
+  border: 1px solid #d7dae0 !important;
+}
+.offer_promoContainers_mobile .prmo_bxaht {
+  border: 1px solid #d7dae0;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 3px 6px #363c580d;
+  overflow: hidden;
+  margin: 10px auto;
+  padding-bottom: 15px;
+}
+.offer_promoContainers_mobile ._tophecpn {
+  background: transparent
+    linear-gradient(262deg, #ff9ba048 0%, #b4cef04d 55%, #8cc3da4f 100%) 0% 0%
+    no-repeat;
+  border-radius: 7px 7px 0 0;
+  padding: 10px 15px;
+  align-items: center;
+}
+.offer_promoContainers_mobile .gap-20 {
+  gap: 8px;
+}
+.offer_promoContainers_mobile .fnt-600 {
+  font-weight: 600;
+}
+.offer_promoContainers_mobile .cblack {
+  color: #000;
+}
+.offer_promoContainers_mobile .fnt-16 {
+  font-size: 16px;
+}
+.offer_promoContainers_mobile .cpn_mcoter {
+  padding: 10px 0 0;
+  margin: auto;
+  width: 92%;
+}
+.offer_promoContainers_mobile ._fcpnentr {
+  border: 1px solid #e1e1e1;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.offer_promoContainers_mobile ._fcpnentr input {
+  width: 80%;
+  border: 0;
+  outline: 0;
+  color: #000 !important;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.offer_promoContainers_mobile ._fcpnentr span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2196f3;
+  text-transform: capitalize;
+}
+.offer_promoContainers_mobile ._msgBx {
+  width: 100%;
+  font-size: 11px !important;
+  float: left;
+  color: #ff3131;
+  margin: 8px 0 4px 0;
+  padding-bottom: 11px;
+  margin: 0 !important;
+}
+.offer_promoContainers_mobile .clr-sucess {
+  color: #2fb380;
+}
+.offer_promoContainers_mobile .cpon_chbx {
+  margin-top: 0;
+  float: left;
+  overflow: auto;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  gap: 10px;
+}
+.offer_promoContainers_mobile .coupn_colap {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+.offer_promoContainers_mobile .cpon_chbx .radio-invrto {
+  margin: 0 !important;
+  font-weight: 500;
+  background: #f5f6f8db;
+  border-radius: 10px;
+}
+.offer_promoContainers_mobile .cpnbx .radio-invrto {
+  display: block;
+  position: relative;
+  font-weight: 600;
+  padding: 11px 16px 7px 40px;
+  cursor: pointer;
+  font-size: 13px;
+
+  margin-right: 17px;
+  user-select: none;
+  border: 1px solid #f5f6f8;
+}
+.offer_promoContainers_mobile .cpnbx .cpn-n {
+  padding: 4px 8px;
+  gap: 5px;
+  border: 1px dashed #d6dae2;
+  border-radius: 4px;
+  width: fit-content;
+  font-size: 14px;
+  background: #fff;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  line-height: 15px;
+  float: left;
+}
+.offer_promoContainers_mobile .cpnbx .z-con {
+  margin: 5px 0;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+}
+.offer_promoContainers_mobile .cpnbx .radio-invrto input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.offer_promoContainers_mobile input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 53%;
+  height: 53%;
+  margin: 20% auto;
+  border-radius: 50%;
+  outline: 0;
+}
+.offer_promoContainers_mobile .cpnbx .checkmark-invrto {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  height: 17px;
+  width: 17px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  background: #fff;
+}
+.offer_promoContainers_mobile .clr-blue {
+  color: #2196f3;
+}
+
+.removew_promocode_desktop {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 650px) {
+  .mobile_view_more_promo .popbx {
+    padding: 0px !important;
+  }
+}
+
+/* View More PromoCode  */
+
+.mobile_view_more_promo .poptitle {
+  margin: 0 15px;
+}
+.mobile_view_more_promo .poptitle img {
+  display: block;
+  max-width: 50px;
+}
+.mobile_view_more_promo .fnt-600 {
+  font-weight: 600;
+}
+.mobile_view_more_promo .fnt-20 {
+  font-size: 20px;
+}
+.mobile_view_more_promo .prmo_bxaht {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.promocodeWrap input{
+  color: #000;
+}
+
+.promo-apply-btn-desktop {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: none;
+  background: none;
+  color: #2196f3;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.promo-apply-btn-desktop:disabled {
+  color: #aeb4be;
+  cursor: not-allowed;
+}
+
+.promo-apply-btn-desktop:hover:not(:disabled) {
+  color: #0d87e9;
+  transform: scale(1.05);
+}
+

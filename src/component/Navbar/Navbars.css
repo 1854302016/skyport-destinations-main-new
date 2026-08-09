@@ -1,0 +1,498 @@
+/* ==========================================================================
+   TRUSTED FARE - MODERNIZED LUXURY NAVBAR
+   Color Theme: Deep Midnight Navy (#081E3F, #0B2545) & Electric Blue (#0066FF)
+   ========================================================================== */
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(11, 37, 69, 0.08);
+  box-shadow: 0 4px 20px rgba(11, 37, 69, 0.04);
+}
+
+.main-navbar-header {
+  min-height: 74px;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background: #FFFFFF !important;
+}
+
+.navbar-container-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Left Group: Hamburger Menu on the leftmost + Brand Logo right next to it */
+.navbar-left-group {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  order: 1 !important;
+}
+
+.topnav_menuIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0B2545;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.topnav_menuIcon:hover {
+  background: #0066FF;
+  border-color: #0066FF;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(0, 102, 255, 0.3);
+  transform: scale(1.04);
+}
+
+.topnav_menuIcon:hover svg,
+.topnav_menuIcon:hover .desk-icon-menu {
+  color: #FFFFFF !important;
+}
+
+.desk-icon-menu {
+  color: #0B2545 !important;
+  transition: color 0.2s ease;
+}
+
+/* Brand Logo */
+.navbar-brand-clean {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+}
+
+.logo-main {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand-clean:hover .logo-main {
+  transform: scale(1.02);
+}
+
+/* Right Group: In-Person Booking & My Account on the right */
+.navbar-right-group {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+  order: 2 !important;
+}
+
+/* In-Person Booking Pill Button */
+.btn-inperson {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  height: 44px !important;
+  padding: 0 20px !important;
+  background: #F0F7FF !important;
+  border: 1.5px solid #CCE2FF !important;
+  border-radius: 50px !important;
+  color: #0066FF !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.08) !important;
+  white-space: nowrap !important;
+}
+
+.btn-inperson:hover {
+  background: #0066FF !important;
+  color: #FFFFFF !important;
+  border-color: #0066FF !important;
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-inperson:hover .icon_blue {
+  color: #FFFFFF !important;
+}
+
+.btn-inperson .icon_blue {
+  display: flex !important;
+  align-items: center !important;
+  color: #0066FF !important;
+  font-size: 20px !important;
+  transition: color 0.2s ease !important;
+}
+
+/* Sign In / Account Pill Button */
+.btn-signin {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  height: 44px !important;
+  padding: 0 22px !important;
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.28) !important;
+  white-space: nowrap !important;
+}
+
+.btn-signin:hover {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%) !important;
+  box-shadow: 0 6px 22px rgba(0, 102, 255, 0.42) !important;
+  transform: translateY(-1px) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-signin .icon_blue {
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 20px !important;
+}
+
+.btn-signin .text {
+  color: #FFFFFF !important;
+}
+
+/* Account Dropdown on Hover/Click */
+.btn-signin .option-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(11, 37, 69, 0.14);
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  padding: 10px;
+  min-width: 190px;
+  z-index: 1200;
+  animation: fadeInDown 0.25s ease;
+}
+
+.btn-signin:hover .option-list {
+  display: block;
+}
+
+.btn-signin .first-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-signin .first-menu li {
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.btn-signin .first-menu li:hover {
+  background: #F0F7FF;
+}
+
+.btn-signin .first-menu .item-link {
+  color: #0B2545 !important;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.btn-signin .first-menu .left-sec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-signin .first-menu .left-sec svg {
+  color: #0066FF !important;
+  font-size: 18px;
+}
+
+/* Country Selector */
+.sharenation {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+._langview.b2cpanel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0B2545;
+  transition: all 0.2s ease;
+}
+
+._langview.b2cpanel:hover {
+  border-color: #0066FF;
+  background: #F0F7FF;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(11, 37, 69, 0.15);
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  padding: 8px;
+  min-width: 170px;
+  z-index: 1200;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-options .option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #0B2545;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-options .option:hover {
+  background: #F0F7FF;
+  color: #0066FF;
+}
+
+/* ==========================================================================
+   LEFT-SIDE DRAWER (Opens on the left side)
+   ========================================================================== */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(6, 26, 51, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1650;
+  animation: fadeIn 0.25s ease;
+}
+
+.sidebar.option-list.left-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: auto !important;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background: #FFFFFF;
+  box-shadow: 10px 0 50px rgba(11, 37, 69, 0.22);
+  z-index: 1700;
+  padding: 30px 24px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.option-list.left-sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.option-list.left-sidebar.close {
+  transform: translateX(-100%);
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #F1F5F9;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #0B2545 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.sidebar .close-btn:hover {
+  background: #0066FF;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+/* Mobile Sidenav */
+._sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #FFFFFF;
+  z-index: 1700;
+  box-shadow: 10px 0 40px rgba(11, 37, 69, 0.2);
+  padding: 24px 20px;
+  overflow-y: auto;
+}
+
+._opcMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 37, 69, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1650;
+}
+
+.closemenu_v3 {
+  font-size: 28px;
+  color: #0B2545;
+  text-decoration: none;
+  font-weight: 700;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.menu_trip_go_card {
+  background: linear-gradient(135deg, #0B2545 0%, #0066FF 100%);
+  border-radius: 18px;
+  padding: 18px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.menu_trip_go_card ._logSinup {
+  font-weight: 800;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.menu_trip_go_card ._logDt {
+  font-size: 12px;
+  color: #CCE2FF;
+}
+
+._sidMenu_tggg a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #0B2545;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+._sidMenu_tggg a:hover {
+  background: #F0F7FF;
+  color: #0066FF;
+}
+
+._sidMenu_tggg ._bxIcn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+._sidMenu_tggg ._hTxt {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+._sidMenu_tggg ._mTxt {
+  font-size: 11px;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .btn-inperson .text {
+    display: none;
+  }
+  .btn-inperson {
+    padding: 0 12px;
+  }
+  .btn-signin {
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  .logo-main {
+    height: 38px;
+  }
+}

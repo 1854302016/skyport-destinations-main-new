@@ -1,0 +1,184 @@
+#wrapper {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    /* padding-top: 110px; */
+}
+
+.hoteldetail .content {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    float: left;
+    background: #fff;
+    overflow: hidden;
+}
+
+.hoteldetail .small-padding {
+    padding: 30px 0;
+}
+
+.hoteldetail .grey-blue-bg {
+    background: #ECF6F8;
+}
+
+.hoteldetail .scroll-nav-container {
+    padding-top: 110px;
+}
+
+
+
+
+
+.hoteldetail section {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.hoteldetail p {
+    margin: 0px !important;
+}
+
+.hoteldetail html,
+.hoteldetail body,
+.hoteldetail div,
+.hoteldetail span,
+.hoteldetail applet,
+.hoteldetail object,
+.hoteldetail iframe,
+.hoteldetail h1,
+.hoteldetail h2,
+.hoteldetail h3,
+.hoteldetail h4,
+.hoteldetail h5,
+.hoteldetail h6,
+.hoteldetail p,
+.hoteldetail blockquote,
+.hoteldetail pre,
+.hoteldetail a,
+.hoteldetail abbr,
+.hoteldetail acronym,
+.hoteldetail address,
+.hoteldetail big,
+.hoteldetail cite,
+.hoteldetail code,
+.hoteldetail del,
+.hoteldetail dfn,
+.hoteldetail em,
+.hoteldetail font,
+.hoteldetail img,
+.hoteldetail ins,
+.hoteldetail kbd,
+.hoteldetail q,
+.hoteldetail s,
+.hoteldetail samp,
+.hoteldetail small,
+.hoteldetail strike,
+.hoteldetail strong,
+.hoteldetail sub,
+.hoteldetail sup,
+.hoteldetail tt,
+.hoteldetail var,
+.hoteldetail dl,
+.hoteldetail dt,
+.hoteldetail dd,
+.hoteldetail ol,
+.hoteldetail ul,
+.hoteldetail li,
+.hoteldetail fieldset,
+.hoteldetail form,
+.hoteldetail label,
+.hoteldetail legend,
+.hoteldetail table,
+.hoteldetail caption,
+.hoteldetail tbody,
+.hoteldetail tfoot,
+.hoteldetail thead,
+.hoteldetail tr,
+.hoteldetail th,
+.hoteldetail td {
+    border: none;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+/* @media only screen and (max-width: 769px) {
+
+    .containerformp html,
+    .containerformp body,
+    .containerformp div,
+    .containerformp span,
+    .containerformp applet,
+    .containerformp object,
+    .containerformp iframe,
+    .containerformp h1,
+    .containerformp h2,
+    .containerformp h3,
+    .containerformp h4,
+    .containerformp h5,
+    .containerformp h6,
+    .containerformp p,
+    .containerformp blockquote,
+    .containerformp pre,
+    .containerformp a,
+    .containerformp abbr,
+    .containerformp acronym,
+    .containerformp address,
+    .containerformp big,
+    .containerformp cite,
+    .containerformp code,
+    .containerformp del,
+    .containerformp dfn,
+    .containerformp em,
+    .containerformp font,
+    .containerformp img,
+    .containerformp ins,
+    .containerformp kbd,
+    .containerformp q,
+    .containerformp s,
+    .containerformp samp,
+    .containerformp small,
+    .containerformp strike,
+    .containerformp strong,
+    .containerformp sub,
+    .containerformp sup,
+    .containerformp tt,
+    .containerformp var,
+    .containerformp dl,
+    .containerformp dt,
+    .containerformp dd,
+    .containerformp ol,
+    .containerformp ul,
+    .containerformp li,
+    .containerformp fieldset,
+    .containerformp form,
+    .containerformp label,
+    .containerformp legend,
+    .containerformp table,
+    .containerformp caption,
+    .containerformp tbody,
+    .containerformp tfoot,
+    .containerformp thead,
+    .containerformp tr,
+    .containerformp th,
+    .containerformp td {
+        margin: 0;
+        padding: 0;
+    }
+} */
+
+.list-single-main-container .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}

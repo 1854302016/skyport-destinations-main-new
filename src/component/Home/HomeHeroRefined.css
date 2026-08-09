@@ -1,0 +1,531 @@
+/* ==========================================================================
+   TRUSTED FARE - HOME SECTIONS DESIGN SYSTEM
+   Color Scheme: Deep Navy (#081E3F, #0B2545) & Electric Blue (#0066FF)
+   ========================================================================== */
+
+:root {
+  --tf-navy-950: #041329;
+  --tf-navy-900: #061A33;
+  --tf-navy-800: #0B2545;
+  --tf-navy-700: #0E325D;
+
+  --tf-blue-600: #0056D6;
+  --tf-blue-500: #0066FF;
+  --tf-blue-400: #1A7BFF;
+  --tf-blue-300: #4D9BFF;
+  --tf-blue-100: #CCE2FF;
+  --tf-blue-50:  #EEF5FF;
+
+  --tf-cyan-400: #38BDF8;
+  --tf-cyan-100: #E0F2FE;
+
+  --tf-text-main: #0B2545;
+  --tf-text-muted: #64748B;
+  --tf-border: rgba(11, 37, 69, 0.08);
+  --tf-card-shadow: 0 10px 30px rgba(11, 37, 69, 0.06);
+  --tf-card-hover-shadow: 0 20px 48px rgba(11, 37, 69, 0.12);
+  --tf-blue-glow: 0 8px 24px rgba(0, 102, 255, 0.25);
+}
+
+.hero-main-wrapper {
+  background: #F8FAFC;
+  overflow-x: hidden;
+}
+
+/* Common Section Headers */
+.offers-refined-section, 
+.deals-refined-section, 
+.why-book-refined {
+  padding: 80px 0;
+  position: relative;
+}
+
+.offers-refined-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+.offers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.title-area h2,
+.gallery-main-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--tf-navy-800);
+  margin: 0;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.title-area h2 span,
+.gallery-main-title span.text-highlight {
+  color: var(--tf-blue-500);
+}
+
+.subtitle {
+  color: var(--tf-text-muted);
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.view-all-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--tf-blue-500);
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 9px 20px;
+  background: var(--tf-blue-50);
+  border: 1px solid var(--tf-blue-100);
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-all-premium:hover {
+  background: var(--tf-blue-500);
+  color: #FFFFFF !important;
+  border-color: var(--tf-blue-500);
+  box-shadow: var(--tf-blue-glow);
+  transform: translateX(4px);
+}
+
+/* Offer Cards - Modern Frosted Luxury */
+.offers-slider-container {
+  position: relative;
+  padding: 0 10px;
+}
+
+.offer-card-glass {
+  background: #FFFFFF;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--tf-card-shadow);
+  border: 1px solid var(--tf-border);
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.offer-card-glass:hover {
+  box-shadow: var(--tf-card-hover-shadow);
+  border-color: rgba(0, 102, 255, 0.25);
+  transform: translateY(-8px);
+}
+
+.offer-image-wrap {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.offer-card-glass:hover .offer-image-wrap img {
+  transform: scale(1.08);
+}
+
+.offer-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(11, 37, 69, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  z-index: 2;
+}
+
+.offer-content-pax {
+  padding: 22px;
+}
+
+.offer-meta h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--tf-navy-800);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.offer-meta p {
+  font-size: 13.5px;
+  color: var(--tf-text-muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.offer-footer-pax {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.promo-code-pill {
+  background: var(--tf-blue-50);
+  border: 1.5px dashed var(--tf-blue-400);
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  color: var(--tf-blue-600);
+  font-size: 12.5px;
+}
+
+.tag-icon {
+  font-size: 13px;
+  color: var(--tf-blue-500);
+}
+
+.book-btn-mini {
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.book-btn-mini:hover {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 102, 255, 0.35);
+  color: #FFFFFF;
+}
+
+/* Slider Controls */
+.offers-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid var(--tf-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tf-navy-800);
+  font-size: 15px;
+  box-shadow: 0 6px 20px rgba(11, 37, 69, 0.12);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.offers-nav-btn:hover {
+  background: var(--tf-blue-500);
+  color: #FFFFFF;
+  border-color: var(--tf-blue-500);
+  box-shadow: var(--tf-blue-glow);
+}
+
+.offers-prev { left: -16px; }
+.offers-next { right: -16px; }
+
+/* Popular Destinations Showcase Enhancement */
+.pop-dest-section-v2 {
+  padding: 90px 0;
+  background: #FFFFFF;
+}
+
+.v2-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.v2-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--tf-navy-800);
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.v2-title span {
+  color: var(--tf-blue-500);
+}
+
+.v2-tabs-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.v2-tab {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--tf-text-muted);
+  padding: 10px 0;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.v2-tab.is-active {
+  color: var(--tf-blue-500);
+}
+
+.v2-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tf-blue-500);
+  border-radius: 20px;
+}
+
+.v2-showcase {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.v2-left-hero {
+  height: 580px;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(11, 37, 69, 0.25);
+  position: relative;
+}
+
+.v2-hero-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.v2-hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.v2-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 36px 40px;
+  background: linear-gradient(to top, rgba(6, 26, 51, 0.95) 0%, rgba(11, 37, 69, 0.45) 60%, transparent 100%);
+  color: #FFFFFF;
+}
+
+.v2-hero-overlay h3 {
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+}
+
+.v2-hero-overlay p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--tf-cyan-400);
+  margin: 0;
+}
+
+.v2-city-name {
+  font-size: 46px;
+  font-weight: 950;
+  color: var(--tf-navy-800);
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+}
+
+.v2-para {
+  font-size: 16px;
+  color: var(--tf-text-muted);
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.v2-cta {
+  background: linear-gradient(135deg, #0066FF 0%, #0B2545 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--tf-blue-glow);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.v2-cta:hover {
+  background: linear-gradient(135deg, #0056D6 0%, #061A33 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.38);
+  color: #FFFFFF;
+}
+
+.v2-grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.v2-mini-card {
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.v2-mini-card:hover {
+  transform: translateY(-6px);
+}
+
+.v2-mini-img-box {
+  height: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--tf-card-shadow);
+  border: 1px solid var(--tf-border);
+}
+
+.v2-mini-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.v2-mini-card:hover .v2-mini-img-box img {
+  transform: scale(1.1);
+}
+
+.v2-mini-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(6, 26, 51, 0.9));
+  color: #FFFFFF;
+}
+
+.v2-mini-label h4 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 2px;
+  color: #FFFFFF;
+}
+
+.v2-mini-label span {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--tf-cyan-400);
+  text-transform: uppercase;
+}
+
+/* Trust Pillars (Why Book) */
+.why-book-refined {
+  background: #FFFFFF;
+  border-top: 1px solid var(--tf-border);
+}
+
+.why-pillar-card {
+  background: #F8FAFC;
+  border: 1px solid var(--tf-border);
+  border-radius: 20px;
+  padding: 36px 24px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-pillar-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(0, 102, 255, 0.2);
+  box-shadow: var(--tf-card-hover-shadow);
+  transform: translateY(-6px);
+}
+
+.why-pillar-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: var(--tf-blue-50);
+  border: 1px solid var(--tf-blue-100);
+  color: var(--tf-blue-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 26px;
+  transition: all 0.3s ease;
+}
+
+.why-pillar-card:hover .why-pillar-icon {
+  background: var(--tf-blue-500);
+  color: #FFFFFF;
+  box-shadow: var(--tf-blue-glow);
+  transform: scale(1.08);
+}
+
+.why-pillar-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--tf-navy-800);
+  margin-bottom: 10px;
+}
+
+.why-pillar-desc {
+  font-size: 13.5px;
+  color: var(--tf-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .v2-showcase { grid-template-columns: 1fr; }
+  .v2-left-hero { height: 420px; }
+  .v2-grid-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .offers-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .title-area h2 { font-size: 26px; }
+  .v2-title { font-size: 26px; }
+  .v2-grid-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,27 @@
+.theme-bg-white {
+    background-color: #ffffff;
+}.theme-text-secondary {
+    color: #002d5b;
+}.deals-tab {
+    box-shadow: 0 0rem 0.8rem rgba(52, 53, 52, 0.15);
+    border-radius: 0.5rem;
+    flex-wrap: nowrap;}
+.deals-tab li .nav-link {
+    color: #343534;
+    padding: 1rem;
+}.deals-tab li .nav-link.active {
+    background-color: transparent;
+    border-bottom: 2px solid #002d5b;
+    border-radius: 0;
+    color: #002d5b;
+}.theme-box-shadow {
+    box-shadow: 0 0rem 0.8rem rgba(52, 53, 52, 0.15);
+}.theme-border-radius {
+    border-radius: 0.5rem;
+}
+
+.theme-text-accent-one {
+    color: #343534;
+}.theme-text-accent-two {
+    color: #9f9f9f;
+}

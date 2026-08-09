@@ -1,0 +1,193 @@
+.TG_new_FOOT p {
+  margin-bottom: 0px !important;
+}
+.TG_new_FOOT {
+  padding: 50px 0px 25px 0px;
+  background-color: #ffaaaa0a;
+  /* background:#f730300a; */
+  /* background:#f5f8fa; */
+}
+.brqNKE {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.hrapha {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  color: rgb(26, 26, 26);
+  text-decoration: none;
+  cursor: auto;
+}
+.flex-wrap.flex-wrap {
+  flex-wrap: wrap;
+}
+.ekQgDI {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+}
+.c-neutral-700.c-neutral-700 {
+  color: gray;
+}
+.jTiBfs {
+  text-decoration: none;
+}
+.maxContent {
+  min-width: max-content;
+}
+.fw-500.fw-500 {
+  font-weight: 400;
+}
+
+.lh-16.lh-16 {
+  line-height: 16px;
+}
+.fs-12.fs-12 {
+  font-size: 12px;
+}
+.TG_new_Inner_foot {
+  font-size: 12px;
+  color: #646464;
+  margin: 0;
+  font-weight: 400;
+}
+
+.rupay {
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+  width: 88px;
+  height: 31px;
+  background-position: -145px -70px;
+}
+.amex {
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+  width: 39px;
+  height: 38px;
+  background-position: -157px -315px;
+}
+.dinersclub {
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+  width: 54px;
+  height: 54px;
+  background-position: -151px -261px;
+}
+.visacard {
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+  width: 76px;
+  height: 24px;
+  background-position: -395px -9px;
+}
+.mastercard {
+  width: 59px;
+  height: 47px;
+  background-position: -146px -107px;
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+}
+.imgouter {
+  /* border-left: 1px solid #ebebeb; */
+  padding: 3px 10px;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+.incradibleindia {
+  width: 92px;
+  height: 37px;
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+  background-position: -393px -41px;
+}
+.iata {
+  width: 52px;
+  height: 37px;
+  background-position: -153px -216px;
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+}
+.tafi {
+  width: 87px;
+  height: 37px;
+  background-position: -7px -251px;
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+}
+.maharashtrature {
+  width: 55px;
+  height: 42px;
+  background-position: -150px -162px;
+  background: url(https://dhiz4uvf5rpaq.cloudfront.net/in/V7/home-sprites.d377e555bba5fb36cb52.png)
+    no-repeat;
+}
+
+.footer_copy_write_TGG {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.footer_phone_tgg {
+  display: none;
+}
+.TG_new_FOOT {
+  display: block;
+}
+.bottom-footer_TG {
+  display: block;
+}
+.footer_copywrite_tg {
+  display: block;
+  padding-top: 15px;
+  background: #f5f5f5;
+}
+@media (max-width: 767.98px) {
+  .footer_copy_write_TGG {
+    margin-top: 30px;
+  }
+  .footer_copywrite_tg {
+    display: none;
+  }
+  .bottom-footer_TG {
+    display: none;
+  }
+  .TG_new_FOOT {
+    display: none;
+  }
+  .footer_phone_tgg {
+    display: block;
+    background-color: #2554b4;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  .TG_new_FOOT {
+    padding: 20px 0px;
+  }
+}
+
+.css-1p4by0y {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  line-height: 24px;
+  color: #191d23;
+}
+.css-u4p24i {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.footer_security_imagess {
+  width: 40px;
+  height: 40px;
+}
+
+.footer_socials_imagess {
+  width: 20px;
+  height: 20px;
+}

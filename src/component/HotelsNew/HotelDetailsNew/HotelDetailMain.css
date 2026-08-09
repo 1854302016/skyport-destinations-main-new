@@ -1,0 +1,242 @@
+.hotel-detailMain .hotel-detailMain {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 7px #00000040;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+/* .hotel-detailMain .hotel-detailSubMain{
+    padding: 10px 15px;
+} */
+.hotel-detailMain .hotel-detailHeading {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 10px;
+}
+.hotel-detailMain .hotelSilder_totalFare {
+  display: flex;
+  width: 100%;
+}
+
+.hotel-detailMain .hotel-ColbigSilder {
+  padding-right: 10px;
+  width: 60%;
+}
+.hotel-detailMain .hotel-bigSilder img {
+  height: 225px; /* or any value you prefer */
+  object-fit: cover; /* ensures image is scaled properly */
+  border-radius: 10px;
+}
+
+.hotel-detailMain .hotel-ColtotalFare {
+  justify-content: flex-end;
+  width: 40%;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.hotel-detailMain .carousel-belowImag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+}
+.hotel-detailMain .carousel-smallImages {
+  border-radius: 10px;
+}
+.hotel-detailMain .hotel-totalFare {
+  display: flex;
+}
+.hotel-detailMain .hoteRoom-Usage {
+  width: 80%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3498db;
+  /* padding-top: 10px; */
+}
+.hotel-detailMain .hoteRoom-UsageCharges {
+  width: 50%;
+}
+.hotel-detailMain .hotel-Guests_Room {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 6px;
+}
+.hotel-detailMain .hotel-BookNowBtn {
+  background: #053355 ;
+  width: 100%;
+  padding: 10px 0px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+.hotel-detailMain .hotel-amenities {
+  display: flex;
+  gap: 10px;
+  padding: 4px 6px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.hotel-detailMain .free_amenitiesIcons {
+  font-size: 17px;
+  margin: 0 5px;
+  color: #3498db;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.carouselImage-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.carouselImageOverlay-text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.carouselImageOverlay-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* full image overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.hotelListingstylingDetail-name {
+  max-width: none !important;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .hotel-detailMain .hotel-detailHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    padding: 5px 0;
+  }
+
+  .hotel-detailMain .hotelSilder_totalFare {
+    flex-direction: column;
+  }
+
+  .hotel-detailMain .hotel-ColbigSilder,
+  .hotel-detailMain .hotel-ColtotalFare {
+    width: 100% !important;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .hotel-detailMain .hotel-bigSilder img {
+    height: 180px; 
+  }
+
+  .hotel-detailMain .carousel-belowImag {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: none;
+  }
+
+  .hotel-detailMain .hotel-totalFare {
+    flex-direction: column;
+  }
+
+  .hotel-detailMain .hoteRoom-Usage,
+  .hotel-detailMain .hoteRoom-UsageCharges {
+    width: 100% !important;
+  }
+
+  .hotel-detailMain .hotel-amenities {
+    flex-wrap: wrap;
+  }
+
+  .hotel-detailMain .hotel-BookNowBtn {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .hotel-detailHeading > div {
+    flex: 1 1 48%;
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .hotel-detailMain .hotel-detailHeading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hotel-detailMain .hotelSilder_totalFare {
+    flex-direction: column;
+  }
+
+  .hotel-detailMain .hotel-ColbigSilder,
+  .hotel-detailMain .hotel-ColtotalFare {
+    width: 100% !important;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .hotel-detailMain .hotel-bigSilder img {
+    height: auto; /* let it scale naturally */
+    max-height: 220px;
+    width: 100%;
+  }
+
+  /* .hotel-detailMain .carousel-belowImag {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    display: flex; 
+  } */
+
+  .hotel-detailMain .carousel-smallImages {
+    width: 90px;
+    height: auto;
+  }
+
+  .hotel-detailMain .hotel-totalFare {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hotel-detailMain .hoteRoom-Usage,
+  .hotel-detailMain .hoteRoom-UsageCharges {
+    width: 100% !important;
+  }
+
+  .hotel-detailMain .hotel-amenities {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hotel-detailMain .hotel-BookNowBtn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .hotel-detailMain .free_amenities {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .hotel-detailHeading > div {
+    flex: 1 1 100%;
+  }
+}

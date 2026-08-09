@@ -1,0 +1,318 @@
+.Traveller_info_mobile_TG {
+  width: 100%;
+  background: #fff;
+  float: left;
+  position: fixed !important;
+  z-index: 210; /* Higher than parent's 202 */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 0;
+}
+#add-trv {
+  background-color: #fff;
+  min-height: 100%;
+}
+.Traveller_info_mobile_TG .top_pnl {
+  width: 100%;
+  background: #2196f3;
+  padding: 10px 0;
+}
+.Traveller_info_mobile_TG .top_pnl {
+  width: 100%;
+  background: #ffffff !important;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 0px 30px !important;
+}
+.Traveller_info_mobile_TG .inner_block {
+  width: 94%;
+  margin: 0 auto;
+}
+.Traveller_info_mobile_TG .lft_pnl {
+  float: left;
+  width: 53%;
+}
+.Traveller_info_mobile_TG .back_arrow {
+  float: left;
+  width: 14px !important;
+  height: 14px !important;
+  background: url("https://flight.easemytrip.com/M_Content/css/NewMobTravCssV2/img/left-arrow.svg")
+    no-repeat 0 0 !important;
+  background-size: 14px 14px;
+  margin: 4px 15px 0 0 !important;
+}
+.Traveller_info_mobile_TG .lft_pnl .title {
+  font-size: 14px;
+  color: #000000 !important;
+  float: left;
+}
+.Traveller_info_mobile_TG .inner_block {
+  width: 94%;
+  margin: 0 auto;
+}
+.Traveller_info_mobile_TG .ad_title {
+  width: 100%;
+  float: left;
+  margin: 10px 0;
+}
+.Traveller_info_mobile_TG .bg-infoalert {
+  background: #05335529;
+  width: 96%;
+  /* float: left; */
+  margin: 0 0 8px 0;
+  padding: 2%;
+  font-size: 12px;
+  color: #262626;
+  border-radius: 5px;
+}
+.Traveller_info_mobile_TG .ad_title span {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #121212;
+  text-transform: capitalize !important;
+  width: 100%;
+  float: left;
+}
+.Traveller_info_mobile_TG .radio-toolbar {
+  /* width: 160px; */
+  /* border: 1px solid #2196f3; */
+  border-radius: 3px;
+  /* float: left; */
+  /* margin: 12px 0 0 0; */
+}
+.Traveller_info_mobile_TG input[type="radio"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #2196f3;
+  border-radius: 50%;
+  outline: 0;
+}
+.Traveller_info_mobile_TG .radio-toolbar input[type="radio"] {
+  display: none;
+}
+.Traveller_info_mobile_TG .radio-toolbar label {
+  cursor: pointer;
+  width: 52px;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  cursor: pointer;
+  padding: 6px 0;
+}
+.Traveller_info_mobile_TG .field-container12 {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+.Traveller_info_mobile_TG .field2 {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #c1c6d1;
+  border-radius: 8px;
+}
+.Traveller_info_mobile_TG .floating-label_1 {
+  position: absolute;
+  pointer-events: none;
+  top: 5px;
+  left: 0;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0;
+  background-color: white;
+  padding: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.Traveller_info_mobile_TG .wd94p {
+  width: 94%;
+  margin: 0 auto;
+}
+.Traveller_info_mobile_TG .save-trv-btn {
+  color: #fff;
+  background: linear-gradient(
+    20deg,
+    rgb(247 48 48) 20%,
+    rgb(29 72 159) 100%
+  ) !important;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 13px 0;
+  font-size: 14px;
+  line-height: 1.42857;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-radius: 40px;
+  border: none;
+}
+
+/* Review Page  */
+#divPaxVerifyDtl {
+  position: relative;
+}
+.revw_opcty {
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+.revw_rt_pp {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 25px 25px 0px 0;
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0 0 4px rgb(0 0 0 / 50%);
+  z-index: 999;
+  width: 100%;
+}
+.revw_f22 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #000;
+}
+.revw_f22::before {
+  content: "";
+  width: 44px;
+  height: 6px;
+  background: #053355;
+  border-radius: 25px;
+  display: block;
+  margin-bottom: 8px;
+}
+.revw_f12 {
+  margin: 10px 0 15px 0;
+  font-size: 14px;
+  width: 100%;
+  color: #000;
+}
+._scr_tvlllr {
+  max-height: 350px;
+  overflow: auto;
+}
+.adcolbx {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+.adlttl {
+  font-size: 15px;
+  color: #053355;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.adlflx {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+._scr_20 {
+  min-width: 24%;
+}
+.adtp_nm {
+  font-size: 12px;
+  color: #000;
+}
+.adbt_nm {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 98%;
+}
+._scr_40 {
+  min-width: 45%;
+}
+._scr_30 {
+  min-width: 31%;
+}
+.btnsect {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.conf_btn {
+  background: #efbf04;
+  /* background: #2196f3; */
+  padding: 10px 14px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 15px;
+  width: 150px;
+  text-align: center;
+  font-weight: 600;
+}
+.edit_btn {
+  font-size: 15px;
+  color: #053355;
+  margin-top: 20px;
+}
+
+.Traveller_info_mobile_TG
+  .dob_TGG_Travel
+  .css-1b1fjlj-MuiFormControl-root-MuiTextField-root {
+  width: 100% !important;
+  margin-top: 20px !important;
+}
+
+.Traveller_info_mobile_TG select {
+  height: 55px !important;
+  margin-top: 15px !important;
+}
+
+/* .Traveller_info_mobile_TG .radio-toolbar input[type="radio"] {
+    display: none;
+  }
+
+  .Traveller_info_mobile_TG .radio-toolbar label {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px 0px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+  } */
+
+.Traveller_info_mobile_TG .radio-toolbar input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

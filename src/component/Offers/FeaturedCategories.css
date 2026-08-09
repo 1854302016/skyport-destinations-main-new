@@ -1,0 +1,123 @@
+.featured {
+    padding: 50px 0;
+    padding-top: 0px;
+}
+
+.tittle {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.tittle h3 {
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.featured .cate {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.featured .cate:hover {
+    transform: scale(1.05);
+  }
+
+.featured .cate img {
+    position: relative;
+    width: 100%;
+}
+
+.featured .cate-over {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .featured .cate:hover .cate-over {
+    opacity: 1;
+  }
+
+.featured .cate-over svg {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 45%;
+}
+
+.featured .cate-over i {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 35%;
+}
+
+.featured .cate-over .after-over {
+    display: none;
+  }
+  
+  .featured .cate:hover .after-over {
+    display: block;
+    animation: flipInY 0.5s;
+  }
+
+.featured .cate-over .after-over p {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.featured .cate-over .after-over a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.featured .cate-tittle {
+    background: #002b5e;
+    display: inline-block;
+    width: 100%;
+    height: 53px;
+    z-index: 99;
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 53px;
+}
+
+@keyframes flipInY {
+    from {
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    40% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    70% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    }
+    to {
+      transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+      animation-timing-function: ease-out;
+    }
+  }

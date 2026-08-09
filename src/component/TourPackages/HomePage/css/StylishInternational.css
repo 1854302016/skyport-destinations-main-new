@@ -1,0 +1,195 @@
+/* ============================================================ */
+/* STYLISH OFFICIAL GALLERY - INTERNATIONAL DESTINATIONS */
+/* ============================================================ */
+
+.stylish-intl-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.stylish-intl-header {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stylish-intl-header .title-group span {
+    color: #e63946;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stylish-intl-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #053355;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.stylish-intl-header .view-all-link {
+    color: #053355;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid #f2bc06;
+    padding-bottom: 5px;
+}
+
+.stylish-intl-header .view-all-link:hover {
+    color: #e63946;
+    border-color: #e63946;
+    gap: 15px;
+}
+
+/* Stylish Grid */
+.stylish-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Make first two cards bigger for a stylish mosaic feel */
+.stylish-card:nth-child(1),
+.stylish-card:nth-child(2) {
+    grid-column: span 2;
+    height: 400px;
+}
+
+.stylish-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 350px;
+    text-decoration: none !important;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: #f8f9fa;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.stylish-card .img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.stylish-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s ease;
+}
+
+.stylish-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(5, 51, 85, 0.8) 0%, transparent 60%);
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.stylish-card .card-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.stylish-card .dest-category {
+    color: #f2bc06;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.stylish-card .dest-name {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    display: block;
+    margin: 0;
+}
+
+/* Hover States */
+.stylish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(5, 51, 85, 0.2);
+}
+
+.stylish-card:hover img {
+    transform: scale(1.1);
+}
+
+.stylish-card:hover .card-overlay {
+    background: linear-gradient(to top, rgba(230, 57, 70, 0.8) 0%, transparent 80%);
+}
+
+.stylish-card:hover .dest-category {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stylish-card .explore-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+    transition: all 0.4s ease;
+    z-index: 3;
+}
+
+.stylish-card:hover .explore-icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .stylish-grid { gap: 20px; }
+}
+
+@media (max-width: 991px) {
+    .stylish-grid { grid-template-columns: repeat(2, 1fr); }
+    .stylish-card:nth-child(n) { grid-column: span 1 !important; height: 300px !important; }
+}
+
+@media (max-width: 575px) {
+    .stylish-intl-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .stylish-intl-header h2 { font-size: 30px; }
+    .stylish-grid { grid-template-columns: 1fr; }
+}

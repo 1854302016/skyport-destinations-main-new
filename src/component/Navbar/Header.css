@@ -1,0 +1,77 @@
+.hbs {
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04);
+}
+.p-relative {
+  position: relative;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.w-100p {
+  width: 100%;
+}
+.z-50 {
+  z-index: 50;
+}
+.pt-4 {
+  padding-top: 16px !important;
+}
+.pb-4 {
+  padding-bottom: 16px !important;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+}
+a {
+  background-color: initial;
+}
+.pr-1,
+.px-1 {
+  padding-right: 4px;
+}
+.px-1 {
+  padding-left: 4px;
+}
+.h-10 {
+  height: 40px;
+}
+.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.pr-3,
+.px-3 {
+  padding-right: 12px;
+}
+.px-3 {
+  padding-left: 12px;
+}
+.fs-3 {
+  font-size: 14px;
+}
+.lh-solid {
+  line-height: 1;
+}
+.t-all {
+  transition: all 0.2s ease;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.br-6 {
+  border-radius: 6px;
+}
+
+.hero-navbar-btnn {
+  background-color: transparent;
+  border: 2px solid #ffffff !important;
+}

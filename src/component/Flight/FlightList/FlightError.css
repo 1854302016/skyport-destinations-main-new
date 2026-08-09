@@ -1,0 +1,50 @@
+.error-card {
+  border-top: 5px solid #e53935;
+}
+
+.error-icon {
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.error-box {
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.primary-btn {
+  background-color: #053355;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #075080;
+}
+
+.secondary-btn {
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background-color: #c6c6c6;
+}

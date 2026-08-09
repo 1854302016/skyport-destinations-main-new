@@ -1,0 +1,295 @@
+.hotelsearchmobile .container_tbs {
+  width: 100%;
+  margin: 0 0 25px 0;
+  display: block !important;
+}
+
+.hotelsearchmobile p {
+  margin: 0;
+}
+
+.hotelsearchmobile .tab-content-fs {
+  float: left;
+  width: 100%;
+}
+
+.hotelsearchmobile .pd20_n {
+  background: #fff;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+
+
+
+.hotelsearchmobile .mb_title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.hotelsearchmobile .pd10_n {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  background: #f1f7fa;
+  border: 1px solid #2d3290;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.hotelsearchmobile .pd10_n {
+  /* background: #f0f0fa; */
+  border: 1px solid #2d3290;
+  /* border: 1px solid #dcdcff; */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(230, 230, 255) 100%
+  );
+  /* color: #2d3290; */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.hotelsearchmobile .ht_acntr {
+  align-items: center;
+}
+
+.hotelsearchmobile .ht_flx {
+  display: flex;
+}
+
+.hotelsearchmobile ._loc-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 0;
+  background: url(https://www.easemytrip.com/Hotels/Content/img/loc-nw.svg)
+    no-repeat 0px;
+  display: flex;
+  background-size: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotelsearchmobile ._value {
+  margin-left: auto;
+  width: 90%;
+}
+
+.hotelsearchmobile .f13 {
+  font-size: 13px;
+}
+
+.hotelsearchmobile .hl-input {
+  width: 100%;
+  float: left;
+  border: 0;
+  font-size: 22px;
+  color: #000;
+  outline: 0;
+  font-weight: 600;
+  -webkit-appearance: none;
+  padding: 0;
+  background: inherit;
+  background-size: 17px 17px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  /* font-family: 'Poppins'; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hotelsearchmobile .wid45 {
+  width: 46%;
+}
+
+.hotelsearchmobile .mgt-10 {
+  margin-top: 15px;
+}
+
+.hotelsearchmobile .fl {
+  float: left;
+}
+
+.hotelsearchmobile .fr {
+  float: right;
+}
+
+.hotelsearchmobile .wid45 {
+  width: 48%;
+}
+
+.hotelsearchmobile .ht_acntr {
+  align-items: center;
+}
+
+.hotelsearchmobile .ht_flx {
+  display: flex;
+}
+
+.hotelsearchmobile ._loc-cald {
+  width: 28px;
+  height: 26px;
+  background: url(https://www.easemytrip.com/Hotels/Content/img/icon-cale.svg)
+    no-repeat 4px;
+  display: flex;
+  background-size: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotelsearchmobile ._value2 {
+  margin-left: auto;
+  width: 77%;
+}
+
+.hotelsearchmobile .dateSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelsearchmobile .f13 {
+  font-size: 13px;
+}
+
+.hotelsearchmobile .hrtlCenter {
+  align-items: center;
+}
+
+.hotelsearchmobile .appendRight8 {
+  margin-right: 8px;
+}
+
+.hotelsearchmobile .dateFont {
+  font-size: 24px;
+  line-height: 27px;
+  color: #000;
+  font-weight: 600;
+}
+
+.hotelsearchmobile .appendRight8 {
+  margin-right: 3px;
+}
+
+.hotelsearchmobile .makeFlex {
+  display: inline-block;
+}
+
+.hotelsearchmobile .capText {
+  text-transform: capitalize;
+  font-size: 11px;
+}
+
+.hotelsearchmobile .lightText_n,
+.capText {
+  line-height: 12px;
+}
+
+.hotelsearchmobile .lightText_n {
+  font-size: 11px;
+}
+
+.hotelsearchmobile ._prs-icon {
+  width: 28px;
+  height: 28px;
+  background: url(https://www.easemytrip.com/Hotels/Content/img/icon-user.svg)
+    no-repeat 4px;
+  background-size: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotelsearchmobile .mgb3 {
+  margin-bottom: 3px;
+}
+
+.hotelsearchmobile .ttl_ad {
+  font-size: 14px;
+  color: #282727;
+  font-weight: bold;
+  width: auto;
+  float: left;
+  /* font-family: lato; */
+}
+
+.hotelsearchmobile .ttl_ad {
+  font-size: 18px;
+  color: #000;
+}
+
+.hotelsearchmobile .circle {
+  border: 2px solid #777777;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: relative;
+  float: right;
+  vertical-align: middle;
+}
+
+.hotelsearchmobile .circle.plus:before,
+.hotelsearchmobile .circle.plus:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #777777;
+}
+
+.hotelsearchmobile .circle.plus:before {
+  width: 2px;
+  margin: 2px auto;
+}
+
+.hotelsearchmobile .circle.plus:after {
+  margin: auto 2px;
+  height: 2px;
+}
+
+.hotelsearchmobile .fs_btn {
+  width: 100%;
+  cursor: pointer;
+  background: #053355 ;
+  /* background: #2d3290; */
+  float: right;
+  text-align: center;
+  padding: 15px 0;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  outline: 0;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+
+@media (max-width:768px) {
+  .hotelsearchmobile .pd20_n{
+    float: none !important;
+  }
+  .hotelsearchmobile .cont_pnl{
+    float: none !important;
+  }
+  .hotelsearchmobile .fs_btn{
+float: none !important;
+  }
+}

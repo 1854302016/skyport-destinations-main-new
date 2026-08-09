@@ -1,0 +1,10 @@
+.terms_item {
+    margin-bottom: 30px;
+}
+.terms_item h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.terms_item p {
+    font-size: 16px;
+}

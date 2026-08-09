@@ -1,0 +1,117 @@
+.inquirymodal .modal-title {
+  color: #fff;
+}
+
+.pkgform-wrapper .pkgform-box {
+  background: #fff;
+  padding: 20px 15px;
+}
+
+#inquirymodal .pkgform-wrapper .pkgform-box {
+  background: transparent;
+  padding: 0;
+}
+
+.pkgform-wrapper .pkgform-box input,
+.pkgform-wrapper .pkgform-box select,
+.pkgform-wrapper .pkgform-box textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  color: #555;
+  margin-bottom: 20px;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+#inquirymodal .pkgform-wrapper .pkgform-box input,
+#inquirymodal .pkgform-wrapper .pkgform-box select,
+#inquirymodal .pkgform-wrapper .pkgform-box textarea {
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+#inquirymodal button[type="button"] {
+  margin-top: 0;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+  width: auto;
+  color: #fff !important;
+  background-color: #9dc541;
+  height: auto;
+  padding: 6px 35px;
+  line-height: 28px;
+}
+
+/* @media (min-width: 576px) {
+  .inquirymodal .modal-dialog {
+    max-width: 650px !important;
+  }
+} */
+.inquirymodal .modal-dialog {
+  max-width: 650px !important;
+}
+
+.pkgform-wrapper .SingleDatePickerInput__withBorder {
+  border: unset !important;
+  height: 40px;
+}
+
+.pkgform-wrapper #travel_date_picker {
+  margin-bottom: 0px !important;
+}
+
+.pkgform-wrapper .SingleDatePicker {
+  margin-bottom: 20px;
+}
+
+.pkgform-wrapper button {
+  width: 40%;
+  text-align: center;
+  border: none;
+  color: #fff;
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  /* background: #ff2828;
+  border: 1px solid #ff2828; */
+  background: #053355;
+  border-radius: 40px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+.pkgform-wrapper button:hover{
+  background: #f2bc06;
+}
+@media (min-width: 576px) {
+  .modal .modal-dialog {
+    max-width: 600px !important;
+  }
+}
+
+.modal .modal-content {
+  border-radius: 15px !important;
+}
+.inquirymodal .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #555;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

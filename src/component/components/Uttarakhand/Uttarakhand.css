@@ -1,0 +1,313 @@
+.uttarakhand-MainPage .uttarakhand-Header{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.uttarakhand-MainPage .uttarakhand-Logo
+{
+    width: 180px;
+}
+.uttarakhand-MainPage .uttarakhand-RequestCB-btn{
+    background-color: #f73030;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.uttarakhand-MainPage .uttarakhand-Bg_Form{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+.uttarakhand-MainPage .uttarakhand-PlaceName{
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+.uttarakhand-MainPage .uttarakhand-formContainer {
+  padding: 15px 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  max-width: 400px; 
+}
+.uttarakhand-MainPage .uttarakhand-tripForm h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.uttarakhand-MainPage .uttarakhand-tripForm p {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+.uttarakhand-MainPage .uttarakhand-formGroup {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.uttarakhand-MainPage.uttarakhand-formGroup label {
+  margin-bottom: 0.5rem;
+ 
+}
+.uttarakhand-MainPage .uttarakhand-formGroup input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(209 213 219) !important;
+  background: transparent;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.uttarakhand-MainPage .uttarakhand-formDisclaimer {
+  font-size: 12px;
+  color: #555;
+  margin: 1rem 0;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+.uttarakhand-SubmitBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uttarakhand-SubmitBtn button{
+  padding: 8px 40px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #053355;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: background-color 0.3s ease;
+}
+.uttarakhand-MainPage .uttarakhand-KeyInclusions-Main{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.uttarakhand-MainPage .uttarakhand-KeyInclusions{
+  background: #000;
+  /* margin: 10px 40px; */
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.uttarakhand-MainPage .uttarakhand-KeyInclusionsImage img{
+  width: 700px;
+  height: 300px;
+}
+.uttarakhand-MainPage .uttarakhand-KeyInclusionsContent{
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  /* width: 400px;
+  height: 250px; */
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  text-align: center;
+  margin: 32px;
+  
+}
+.uttarakhand-MainPage .uttarakhand-KeyInclusionsContent h4{
+  font-size: 20px;
+}
+.uttarakhand-MainPage .uttarakhand-KeyInclusionsContent p{
+  font-size: 14px;
+}
+.uttarakhand-Safe_TravelWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.uttarakhand-Safe_Travel {
+  width: 100px;
+  height: 100px;
+  background: #053355;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.safe-icon {
+  font-size: 40px;
+  color: white;
+}
+
+.uttarakhand-Safe_TravelText {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.uttarakhand-MainPage .Uttarakhand-About{
+  font-size: 72px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 50px 0;
+}
+.uttarakhand-MainPage .Uttarakhand-AboutBharat{
+  padding: 10px 100px;
+  text-align: center;
+}
+.uttarakhand-MainPage .uttarakhand-formContainerBelow {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(to top, #000000, #031843);
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.uttarakhand-formGroup input:focus {
+  outline: none;
+  background: #e0e0e0;
+  box-shadow: 0 0 0 2px #053355;
+}
+.uttarakhand-formDisclaimer a {
+  color: #f73030;
+  text-decoration: none;
+}
+.uttarakhand-formDisclaimer a:hover {
+  text-decoration: underline;
+}
+
+.uttarakhand-SubmitBtn {
+  text-align: center;
+}
+.uttarakhand-SubmitBtn button:hover {
+  background-color: #4b81ec;
+}
+.uttarakhand-formContainerBelowBgImg{
+  width: 100%;
+  background: #000;
+  padding: 20px;
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 575.98px) {
+  .uttarakhand-MainPage .uttarakhand-Header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 20px;
+  }
+  .uttarakhand-MainPage .uttarakhand-Logo{
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .uttarakhand-MainPage .uttarakhand-Bg_Form {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: auto;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-formContainer {
+    position: relative;
+    right: auto;
+    margin: 20px 0 0 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-PlaceName {
+    position: relative;
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-tripForm h2 {
+    font-size: 1.1rem;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-tripForm p,
+  .uttarakhand-MainPage .uttarakhand-formDisclaimer {
+    font-size: 13px;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-SubmitBtn button {
+    width: 100%;
+  }
+  .uttarakhand-MainPage .uttarakhand-Bg_Form {
+    padding: 30px;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-formContainer {
+    margin-right: 0;
+    max-width: 90%;
+  }
+
+  .uttarakhand-MainPage .uttarakhand-PlaceName {
+    font-size: 50px;
+  }
+    .uttarakhand-MainPage .uttarakhand-KeyInclusions{
+      display: block;
+      margin: 0;
+      padding-bottom: 1px;
+    }
+    .uttarakhand-MainPage .uttarakhand-KeyInclusions img{
+      width: 100%;
+      height: 200px;
+    }
+    .uttarakhand-MainPage .uttarakhand-Safe_TravelWrapper{
+      text-align: center;
+      margin: 0 5px;
+    }
+    .uttarakhand-MainPage .Uttarakhand-AboutBharat{
+      padding: 40px 20px;
+
+    }
+    .uttarakhand-MainPage .Uttarakhand-About{
+      font-size: 36px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+}
+@media (max-width: 1024px) {
+  .uttarakhand-MainPage .uttarakhand-KeyInclusions{
+    display: block;
+    padding-bottom: 1px;
+  }
+    .uttarakhand-MainPage .uttarakhand-KeyInclusions img{
+      width: 100%;
+      height: 400px;
+    }
+}

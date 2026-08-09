@@ -1,0 +1,399 @@
+.payModalMain {
+  /* position: fixed; */
+  width: 100%;
+  /* background-color: #fff; */
+}
+.flightPay {
+  width: 70%;
+  margin: auto;
+  z-index: 10;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_name .name {
+  color: white !important;
+}
+.flightPay strong {
+  color: white;
+}
+.flightPay .box-result {
+  background-color: #f73030;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_name .flight_no {
+  color: white;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_time {
+  color: #fff !important;
+}
+.flightPay .custom_box_result ul.list-search-result li span.date {
+  color: white !important;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_time .airport {
+  color: white !important;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_amenties span {
+  color: white;
+}
+.flightPay .custom_box_result ul.booking_list li.flight_amenties .middle:before,
+.custom_box_result ul.booking_list li.flight_amenties .middle:after {
+  color: white !important;
+}
+.flightPay
+  .flightPay
+  .custom_box_result
+  ul.booking_list
+  li.flight_amenties
+  .txt {
+  color: black !important;
+}
+.flightPay
+  .custom_box_result
+  ul.booking_list
+  li.flight_amenties
+  .bottom
+  .refundable {
+  color: white;
+  border: 1px solid #68738c;
+}
+.bor {
+  float: left;
+  margin-left: auto;
+  width: 100%;
+  /* margin-top: 10px; */
+  background: #ffffff;
+  border-radius: 4px;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+}
+.po-re {
+  position: relative;
+}
+.trheadbg {
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 7px;
+  line-height: 26px;
+  color: #000;
+}
+.po-ab {
+  position: absolute;
+}
+.edt1 {
+  cursor: pointer;
+  font-size: 12px !important;
+  background: #135ea0;
+  color: #ffffff;
+  top: -3px;
+  left: 1px;
+  transform: none;
+  padding: 0px 9px !important;
+  min-width: auto;
+  font-weight: 400 !important;
+  border-radius: 0 0 14px 0;
+}
+.tr-cn {
+  width: 96%;
+  margin: 0 auto;
+}
+.ps-d {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+.ps1n {
+  width: 25%;
+  float: left;
+  font-size: 12px;
+  padding-right: 2%;
+}
+.fnt {
+  float: left;
+  color: #000000;
+  width: 100%;
+  font-weight: 500;
+}
+.fnt-g {
+  float: left;
+  color: #737373;
+  width: 100%;
+  margin-top: 10px;
+  word-break: break-all;
+}
+.ps2n {
+  width: 13%;
+  float: left;
+  font-size: 12px;
+}
+.ps3n {
+  width: 22%;
+  float: left;
+  font-size: 12px;
+  padding-right: 1%;
+}
+.ps4n {
+  width: 20%;
+  float: left;
+  font-size: 12px;
+  padding-right: 1%;
+}
+.ps5n {
+  width: 18%;
+  float: left;
+  font-size: 12px;
+  padding-right: 0;
+}
+.ps1n1 {
+  width: 24%;
+  float: left;
+  font-size: 12px;
+  padding-right: 1%;
+}
+.flightPay .flightPaybtn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #e91e63;
+}
+.payModalMain .flightPay .flighttxt {
+  color: #f73030 !important;
+}
+.payModalMain .overlay_sc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  background: rgba(8, 8, 8, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (max-width: 769px) {
+  .flightPay {
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .bor:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .bor {
+    margin: 0px 2% 0 !important;
+    width: 97%;
+  }
+}
+
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .bor {
+    width: 98%;
+    margin: 20px 1% 0;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .ps1n {
+    width: 48%;
+    padding-right: 2%;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .fnt-g {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .ps2n {
+    width: 48%;
+    padding-left: 2%;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .ps3n {
+    width: 48%;
+    padding-right: 2%;
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .ps4n {
+    width: 48%;
+    padding-left: 2%;
+    margin-top: 5px;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+  .ps5n {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+.walletBalanceBold {
+  font-weight: 600;
+  color: #000;
+}
+
+.payModelCross {
+  position: relative;
+  right: -9px;
+  top: -9px;
+  float: inline-end;
+  width: 30px;
+  z-index: 2;
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.fd-h2,
+.fd-h2-ae,
+.fd-h2-uk,
+.fd-h2-th {
+  width: 100%;
+  float: left;
+  padding-left: 2%;
+  font-size: 18px;
+  color: #1a1a1a;
+  height: 50px;
+  line-height: 50px;
+  background: linear-gradient(90deg, #c7dffe 0%, #d8f2ff 100%);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.fd-h2:before {
+  float: left;
+  content: " ";
+  background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+  width: 35px;
+  height: 35px;
+  background-position: -227px -3px;
+  margin-top: 11px;
+}
+.fd-h2 span,
+.fd-h2-ae span,
+.fd-h2-uk span,
+.fd-h2-th span {
+  margin-left: 1%;
+  line-height: 50px;
+}
+.main-pymnt-bx {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.pymnt-bx-lft {
+  width: 34%;
+  float: left;
+  padding: 0;
+  background: #f8f8f8;
+  border-right: 1px solid #ccc;
+}
+.blk-cls {
+  background: #fff;
+  width: 101% !important;
+  position: relative;
+}
+.card-dtl,
+.CareemPay-dtl {
+  width: 100%;
+  margin: 0% 0%;
+  padding: 6%;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* .blk-cls::before {
+  content: '';
+  border-left: 3px solid #2196f3;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+} */
+.pymtflx {
+  display: flex;
+  align-items: flex-start;
+}
+.card-im2 {
+  width: 35px;
+  float: left;
+  background: url("https://flight.easemytrip.com/Content/img/traveller/paymnt-rec.png");
+  background-position: 0px -31px;
+  height: 27px;
+}
+.pymttxt {
+  width: calc(100% - 35px);
+  width: calc(100% - 35px);
+  display: flex;
+  flex-flow: column;
+}
+/* .blu {
+  color: #2196f3 !important;
+} */
+.payment-txt,
+.netbanking-txt,
+.netbanking-txt,
+.netbanking-txt {
+  color: #000;
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 600;
+}
+.pymtsbtxt {
+  font-size: 11px;
+  color: #000;
+  display: inline-block;
+}
+.upi-dtl {
+  width: 100%;
+  margin: 0% 0%;
+  padding: 6%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.upi {
+  width: 35px;
+  float: left;
+  background: url("https://flight.easemytrip.com/Content/img/traveller/upi.png")
+    no-repeat;
+  height: 27px;
+}
+.cscPaymentdisabledl {
+  width: 100%;
+  margin: 0% 0%;
+  padding: 6%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.pymnt-bx-rgt3 {
+  width: 66%;
+  float: left;
+  min-height: 36.8vh;
+  padding: 2% 0% 2% 3%;
+}
+.pymnt-bx-balenceMode {
+  display: flex;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+.pymnt-bx-balenceinner {
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  text-align: end;
+}
+.pymnt-bx-balencespan {
+  color: #f73030;
+  font-weight: 700;
+  width: 100%;
+  font-size: 20px;
+  text-align: start;
+}

@@ -1,0 +1,98 @@
+.hotelsearchmobile section {
+    float: left;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.hotelsearchmobile ._tophdr {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.hotelsearchmobile ._ininety {
+    width: 92%;
+    margin: auto;
+}
+
+.hotelsearchmobile ._flxhudrd {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hotelsearchmobile ._BkHome {
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotelsearchmobile .arwWwhte {
+    width: 14px;
+    height: 14px;
+    float: left;
+    background: url(https://www.easemytrip.com/images/mob-web/svg/left-arrow-white.svg) no-repeat 0 0;
+    background-size: 14px 14px;
+    margin: 0;
+    filter: brightness(0) invert(1%);
+}
+
+.hotelsearchmobile ._tvhdr {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hotelsearchmobile ._shricn {
+    margin-left: 15px;
+    float: right;
+    width: 15px;
+    height: 15px;
+    background: url(https://www.easemytrip.com/images/mob-web/svg/shareicon.svg) no-repeat;
+    display: block;
+    background-size: 100%;
+    filter: brightness(0) invert(1%);
+}
+
+.hotelsearchmobile #flipv3 {
+    text-align: right;
+    position: relative;
+    z-index: 99;
+}
+
+.hotelsearchmobile #flipv3 {
+    /* margin-left: auto; */
+}
+
+.hotelsearchmobile ._langview {
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    font-size: 12px;
+    align-items: center;
+    color: #858585;
+    font-weight: 600;
+}
+
+.hotelsearchmobile ._langview span {
+    margin: auto 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotelsearchmobile ._langview img {
+    width: 20px;
+}
+
+.hotelsearchmobile ._arrwdnlang {
+    border: solid #B9B9B9;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    margin-left: 5px;
+    top: -2px;
+}

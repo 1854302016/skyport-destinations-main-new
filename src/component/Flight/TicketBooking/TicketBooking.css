@@ -1,0 +1,666 @@
+.ticketdata_Container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pageStickyHder {
+  background: #041422;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+.pageStickyHder {
+  background: #053355 ;
+}
+.flightsContainer {
+  margin: 0 auto;
+  position: relative;
+  width: 1200px;
+}
+.pageHeader {
+  display: flex;
+}
+.whiteText {
+  color: #fff;
+}
+.fontSize20 {
+  font-size: 20px;
+}
+.blackFont {
+  font-weight: 600;
+}
+.pageComponentsLinks ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pageHeaderWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.pageComponentsLinks ul li {
+  list-style-type: disc;
+  color: #fff;
+  /* color: hsla(0, 0%, 100%, .5); */
+  list-style-position: inside;
+  font-size: 5px;
+  padding-right: 5px;
+}
+.pageComponentsLinks ul li:first-child {
+  list-style-type: none;
+}
+.pageComponentsLinks ul li span {
+  /* color: hsla(0, 0%, 100%, .5); */
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+.isGi .pageComponentsLinks ul li span {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.bgGradient {
+  background-image: linear-gradient(0deg, #15457b, #051423);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 150px;
+}
+.bgGradient {
+  background: #efbf04 ;
+}
+.ticketContainers {
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.pb__60 {
+  padding-bottom: 60px;
+}
+
+.pt__60 {
+  padding-top: 60px;
+}
+.invoice__wrapper {
+  /* background: linear-gradient(90deg, rgba(41, 66, 203, 0.04) 0%, rgba(39, 61, 177, 0.04) 100%); */
+  padding: 40px 40px;
+  border-radius: 5px;
+}
+.hotel__invoice {
+  /* border: 1px solid #f3f3f3; */
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 6px;
+}
+.mb__10 {
+  margin-bottom: 10px;
+}
+.invoice__wrapper .invoice__textwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.hotel__emailinvoice .invoice__textwrapper {
+  border-bottom: unset;
+}
+.dtext {
+  color: #3f3f3f !important;
+}
+.invoice__wrapper .invoice__textwrapper .invoice__leftbox h3 {
+  color: #3f3f3f;
+  margin-bottom: 20px;
+}
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+.hotel__emailinvoice .reservation__contetn {
+  border-bottom: 1px solid var(--input);
+}
+.mb__30 {
+  margin-bottom: 30px;
+}
+.pb__30 {
+  padding-bottom: 30px;
+}
+.dtext {
+  color: #3f3f3f !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fz-16 {
+  font-size: 1rem;
+}
+.mb__10 {
+  margin-bottom: 10px;
+}
+.d-block {
+  display: block !important;
+}
+.mb__15 {
+  margin-bottom: 15px;
+}
+.gap-2 {
+  gap: 0.5rem !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.d-flex {
+  display: flex !important
+;
+}
+.hotel__emailinvoice .reservation__contetn label {
+  width: calc(100% - 25px);
+}
+.lato {
+  font-family: "Lato", sans-serif;
+}
+.gratext {
+  background: linear-gradient(90deg, #2942cb 0%, #273db1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fz-18 {
+  font-size: 1.125rem;
+}
+.dtext {
+  color: #3f3f3f !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fz-16 {
+  font-size: 1rem;
+}
+.booking__number {
+  background: linear-gradient(
+    90deg,
+    rgba(41, 66, 203, 0.05) 0%,
+    rgba(39, 61, 177, 0.05) 100%
+  );
+  padding: 18px 20px 20px;
+  width: 99%;
+  margin-left: 4px;
+}
+.mb__30 {
+  margin-bottom: 30px;
+}
+.mt__30 {
+  margin-top: 30px;
+}
+.passenger__infos .p__inforbox {
+  border-radius: 5px;
+  border: 1px solid #e0e4f8;
+  overflow: hidden;
+}
+.tablebg {
+  background: linear-gradient(
+    90deg,
+    rgba(41, 66, 203, 0.05) 0%,
+    rgba(39, 61, 177, 0.05) 100%
+  );
+}
+.passenger__infos .p__inforbox .p__inf {
+  max-width: 650px;
+  padding: 15px 25px;
+}
+.bgwhite {
+  background: #fff;
+}
+.passenger__infos .p__inforbox .p__inf {
+  max-width: 650px;
+  padding: 15px 25px;
+}
+.priceb {
+  border-bottom: 1px solid #e9ecf9;
+}
+.passenger__infos .p__inforbox .tableitems {
+  padding-left: 40px;
+}
+.d-block {
+  display: block !important;
+}
+.invoice__wrapper .note {
+  font-size: 1rem;
+  color: #3f3f3f;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.text-center {
+  text-align: center !important;
+}
+.cmn__btn {
+  border-radius: 5px;
+  padding: 14px 30px 14px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: inline-block;
+  color: #ffffff;
+  position: relative;
+  background: #2840bf;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.5s;
+}
+.cmn__btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  background: #415fe2;
+  transition: all 0.5s;
+  width: 0px;
+  height: 100%;
+}
+.cmn__btn span {
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+/* NEW CSS  */
+.themeholy-invoice {
+  position: relative;
+  z-index: 4;
+  background-color: #ffffff;
+}
+/* .themeholy-invoice .download-inner {
+    padding: 50px;
+} */
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.text-start {
+  text-align: left !important;
+}
+.info-box2 {
+  background-color: #f3f3f3;
+  border-right: 1px solid #e3e3e3;
+  padding: 15px 20px;
+}
+.themeholy-invoice b {
+  color: #111111;
+}
+.info-box2.text-end {
+  border-right: none;
+}
+.text-end {
+  text-align: right !important;
+}
+.table-title {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #e3e3e3;
+}
+.invoice-table {
+  border: none;
+  margin-bottom: 25px;
+}
+.table-stripe3 {
+  border: 1px solid #f3f3f3;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.invoice-table tr {
+  border-bottom: 1px solid #e3e3e3;
+  position: relative;
+}
+.table-stripe3 tr {
+  border-bottom: 1px solid #f3f3f3;
+}
+.invoice-table thead tr {
+  border-bottom: none;
+}
+.table-stripe3 thead tr {
+  border-bottom: 1px solid #e1ecff;
+}
+.invoice-table th {
+  color: #111111;
+}
+.invoice-table th,
+.invoice-table td {
+  padding: 11px 20px;
+  border: none;
+}
+.invoice-table thead th,
+.invoice-table thead td {
+  background-color: #e1ecff;
+}
+.table-stripe3 tr th,
+.table-stripe3 tr td {
+  border-right: 1px solid #e3e3e3;
+}
+.table-stripe3 thead th,
+.table-stripe3 thead td {
+  background-color: #e1ecff !important;
+  border-radius: 0 !important;
+  border-top: 1px solid #e0e0e0;
+}
+.invoice-table thead th:first-child,
+.invoice-table thead td:first-child {
+  border-radius: 0;
+}
+.table-stripe3 tr th:nth-child(2),
+.table-stripe3 tr td:nth-child(2) {
+  text-align: left;
+}
+.table-stripe3.style5 th:last-child,
+.table-stripe3.style5 td:last-child {
+  text-align: left;
+}
+.table-stripe3 tr th:last-child,
+.table-stripe3 tr td:last-child {
+  border-right: none;
+}
+.invoice-table {
+  border: none;
+  margin-bottom: 25px;
+}
+.table-style1 {
+  border: 1px solid #f3f3f3;
+  margin-top: -10px;
+}
+
+.table-style1 tr th,
+.table-style1 tr td {
+  text-align: left !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #f3f3f3;
+  width: 32.9%;
+}
+.table-style1 thead th,
+.table-style1 thead td {
+  border-right: 1px solid #e3e3e3;
+}
+
+.total-table2 {
+  border: none;
+}
+.total-table2 th,
+.total-table2 td {
+  border: none;
+  padding: 5px 20px;
+}
+.company-address {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 13px 30px;
+  border-radius: 999px;
+  margin-top: 15px;
+  margin-bottom: 26px;
+}
+.company-address.style2 {
+  background-color: transparent;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.themeholy-invoice b {
+  color: #111111;
+}
+.invoice-note {
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.invoice-note svg {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.invoice-note b {
+  margin-right: 5px;
+}
+.invoice-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 3px;
+  overflow: hidden;
+  margin-top: 12px;
+  position: relative;
+  top: 0px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(119, 119, 119, 0.25);
+  border-radius: 10px;
+  max-width: 129px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.invoice-buttons a,
+.invoice-buttons button {
+  border: none;
+  height: 40px;
+  width: 60px;
+  line-height: 37px;
+  text-align: center;
+  background-color: #cfffea;
+  border-radius: 7px 0 0 7px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.invoice-buttons .download_btn {
+  background-color: #e1ecff;
+  border-radius: 0 7px 7px 0;
+}
+
+/* Ticket Style  */
+.invoice_style3 {
+  padding-bottom: 30px;
+}
+.themeholy-invoice .big-title {
+  font-size: 44px;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 40px;
+}
+.header-bottom {
+  position: relative;
+  z-index: 2;
+}
+.themeholy-invoice .header-bottom {
+  margin-top: 22px;
+  margin-bottom: 19px;
+}
+.invoice_style3 .header-bottom {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 10px;
+  margin-top: 26px;
+}
+.invoice-number {
+  margin-bottom: 0;
+}
+.me-4 {
+  margin-right: 1.5rem !important;
+}
+.invoice-date {
+  margin-bottom: 0;
+}
+.body-shape3 {
+  /* position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 117px;
+    overflow: hidden; */
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  max-height: 145px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: bottom center;
+  width: 100%;
+}
+.body-shape3 svg {
+  max-width: 100%;
+}
+.themeholy-invoice .download-innersssss {
+  padding: 71px 50px 0px 50px;
+}
+
+.invoice-headar {
+  height: 125px;
+  margin-bottom: 25px;
+  background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  background: linear-gradient(
+    20deg,
+    rgb(247 48 48 / 13%) 20%,
+    rgb(29 72 159 / 28%) 100%
+  );
+}
+.invoice-logo {
+  padding: 50px;
+}
+.invoice-logo img {
+  height: 25px;
+}
+.invoice-id {
+  border-radius: 0 0 0 200px;
+  z-index: 0;
+  background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+  background: #053355 ;
+}
+.invoice-id .info {
+  max-width: 200px;
+  margin: 0 50px 0 auto;
+  padding: 34px 0;
+}
+.invoice-id .color-white {
+  color: #fff !important;
+}
+.invoice-id .color-white {
+  color: #fff !important;
+}
+.invoice-id .inv-header-1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  color: #262525;
+}
+.invoice-content .color-white {
+  color: #fff !important;
+}
+
+.invoice-id .info p {
+  font-size: 14px;
+}
+.invoice-headar p span {
+  float: right;
+}
+.ticket_container_mobileee {
+  display: none;
+}
+@media (max-width: 768px) {
+  .ticket_container_mobileee {
+    display: block;
+  }
+  .bgGradient {
+    height: 200px;
+  }
+  .order__section {
+    display: none;
+  }
+  .invoice__wrapper {
+    padding: 20px 20px;
+  }
+  .info-box2 {
+    padding: 10px 10px;
+  }
+  .themeholy-invoice b {
+    font-size: 15px;
+  }
+  .booking-card,
+  .trip-card {
+    /* border-left: 4px solid #c6c3c3; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .journey-stops {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .departure-stop,
+  .arrival-stop {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #053355 ;
+    position: relative;
+  }
+  .departure-stop {
+    margin-top: 6px;
+  }
+  .journey-line {
+    width: 2px;
+    height: 40px;
+    background: #053355 ;
+    opacity: 0.5;
+    margin: 4px 0;
+  }
+  .arrival-stop {
+    margin-bottom: 6px;
+  }
+  .flex-grow-1 {
+    flex-grow: 1 !important;
+  }
+  .additional-info {
+    border-left: 3px solid #bf364c;
+  }
+  .text-primary-color {
+    color: #bf364c;
+  }
+  .btn-app {
+    background: #053355 ;
+    color: white;
+    border-radius: 9px;
+    border: none;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(98, 0, 238, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .booking_cards_booking {
+    border-bottom: 4px solid #fad4d1c7;
+  }
+}

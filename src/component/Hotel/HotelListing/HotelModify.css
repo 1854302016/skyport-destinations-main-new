@@ -1,0 +1,13 @@
+.hotel_modify_form{
+    background: linear-gradient(20deg, #f73030 20%, #053355);
+    height: 100px;
+    margin: 10px 0px;
+    position: relative;
+}
+.hotel-specific-location{
+    background: linear-gradient(20deg, #f73030 20%, #053355);
+}
+.hotel-specific-location .hotel-specific-location-designing{
+    border: none;
+
+}

@@ -1,0 +1,37 @@
+name: Deploy website on push
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  web-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Install dependencies (force legacy support)
+        run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: CI='' node --max-old-space-size=4096 node_modules/react-scripts/scripts/build.js
+
+      - name: Deploy via FTP/SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.GIT_CPANEL_SERVER }}
+          username: ${{ secrets.GIT_CPANEL_USER }}
+          password: ${{ secrets.GIT_CPANEL_PWD }}
+          protocol: ${{ secrets.GIT_CPANEL_PROTOCOL }}
+          local-dir: ./build/

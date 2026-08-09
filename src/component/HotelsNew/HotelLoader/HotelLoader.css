@@ -1,0 +1,85 @@
+/* ---------- Hotel Loader Container ---------- */
+.hotelLoaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, .1);
+}
+
+/* ---------- Loader Animation ---------- */
+.hotelLoaderAnimation {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.hotelLoaderAnimation span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #12AD2B;
+  border-radius: 50%;
+  animation: animateHotelLoader 1.5s linear infinite;
+  transform-origin: 60px 60px;
+}
+
+.hotelLoaderAnimation span:nth-child(n) {
+  --i: calc(var(--i) * 18deg);
+  transform: rotate(var(--i)) translateX(40px);
+}
+
+@keyframes animateHotelLoader {
+  0% {
+    transform: rotate(calc(var(--i) * 1deg)) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(var(--i) * 1deg)) translateX(40px) rotate(360deg);
+  }
+}
+
+/* ---------- Center Icon ---------- */
+.hotelLoaderIcon {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+/* ---------- Loader Text ---------- */
+.hotelLoaderText {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ---------- Optional Responsive ---------- */
+@media (max-width: 768px) {
+  .hotelLoaderContainer {
+    min-height: 200px;
+    padding: 15px;
+  }
+  .hotelLoaderText {
+    font-size: 14px;
+  }
+  .hotelLoaderIcon {
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    left: 40px;
+  }
+}

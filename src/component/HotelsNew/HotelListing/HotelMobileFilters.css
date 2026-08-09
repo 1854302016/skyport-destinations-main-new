@@ -1,0 +1,65 @@
+.Hotel-menuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: nowrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: auto; 
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;  /* For IE and Edge */
+
+}
+
+.hotelFilter-menuItem {
+  display: flex;
+  flex-direction: column; /* stack icon on top of text */
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  color: #333;
+  font-size: 0.85rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  min-width: 60px;
+}
+
+.hotelFilter-menuItem:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotelFilter-menuItem input[type="radio"] {
+  margin-top: 4px;
+  accent-color: #007bff;
+  transform: scale(1.1);
+}
+
+.hotel-menuIcons{
+    margin-bottom: 5px;
+    font-size: medium
+}
+.Hotel-menuContainerMain{
+  display: none;
+}
+@media (max-width:600px) {
+  .Hotel-menuContainerMain{
+    display: block;
+    position: relative;
+  }
+  /* .Hotel-menuContainer{
+    position: absolute;
+    top: 10;
+    bottom: 0;
+  } */
+}

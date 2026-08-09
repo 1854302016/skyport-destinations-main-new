@@ -1,0 +1,428 @@
+.copy-writee p {
+  margin: 0px !important;
+}
+.pb--85 {
+  padding-bottom: 85px !important;
+}
+.mt--160 {
+  margin-top: 220px !important;
+}
+.footer-bg-one {
+  background-color: #1a348c;
+  /* background-image: linear-gradient(to right, #124a8b, #012644); */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: #f73030; */
+  /* background-image: url('https://themewant.com/products/html/drill/handyman/assets/images/footer/01.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*   background: #053355 ; */
+}
+.bg-cta-footer-one {
+  background: #1f1f1f;
+  border-radius: 10px;
+  margin-top: -80px;
+}
+.bg-cta-footer-one {
+  /* background: #00223d; */
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  margin-top: -80px;
+}
+.bg-cta-footer-one .logo-area-footer {
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 38px;
+  display: block;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  color: var(--color-heading);
+  text-decoration: none;
+  outline: none;
+}
+.bg-cta-footer-one .logo-area-footer img {
+  width: 200px;
+}
+.bg-cta-footer-one .single-cta-area {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.bg-cta-footer-one .single-cta-area .icon {
+  height: 50px;
+  width: 50px;
+  /* background: #f73030; */
+  background: #053355 ;
+  /* background-image: linear-gradient(to right, #124a8b, #012644); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+}
+.bg-cta-footer-one .single-cta-area .icon i {
+  color: #fff;
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.bg-cta-footer-one .single-cta-area .contact-info {
+  margin-left: 15px;
+  text-align: left;
+}
+.bg-cta-footer-one .single-cta-area .contact-info p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 7px;
+  color: #74787c;
+}
+.bg-cta-footer-one .single-cta-area .contact-info a {
+  font-weight: 600;
+
+  font-size: 15px;
+  line-height: 24px;
+  color: #000;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.align-items-center {
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+.pt--90 {
+  padding-top: 90px !important;
+}
+.single-footer-one-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 136px;
+  justify-content: space-between;
+}
+.single-footer-one-wrapper .single-footer-component {
+  flex-basis: 20%;
+}
+.single-footer-one-wrapper .single-footer-component.first {
+  flex-basis: 30%;
+}
+.single-footer-one-wrapper .single-footer-component .title-area {
+  position: relative;
+  margin-bottom: 45px;
+}
+.single-footer-one-wrapper .single-footer-component .title-area .title {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.single-footer-one-wrapper .single-footer-component .title-area::after {
+  position: absolute;
+  background-image: url("https://themewant.com/products/html/drill/handyman/assets/images/footer/02.png");
+  background-size: cover;
+  content: "";
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 61px;
+  background-repeat: no-repeat;
+}
+.single-footer-one-wrapper .single-footer-component .body p.disc {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #fff;
+}
+.rts-social-style-one ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.rts-social-style-one ul li {
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.rts-social-style-one ul li a {
+  display: block;
+  padding: 13px;
+  background: #032a4c63;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+.rts-social-style-one ul li a i {
+  color: #fff;
+  transition: 0.3s;
+}
+.single-footer-one-wrapper .single-footer-component {
+  flex-basis: 20%;
+}
+.single-footer-one-wrapper .single-footer-component .title-area {
+  position: relative;
+  margin-bottom: 45px;
+}
+.single-footer-one-wrapper .single-footer-component .title-area .title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.pages-footer ul {
+  padding: 0;
+  margin: 0;
+}
+.pages-footer ul li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.pages-footer ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.pages-footer ul li a i {
+  margin-right: 15px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 40px;
+}
+.pages-footer ul li a p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  transition: 0.3s;
+  margin-bottom: 0;
+  color: #fff;
+}
+.cards {
+  width: 100%;
+  margin: 20px 0 40px;
+  float: left;
+}
+.visa,
+.master,
+.american {
+  background-image: url("https://tripoholidays.com/public/images/ns-sprite.png");
+  float: left;
+  height: 37px;
+  width: 57px;
+  margin-right: 10px;
+}
+.visa {
+  background-position: -1px -35px;
+}
+.cards > a {
+  padding: 1px;
+  margin: 3px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.master {
+  background-position: -69px -35px;
+}
+.american {
+  background-position: -138px -35px;
+}
+.py_pal {
+  background-image: url("https://tripoholidays.com/public/images/ns-sprite.png");
+  float: left;
+  height: 37px;
+  width: 84px;
+  background-position: -315px -83px;
+}
+.rupaylg {
+  background-image: url("https://tripoholidays.com/public/images/rupay-lg-nw.png");
+  float: left;
+  height: 35px;
+  width: 57px;
+  background-position: 0 0;
+}
+.pcilg {
+  background-image: url("https://tripoholidays.com/public/images/pci-logo.png");
+  float: left;
+  height: 35px;
+  width: 57px;
+  background-position: 0 0;
+}
+.social-image-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 595.98px) {
+  .bg-cta-footer-one .single-cta-area {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    /* text-align: center; */
+    /* margin-bottom: 10px; */
+    justify-content: start;
+    /* gap: 10px; */
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .popular_dest {
+    margin-left: -35px;
+  }
+
+  .popular_dest_title {
+    text-wrap: nowrap;
+  }
+}
+
+.footer_bar_link {
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  flex: 0 0 33%;
+  font-size: 12px;
+  border-top: 3px solid #a3a3a35c;
+  color: #454545;
+  font-weight: 500;
+}
+.footer_mobile_bar {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  transition: 0.5s all ease;
+}
+.footer_bar_link span {
+  display: block;
+}
+.footer_bar_link .fa-phone {
+  transform: rotate(0deg);
+}
+
+.stickybottom {
+  display: none;
+}
+@media (max-width: 525px) {
+  .stickybottom {
+    display: block;
+  }
+}
+.stickybottom {
+  background-color: #fff;
+  position: sticky;
+  bottom: 0;
+  /* display: flex */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 700000;
+  box-shadow: 0 -1px 3px #cac4c7;
+}
+.stkyflx {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 5px 15px;
+}
+.stiky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  font-size: 11px;
+  font-weight: 500;
+  color: #999999;
+}
+.clrstky {
+  color: #f73030;
+}
+.clrstky:before {
+  content: "";
+  display: block;
+  width: 23px;
+  background-color: #f73030;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  border-radius: 50px;
+}
+._HomeStky {
+  /* background: url(https://images.emtcontent.com/mob-emthome/home.svg); */
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+._BookingsStky {
+  /* background: url(https://images.emtcontent.com/mob-emthome/bookings.svg); */
+  width: 23px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+._OffersStky {
+  /* background: url(https://images.emtcontent.com/mob-emthome/offers.svg); */
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+._WalletStky {
+  /* background: url(https://images.emtcontent.com/mob-emthome/wallet.svg); */
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+._MoreStky {
+  /* background: url(https://images.emtcontent.com/mob-emthome/more.svg); */
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

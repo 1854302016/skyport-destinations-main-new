@@ -1,0 +1,881 @@
+.flightCont {
+  /* padding: 50px !important; */
+  background-color: white;
+  /* margin-right: 90px; */
+  /* border: 1px solid #d32f2f; */
+  border-radius: 0.5rem;
+  /* margin-top: -90px; */
+  height: max-content;
+  padding: 40px;
+  color: #d32f2f;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 0px, rgb(0 0 0 / 10%) 0px 2px 8px 0px;
+
+  background: radial-gradient(circle, #d32f2f0f 0%, #d32f2f00 100%);
+  /* display: flex;
+  justify-content: center; */
+
+  /* padding: 160px 0px 30px !important; */
+}
+
+.flight-booking-main-duv .slick-arrow,
+.flight-booking-main-duv .slick-prev {
+  display: none !important;
+}
+
+/* @media (min-width: 768px){
+  .flight-booking-main-duv{
+    padding: 40px;
+  }
+} */
+/* .flight-booking-main-duv {
+  position: relative;
+  z-index: -1;
+} */
+.video_banner_tagsss {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.flight_booking_inner_div_div {
+  position: relative;
+  z-index: 10;
+  padding: 60px 0px;
+}
+
+.flightBookingMainDiv {
+  background-color: white;
+  width: 100%;
+  /* height: 18vh;
+  
+ margin-bottom: 50px; */
+  border: 1px;
+}
+
+/* .flightBookingparentDiv {
+  margin: auto;
+} */
+
+.flightSearchRadio {
+  display: flex !important;
+  gap: 20px;
+  margin-top: 10px;
+  /* margin-bottom: 20px; */
+  align-items: center !important;
+}
+
+.flightSearchRadio .flightPara {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 5px;
+}
+
+.flightBookingSearch {
+  display: flex;
+  display: flex;
+  /* margin-right: 76px; */
+  /* margin-left: 78px; */
+  justify-content: space-between;
+  margin-bottom: 20px !important;
+  color: #d32f2f;
+}
+
+.FlightBookingDel {
+  /* border: 1px dashed #d32f2f; */
+  width: 24%;
+  /* margin-right: 30px; */
+  /* margin-bottom: 20px; */
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.flightBookingtext {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #d32f2f;
+}
+
+.flightBookingMinText {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.flightBookingRecent {
+  /* margin-left: 73px; */
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  /* color: #d32f2f; */
+}
+
+.flightBookingFrom {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.flightBookingFromDiv {
+  width: 100%;
+}
+
+.flightBookingFromInputs1 {
+  padding: 13px 10px;
+  width: 100%;
+  color: #d32f2f;
+  border: 0.1px solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.flightBookingFromInputs13 {
+  padding: 13px 10px;
+  width: 100%;
+  color: #d32f2f;
+  border: 0.1px solid;
+  border-radius: 5px;
+  margin-bottom: 17px;
+  margin-top: 10px;
+}
+
+.flightBookingFromInput {
+  padding: 13px 10px;
+  width: 100%;
+  color: #d32f2f;
+  border: 0.1px solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.flightBookingArrow {
+  /* text-align: center; */
+  /* margin: auto; */
+  /* background-color: white; */
+  margin-top: 45px;
+  border-radius: 40px;
+  color: #d32f2f;
+  margin-left: 0px;
+}
+
+.flightBookingDeparture {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flightBookingFare {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  /* margin-bottom: 10px; */
+}
+
+/* .flightBookingHeroCont {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  width: 70% !important;
+  margin: auto;
+  margin-top: 30px;
+} */
+
+.flightBookingSidebar {
+  width: 100% !important;
+  padding: 20px;
+  /* margin-left: 20px; */
+  /* border: 1px solid black; */
+  /* box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 0px, rgb(0 0 0 / 10%) 0px 2px 8px 0px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.1px solid rgba(0, 0, 0, 0.083);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+@media (max-width: 884px) {
+  .flightBookingSidebarfirstDiv {
+    /* display: flex;
+    color: white;
+    font-weight: 600;
+    align-items: center; */
+    font-size: 12px;
+    /* width: max-content; */
+    padding: 0px !important;
+  }
+}
+
+.flightBookingSidebarfirstDiv {
+  display: flex;
+  color: #fff;
+  font-weight: 600;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  width: max-content;
+  padding: 7px 47px 7px 25px;
+}
+
+.flightBookingSidebarInner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 13px;
+}
+
+.flightBookingIcon {
+  color: white;
+  margin-right: 10px;
+  font-size: 23px !important;
+}
+
+.flightBookingSideBarMain {
+  height: 70vh;
+  padding: 20px 0px;
+  background: #d32f2f;
+  /* background-color: #17194e; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.flightBookingSidebarfirstDiv:hover {
+  background-color: #2b7a99;
+  color: white;
+  border-radius: 5px;
+  /* padding: 15px; */
+}
+
+.flightBookingSidebarfirstDiv:hover .flightBookingIcon {
+  color: white;
+}
+
+.flightBookingIcon:hover {
+  color: white;
+}
+
+.flightBookingThird {
+  width: 100%;
+  /* margin-left: -80px; */
+}
+
+.flightBookingBtn {
+  /* background-color: #f73030 !important; */
+  background: #053355 ;
+  color: white;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  /* font-size: 15px; */
+}
+
+.flightBookingRowDash {
+  padding: 6px;
+}
+
+.wallet-section {
+  background: #fff;
+  border-radius: 5px;
+  width: 100% !important;
+  padding: 15px;
+  font-weight: 500;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 0px, rgb(0 0 0 / 10%) 0px 2px 8px 0px;
+}
+
+.wallet-section h2 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #ccc;
+  /* padding: 10px; */
+  display: flex;
+  /* width: max-content; */
+  /* align-items: center; */
+  margin-bottom: 3px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.wallet-section p {
+  font-size: 12px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+  width: max-content;
+}
+
+/* Default styles */
+.flightCont {
+  background: #fff;
+  /* background-color: #ffffff3b; */
+  /* margin-right: 90px; */
+  border-radius: 0.5rem;
+  height: max-content;
+  padding: 20px 40px 20px 40px;
+  color: #d32f2f;
+
+  /* color: antiquewhite; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 2px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+}
+
+/* Hide slick arrows on all devices */
+.flight-booking-main-duv .slick-arrow {
+  display: none !important;
+}
+
+/* Sidebar styles */
+.flightBookingSidebar {
+  width: 30% !important;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.1px solid rgba(0, 0, 0, 0.083);
+  border-radius: 10px;
+}
+
+/* Responsive styles for tablet */
+@media only screen and (max-width: 768px) {
+  .flightBookingHeroCont {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flightBookingThird {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .flightCont {
+    margin-right: 0;
+  }
+
+  .flightBookingSidebar {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .flightBookingSideBarMain {
+    height: max-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .flightBookingMainDiv {
+    display: none;
+  }
+
+  .flightBookingSidebarInner {
+    display: flex;
+    height: max-content;
+    /* position: sticky; */
+    padding: 15px 15px;
+    /* flex-direction: column; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    /* margin-top: 8px; */
+    gap: 20px;
+  }
+
+  .flightBookingSidebarfirstDiv {
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .flightBookingSideBarMain {
+    padding: 8px 24px;
+  }
+
+  .flightBookingSidebarHidden {
+    display: none;
+  }
+}
+
+/* Responsive styles for phone */
+@media only screen and (max-width: 480px) {
+  .flightBookingSearch {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .FlightBookingDel {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .flightBookingMainDiv {
+    margin-bottom: 30px;
+  }
+
+  .flightBookingSidebar {
+    width: 100% !important;
+
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .mainFlightCont {
+    flex-direction: column;
+    gap: 20px;
+    /* margin-top: 25px; */
+  }
+
+  .flightBookingBtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .flightBookingIcon {
+    margin-top: -6px;
+    font-size: 20px !important;
+  }
+
+  .flightBookingSideBarMain {
+    height: 10vh;
+    position: sticky;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+  }
+
+  .flightBookingtext {
+    font-size: 12px;
+  }
+
+  .flightBookingMinText {
+    font-size: 10px;
+  }
+
+  .flightSearchRadio .flightPara {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .flightBookingFromDiv {
+    margin-top: -13px;
+  }
+
+  .flightSearchRadio {
+    display: flex;
+    gap: 15px !important;
+    padding: -20px;
+    /* margin-bottom: 5px; */
+  }
+
+  .flightBookingFrom {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .flightBookingArrow {
+    margin-top: 0px !important;
+    /* margin-bottom: 5px !important; */
+    margin: auto;
+    width: 100%;
+  }
+
+  .flightBookingRecent {
+    margin-left: 10px;
+  }
+
+  /* .flightBookingSearch {
+    margin-left: 1px;
+    margin-right: 1px;
+  } */
+
+  .flightBookingIcon {
+    margin-right: 0px;
+  }
+
+  .flightCont {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .flightBookingFromInputs1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .flightBookingFromInputs13 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .flightBookingMainDiv {
+    display: none;
+  }
+}
+
+.dashboardbox {
+  width: 100%;
+  float: left;
+  position: relative;
+  border-radius: 5px;
+  min-height: 150px;
+  margin: 0;
+}
+
+.dashboardbox .boxheading {
+  font-size: 14px;
+  /* color: #fff; */
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+  margin: 0 auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.boxheadcolor2 {
+  background: #17194e;
+}
+
+.dashinnerbox {
+  width: 100%;
+  padding: 5px;
+  float: left;
+}
+
+.dashinnerbox ul li {
+  font-weight: 300;
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  width: 100%;
+}
+
+.dashinnerbox ul li label {
+  font-weight: 100;
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  min-width: 114px;
+  margin: 0;
+  margin-right: 5px;
+  text-wrap: nowrap;
+}
+
+.dashboxcolor2 {
+  background: #d32f2f;
+}
+
+@media (max-width: 1205px) {
+  .flightBookingSearch {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* .DayPicker-Day--start,
+.DayPicker-Day--end {
+  background-color: #d32f2f !important;
+}
+
+.DayPicker-Day--range {
+  background-color: #515494;
+} */
+
+/* .DayPicker-Day {
+  width: <your-width-here>px; 
+  height: <your-height-here>px; 
+} */
+
+/* .CalendarDay{
+  width: 30px;
+  height: 30px;
+} */
+
+@media (max-width: 374.99998px) {
+  .DayPicker {
+    /* width: 280px; */
+    margin-left: -20px !important;
+    /* margin-top: -10px ; */
+  }
+}
+
+.DayPicker {
+  z-index: 999999;
+}
+
+.sfp-change-trip {
+  position: relative;
+  width: 318px;
+  height: 30px;
+  border-radius: 5px;
+  /* border-radius: 15px; */
+  box-sizing: border-box;
+  /* padding: 4px; */
+  padding: 0px 0px 0px 0px;
+  background-color: #f73030;
+  /* background: #d32f2f; */
+  background: #053355 ;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* margin-bottom: 20px; */
+}
+
+.sfp-change-trip .sfp-trip {
+  position: relative;
+  flex: 1;
+  z-index: 5;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  transition: all 0.2s linear;
+  letter-spacing: 0.5;
+  font-weight: 400;
+  padding: 5px;
+
+  color: #fff;
+}
+
+.sfp-change-trip .sfp-trip.active {
+  font-weight: 700;
+  color: #fff !important;
+  /* color: #d32f2f; */
+  border-radius: 5px;
+  /* border-radius: 12px; */
+  background-color: #efbf04;
+  transition: all 0.2s linear;
+}
+
+/* .sfp-change-trip .sfp-trip-layer{
+  position: absolute;
+  width: 102px;
+  height: 22px;
+  border-radius: 12px;
+  background-color: #fff;
+  z-index: 1;
+  transition: all .2s linear;
+}
+
+.sfp-change-trip .sfp-trip-layer.layer-left{
+  transform: translate(0);
+} */
+
+@media (max-width: 768px) {
+  .sfp-change-trip {
+    width: 100%;
+    max-width: 275px;
+    margin-bottom: 5px;
+  }
+}
+
+.CalendarDay__hovered_span,
+.CalenderDay_hovered_span:hover {
+  background: rgb(18, 82, 209) !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+.CalendarDay__hovered_span span,
+.CalenderDay_hovered_span span:hover {
+  color: white !important;
+}
+
+.CalendarMonth_caption {
+  background-color: #053355;
+}
+
+.DayPicker strong {
+  color: #fff !important;
+}
+
+.DayPickerNavigation_button__default {
+  background-color: #053355 !important;
+  color: white;
+  border: 1px solid #053355 !important;
+}
+.DayPickerNavigation_button__horizontalDefault {
+  top: 0px !important;
+}
+.DayPicker small {
+  color: white !important;
+}
+
+.DayPickerNavigation_svg__horizontal {
+  fill: white !important;
+}
+
+/* .CalendarDay__default {
+  border: 1px solid white !important;
+  color: white !important;
+  background: #17194e !important;
+} */
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background-color: #053355 !important;
+  color: white;
+  border: 1px solid white !important;
+}
+
+.CalendarDay__selected_span {
+  background-color: #053355 !important;
+  color: white;
+  border: 1px solid white !important;
+}
+
+.CalendarDay__selected span,
+.CalendarDay__selected span:active,
+.CalendarDay__selected span:hover {
+  color: white !important;
+}
+
+.CalendarDay__selected_span span {
+  color: white !important;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-right: 33px solid #053355 !important;
+}
+
+.CalendarMonth_caption {
+  padding-top: 12px !important;
+  padding-bottom: 27px !important;
+}
+
+.DayPicker_weekHeader {
+  top: 42px !important;
+}
+
+.sharenation ._shricn {
+  margin-left: 15px;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: url(https://www.easemytrip.com/images/mob-web/svg/shareicon.svg)
+    no-repeat;
+  display: block;
+  background-size: 100%;
+  filter: brightness(0) invert(1%);
+}
+
+.sharenation #flipv3 {
+  text-align: right;
+  position: relative;
+  z-index: 99;
+}
+
+.sharenation ._langview {
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  align-items: center;
+  color: #858585;
+  font-weight: 600;
+}
+
+.sharenation ._langview span {
+  margin: auto 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sharenation ._langview img {
+  width: 20px;
+}
+
+.sharenation ._arrwdnlang {
+  border: solid #b9b9b9;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: relative;
+  margin-left: 5px;
+  top: -2px;
+}
+
+.sharenation .dropdown-options {
+  position: absolute;
+  top: 30px;
+  z-index: 999;
+  background: #fff;
+  right: -30px;
+  width: 250px;
+  height: 300px;
+  overflow: auto;
+  scrollbar-width: thin;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sharenation .option {
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+  padding: 5px 10px;
+}
+
+.sharenation .option img {
+  margin-right: 10px;
+}
+
+.sharenation .option span {
+  display: inline-block;
+}
+
+.cityselect .row {
+  margin: 0;
+  padding: 0;
+}
+
+.cityselect .row > * {
+  margin: 0;
+  padding: 0;
+}
+
+.hotelsearchmobile .fs_btn {
+  background: #f73030;
+  border: 0;
+  border-radius: 40px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  /* float: right; */
+  font-size: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+  outline: 0;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (max-width: 525px) {
+  .sfp-change-trip .sfp-trip {
+    padding: 0px !important;
+    color: #fff;
+    font-weight: 700;
+    /* color: #333333; */
+  }
+  .sfp-change-trip .sfp-trip.active {
+    color: #002543 !important;
+  }
+}

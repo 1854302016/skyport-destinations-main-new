@@ -1,0 +1,212 @@
+.top-cities-container {
+  /* background: url('https://www.easemytrip.com/images/desk-img/bg-world-map.jpg') top / 90%  no-repeat; */
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  /* opacity: 0.5; */
+  /* background: #F5F8FA ; */
+  /* background: #f730300f; */
+  /* background: linear-gradient(162deg, rgb(210 228 255) 0%, rgb(252 221 212) 100%); */
+  /* background: radial-gradient(circle, #fff 0, #e9f3ff 100%) !important; */
+}
+
+._toprflcont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+._hdrtxt {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  justify-content: center;
+}
+._hdrtxt {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1 1;
+  line-height: normal;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(34, 34, 34);
+  text-align: center;
+}
+/* ._hdrtxt:before {
+  content: "";
+  background: url("https://www.easemytrip.com/images/offer-img/triwings-left.svg");
+  width: 37px;
+  position: absolute;
+  left: -44px;
+  height: 12px;
+  background-size: 100%;
+}
+._hdrtxt:after {
+  content: "";
+  background: url("https://www.easemytrip.com/images/offer-img/triwings.svg");
+  width: 37px;
+  position: absolute;
+  right: -44px;
+  height: 12px;
+  background-size: 100%;
+} */
+
+._city_bx,
+._city_bx:hover {
+  padding: 5px;
+  cursor: pointer;
+}
+._city_bx,
+.view_btn {
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 20px;
+  align-items: center;
+}
+._city_bx {
+  max-width: 90%;
+  background: #58b8f00d;
+  /* background-color: #f730300d; */
+  /* background-color: #ebf5ff8a; */
+  /* padding: 10px; */
+  /* background: radial-gradient(circle, #fff 0, #3c80cd0a 100%); */
+  color: unset;
+  /* background: linear-gradient(162deg, rgb(44 100 185 / 20%) 40%, rgb(248 165 0 / 8%) 100%); */
+  /* background: radial-gradient(circle, #d9eafd1f 0, #3c80cd1f 100%); */
+    border-radius: 15px;
+}
+
+._city_bx:hover,
+._img img,
+._prodbox {
+  border-radius: 10px;
+}
+._city_bx:hover {
+  background: #ecf5fe;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+._img,
+._wid70 {
+  border-radius: 15px;
+}
+._img,
+._img img {
+  height: 55px;
+  width: 55px;
+}
+._img,
+.iconcf2 {
+  display: flex;
+  align-items: center;
+}
+._img {
+  margin-right: 15px;
+}
+._igtxt,
+._wid70 {
+  flex-direction: column;
+}
+._igtxt {
+  display: flex;
+  justify-content: space-between;
+}
+._c_nm {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: flex
+;
+  justify-content: space-around;
+}
+/* ._c_nm {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+} */
+._count {
+  font-weight: 600;
+}
+._count {
+  font-size: 16px;
+  margin: auto 0;
+  color: #034276;
+  text-align: start;
+  width: 100%;
+  margin-left: 5px;
+}
+/* ._count {
+  font-size: 16px;
+  margin: auto 0;
+  color: #034276;
+} */
+.top-cities-countryyy {
+  margin-right: 10px;
+}
+.top-cities-countryy {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  ._city_bx {
+    max-width: unset;
+  }
+
+  ._c_nm {
+    font-size: 15px;
+  }
+  .top_cities_flight_serach{
+    font-size: 28px;
+  }
+}
+.top_cities_images_all {
+    height: 90px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px 0px 0px 2px;
+}
+/* .top_cities_images_all{
+  height: 65px;
+  object-fit: cover;
+} */
+.top_citites_fontt{
+  font-size: 13px;
+}
+.top_cities_mainnn_cont{
+  padding:0px 8px 0px 0px;
+}
+.top-second-cities-container{
+ width: 100%;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+@media (max-width:1220px) {
+  .top_citites_fontt{
+    font-size: 10px !important; 
+}
+}
+
+@media (max-width:1199px) {
+  .top_citites_fontt a {
+    font-size: 10px !important;
+}
+}
+
+
+@media (min-width: 1199px) and (max-width: 1366px) {
+   .top_citites_fontt a {
+    font-size: 10px !important;
+}
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .top_citites_fontt a {
+    font-size: 10px !important;
+}
+}

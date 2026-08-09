@@ -1,0 +1,74 @@
+/* Container */
+.heading_flight_list_three .sort-options-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+/* Row layout */
+.heading_flight_list_three .sort-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+/* Individual option box */
+.heading_flight_list_three .sort-option {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 12px;
+  /* border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  background-color: #ffffff; */
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.heading_flight_list_three .sort-option:hover {
+  background-color: #f2f2f2;
+}
+
+/* Radio + Label group */
+.heading_flight_list_three .sort-option input[type="radio"] {
+  transform: scale(1.4); /* Increase size */
+  margin-right: 12px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+/* Label text wrapper */
+.heading_flight_list_three .sort-label {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title and subtitle styles */
+.heading_flight_list_three .sort-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #222;
+}
+
+.heading_flight_list_three .sort-subtitle {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 2px;
+}
+.heading_flight_list_three .text-wrapper {
+  padding: 8px 25px;
+  margin: 0px 15px;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+}
+.heading_flight_list_three .sort-heading {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.heading_flight_list_three .sort-body {
+  font-size: 12px;
+  line-height: 1.4;
+}

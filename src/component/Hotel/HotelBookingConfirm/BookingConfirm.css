@@ -1,0 +1,217 @@
+.hotelBookingparentDiv p,
+h {
+  margin: 0px;
+}
+.hotelBookingparentDiv p {
+  font-size: 14px;
+}
+.hotelTicketMainHead {
+  /* margin-top: 5px; */
+  font-size: 20px;
+  color: #2d3290;
+  font-weight: 600;
+  /* text-align: center; */
+  margin-block: auto;
+}
+.hotelBookingSecDiv {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px 10px;
+  /* border-radius: 4px; */
+  background-color: rgb(23 26 85);
+
+  color: white;
+  /* border-radius: 4px; */
+}
+.hotelBookingThirdDiv {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1px 15px;
+  /* background-color: #919191; */
+  /* color: white; */
+  border-radius: 4px;
+}
+.hotelBookingThirDivPara {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #171055;
+  color: white;
+  font-size: 16px;
+  /* border-radius: 4px; */
+  padding: 8px;
+}
+/* .hotelBookingThirdDivInner {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+} */
+.hotelBookinBoldText {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.hotelBookingImageData {
+  width: 108.5%;
+  margin-left: -11px;
+  /* height: 300px; */
+  object-fit: cover;
+}
+.hotlBookingUpperIcon {
+  padding: 3px 8px;
+  background-color: #73b9ff29;
+  font-size: 15px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hotlBookingUpperIcon2 {
+  padding: 3px 8px;
+  background-color: #dee2e6;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  font-weight: 500;
+  gap: 5px;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hotelBookingFourthDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 6px;
+  color: black;
+  font-weight: 500;
+}
+.hotelBookingFifthDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px !important;
+  font-weight: 600;
+}
+.hotelBookingHeaderDiv {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px 0px 10px 0px;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.hotelBookingUnderFirst {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  /* margin-bottom: 10px; */
+}
+.hotelBookingHeadingDiv {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.hotelBookingHideDetails {
+  display: block;
+}
+.hotelBookingFourthMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.hotelBookingHeadingMain {
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 786px) {
+  .hotelBookingparentDiv p {
+    font-size: 12px;
+  }
+  .hotelBookingUnderFirst {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hotelBookingHeadingMain {
+    text-align: start;
+  }
+  .hotelBookingImageData {
+    width: 106%;
+  }
+  /* .hotelBookingHideDetails {
+    display: none;
+  } */
+  .hotelBookingFourthMain {
+    margin-bottom: 10px;
+  }
+  .hotelBookingBigTag {
+    text-wrap: nowrap;
+  }
+}
+
+/* Markuppppppppppppppppppp */
+.hotelBookingMarkupMain {
+  width: 100%;
+}
+.hotelBookingMarkup {
+  border: 30px solid #acbbd9bf;
+  padding: 15px;
+  position: absolute;
+  /* text-align: center; */
+  background-color: white;
+  /* padding: 40px; */
+  top: 180px;
+  left: 399px;
+  width: 40%;
+}
+.hotelBookingMarkuppara {
+  font-size: 18px;
+  font-weight: 500;
+}
+.hotelBookingMarkupClose {
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(156, 19, 46);
+  border: none;
+}
+.hotelBookingMarkupSub {
+  padding: 5px 10px;
+  color: white;
+  background-color: #2d3290;
+  border: none;
+}
+.hotelBookingCloseSub {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-top: 10px;
+  gap: 10px;
+}
+.bookingConfirmHotelFooter {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .hotelBookingMarkup {
+    width: 95%;
+    /* top: 0; */
+    border: 20px solid #acbbd9bf !important;
+    left: 10px;
+  }
+  .hotelBookingMarkuppara {
+    font-size: 14px;
+  }
+  .hotelBookingHeaderDiv {
+    gap: 8px;
+    justify-content: start;
+  }
+}
+@media (max-width: 550px) {
+  .bookingConfirmHotelFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+}

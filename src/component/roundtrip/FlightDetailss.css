@@ -1,0 +1,283 @@
+.flight-details {
+  background: #48305a;
+  color: #fff;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.ovf-hidden {
+  overflow: hidden;
+}
+.pr {
+  position: relative;
+}
+.full-width {
+  width: 100%;
+}
+.table {
+  display: table;
+}
+.flight-details .header {
+  padding-top: 6px;
+  padding-left: 6px;
+  background: #301b41;
+}
+.fs-13 {
+  font-size: 0.92857rem;
+}
+.bold {
+  font-family: "Rubik serif";
+}
+.text-center {
+  text-align: center;
+}
+.cursor-pointer {
+  cursor: pointer;
+}.table>* {
+    display: table-cell;
+}.flight-details .header .heading {
+    padding: 7px 16px 13px;
+    opacity: 0.9;
+}.flight-details.full-details .header .heading {
+    opacity: 1;
+}
+.flight-details.full-details .header .heading.active:before {
+    content: "";
+    border: 7px solid #301b41;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #301b41;
+    border-bottom: 0;
+    transform: translate(-50%, 100%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}.i-b {
+    display: inline-block;
+}.pr {
+    position: relative;
+}.pr-5 {
+    padding-right: 5px;
+}.fs-22 {
+    font-size: 1.57143rem;
+}
+.ytfi-cancel:before {
+    content: "";
+}
+[class^="ytfi-"]:before, [class*=" ytfi-"]:before {
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "fontello";
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.flight-details .details {
+    width: 62.6%;
+    background: #fff;
+    border-bottom-left-radius: 6px;
+}
+.flight-details.full-details .details {
+    width: 100%;
+}
+.white-bg {
+    background: #fff;
+}
+.flight-details .details .contents {
+    color: #333;
+    padding: 20px 0 10px;
+    border-bottom-left-radius: 6px;
+}.flight-details .details .contents .container, .flight-details .details .contents .disclaimer {
+    padding-right: 3%;
+    padding-left: 4.5%;
+}.scroll-v {
+    overflow-y: auto;
+    overflow-x: hidden;
+    –webkit-overflow-scrolling: touch;
+}.flight-details .tab-content {
+    max-height: 400px;
+    padding-right: 1.5%;
+}.flight-details .details .contents .airline-det {
+    border-bottom: 2px solid #f2f2f2;
+    padding: 6px 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.ytfi-plane:before {
+    content: "";
+}
+.flight-details .details .contents .airline-det .logo .ytfi-plane:before {
+    content: '';
+}
+.domAirLogo {
+    width: 70px;
+    height: 70px;
+    background: transparent url("https://www.yatra.com/content/b2c-cdn/airline-logo-cdn/resources/images/DFL.png?version=202202031210") 0 0 no-repeat;
+    background-size: 700px 140px;
+    float: left;
+    image-rendering: optimizequality;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+}
+.search-page .air-logo {
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: content-box;
+}.domAirLogo.size-28 {
+    background-size: 280px 56px;
+    width: 28px;
+    height: 28px;
+}.size-28.xUK {
+    background-position: -168px -0px;
+}.text-left {
+    text-align: left;
+}.pl-10 {
+    padding-left: 10px;
+}.full-width {
+    width: 100%;
+}.mb-2 {
+    margin-bottom: 2px;
+}.pull-left {
+    float: left;
+}
+.ellipsis {
+    max-width: 99.5%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* .flight-details .details .contents .airline-det .airline .name {
+    max-width: 40%;
+} */
+.mr-2 {
+    margin-right: 2px;
+}.v-aligm-m {
+    vertical-align: middle;
+}.font-lightestgrey {
+    color: #999;
+}.fs-10 {
+    font-size: .71429rem;
+}.fs-13 {
+    font-size: .92857rem;
+}.flight-details .details .contents .airline-det .amenties {
+    width: 28%;
+}.flight-details .details .contents .airline-det .amenties .amenety {
+    padding-right: 5px;
+}.tipsy {
+    cursor: pointer;
+    position: relative;
+}.bottom-center {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-name: tipsy-anim-bottom-center;
+    -moz-animation-name: tipsy-anim-bottom-center;
+    animation-name: tipsy-anim-bottom-center;
+}.tipsy .tipsy-content {
+    background: #000;
+    opacity: 0.77;
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    bottom: 100%;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #cdcecf;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 5px 1px #cdcecf;
+    -webkit-box-shadow: 0 0 5px 1px #cdcecf;
+    box-shadow: 0 0 5px 1px #cdcecf;
+    left: 50%;
+    transform: translate(-50%, -1em);
+    z-index: 2;
+}.tipsy .tipsy-content.bottom {
+    transform-origin: 0% 100%;
+    bottom: -1em;
+}.tipsy .tipsy-content.bottom.bottom-center {
+    transform: translate(-50%, 100%);
+}.flight-details .details .contents .airline-det .amenties .amenety .tipsy-content {
+    width: max-content;
+}.flight-details .details .contents .airline-det .amenties .amenety.meal .tipsy-content {
+    min-width: auto;
+    max-width: 100px;
+}.disabled {
+    pointer-events: none;
+    color: #999;
+    opacity: 0.6;
+}.flight-details .details .contents .airline-det .amenties .amenety {
+    padding-right: 5px;
+}.flight-details .details .contents .airline-det .amenties .amenety.disabled {
+    color: #666;
+    opacity: 0.25;
+}
+.disabled>* {
+    cursor: not-allowed;
+    font-family: "Rubik-regular";
+    color: #999;
+}.ytfi-wifi:before {
+    content: "";
+}[class^="ytfi-"]:before, [class*=" ytfi-"]:before {
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "fontello";
+}.tipsy .tipsy-content.bottom.bottom-center {
+    transform: translate(-50%, 100%);
+}.tipsy .tipsy-content.bottom {
+    transform-origin: 0% 100%;
+    bottom: -1em;
+}
+.flight-details .details .contents .airline-det .amenties .amenety .tipsy-content {
+    width: max-content;
+}.flight-details .details .contents .airline-det .amenties .amenety.seat .tipsy-content {
+    min-width: auto;
+    max-width: 60px;
+}.flight-details .details .contents .airline-det .amenties .amenety:last-of-type {
+    padding-right: 0;
+}.flight-details .details .contents .airline-det .amenties .amenety.disabled {
+    color: #666;
+    opacity: 0.25;
+}.flight-details .details .contents .airline-det .amenties .amenety {
+    padding-right: 5px;
+}.tipsy .tipsy-content.bottom.bottom-right {
+    transform: translate(-100%, 100%);
+    left: 150%;
+}
+.flight-details .details .contents .schedule-det {
+    padding: 15px 0;
+}.flight-details .details .contents .schedule-det .city {
+    width: 35%;
+}.pr-18 {
+    padding-right: 18px;
+}.no-wrap {
+    white-space: nowrap;
+}.mb-2 {
+    margin-bottom: 2px;
+}.fs-16 {
+    font-size: 1.14286rem;
+}.mb-5 {
+    margin-bottom: 5px;
+}.fs-12 {
+    font-size: .85714rem;
+}.ml-2 {
+    margin-left: 2px;
+}

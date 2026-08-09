@@ -1,0 +1,100 @@
+.TG__topCities .items{
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    margin: 0 9px 10px;
+    border: 1px solid #eae8e8;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    padding: 20px 10px;
+    width: 120px;
+    height: 150px;
+    margin-left: 0;
+}
+.TG__topCities .items .origin_destination {
+    padding-left: 12px;
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+.TG__topCities .items .origin_destination:before {
+    content: " ";
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 50%;
+    top: 0;
+    left: -3.5px;
+    height: 6px;
+    width: 6px;
+}.TG__topCities .items .elip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}.TG__topCities .items .origin_destination div {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 2px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}.TG__topCities .items .origin_destination .time {
+    margin: 5px 0 20px;
+    font-weight: 400;
+    font-size: 12px;
+    width: 100%;
+}.TG__topCities .items .origin_destination:after {
+    content: " ";
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: -3.5px;
+    height: 6px;
+    width: 6px;
+}.TG__topCities .items .price_go {
+    padding-top: 30px;
+    padding-left: 14px;
+}.TG__topCities .items .price_go .low_price {
+    font-size: 18px;
+    color: #f34f4f;
+    text-align: left;
+    display: block;
+    font-weight: 500;
+    line-height: 20px;
+}.TG__topCities .items .price_go .low_price span {
+    width: 100%;
+    font-weight: 400;
+    display: block;
+    color: #999;
+    font-size: 12px;
+}.TG__topCities .items .price_go .low_price .rs {
+    font-size: 20px;
+    color: #f34f4f;
+    font-weight: 500;
+    display: inline;
+    float: left;
+    width: 15px;
+}
+
+.topC_ities_home{
+    height: 50px !important;
+    width: 100%;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+
+.TG__topCities img{
+width: 100%;
+height: 60px !important;
+margin-block:auto;
+}   
+@media (max-width:525px) {
+    .top_citires_forntt{
+        font-size: 11px !important;
+    }
+}

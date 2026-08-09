@@ -1,0 +1,267 @@
+.hotel-RoomsOverViewMain {
+  position: relative;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOverViewMenu {
+  background-color: #fff;
+  box-shadow: 0 0 5px #0000001a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.hotel-RoomsOverViewMenu.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOverViewMenuFinalBooking {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px #0000001a;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOverViewRoomsBenefits {
+  background-color: #d6eaf8;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  border-right: 1px solid #d6eaf8;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.hotel-RoomsOverViewMain .hotel-finalRoomType-Row {
+  padding: 10px 15px;
+  display: flex;
+}
+
+.hotel-RoomsOverViewMain .hotel-finalRoomType {
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  margin: 8px auto 15px;
+  color: #3498db;
+}
+
+.hotel-RoomsOverViewMain .hotel-finalRoomTypeImg {
+  height: 165px !important;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.hotel-RoomsOverViewMain .hotel-finalRoomType-Btn {
+  float: left;
+  padding: 5px 8px;
+  background: #d6eaf8;
+  border-radius: 5px;
+  margin: 15px 4px 7px 0;
+  font-size: 13px;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOnly {
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  margin: 8px auto 15px;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOnly-Item {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOnly-Icons {
+  color: #12ad2b;
+  font-size: 20px !important;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.hotel-RoomsOverViewMain .hotel-bookNowgetOffer {
+  position: relative;
+  font-size: 12px;
+  margin: 15px 0 0 auto;
+  background-color: #bbffc3;
+  text-align: center;
+  padding: 2px;
+  width: 202px;
+  color: #000;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #bbffc378;
+}
+
+.hotel-RoomsOverViewMain .hotel-RoomsOnly-ItemBookNowBtn {
+  background: #053355 ;
+  width: 100%;
+  padding: 10px 0px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.hotel-RoomOverView-Description .hotel-Rooms-Des {
+  background-color: #fff;
+  box-shadow: 0 0 5px #0000001a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 1px solid #dbdbdb;
+  margin: 10px 0;
+}
+
+.hotel-RoomOverView-Description .hotel-Rooms-Des-Below {
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.hotel-RoomOverView-Description .hotel-Rooms-Ameni-Below {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px 0 15px 0;
+}
+
+.hotel-RoomOverView-Description .hotel-amenities-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hotel-RoomOverView-Description .free_amenitiesList {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotel-RoomOverView-Description .free_amenitiesList:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-RoomOverView-Description .free_amenitiesListIcons {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.hotel-RoomOverView-Description .hotel-Rooms-BookingPolicyList {
+  list-style: disc;
+  font-size: 13px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.hotel-finalRoomType-Col {
+  border: 1px solid rgb(230, 230, 230);
+}
+.cross-pricing {
+  margin-top: 8px;
+}
+
+/* ✅ Mobile specific overrides */
+@media only screen and (max-width: 600px) {
+  .hotel-RoomsOverViewMain .hotel-RoomsOverViewMenu {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .hotel-RoomsOverViewMenuItems {
+    font-size: 15px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .hotel-RoomsOverViewMenu a:nth-child(4),
+  .hotel-RoomsOverViewMenu a:nth-child(5) {
+    display: none !important;
+  }
+
+  #booking-policy-section {
+    display: none;
+  }
+
+  #location-section {
+    display: none;
+  }
+
+  #location-section iframe {
+    height: 250px !important;
+    border-radius: 10px;
+  }
+
+  .hotel-finalRoomType-Row {
+    display: block !important;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin: 6px 0;
+  }
+
+  .hotel-RoomsOverViewMain .hotel-finalRoomType-Row {
+    padding: 0;
+  }
+
+  .hotel-finalRoomType-Col {
+    width: 100% !important;
+    display: block !important;
+    border-right: none !important;
+    margin-bottom: 10px;
+    border: none;
+  }
+
+  .hotel-finalRoomTypeImg {
+    width: 100%;
+    height: auto !important;
+    border-radius: 5px;
+  }
+
+  .hotel-RoomsOverViewRoomsBenefits {
+    display: none !important;
+  }
+
+  .hotel-RoomOverView-Description .hotel-amenities-lists {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hotel-RoomOverView-Description .free_amenitiesList {
+    flex: 1 1 45%;
+    font-size: 13px;
+  }
+
+  .hotel-bookNowgetOffer {
+    display: none;
+  }
+  .hotelDetail-ratings {
+    display: none;
+  }
+}

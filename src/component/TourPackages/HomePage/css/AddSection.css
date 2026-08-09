@@ -1,0 +1,51 @@
+.addSection {
+    margin: 30px auto;
+    display: block;
+}
+
+.deskvw {
+    display: block;
+}
+
+.mobvw {
+    display: none;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 600px) {
+    .deskvw {
+        display: none;
+    }
+
+    .mobvw {
+        display: block;
+    }
+}
+
+.lftbtn,
+.rgtbtn {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    height: 22px;
+    margin: auto;
+    background: #000;
+    width: 22px;
+    padding: 0;
+    padding-right: 3px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    left: -10px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.rgtbtn {
+    left: unset;
+    right: -10px;
+    padding-right: 0px;
+    padding-left: 3px;
+}

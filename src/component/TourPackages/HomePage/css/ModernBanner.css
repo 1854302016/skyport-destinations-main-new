@@ -1,0 +1,499 @@
+/* ============================================
+   MODERN BANNER SECTION STYLES
+   Professional Hero Section with Search
+   ============================================ */
+
+/* Banner Wrapper */
+.modern-banner-wrapper {
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #bdc920 0%, #e4d60f 100%);
+}
+
+.modern-banner-slider {
+  height: 100%;
+  position: relative;
+}
+
+.modern-banner-slide {
+  height: 550px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Banner Overlay */
+.modern-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(202, 202, 202, 0.85) 0%,
+    rgba(43, 45, 66, 0.75) 50%,
+    rgba(69, 123, 157, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* Banner Content */
+.modern-banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.modern-banner-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+  animation: fadeInDown 0.8s ease-out;
+  line-height: 1.2;
+}
+
+.modern-banner-subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Modern Search Box */
+.modern-search-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.modern-search-box {
+  background: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.modern-search-box:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.modern-search-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #e63946 0%, #d62828 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modern-search-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+}
+
+.modern-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #2b2d42;
+  padding: 0 12px;
+  background: transparent;
+}
+
+.modern-search-input::placeholder {
+  color: #6c757d;
+}
+
+.modern-search-button {
+  background: linear-gradient(135deg, #f2bc06 0%, #e0a800 100%);
+  color: #2b2d42;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.modern-search-button:hover {
+  background: linear-gradient(135deg, #e0a800 0%, #f2bc06 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(242, 188, 6, 0.4);
+}
+
+/* Auto Suggest Dropdown */
+.modern-autosuggest {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 10;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modern-autosuggest-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modern-autosuggest-header svg {
+  width: 20px;
+  height: 20px;
+  color: #e63946;
+}
+
+.modern-autosuggest-header strong {
+  color: #2b2d42;
+  font-size: 14px;
+}
+
+.modern-autosuggest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modern-autosuggest-item {
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.modern-autosuggest-item:last-child {
+  border-bottom: none;
+}
+
+.modern-autosuggest-item:hover {
+  background: #f8f9fa;
+}
+
+.modern-autosuggest-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.modern-autosuggest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modern-autosuggest-content {
+  flex: 1;
+}
+
+.modern-autosuggest-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b2d42;
+  margin: 0;
+}
+
+/* Category Pills Section */
+.modern-category-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 30px 0;
+  margin-top: -30px;
+  position: relative;
+  z-index: 3;
+}
+
+.modern-category-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.modern-category-pills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f0f0f0;
+}
+
+.modern-category-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.modern-category-pill:hover {
+  background: #fff3cd;
+  transform: translateY(-2px);
+}
+
+.modern-category-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9ffe5 0%, #ffd0d0 100%);
+}
+
+.modern-category-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.modern-category-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b2d42;
+  transition: color 0.3s ease;
+}
+
+.modern-category-pill:hover .modern-category-text {
+  color: #e63946;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .modern-banner-wrapper {
+    height: 500px;
+  }
+  
+  .modern-banner-slide {
+    height: 500px;
+  }
+  
+  .modern-banner-title {
+    font-size: 48px;
+  }
+  
+  .modern-banner-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-banner-wrapper {
+    height: 450px;
+  }
+  .modern-autosuggest-header{
+    display: none;
+  }
+  
+  .modern-banner-slide {
+    height: 450px;
+  }
+  
+  .modern-banner-title {
+    font-size: 36px;
+  }
+  
+  .modern-banner-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .modern-search-container {
+    max-width: 90%;
+  }
+  
+  .modern-search-box {
+    padding: 6px;
+  }
+  
+  .modern-search-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .modern-search-input {
+    font-size: 15px;
+  }
+  
+  .modern-search-button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  
+  .modern-category-pills {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  
+  .modern-category-pill {
+    padding: 8px 16px;
+  }
+  
+  .modern-category-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .modern-category-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-banner-wrapper {
+    height: 450px;
+  }
+  
+  .modern-banner-slide {
+    height: 450px;
+  }
+  
+  .modern-banner-title {
+    font-size: 28px;
+  }
+  
+  .modern-banner-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .modern-search-box {
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 20px;
+  }
+  
+  .modern-search-icon {
+    display: none;
+  }
+  
+  .modern-search-input {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .modern-search-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  
+  .modern-category-pills {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    border-radius: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .modern-category-pill {
+    flex-shrink: 0;
+  }
+}
+
+/* Scrollbar for mobile category pills */
+.modern-category-pills::-webkit-scrollbar {
+  height: 4px;
+}
+
+.modern-category-pills::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.modern-category-pills::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 10px;
+}
+
+
+@media (max-width:767.9px) {
+  /* Banner Content */
+.modern-banner-content {
+  padding: 85px 20px;
+}
+.modern-category-section{
+  display: none;
+}
+.diverse_experience{
+  font-size: 20px !important;
+}
+}

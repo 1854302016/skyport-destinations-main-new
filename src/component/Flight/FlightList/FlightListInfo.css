@@ -1,0 +1,674 @@
+/* ============================================================
+   FlightListInfo — Premium Design
+   ============================================================ */
+
+/* ---------- Container ---------- */
+.fli-container {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* ---------- Tab Bar ---------- */
+.fli-tabs {
+  display: flex;
+  gap: 0;
+  background: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 0 20px;
+}
+
+.fli-tab {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.fli-tab:hover {
+  color: #053355;
+}
+
+.fli-tab.active {
+  color: #053355;
+  border-bottom-color: #053355;
+}
+
+/* ---------- Tab Content ---------- */
+.fli-tab-content {
+  padding: 20px;
+}
+
+/* ---------- Segment ---------- */
+.fli-segment {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e8edf3;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 6px rgba(5, 51, 85, 0.04);
+}
+
+.fli-segment.has-layover {
+  margin-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+
+/* Segment header row */
+.fli-seg-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.fli-seg-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: #053355;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+.fli-seg-airline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fli-airline-logo {
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.fli-airline-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.fli-flight-num {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.fli-cabin {
+  font-size: 10px;
+  font-weight: 700;
+  color: #053355;
+  background: #e8f0fe;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Route Row ---------- */
+.fli-route-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Airport block */
+.fli-airport {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fli-origin { text-align: left; }
+.fli-destination { text-align: right; }
+
+.fli-time {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.fli-city {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  margin-top: 2px;
+}
+
+.fli-code {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fli-terminal {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: #b0bec5;
+  margin-top: 3px;
+}
+
+.fli-destination .fli-terminal {
+  justify-content: flex-end;
+}
+
+/* Path visual */
+.fli-path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.fli-duration-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.fli-path-visual {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+  position: relative;
+}
+
+.fli-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #053355;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fli-path-line {
+  flex: 1;
+  height: 1.5px;
+  background: repeating-linear-gradient(
+    to right,
+    #053355 0,
+    #053355 5px,
+    transparent 5px,
+    transparent 10px
+  );
+}
+
+.fli-takeoff-icon {
+  color: #053355;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.fli-land-icon {
+  color: #053355;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.fli-nonstop-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Layover Banner ---------- */
+.fli-layover {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  gap: 8px;
+  background: #fff7ed;
+  border: 1px dashed #fb923c;
+  border-top: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #c2410c;
+  border-radius: 0 0 14px 14px;
+  /* margin-bottom: 10px; */
+}
+
+
+.premium-info-container {
+    background: #fff;
+    border-top: 1px solid #0000000d;
+    float: right;
+    width: 100%;
+}
+
+/* ---------- Fare Grid ---------- */
+.fli-fare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Fare Card */
+.fli-fare-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  border-radius: 16px;
+  padding: 18px;
+  color: #ffffff;
+}
+
+.fli-fare-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f2bc06;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.path-line{
+      background: repeating-linear-gradient(90deg, #cbd5e1, #cbd5e1 5px, #0000 0, #0000 10px);
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 50%;
+
+}
+
+.fli-fare-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.fli-fare-rows::-webkit-scrollbar { width: 3px; }
+.fli-fare-rows::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+.fli-fare-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.fli-pax-type {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.fli-pax-count {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-left: 5px;
+}
+
+.fli-fare-breakdown-small {
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 2px;
+}
+
+.fli-fare-amount {
+  font-size: 15px;
+  font-weight: 800;
+  color: #f2bc06;
+}
+
+.fli-fare-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.fli-fare-total span:first-child {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fli-grand-total {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* Policies Card */
+.fli-policies-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e8edf3;
+  padding: 18px;
+  box-shadow: 0 1px 6px rgba(5,51,85,0.04);
+}
+
+.fli-policies-header {
+  font-size: 10px;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.fli-policy-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fli-policy-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fli-policy-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fli-policy-cancel {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+.fli-policy-change {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.fli-policy-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.fli-policy-desc {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   MOBILE — max-width: 767px
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* Mobile flight card */
+  .flight-card-mobile {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 2px 10px rgba(5, 51, 85, 0.06);
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  .flight-card-mobile .mobile-card-header {
+    background: linear-gradient(135deg, #eeeeee 0%, #efefef 100%);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flight-card-mobile .mobile-airline-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .flight-card-mobile .mobile-airline-name {
+    color: #1c286b;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .flight-card-mobile .mobile-price-pill {
+    background: #f2bc0614;
+    color: #f2bc06;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .flight-card-mobile .mobile-journey-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .flight-card-mobile .mobile-time {
+    font-size: 22px;
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 1;
+  }
+
+  .flight-card-mobile .mobile-airport-code {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .flight-card-mobile .mobile-duration-center {
+    text-align: center;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .flight-card-mobile .mobile-duration-text {
+    font-size: 10px;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  .flight-card-mobile .mobile-path-line {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    gap: 2px;
+  }
+
+  .flight-card-mobile .mobile-path-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #053355;
+    flex-shrink: 0;
+  }
+
+  .flight-card-mobile .mobile-path-dash {
+    flex: 1;
+    height: 1.5px;
+    background: repeating-linear-gradient(to right, #053355 0, #053355 4px, transparent 4px, transparent 8px);
+  }
+
+  .flight-card-mobile .mobile-stop-badge {
+    font-size: 9px;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  .flight-card-mobile .mobile-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px 12px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .flight-card-mobile .mobile-details-btn {
+    font-size: 12px;
+    font-weight: 700;
+    color: #053355;
+    background: none;
+    border: none;
+    /* border: 1px solid #d1dde8; */
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .flight-card-mobile .mobile-book-btn {
+    background: none;
+    /* background: linear-gradient(135deg, #e8ba06, #efbf04); */
+    /* background: linear-gradient(135deg, #053355, #0a4a7a); */
+    color: #e8ba06;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 18px;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+
+  /* ---- FlightListInfo on mobile ---- */
+  .fli-tabs {
+    padding: 0 12px;
+  }
+
+  .fli-tab {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .fli-tab-content {
+    padding: 12px;
+  }
+
+  .fli-segment {
+    padding: 12px;
+  }
+
+  .fli-time {
+    font-size: 20px;
+  }
+
+  .fli-path {
+    min-width: 70px;
+  }
+
+  .fli-duration-pill {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  /* Fare grid stacks on mobile */
+  .fli-fare-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .fli-grand-total {
+    font-size: 20px;
+  }
+}
+
+/* ---- Utility classes retained ---- */
+.fw-800 { font-weight: 800 !important; }
+.tracking-widest { letter-spacing: 0.1em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.bg-orange-light { background-color: #fff7ed; }
+.text-orange { color: #c2410c; }
+.grayscale-hover {  opacity: 0.7; transition: all 0.3s ease; }
+.grayscale-hover:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+.fli-baggage-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.fli-baggage-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.fli-baggage-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #f3f4f6;
+}
+
+.fli-baggage-row:first-of-type {
+    border-top: none;
+}

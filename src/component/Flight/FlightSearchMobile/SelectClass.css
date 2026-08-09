@@ -1,0 +1,144 @@
+.hotelsearchmobile .showBx {
+  display: block !important;
+}
+
+.hotelsearchmobile #selectClass {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 0;
+  z-index: 999999999999991;
+  display: none;
+}
+
+.hotelsearchmobile .inner_wrap_bg {
+  background: #fff;
+}
+
+.hotelsearchmobile .top_pnl {
+  width: 100%;
+  background: #fff !important;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 8px 0 !important;
+}
+
+.hotelsearchmobile .innr_header_pd {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hotelsearchmobile .lft_pnl {
+  float: left;
+}
+
+.hotelsearchmobile .sClass_ttl {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.hotelsearchmobile .close_class {
+  /* position: relative; */
+  font-size: 24px;
+  margin-block: 0;
+  padding-block: 0;
+  color: #a5a5a5;
+  /* right: 10px;
+    top: 3px; */
+  float: flex;
+}
+
+.hotelsearchmobile .innr_pd10 {
+  padding: 15px;
+}
+
+.hotelsearchmobile .radio_sclass {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 19px;
+  line-height: 22px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hotelsearchmobile .radio_sclass input {
+  position: absolute;
+  opacity: 0;
+}
+
+.hotelsearchmobile .checkmark_sclass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border: 1px solid #f73030;
+  border-radius: 50%;
+}
+
+.hotelsearchmobile .radio_sclass input:checked ~ .checkmark_sclass {
+  background-color: #fff;
+}
+
+.hotelsearchmobile .checkmark_sclass:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.hotelsearchmobile .radio_sclass .checkmark_sclass:after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f73030;
+}
+
+.hotelsearchmobile .radio_sclass input:checked ~ .checkmark_sclass:after {
+  display: block;
+}
+
+.hotelsearchmobile .Btnclass_v2 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: #f73030;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.hotelsearchmobile .overlay_sc {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 999999999999981;
+  cursor: pointer;
+}
+
+.hotelsearchmobile .showBx {
+  display: block !important;
+}

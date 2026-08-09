@@ -1,0 +1,81 @@
+.mainReuse {
+  background-color: #ffffff;
+  margin-left: 16px;
+  margin-right: 16px;
+  /* width: 351px; */
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+}
+
+.main_RESUSEA .slick-slide {
+  min-height: 360px;
+}
+
+.reuseRelative {
+  position: relative;
+}
+
+.ReuseTourPackageImage {
+  height: 240px;
+  width: 350px;
+}
+
+.reuseSecMain {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  top: 12px;
+}
+
+.reuseSecMainhead1 {
+  background-color: rgba(0, 0, 0, 0.37);
+  font-weight: 500;
+  padding: 4px 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.reuseSecMainhead2 {
+  background-color: #efbf04;
+  font-weight: 500;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+}
+
+.reuseSecMain2 {
+  font-size: 16px;
+  /* font-weight: 500; */
+  /* margin-top: 8px; */
+  padding: 12px 16px;
+  min-height: 170px;
+}
+
+.reuseSecMain2Head1 {
+  color: #053355;
+  font-size: 20px;
+}
+
+.reuseSecMain2Head2 {
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.reuseSecMain2Head3 {
+  font-size: 16px;
+}
+
+.reuseSecMain2Head3 span {
+  color: rgb(6, 6, 77);
+}
+
+/* .ReuseTourPackageImage {
+  width: 360px;
+} */
+@media (max-width: 1351px) {
+}

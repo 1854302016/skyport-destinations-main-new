@@ -1,0 +1,174 @@
+.bus-voucher-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.voucher-header-left h2 {
+  margin: 0 0 8px 0;
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+.voucher-header-left p,
+.voucher-header-right p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.voucher-header-right h5 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bus-details {
+  margin-bottom: 20px;
+}
+
+.bus-details h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #1a237e;
+}
+
+.bus-details p {
+  margin: 4px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.travel-details {
+  margin-bottom: 24px;
+}
+
+.travel-box {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  height: 100%;
+}
+
+.travel-box h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.travel-box p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.amenities {
+  margin-bottom: 24px;
+}
+
+.amenities h5 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.amenities ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.amenities li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.amenities .icon {
+  margin-right: 6px;
+  color: #2e7d32;
+  font-size: 18px;
+}
+
+.passenger-info {
+  margin-bottom: 24px;
+}
+
+.passenger-info h5 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.table {
+  margin: 0;
+  background-color: #fff;
+}
+
+.table th,
+.table td {
+  font-size: 14px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.invoice {
+  margin-top: 24px;
+}
+
+.invoice h5 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.text-end {
+  text-align: right;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .voucher-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .voucher-header-left,
+  .voucher-header-right {
+    width: 100%;
+  }
+
+  .amenities ul {
+    flex-direction: column;
+  }
+}

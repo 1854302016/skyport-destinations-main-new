@@ -1,0 +1,62 @@
+
+    .invoice__textwrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    .hotelinvoice-buttons{
+      margin: 0 !important;
+      border-radius: 0 !important;
+      max-width: 200px !important;
+    }
+    .hotelinvoice-buttons button{
+      border-radius: 8px !important;
+      background-color: #CFFFEA !important;
+    }
+    .hotelinvoiceBottom-buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .booking-confirm{
+      background: linear-gradient(90deg, #43a047 0%, #43a047 100%) !important;
+      -webkit-text-fill-color: transparent !important;
+      text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .hotelPrebookVoucher {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 16px;
+    }
+
+    .hotelFinalBooking_hotelDetailsVoucher{
+        max-width: 800px;
+    }
+ @media (min-width: 768px) {
+    .hide-desktop {
+      display: none !important;
+    }
+  }
+  
+  .booking-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #ccc;
+  border-top-color: #ff9800;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

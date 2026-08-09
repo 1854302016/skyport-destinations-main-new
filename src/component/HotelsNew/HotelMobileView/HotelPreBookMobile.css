@@ -1,0 +1,539 @@
+.hotelPreBookMobile-wrapper {
+  padding: 20px 16px;
+}
+
+.hotelPreBookMobile-header {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.hotelPreBookMobile-backArrow {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.hotelPreBookMobile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotelPreBookMobile-titleRow {
+  position: relative;
+}
+
+.hotelPreBookMobile-titleText {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotelPreBookMobile-stars {
+  margin-left: 8px;
+}
+
+.hotelPreBookMobile-blueStar {
+  color: #1e90ff;
+  font-size: 16px;
+}
+
+.hotelPreBookMobile-grayStar {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.hotelPreBookMobile-address {
+  color: #888;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.hotelPreBookMobile-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 12px 0;
+}
+
+.hotelPreBookMobile-roomRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotelPreBookMobile-roomInfo {
+  flex: 1;
+}
+
+.hotelPreBookMobile-roomTitle {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.hotelPreBookMobile-roomList {
+  margin: 0 0 8px 16px;
+  padding: 0;
+}
+
+.hotelPreBookMobile-roomList li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+.hotelPreBookMobile-viewMore {
+  color: #1e90ff;
+}
+
+.hotelPreBookMobile-guestInfo {
+  font-size: 12px;
+}
+
+.hotelPreBookMobile-roomImage img {
+  width: 90px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.hotelPreBookMobile-dashedDivider {
+  border-top: 1px dashed #ccc;
+  margin: 12px 0;
+}
+
+.hotelPreBookMobile-sectionTitle {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.hotelPreBookMobile-travelDetails {
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.hotelPreBookMobile-dateBox {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 12px;
+  justify-content: space-between;
+}
+
+.hotelPreBookMobile-dateItem {
+  text-align: center;
+  flex: 1;
+}
+
+.hotelPreBookMobile-dateLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hotelPreBookMobile-dateDay {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hotelPreBookMobile-dateTime {
+  font-size: 10px;
+}
+
+.hotelPreBookMobile-nightCircle {
+  background: #0a66c2;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 8px;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+.hotelPreBookMobile-inclusionsLink {
+  color: #1e90ff;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.hotelPreBookMobile-wrapper .hotelback-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+/* === PRICE BREAKUP === */
+.hotelPreBookMobile-priceCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.hotelPreBookMobile-priceSubtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 12px;
+}
+
+.hotelPreBookMobile-priceRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.hotelPreBookMobile-grandTotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.hotelPreBookMobile-grandTotalAmount {
+  color: #1e90ff;
+}
+
+/* === TRAVELLER DETAILS === */
+.hotelPreBookMobile-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
+.hotelPreBookMobile-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.hotelPreBookMobile-myself {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.hotelPreBookMobile-myselfIcon {
+  color: #0a66c2;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.hotelPreBookMobile-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hotelPreBookMobile-inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelPreBookMobile-inputGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.hotelPreBookMobile-inputGroup input,
+.hotelPreBookMobile-inputGroup select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* === LAST NAME + PROMO TAG === */
+.hotelPreBookMobile-lastNameInput {
+  position: relative;
+}
+
+.hotelPreBookMobile-promoTag {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #22c55e;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 10px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hotelPreBookMobile-promoTag .promoIcon {
+  font-size: 12px;
+}
+
+.hotelPreBookMobile-promoTag .promoArrow {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* === FOOTER PRICE BAR === */
+.hotelPreBookMobile-priceBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  z-index: 10;
+}
+
+.hotelPreBookMobile-priceBar button {
+  background: #053355 ;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+.hotelTravellerMobile-wrapper {
+  padding: 16px;
+}
+
+.hotelTravellerMobile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotelTravellerMobile-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.hotelTravellerMobile-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.hotelTravellerMobile-myself {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hotelTravellerMobile-myselfCheck {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #1e90ff;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.hotelTravellerMobile-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hotelTravellerMobile-inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelTravellerMobile-inputGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.hotelTravellerMobile-inputGroup input,
+.hotelTravellerMobile-inputGroup select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.hotelTravellerMobile-subsection {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+
+.hotelTravellerMobile-mobileRow {
+  display: flex;
+  gap: 8px;
+}
+
+.hotelTravellerMobile-mobileRow select {
+  flex: 0 0 70px;
+}
+
+.hotelTravellerMobile-addMore {
+  color: #1e90ff;
+  font-size: 14px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.hotelTravellerMobile-priceBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+.footer-continue-btn:hover {
+  background: #007bff;
+}
+/* === OFFERS & PROMO CODES === */
+.hotelPreBookMobile-offersCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 16px 0;
+}
+
+.hotelPreBookMobile-offersHeader {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.hotelPreBookMobile-offersHeaderIcon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.hotelPreBookMobile-promoApplied {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hotelPreBookMobile-remove {
+  color: #1e90ff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.hotelPreBookMobile-successMsg {
+  font-size: 14px;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.hotelPreBookMobile-couponOption {
+  border: 1px solid #1e90ff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  background: #f9f9f9;
+}
+
+.hotelPreBookMobile-couponOption.inactive {
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+.hotelPreBookMobile-couponOption input {
+  margin-right: 8px;
+}
+
+.hotelPreBookMobile-couponText {
+  flex: 1;
+}
+
+.hotelPreBookMobile-couponTitle {
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+  border: 1px dashed #1e90ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.hotelPreBookMobile-couponDesc {
+  font-size: 12px;
+  color: #333;
+}
+
+.hotelPreBookMobile-viewMore {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e90ff;
+}
+
+/* === GST BOX === */
+.hotelPreBookMobile-gstBox {
+  background: #fff7f0;
+  border: 1px solid #fcd9b6;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+.hotelPreBookMobile-gstBox label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.hotelPreBookMobile-gstBox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.hotelPreBookMobile-gstBox p {
+  font-size: 12px;
+  color: #333;
+}
+
+/* === TERMS & CONDITIONS === */
+.hotelPreBookMobile-tnc {
+  font-size: 12px;
+  margin-bottom: 70px;
+}
+
+.hotelPreBookMobile-tnc input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.hotelPreBookMobile-tnc a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: 600;
+}

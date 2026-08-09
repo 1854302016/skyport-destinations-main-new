@@ -1,0 +1,678 @@
+/* @import '~@fortawesome/fontawesome-free/css/all.css'; */
+
+.hoteldetail .list-single-hero {
+    padding: 250px 0 0;
+    overflow: hidden;
+}
+
+.hoteldetail section {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.hoteldetail section.parallax-section .bg,
+.hoteldetail .list-single-hero .bg,
+.hoteldetail .hero-parallax .bg {
+    height: 120%;
+    top: 0;
+}
+
+.hoteldetail .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: repeat;
+    background-origin: content-box;
+}
+
+.hoteldetail .list-single-hero-title,
+.hoteldetail .map-card-rainting,
+.hoteldetail .geodir-category-opt,
+.hoteldetail .listing-item-cat,
+.hoteldetail .ajax-modal-title {
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(6, 27, 65, 0)), color-stop(100%, rgba(6, 27, 65, 0.95)));
+    background: -webkit-linear-gradient(top, rgba(6, 27, 65, 0) 0%, rgba(6, 27, 65, 0.95) 100%);
+    background: -o-linear-gradient(top, rgba(6, 27, 65, 0) 0%, rgba(6, 27, 65, 0.95) 100%);
+    background: -ms-linear-gradient(top, rgba(6, 27, 65, 0) 0%, rgba(6, 27, 65, 0.95) 100%); */
+    background: linear-gradient(to bottom, rgba(6, 27, 65, 0) 0%, rgba(6, 27, 65, 0.95) 100%);
+}
+
+.hoteldetail .list-single-hero-title {
+    z-index: 2;
+    padding: 40px 0 30px;
+}
+
+.hoteldetail .fl-wrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.hoteldetail .container {
+    max-width: 1224px;
+    width: 92%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+/* .row {
+    margin-left: -15px;
+    margin-right: -15px;
+} */
+
+.hoteldetail .listing-rating-wrap {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.hoteldetail .listing-rating-wrap .listing-rating,
+.hoteldetail .listing-rating-wrap span {
+    float: left;
+}
+
+.hoteldetail .list-single-hero-title .listing-rating svg {
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+.hoteldetail .nav-holder nav li a.act-link,
+.hoteldetail .nav-holder nav li a:hover,
+.hoteldetail .main-register h3 span strong,
+.hoteldetail .header-search-input-item-icon,
+.hoteldetail .subfooter-show-lang svg,
+.hoteldetail #footer-twiit .timePosted a:before,
+.hoteldetail .footer-contacts li svg,
+.hoteldetail .fc-cont:hover,
+.hoteldetail .custom-form label span,
+.hoteldetail .section-title-separator span svg:nth-child(2),
+.hoteldetail .five-star-rating .listing-rating svg,
+.hoteldetail .four-star-rating .listing-rating svg,
+.hoteldetail .three-star-rating .listing-rating svg,
+.hoteldetail .grid-opt li span:hover,
+.hoteldetail .price-opt ul li a svg,
+.hoteldetail .geodir-category-opt .listing-rating svg,
+.hoteldetail .geodir-category-opt .js-favorite:hover svg,
+.hoteldetail .geodir-category-location a svg,
+.hoteldetail .map-card-rainting svg,
+.hoteldetail .map-popup-location-info svg,
+.hoteldetail .daterangepicker .calendar-table th,
+.hoteldetail .listing-rating svg,
+.hoteldetail .rooms-details-header h5,
+.hoteldetail .custom-form label svg,
+.hoteldetail .nice-select:before,
+.hoteldetail .amenities-list li span.status.status-no,
+.hoteldetail .flatWeatherPlugin ul.wiForecasts li.wi,
+.hoteldetail .widget-posts-date svg,
+.hoteldetail .claim-widget-link a:hover,
+.hoteldetail .mapzoom-in,
+.hoteldetail .dashboard-list-box.activities .dashboard-message-text svg,
+.hoteldetail .fuzone .fu-text svg,
+.hoteldetail .dashboard-message-text h4 span,
+.hoteldetail .tfp-btn:before,
+.hoteldetail .process-wrap li svg,
+.hoteldetail .singleMap_visible-title-item h4 svg,
+.hoteldetail .flat-title-wrap .breadcrumbs a:before,
+.hoteldetail .breadcrumbs-fs .breadcrumbs a:before,
+.hoteldetail .log-massage a:hover,
+.hoteldetail .cart-total strong,
+.hoteldetail .post-opt li svg,
+.hoteldetail .cat-item li span,
+.hoteldetail .post-link,
+.hoteldetail .faq-nav li a.act-faq-link:before,
+.hoteldetail .faq-nav li a:hover:before,
+.hoteldetail .process-item h4 a:hover,
+.hoteldetail .intro-item h6,
+.hoteldetail .collage-image-input svg,
+.hoteldetail .inpt_dec,
+.hoteldetail .qty-dropdown-header svg,
+.hoteldetail .geodir-category-opt h4 a:hover,
+.hoteldetail .map-modal-container h3 svg,
+.hoteldetail .header-user-name:hover,
+.hoteldetail .show-reg-form:hover,
+.hoteldetail .home-btn:hover a,
+.hoteldetail .menusb a.act-link,
+.hoteldetail .footer-social li a:hover,
+.hoteldetail .dashboard-listing-table-text h4 a:hover,
+.hoteldetail .dashboard-listing-table-address svg,
+.hoteldetail .map-close,
+.hoteldetail .text-carousel-item a.testim-link:hover {
+    color: #F9B90F;
+}
+
+.hoteldetail .list-single-hero-title h2 {
+    text-align: left;
+    float: left;
+    width: 100%;
+    z-index: 2;
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* .list-single-hero-title h2:before {
+    background: #3AACED;
+} */
+
+.hoteldetail .list-single-hero-title h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.hoteldetail .list-single-header-contacts {
+    margin-top: 40px;
+}
+
+.hoteldetail .fl-wrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.hoteldetail ol,
+.hoteldetail ul {
+    list-style: none;
+}
+
+.hoteldetail .list-single-header-contacts li {
+    float: left;
+    margin-right: 18px;
+}
+
+/* .list-single-header-contacts li svg {
+    background: #3AACED;
+} */
+
+.hoteldetail .list-single-header-contacts li svg {
+    margin-right: 10px;
+    /* font-size: 20px; */
+}
+
+.hoteldetail .list-single-header-contacts li a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.hoteldetail .list-single-hero-details {
+    margin-top: 6px;
+}
+
+.hoteldetail .list-single-hero-rating {
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+
+.hoteldetail .list-single-hero-rating .rate-class-name {
+    float: right;
+    cursor: pointer;
+}
+
+.hoteldetail .list-single-hero-rating .score {
+    float: left;
+    color: #fff;
+    text-align: right;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+.hoteldetail .list-single-hero-rating .score strong {
+    width: 100%;
+    float: left;
+    padding-bottom: 4px;
+    color: white;
+}
+
+.hoteldetail .list-single-hero-rating .rate-class-name span {
+    background: #2d3290;
+    color: #fff;
+    float: left;
+    font-weight: 600;
+    border-radius: 7px 7px 7px 0;
+    padding: 22px;
+    font-size: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.21);
+}
+
+.hoteldetail .list-single-hero-rating-list {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 20px;
+    right: 0;
+    z-index: 10;
+    background: rgba(6, 27, 65, 0.45);
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+.hoteldetail .list-single-hero-rating-list .rate-item {
+    margin-bottom: 10px;
+}
+
+.hoteldetail .rate-item-title {
+    margin-bottom: 6px;
+    text-align: left;
+    color: #fff;
+    font-size: 12px;
+}
+
+.hoteldetail .rate-item-bg {
+    height: 6px;
+    background: #fff;
+    border-radius: 8px;
+    float: left;
+    width: calc(100% - 30px);
+    overflow: hidden;
+}
+
+.hoteldetail .color-bg,
+.hoteldetail .close-header-search:hover,
+.hoteldetail #footer-twiit p.tweet:before,
+.hoteldetail .cs-mumber-button:hover,
+.hoteldetail .tabs-menu li a,
+.hoteldetail .review-range-container .irs-bar,
+.hoteldetail .review-range-container .irs-bar-edge,
+.hoteldetail .search-input-item .irs-line,
+.hoteldetail .col-list-search-input-item .irs-line,
+.hoteldetail .pagination a.current-page,
+.hoteldetail .pagination a.current-page:hover,
+.hoteldetail .mapnavigation a:hover,
+.hoteldetail .back-to-filters span,
+.hoteldetail .infoBox-close,
+.hoteldetail .slick-dots li.slick-active button,
+.hoteldetail .map-modal-close,
+.hoteldetail .geodir-opt-link a,
+.hoteldetail .cluster div:hover,
+.hoteldetail .to-top,
+.hoteldetail .daterangepicker td.active,
+.hoteldetail .list-single-hero-title h2:before,
+.hoteldetail .user-stats:before,
+.hoteldetail .ed-btn:hover,
+.hoteldetail .dashboard-header,
+.hoteldetail .massage-date span:before,
+.hoteldetail .chat-contacts-item:after,
+.hoteldetail .lisd-link:hover,
+.hoteldetail .scroll-nav-wrapper .scroll-nav li a.act-scrlink,
+.hoteldetail .accordion a.toggle span,
+.hoteldetail .list-widget-social li a,
+.hoteldetail .box-item a.gal-link,
+.hoteldetail .message-input button,
+.hoteldetail .message-counter,
+.hoteldetail .line-separator:before,
+.hoteldetail .intro-item h2:before,
+.hoteldetail .section-separator:before,
+.hoteldetail #progressbar li:before,
+.hoteldetail .price-num.col-dec-1:before,
+.hoteldetail .tags-stylwrap.sb-tags a,
+.hoteldetail .geodir-opt-list a:hover,
+.hoteldetail .main-search-button:hover,
+.hoteldetail .twitter-link,
+.hoteldetail .recomm-price svg,
+.hoteldetail .lg-actions .lg-next,
+.hoteldetail .lg-actions .lg-prev {
+    background: #2d3290;
+}
+
+.hoteldetail .show-lang svg,
+.hoteldetail .nav-holder nav li a svg,
+.hoteldetail .filter-tags input:checked:after,
+.hoteldetail .custom-form .filter-tags input:checked:after,
+.hoteldetail main-register h3 span,
+.hoteldetail .lost_password a:hover,
+.hoteldetail .header-search-input-item.location a,
+.hoteldetail .pac-icon:before,
+.hoteldetail .footer-social li a,
+.hoteldetail .cs-mumber,
+.hoteldetail .show-search-button svg,
+.hoteldetail .show-currency-tooltip span svg,
+.hoteldetail .show-reg-form svg,
+.hoteldetail .header-user-name:before,
+.hoteldetail .tabs-menu li.current a,
+.hoteldetail .currency-tooltip li svg,
+.hoteldetail .currency-wrap .show-currency-tooltip svg,
+.hoteldetail .subfooter-lang-tooltip li a,
+.hoteldetail .header-search-input-item.in-loc-dec:before,
+.hoteldetail .col-list-search-input-item.location a,
+.hoteldetail .col-list-search-input-item.in-loc-dec:before,
+.hoteldetail .list-main-wrap-title h2 span,
+.hoteldetail .grid-opt li span.act-grid-opt,
+.hoteldetail .grid-opt li span.act-grid-opt:hover,
+.hoteldetail .price-opt ul li a:hover,
+.hoteldetail .geodir-category-content h3 a:hover,
+.hoteldetail .geodir-category-opt .js-favorite svg,
+.hoteldetail .avatar-tooltip strong,
+.hoteldetail .listing-title a,
+.hoteldetail .map-popup-location-price,
+.hoteldetail .nice-select .nice-select-search-box:before,
+.hoteldetail .map-modal-container h3 a:hover,
+.hoteldetail .category-fix-bg-title h4,
+.hoteldetail .geodir-opt-tooltip strong,
+.hoteldetail .facilities-list li svg:hover,
+.hoteldetail .to-top:hover,
+.hoteldetail .section-title .breadcrumbs a:before,
+.hoteldetail .list-single-header-contacts li svg,
+.hoteldetail .share-container .share-icon:hover:before,
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs a:before,
+.hoteldetail .listing-features li svg,
+.hoteldetail .rooms-details-header h5 span,
+.hoteldetail .inline-facts svg,
+.hoteldetail .ajax-modal-photos-btn span,
+.hoteldetail .ajax-modal-list li svg,
+.hoteldetail .total-coast span,
+.hoteldetail .custom-form .total-coast input,
+.hoteldetail .bookdate-container-dayscounter svg,
+.hoteldetail .box-widget-list li svg,
+.hoteldetail .list-single-main-item-title:before,
+.hoteldetail .box-widget-item-header:before,
+.hoteldetail .fc-button svg,
+.hoteldetail .share-container .share-icon,
+.hoteldetail .reviews-comments-item-date svg,
+.hoteldetail .custom-form .review-total span input,
+.hoteldetail .flatWeatherPlugin ul.wiForecasts li,
+.hoteldetail .box-widget-list li a:hover,
+.hoteldetail .list-single-main-item-title h3 span,
+.hoteldetail .claim-widget-link a,
+.hoteldetail .mapnavigation a svg,
+.hoteldetail .list-single-hero-header .list-single-hero-price span,
+.hoteldetail .breadcrumbs.inline-breadcrumbs a:before,
+.hoteldetail .box-widget-content .widget-posts-descr .geodir-category-location a svg,
+.hoteldetail .box-widget-content .widget-posts-link svg,
+.hoteldetail .tfp-btn strong,
+.hoteldetail .dashboard-message-text p a,
+.hoteldetail .dasboard-menu li a.user-profile-act svg,
+.hoteldetail .dasboard-menu li a:hover svg,
+.hoteldetail .pass-input-wrap span,
+.hoteldetail .radio input[type="radio"]:checked+\ span:before,
+.hoteldetail .custom-form .radio span,
+.hoteldetail .reply-mail a,
+.hoteldetail .tfp-det p a,
+.hoteldetail .chat-contacts-item .chat-contacts-item-text span,
+.hoteldetail .reviews-comments-item-text h4 a.reviews-comments-item-link,
+.hoteldetail .video-box-btn,
+.hoteldetail .text-carousel .slick-center .text-carousel-item:after,
+.hoteldetail .text-carousel .slick-center .text-carousel-item:before,
+.hoteldetail .single-facts .inline-facts svg,
+.hoteldetail .team-social li a,
+.hoteldetail .team-dec,
+.hoteldetail .filter-tags label a,
+.hoteldetail .breadcrumbs-fs .breadcrumbs span,
+.hoteldetail .home-btn a,
+.hoteldetail .cart_list li span,
+.hoteldetail #progressbar li:before,
+.hoteldetail .log-massage a,
+.hoteldetail .cat-item li a,
+.hoteldetail .post-link svg,
+.hoteldetail .card-post-content h3:before,
+.hoteldetail .card-post-content h3 a:hover,
+.hoteldetail .post-opt li a:hover,
+.hoteldetail .wishlist-link,
+.hoteldetail .box-widget-content .widget-posts-descr a:hover,
+.hoteldetail .faq-nav li a.act-faq-link,
+.hoteldetail .time-line-icon svg,
+.hoteldetail s .listing-counter span,
+.hoteldetail .images-collage-title,
+.hoteldetail .down-btn svg,
+.hoteldetail .qty-dropdown-content .quantity-item label svg,
+.hoteldetail .qty-dropdown-header:before,
+.hoteldetail .main-search-input-item_small:before,
+.hoteldetail .main-search-input-item.location a,
+.hoteldetail .listing-counter strong,
+.hoteldetail .weather-grid .flatWeatherPlugin .wiToday .wiIconGroup div.wi,
+.hoteldetail .geodir-category-price span,
+.hoteldetail .show-search-button:hover svg,
+.hoteldetail .hotel-card .geodir-category-location a svg,
+.hoteldetail .header-search-input-item.date-parent:before,
+.hoteldetail .menusb a svg,
+.hoteldetail .menusb a.back:before,
+.hoteldetail .footer-contacts li a:hover,
+.hoteldetail #footer-twiit a:hover,
+.hoteldetail .dasboard-menu-btn svg,
+.hoteldetail .header-user-menu li a:hover,
+.hoteldetail .dashboard-listing-table-text h4 a,
+.hoteldetail .mlc svg,
+.hoteldetail .show-more-filters svg {
+    color: #2d3290;
+}
+
+.hoteldetail .rate-item-line {
+    float: left;
+    height: 6px;
+    border-radius: 4px;
+}
+
+.hoteldetail .rate-item-percent {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    color: #fff;
+}
+
+.hoteldetail .list-single-hero-links {
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
+.hoteldetail .lisd-link {
+    float: left;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.21);
+    background: rgba(255, 255, 255, 0.11);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.hoteldetail .lisd-link svg {
+    margin-right: 10px;
+}
+
+.hoteldetail .breadcrumbs-hero-buttom {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs {
+    float: left;
+    position: relative;
+    top: 10px;
+}
+
+.hoteldetail .section-title .breadcrumbs a,
+.hoteldetail .section-title .breadcrumbs span,
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs a,
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs span,
+.hoteldetail .flat-title-wrap .breadcrumbs span,
+.hoteldetail .flat-title-wrap .breadcrumbs a {
+    color: rgba(255, 255, 255, 0.71);
+    display: inline-block;
+    padding: 0 16px;
+    position: relative;
+    font-weight: 500;
+}
+
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs a,
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs span {
+    float: left;
+    padding: 0 5px 0 0;
+}
+
+.hoteldetail .section-title .breadcrumbs span,
+.hoteldetail .section-title .breadcrumbs a:hover,
+.hoteldetail section.parallax-section .section-title h2,
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs a,
+.hoteldetail .flat-title-wrap .breadcrumbs a {
+    color: #fff;
+}
+
+/* .section-title .breadcrumbs a:before, .breadcrumbs-hero-buttom .breadcrumbs a:before, .breadcrumbs.inline-breadcrumbs a:before, .dasboard-breadcrumbs a:before, .flat-title-wrap .breadcrumbs a:before, .breadcrumbs-fs .breadcrumbs a:before {
+    font-family: Font Awesome\ 5 Pro;
+    content: "\f105";
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    margin-top: -7px;
+    width: 10px;
+    height: 2px;
+} */
+
+.hoteldetail .breadcrumbs-hero-buttom .breadcrumbs a svg {
+    color: #2d3290;
+}
+
+.hoteldetail .list-single-hero-price,
+.hoteldetail .header-sec-link a,
+.hoteldetail .flat-title-wrap h2 {
+    color: #fff;
+}
+
+.hoteldetail .list-single-hero-price {
+    float: right;
+    font-size: 11px;
+}
+
+.hoteldetail .list-single-hero-price span {
+    color: #5ECFB1;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 20px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .hoteldetail .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hoteldetail .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1064px) {
+    .hoteldetail .container {
+        width: 1170px;
+    }
+}
+/* 
+.hoteldetail .list-single-hero-links{
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+@media only screen and (max-width: 1065px) {
+    .hoteldetail .list-single-hero {
+        padding: 100px 0 0;
+    }
+
+    .hoteldetail .list-single-hero-rating {
+        float: left;
+        margin-top: 20px;
+    }
+
+    .hoteldetail .list-single-hero-rating .score {
+        float: right;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 15px;
+    }
+
+    .hoteldetail .list-single-hero-links {
+        float: left;
+    }
+
+    .hoteldetail .lisd-link {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 769px) {
+
+    .hoteldetail .show-lang,
+    .hoteldetail .show-currency-tooltip,
+    .hoteldetail .review-comments-avatar:before,
+    .hoteldetail .grid-opt,
+    .hoteldetail .scroll-nav {
+        display: none;
+    }
+
+    .hoteldetail .listing-features li,
+    .hoteldetail .list-single-facts .inline-facts-wrap {
+        width: 50%;
+    }
+
+    .hoteldetail .list-single-hero-rating-list {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+
+@media only screen and (max-width: 541px) {
+
+    .hoteldetail .home-intro h2,
+    .hoteldetail .home-intro-card h3,
+    .hoteldetail section.parallax-section .section-title.big-title h2,
+    .hoteldetail .list-single-hero-title h2 {
+        font-size: 24px;
+    }
+
+    .hoteldetail .team-box,
+    .hoteldetail #progressbar li,
+    .hoteldetail .previous-form,
+    .hoteldetail .next-form,
+    .hoteldetail .list-single-header-contacts li {
+        width: 100%;
+    }
+
+    .hoteldetail .list-single-header-contacts li {
+        text-align: left;
+        padding: 5px 0;
+    }
+
+    .hoteldetail .next-form,
+    .hoteldetail .list-single-hero-price {
+        float: left;
+        margin-top: 15px;
+    }
+
+    
+}

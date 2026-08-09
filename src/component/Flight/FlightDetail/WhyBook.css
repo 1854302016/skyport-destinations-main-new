@@ -1,0 +1,52 @@
+.tripgo_why_book_mobile {
+  display: none;
+}
+
+@media (max-width: 767.9px) {
+  .tripgo_why_book_mobile {
+    display: block;
+    margin-top:20px;
+  }
+}
+.tripgo_why_book_mobile .whbklist_tg {
+  
+ 
+    display: flex
+;
+
+    overflow: auto;
+    padding-bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 12px 0 25px 0;
+}.tripgo_why_book_mobile ul.whbklist_tg li {
+    padding: 10px 12px;
+    flex: 0 0 165px;
+    background: #ECF7FF;
+    border: 1px solid #ACDAFF;
+    border-radius: 10px;
+    margin-right: 10px;
+    flex-direction:column;
+    display: flex
+;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    margin-right: 10px;
+}.tripgo_why_book_mobile .whybkicn_tg {
+    width: 30px;
+}.tripgo_why_book_mobile .whybhed_tg {
+    padding-bottom: 2px;
+    font-size: 13px;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0px;
+}.tripgo_why_book_mobile .whybsbd_tg {
+    font-size: 12px;
+    color: #000000;
+     text-align: center;
+    font-weight: normal;
+      margin-bottom: 0px;
+}

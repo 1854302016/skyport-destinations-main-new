@@ -1,0 +1,152 @@
+.bus_phone_container {
+  position: relative;
+}
+
+.bus_phone_container .pd10_n {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #f9dad9 !important;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+.bus_phone_container .inner_cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.bus_phone_container .des_icn {
+  width: 15px;
+  height: 20px;
+  display: block;
+  background: url("https://images.emtcontent.com/mob-web/bus-img/location-icn.png")
+    no-repeat 0 0;
+  background-size: 15px 20px;
+  position: absolute;
+  bottom: 0;
+}
+.bus_phone_container .input_bus_mobile {
+  /* border-bottom: 1px solid #97c7e2; */
+  width: 100%;
+  /* float: left; */
+  padding-bottom: 0;
+}
+.bus_phone_container .m_rel {
+  position: relative;
+}
+.bus_phone_container .inpttl {
+  font-size: 12px;
+  color: #656565;
+  text-transform: uppercase;
+}
+.bus_phone_container .hl-input {
+  width: 100%;
+  display: flex;
+  border: 0;
+  font-size: 20px;
+  color: #000;
+  outline: 0;
+  font-weight: 600;
+  padding: 0;
+  background: transparent;
+  align-items: center;
+}
+.bus_phone_container .fullwid {
+  width: 100%;
+  display: block;
+}
+.bus_phone_container .fullwid {
+  text-transform: capitalize;
+}
+.bus_phone_container .swap_icn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  background: url("https://images.emtcontent.com/mob-web/bus-img/swap-bus-iconn.svg")
+    no-repeat 0 0;
+  background-size: 40px 40px;
+  top: 43px;
+  right: 2px;
+}
+.bus_phone_container .swap_icn {
+  top: 64px;
+}
+.bus_phone_container .in_box2 {
+  width: 100%;
+  float: left;
+  margin-top: 0px;
+}
+.bus_phone_container .location {
+  min-width: 10%;
+  /* place-self: flex-end; */
+}
+.bus_phone_container ._loc-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: auto;
+  background: url("https://images.emtcontent.com/mob-web/bus-img/loc-nw.svg")
+    no-repeat 0 0;
+  background-size: 100%;
+  display: block;
+  margin: 0 0 0 0;
+}
+.bus_phone_container .swap_icn_blank {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  background: url("https://images.emtcontent.com/mob-web/bus-img/swap-bus-iconn.svg")
+    no-repeat 0 0;
+  background-size: 40px 40px;
+  top: 43px;
+  right: 2px;
+}
+.bus_phone_container ._loc-iconcal {
+  width: 23px;
+  height: 23px;
+  background: url("https://images.emtcontent.com/mob-web/bus-img/calender-hotel-iconn.svg")
+    no-repeat 0 0;
+  background-size: 23px 23px;
+  display: block;
+  margin: -3px 0 0 0;
+}
+.bus_phone_container .hl-input4 {
+  width: 100%;
+  float: left;
+  border: 0;
+  font-size: 16px;
+  color: #000;
+  outline: 0;
+  font-weight: 600;
+  -webkit-appearance: none;
+  padding: 0px 0 0px 0;
+  background: url() no-repeat 0 5px;
+  background-size: 23px 23px;
+}
+.bus_phone_container ._merleft {
+  margin-left: auto;
+  /* width: 62%; */
+  display: flex;
+}
+.bus_phone_container ._merleft {
+  flex-shrink: 0;
+}
+.bus_phone_container .nextday {
+  font-size: 12px;
+  color: #2196f3;
+  margin-left: auto;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #2196f3;
+  padding: 3px 5px;
+  border-radius: 40px;
+  margin-top: 4px;
+  background: #fff;
+  margin-left: 2px;
+}
+
+.bus_phone_container .auto_saugg {
+  margin-top: 64px;
+}

@@ -1,0 +1,181 @@
+.ancillary-header {
+  background-color: #fff;
+  color: #4a4a4a;
+}
+.ancillary-main p {
+  margin-bottom: 0px;
+}
+.ancillary-head {
+  padding: 13px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alnItemCenter {
+  align-items: center !important;
+}
+.hdrBackArrow {
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  width: 20px;
+}
+.isGi a {
+  text-decoration: none;
+  color: #2276e3;
+}
+.backIcon {
+  background-position: 0 0;
+  height: 15px;
+
+  top: 7px;
+  position: static;
+  width: 20px;
+
+  background: url("https://imgak.mmtcdn.com/flights/assets/media/pwa_flight_sprite.png")
+    no-repeat;
+  background-size: 200px 341px;
+  display: inline-block;
+}
+
+.ancillary-header .fli-tabs,
+.ancillary-header .fli-tabs-item.active {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.ancillary-header .fli-tabs {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.ancillary-head,
+.fli-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ancillary-header .fli-tabs-item.active {
+  border-color: #008cff;
+}
+.ancillary-header .fli-tabs-item {
+  padding: 15px 5px;
+}
+.fli-tabs-item {
+  flex: 1;
+  text-align: center;
+}
+.fli-tabs-item.active {
+  border-bottom: 4px solid #008cff !important;
+  color: #000;
+  font-weight: 700;
+}
+
+.mobile_ssr_container {
+  width: 100%;
+  background: #fff;
+  float: left;
+  position: fixed !important;
+  z-index: 205;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  height: 100vh;
+  bottom: 0;
+  /* position: fixed !important; */
+  top: -1px;
+}
+.mobile_ssr_container .flightWrap,
+.mobile_ssr_container .flightWrapBiz {
+  padding-left: 0px;
+}
+.mobile_ssr_container .iconflFront {
+  width: 350px;
+  height: 248px;
+}
+.mobile_ssr_container .iconflTail {
+  width: 335px;
+  height: 415px;
+}
+.mobile_ssr_container .flightSeatMatrix {
+  background: #fff;
+  margin-top: -6px;
+  width: 335px;
+  direction: ltr;
+}
+.mobile_ssr_container .scrollItem {
+  min-width: 100%;
+}
+.mobile_ssr_container .emptyCell,
+.mobile_ssr_container .seatNotAvailable {
+  width: 24px;
+  height: 24px;
+}
+.mobile_ssr_container .seatBlock {
+  height: 24px;
+  border-radius: 2px;
+  text-align: center;
+}
+.mobile_ssr_container .seatBlock,
+.mobile_ssr_container .seatLabel {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.mobile_ssr_container .fontSize12 {
+  font-size: 10px;
+}
+.mobile_ssr_container .legendWrap {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 15px 11px;
+  bottom: 0px;
+  z-index: 100;
+  position: fixed;
+  display: inline-flex;
+  z-index: 100;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 0px;
+  width: 100%;
+  /* gap: 7px; */
+  top: 80%;
+  height: max-content;
+}
+
+.mobile_ssr_container .selected_seat_resp li {
+  justify-content: space-between;
+  width: 100%;
+}
+.mobole_flight_ssr_seat {
+  margin-top: -100px;
+}
+.mobile_ssr_container .selected_seat_resp_outbound {
+  top: 60%;
+  width: 100%;
+}
+.mobile_ssr_container .Ssrtgo .PlusMinusRow_adon {
+  width: 115px;
+}
+
+.mobile_ssr_container .Ssrtgo .menu_50 .dtlsec_adon {
+  width: 36%;
+  /* float: left; */
+}
+.mobile_ssr_container .Ssrtgo {
+  overflow: hidden;
+  width: 100%;
+}
+
+.p-2:last-of-type {
+  padding-bottom: 60px;
+}
+
+@media (max-width:767.9px) {
+  .flightWrap{
+margin-top: -55px;
+  }
+}

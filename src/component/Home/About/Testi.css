@@ -1,0 +1,184 @@
+/* .background-body {
+  background-color: #fff !important;
+} */
+.box-testimonials-2 {
+  position: relative;
+  padding: 60px 0px 100px;
+  padding-bottom: 90px !important;
+  background: url("https://travila-nextjs.vercel.app/_next/static/media/bg-testimonials.f615b313.png")
+    no-repeat top 100px right 40px;
+  border-bottom: 1px solid #e4e6e8;
+}
+.box-testimonials-4 {
+  background-image: url("https://travila-nextjs.vercel.app/_next/static/media/bg-testimonial.8610a296.png");
+  background-position: bottom 20px left 17%;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.text-center {
+  text-align: center !important;
+}
+.box-author-testimonials {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 123;
+  position: relative;
+  border: 1px solid #e4e6e8;
+}
+.box-testimonials-2 .box-author-testimonials {
+  background-color: #efbf04;
+}
+.box-author-testimonials img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin-right: -13px;
+}
+.mb-35 {
+  margin-bottom: 35px !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+.neutral-1000 {
+  color: #000 !important;
+}
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+.light-mode {
+  display: inline-block !important;
+}
+.box-swiper-home7 {
+  padding: 0 35px;
+  position: relative;
+}
+.box-swiper-home7 .swiper-group-journey {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.swiper-group-journey {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+.card-testimonial {
+  max-width: 470px;
+  width: 100%;
+  padding: 34px 40px;
+  border: 1px solid #e4e6e8;
+  background-color: #fff;
+  border-radius: 32px;
+}
+.background-card {
+  background-color: #fff !important;
+}
+.box-testimonials-4 .card-testimonial {
+  max-width: 100%;
+}
+.box-swiper-home7 .card-testimonial {
+  box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.09);
+}
+.box-testimonials-2 .card-testimonial .card-info .card-title {
+  margin-bottom: 9px !important;
+  font-weight: 700;
+}
+.neutral-500 {
+  color: #737373 !important;
+}
+.card-testimonial .card-top {
+  border-bottom: 1px solid #e4e6e8;
+  padding-bottom: 23px;
+  margin-bottom: 31px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.box-testimonials-2 .card-testimonial .card-top {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 28px;
+}
+.card-testimonial .card-top .card-author {
+  display: flex;
+  align-items: center;
+}
+.card-testimonial .card-top .card-author .card-image {
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+}
+.card-testimonial .card-top .card-author .card-image img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: block;
+}
+.card-testimonial .card-top .card-rate img {
+  margin-left: 2px;
+}
+.testimonial-swiperees {
+  height: 40px !important;
+  width: 40px !important;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e4e6e8;
+}
+.testimonial-swiperees-next {
+  right: 10px;
+  left: auto;
+}
+.dark-mode {
+  display: none !important;
+}
+.box-swiper-home7 {
+  padding: 0 35px;
+  position: relative;
+}
+.box-swiper-home7 .swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.testimonial-swiperees-prev,
+.testimonial-swiperees-next {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (44px / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.testimonial-swiperees-prev {
+  left: 10px;
+  right: auto;
+}
+
+
+
+.box-testimonials-2 .swiper-button-prev:after, .box-testimonials-2 .swiper-rtl .swiper-button-next:after,.box-testimonials-2 .swiper-button-next:after{
+    display: none !important;
+    content: "" !important;
+}

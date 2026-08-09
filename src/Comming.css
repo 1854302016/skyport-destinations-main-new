@@ -1,0 +1,53 @@
+.cardss .cs-title p {
+  margin: 0px !important;
+}
+.cardss .cs-title {
+  color: #f73030 !important;
+  font-weight: 600 !important;
+  display: block;
+  font-size: 2rem;
+}
+.cardss .cs-text {
+  color: #566a7f !important;
+  font-weight: 600 !important;
+  font-size: 17px;
+}
+.cardss .cs-card {
+  min-height: 120px;
+}
+.cardss .card-title {
+  background: #0079ab;
+  padding: 8px !important;
+}
+.cardss .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.bus-containerr {
+  min-height: 200px;
+  border: 1px solid #000;
+}
+.bus-containerr-h2 {
+  font-size: 20px;
+  background-color: #f73030;
+  color: #fff;
+  padding: 20px;
+  text-align: start;
+}
+.bus-container-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+}
+.bus-cont-phone {
+  font-size: 18px;
+  font-weight: 700;
+}
+.bus-cont-phone {
+  font-size: 18px;
+  font-weight: 700;
+}

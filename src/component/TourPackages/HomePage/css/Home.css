@@ -1,0 +1,411 @@
+/* @font-face {
+  font-family: reey;
+  src: url("./reey.woff");
+} */
+
+.ui-widget {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  position: relative;
+}
+.form-controlsss {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-size: 1em;
+}
+.search-area input[type="text"] {
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #fff !important;
+}
+.search_btn {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  background: none !important;
+  border: none !important;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.tourBannerMainPage {
+  position: relative !important;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.alhindholidays.com/assets/img/banner/banner2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+.tourBannerMainPage2 {
+  position: relative !important;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.alhindholidays.com/assets/img/banner/banner1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+.tourBannerMainPage3 {
+  position: relative !important;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.alhindholidays.com/assets/img/banner/banner4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+.image-layer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  background: #27252547;
+}
+.tourBannerHeading h2 {
+  font-size: 80px;
+  text-align: center;
+  font-weight: 400;
+  /* font-family: reey; */
+  color: white;
+  opacity: 1 !important;
+  z-index: 9;
+  transition: transform 2s ease, opacity 2s ease;
+}
+.tourBannerHeading p {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+  margin-left: 70px;
+  transition-delay: 0;
+  transition: transform 2s ease, opacity 2s ease;
+  z-index: 3;
+  margin-bottom: 25px;
+}
+/* .tourBannerHeading h2 span:before {
+  position: absolute;
+  top: 278px;
+  right: 253px;
+  background-image: url("https://tevily-nextjs.vercel.app/_next/static/media/main-slider-shape-1.d5aadaec.png");
+  background-repeat: no-repeat;
+  width: 409px;
+  height: 24px;
+  content: "";
+} */
+.AdventureSpanTag {
+  position: relative;
+}
+.AdventureImage {
+  position: absolute;
+  left: 45px;
+  bottom: -9px;
+}
+.tourBannerMainSec {
+  width: 1423px;
+  opacity: 1;
+  transform: translate3d(-2846px, 0px, 0px);
+  transition-duration: 0ms;
+  /* position: relative; */
+  background-color: #151414;
+}
+
+.destinations-one {
+  position: relative;
+  display: block;
+  /* background: #f2bc060f; */
+  /* background: #ffd37c26; */
+  padding: 40px 0 40px;
+}
+.section-title {
+  margin-top: 5px;
+  /* margin-bottom: 47px; */
+}
+.text-center {
+  text-align: center !important;
+}
+.section-title__tagline {
+  display: block;
+  color: #f2bc06;
+  font-size: 20px;
+  align-items: center;
+  line-height: 30px;
+  font-weight: 400;
+  /* font-family: reey; */
+}
+.section-title__title {
+  margin: 0;
+  font-weight: 700;
+  color: black;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+}
+/* .destinations-one .row {
+  --bs-gutter-x: 10px;
+} */
+.destinations-one__single {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.destinations-one__img {
+  position: relative;
+  display: block;
+  height: 270px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+}
+.destinations-one__single:hover .destinations-one__img:before {
+  transform: scale(1.2);
+  transform-origin: bottom center;
+}
+
+.destinations-one__img:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border-radius: 8px;
+  background-color: rgba(48, 48, 65, 0.5);
+  transform: scaleY(0);
+  transition: transform 0.5s ease;
+  transform-origin: top center;
+  z-index: 1;
+}
+.destinations-one__img img {
+  width: 100%;
+  border-radius: 8px;
+  transform: scale(1);
+  height: 300px;
+  transition: transform 0.5s ease;
+}
+.destinations-one__content {
+  position: absolute;
+  bottom: 43px;
+  left: 50px;
+  z-index: 2;
+}
+.destinations-one__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+  display: block;
+}
+.destinations-one__sub-title,
+.destinations-one__title {
+  letter-spacing: -0.02rem;
+  position: relative;
+  z-index: 1;
+}
+.destinations-one__title > a {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.destinations-one__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 40px;
+  transition: all 0.5s ease;
+  transform: scaleX(0);
+  z-index: 2;
+}
+.destinations-one__single:hover .destinations-one__button {
+  transform: scaleX(1);
+}
+.destinations-one__button > a {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: #f2bc06;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0 15px;
+  transition: all 0.5s ease;
+}
+.destinations-one__single:hover .destinations-one__img img {
+  transform: scale(1.05);
+}
+
+.tourBannerSearchHead {
+  text-align: center;
+  /* margin-top: 10px; */
+}
+.tourBannerSearchHeadInput {
+  border-radius: 40px 0px 0px 40px;
+  padding: 10px 24px 10px 24px;
+  width: 60%;
+}
+.tourBannerSearchHeadInputButton {
+  padding: 8px 36px 10.7px 36px;
+  border-radius: 5px 40px 40px 0px;
+  color: white;
+  /* font-weight: 600; */
+  font-size: 15px;
+  background-color: #f2bc06;
+  translate: -10px;
+}
+@media (max-width: 768px) {
+  .tourBannerHeading h2 {
+    font-size: 28px;
+  }
+  .AdventureImage {
+    width: 129px;
+    position: absolute;
+    left: 20px;
+    bottom: 46px;
+  }
+  .tourBannerHeading p {
+    font-size: 20px;
+    margin-left: 9px;
+  }
+  /* .tourBannerMainPage {
+    min-height: 448px;
+  } */
+  .about-one__call {
+    left: -50px !important;
+  }
+  .about-one__right {
+    margin-left: 0px !important;
+    margin-top: 60px !important;
+  }
+  .section-title__title {
+    font-size: 32px !important;
+    line-height: 41px !important;
+    font-weight: 600 !important;
+  }
+  /* .tourBannerSearchHeadInputButton {
+    padding: 8px 20px 10.7px 20px;
+  } */
+}
+@media (max-width: 426px) {
+  .tourBannerSearchHeadInputButton {
+    padding: 8px 20px 10.7px 20px;
+  }
+}
+
+.tour-banner-conttt .slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.custom-next,
+.custom-prev,
+.custom-next2,
+.custom-prev2,
+.custom-next3,
+.custom-prev3,
+.custom-next4,
+.custom-prev4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #f2bc06;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tour_package_skyy .custom-next {
+  right: 10px;
+  translate: 55px -30px;
+}
+
+.tour_package_skyy .custom-prev {
+  left: 10px;
+  translate: -55px -30px;
+}
+
+.custom-next:hover,
+.custom-prev:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.tour_package_skyy .custom-next2 {
+  right: 10px;
+  translate: 55px 0px;
+}
+
+.tour_package_skyy .custom-prev2 {
+  left: 10px;
+  translate: -55px 0px;
+}
+
+.custom-next3 {
+  right: 10px;
+  translate: 55px 25px;
+}
+
+.custom-prev3 {
+  left: 10px;
+  translate: -55px 25px;
+}
+
+.custom-next4 {
+  right: 10px;
+  translate: 55px 25px;
+}
+
+.custom-prev4 {
+  left: 10px;
+  translate: -55px 25px;
+}
+
+@media (max-width: 448px) {
+  .custom-next,
+  .custom-prev,
+  .custom-next2,
+  .custom-prev2,
+  .custom-next3,
+  .custom-prev3,
+  .custom-next4,
+  .custom-prev4 {
+    display: none;
+  }
+}
+

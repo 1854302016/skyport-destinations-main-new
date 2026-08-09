@@ -1,0 +1,136 @@
+.review_passenger_detail {
+  position: relative;
+}
+.review_passenger_detail .overlayBggg,
+.review_passenger_detail .popupOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.review_passenger_detail .overlayBggg {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  backdrop-filter: blur(3px);
+  background-color: #00000073;
+}
+.review_passenger_detail .commonOverlay {
+  background: #fff;
+  min-width: 460px;
+  padding: 30px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 100;
+  left: 50%;
+  border-radius: 2px;
+}
+.review_passenger_detail .icon20 {
+  height: 20px;
+  width: 20px;
+}
+.review_passenger_detail .bgProperties {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.review_passenger_detail .overlayCrossIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.review_passenger_detail .overlayCrossIcon {
+  z-index: 100;
+}
+.review_passenger_detail .appendBottom12 {
+  margin-bottom: 12px;
+}
+.review_passenger_detail .reviewDtlsOverlayContent {
+  padding: 15px 0;
+  position: relative;
+  margin-top: 15px;
+  max-height: 370px;
+  overflow-y: auto;
+}
+.review_passenger_detail .tvlrDtlsCard {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.21);
+  padding: 15px;
+  border-radius: 4px;
+  margin: 2px 2px 20px;
+}
+.review_passenger_detail .isGi .adultListWrapper,
+.review_passenger_detail .isGi .flightDetailBlk,
+.review_passenger_detail .isGi .tvlrDtlsCard {
+  box-shadow: none;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+}
+.review_passenger_detail .tvlrDtlsCard:last-child {
+  margin-bottom: 0;
+}
+.review_passenger_detail .appendBottom7 {
+  margin-bottom: 7px;
+}
+.review_passenger_detail .tvlrDtlsCard .title {
+  position: relative;
+  text-transform: uppercase;
+}
+.review_passenger_detail .tvlrDtlsCard .title:before {
+  width: 2px;
+  height: 12px;
+  background: #008cff;
+  position: absolute;
+  top: 6px;
+  left: -17px;
+  content: "";
+}
+.review_passenger_detail .blackText {
+  color: #000;
+}
+.review_passenger_detail .tvlrLftInfo {
+  width: 50%;
+  color: #757575;
+}
+.review_passenger_detail .makeFlex .flexOne {
+  flex: 1;
+}
+.review_passenger_detail .detailsPopupFooter {
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.review_passenger_detail .isGi .linkText {
+  color: #2276e3;
+}
+.review_pass_editt {
+  margin-right: 20px;
+  color: #2276e3;
+  font-size: 15px;
+  font-weight: 600;
+}
+.review_pass_condifmr {
+  display: flex;
+  border-radius: 35px;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 32px;
+  padding: 0 20px;
+  border: none;
+  outline: none !important;
+  font-weight: 500;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #efbf04 ;
+}
+.review_page_para {
+  font-size: 13px;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,233 @@
+/* Base Styles */
+.hotelFinalBookingPC_msgSuccess {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Desktop View */
+.hotelFinalBookingPC_desktop {
+  display: block;
+}
+
+.hotelFinalBookingPC_promocodeWrap {
+  border: 1px solid #ddd;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.hotelFinalBookingPC_promoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+}
+
+.hotelFinalBookingPC_iconPromoImg {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hotelFinalBookingPC_inputSection {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hotelFinalBookingPC_promoInput {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.hotelFinalBookingPC_btnRemove {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hotelFinalBookingPC_couponList {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_promoItem {
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 6px;
+  /* transition: background-color 0.3s; */
+  background-color: #f4f4f4;
+}
+
+.hotelFinalBookingPC_promoItem:hover {
+  background-color: #f9f9f9;
+}
+
+.hotelFinalBookingPC_couponContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_couponIcon {
+  font-size: 20px;
+}
+
+.hotelFinalBookingPC_couponText {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .hotelFinalBookingPC_couponCode {
+  font-weight: bold;
+} */
+
+.hotelFinalBookingPC_couponDescription {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Mobile View */
+.hotelFinalBookingPC_mobile {
+  display: none;
+}
+
+.hotelFinalBookingPC_mobileWrapper {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.hotelFinalBookingPC_mobileHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_mobileTitle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hotelFinalBookingPC_mobileInput {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_mobileInput input {
+  flex-grow: 1;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.applyText, .removeText {
+  color: #2196f3;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hotelFinalBookingPC_mobileCouponList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_couponRadio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.hotelFinalBookingPC_couponRadio input {
+  display: none;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
+  /* Ensure padding around the mobile section */
+  .hotelFinalBookingPC_mobileWrapper {
+    padding: 16px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .hotelFinalBookingPC_mobileHeader {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 12px;
+  }
+
+  .hotelFinalBookingPC_mobileInput {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .hotelFinalBookingPC_mobileInput input {
+    font-size: 14px;
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+  }
+
+  .applyText,
+  .removeText {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .hotelFinalBookingPC_couponRadio {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .hotelFinalBookingPC_couponRadio > div {
+    font-weight: bold;
+    min-width: 60px;
+  }
+
+  .hotelFinalBookingPC_couponRadio > span {
+    flex: 1;
+    color: #666;
+  }
+
+  .hotelFinalBookingPC_msgSuccess {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .hotelFinalBookingPC_promoHeader{
+    margin: 0 15px;
+  }
+  .hotelFinalBookingPC_promoHeader{
+    border: none;
+  }
+}
+
