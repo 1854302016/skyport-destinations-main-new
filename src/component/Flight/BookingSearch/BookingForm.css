@@ -906,7 +906,7 @@
   width: max-content !important;
   min-width: 660px !important;
   box-sizing: border-box !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   animation: dropdownPop 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
@@ -930,7 +930,6 @@
 .calendar-dropdown-wrapper .DayPicker,
 .calendar-dropdown-wrapper .DayPicker__horizontal,
 .calendar-dropdown-wrapper .DayPicker_focusRegion,
-.calendar-dropdown-wrapper .DayPicker_transitionContainer,
 .calendar-dropdown-wrapper .CalendarMonthGrid,
 .calendar-dropdown-wrapper .CalendarMonth,
 .calendar-dropdown-wrapper .CalendarMonth_table {
@@ -941,7 +940,10 @@
 }
 
 .calendar-dropdown-wrapper .DayPicker_transitionContainer {
-  overflow: visible !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: transparent !important;
+  border: none !important;
   height: auto !important;
   min-height: 290px !important;
 }
@@ -999,15 +1001,16 @@
   cursor: pointer !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04) !important;
+  z-index: 10 !important;
 }
 
 .calendar-dropdown-wrapper .DayPickerNavigation_leftButton__horizontalDefault {
-  left: 6px !important;
+  left: 8px !important;
   right: auto !important;
 }
 
 .calendar-dropdown-wrapper .DayPickerNavigation_rightButton__horizontalDefault {
-  right: 6px !important;
+  right: 8px !important;
   left: auto !important;
 }
 
@@ -1180,6 +1183,10 @@
   font-weight: 700 !important;
 }
 
+.calendar-dropdown-wrapper .CalendarDay__selected_span .cal-day-num {
+  color: #0066FF !important;
+}
+
 .calendar-dropdown-wrapper .CalendarDay__selected_start {
   background: linear-gradient(to right, transparent 50%, #EEF5FF 50%) !important;
 }
@@ -1188,15 +1195,37 @@
   background: linear-gradient(to left, transparent 50%, #EEF5FF 50%) !important;
 }
 
-/* Hovered In-Range Span */
-.calendar-dropdown-wrapper .CalendarDay__hovered_span {
-  background: #F1F5F9 !important;
+/* Hovered In-Range Span (When moving cursor to select return date) */
+.calendar-dropdown-wrapper .CalendarDay__hovered_span,
+.calendar-dropdown-wrapper .CalendarDay__hovered_offset {
+  background: #EEF5FF !important;
 }
 
 .calendar-dropdown-wrapper .CalendarDay__hovered_span .cal-day-inner {
   background: transparent !important;
   color: #0066FF !important;
   border-radius: 0 !important;
+  font-weight: 700 !important;
+}
+
+.calendar-dropdown-wrapper .CalendarDay__hovered_span .cal-day-num {
+  color: #0066FF !important;
+}
+
+/* Hovered Prospective End Date under cursor */
+.calendar-dropdown-wrapper .CalendarDay__hovered_span:hover .cal-day-inner,
+.calendar-dropdown-wrapper .CalendarDay:hover .cal-day-inner {
+  background: #0066FF !important;
+  color: #FFFFFF !important;
+  border-radius: 50% !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.35) !important;
+  transform: scale(1.04);
+}
+
+.calendar-dropdown-wrapper .CalendarDay__hovered_span:hover .cal-day-num,
+.calendar-dropdown-wrapper .CalendarDay:hover .cal-day-num {
+  color: #FFFFFF !important;
 }
 
 /* Disabled / Past Dates */

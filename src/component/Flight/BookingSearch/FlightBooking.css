@@ -670,15 +670,15 @@
   }
 }
 
-.CalendarDay__hovered_span,
-.CalenderDay_hovered_span:hover {
+.flightbooking-wrap .CalendarDay__hovered_span,
+.flightbooking-wrap .CalenderDay_hovered_span:hover {
   background: rgb(18, 82, 209) !important;
   color: white !important;
   border: 1px solid white !important;
 }
 
-.CalendarDay__hovered_span span,
-.CalenderDay_hovered_span span:hover {
+.flightbooking-wrap .CalendarDay__hovered_span span,
+.flightbooking-wrap .CalenderDay_hovered_span span:hover {
   color: white !important;
 }
 
