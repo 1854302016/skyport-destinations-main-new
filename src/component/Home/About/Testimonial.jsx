@@ -13,7 +13,7 @@ const Testimonial = () => {
               <img src="https://travila-nextjs.vercel.app/assets/imgs/page/homepage1/testimonial.png" alt="Travila" />
               <img src="https://travila-nextjs.vercel.app/assets/imgs/page/homepage1/testimonial2.png" alt="Travila" />
               <img src="https://travila-nextjs.vercel.app/assets/imgs/page/homepage1/testimonial3.png" alt="Travila" />
-            <div style={{marginLeft:'20px'}}>  Testimonials</div>
+              <span style={{ marginLeft: '16px' }}>Testimonials</span>
             </div>
           </div>
           <h2 className="mt-8 mb-35 neutral-1000" style={{fontWeight:'700'}}>Don't take our word for it</h2>

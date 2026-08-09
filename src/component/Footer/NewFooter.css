@@ -2,7 +2,6 @@
   background: #053355;
   color: #fff;
   padding: 40px 0 0 0;
-   
 }
 .footer-content {
   display: flex;
@@ -24,7 +23,7 @@
 }
 .footer-title {
   font-weight: bold;
-  color: #f2bc06;
+  color: #38BDF8;
   margin-bottom: 12px;
   font-size: 1.1em;
 }
@@ -32,8 +31,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(242,188,6,0.12);
-  color: #f2bc06;
+  background: rgba(0, 102, 255, 0.12);
+  color: #38BDF8;
   font-weight: bold;
   padding: 10px 16px;
   border-radius: 6px;
@@ -59,7 +58,7 @@
   font-size: 0.98em;
 }
 .footer-list a:hover {
-  color: #f2bc06;
+  color: #38BDF8;
 }
 .footer-bottom {
   display: flex;
@@ -68,7 +67,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 24px 0 24px;
-  border-top: 1px solid #f2bc06;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -77,10 +76,10 @@
   align-items: center;
   gap: 16px;
   font-weight: 500;
-  color: #f2bc06;
+  color: #38BDF8;
 }
 .footer-social-icons a {
-  color: #f2bc06;
+  color: #38BDF8;
   font-size: 1.4em;
   margin-right: 12px;
   transition: color 0.2s;
@@ -126,16 +125,14 @@
   background: #053355;
   color: #fff;
   padding: 0 0 0 0;
-   width: 100%;
-    float: left;
-    padding: 20px 0;
-    /* background-color: #000; */
-    background-image: url("https://www.flightsmojo.in/images/footer_bg.png");
-    background-size: 1366px auto;
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    padding-bottom: 144px;
-  /* font-family: 'Segoe UI', Arial, sans-serif; */
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  background-image: url("https://www.flightsmojo.in/images/footer_bg.png");
+  background-size: 1366px auto;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 144px;
 }
 .footer-twopane-content {
   display: flex;
@@ -146,7 +143,6 @@
 }
 .footer-twopane-left {
   min-width: 220px;
-  /* background: rgba(242,188,6,0.10); */
   border-radius: 10px 0 0 10px;
   display: flex;
   flex-direction: column;
@@ -168,12 +164,12 @@
 .footer-twopane-menu-item.active,
 .footer-twopane-menu-item:focus {
   background: #03243a;
-  color: #f2bc06;
-  border-left: 4px solid #f2bc06;
+  color: #38BDF8;
+  border-left: 4px solid #0066FF;
 }
 .footer-twopane-menu-item:hover {
   background: #03243a;
-  color: #f2bc06;
+  color: #38BDF8;
 }
 .footer-twopane-submenu {
   margin-left: 12px;
@@ -194,12 +190,12 @@
 .footer-twopane-submenu-item.active,
 .footer-twopane-submenu-item:focus {
   background: #03243a;
-  color: #f2bc06;
-  border-left: 3px solid #f2bc06;
+  color: #38BDF8;
+  border-left: 3px solid #0066FF;
 }
 .footer-twopane-submenu-item:hover {
   background: #053355;
-  color: #f2bc06;
+  color: #38BDF8;
 }
 .footer-twopane-right {
   flex: 1 1 0;
@@ -249,7 +245,7 @@
   transition: color 0.2s;
 }
 .footer-twopane-list a:hover {
-  color: #f2bc06;
+  color: #38BDF8;
 }
 @media (max-width: 900px) {
   .footer-twopane-content {
@@ -264,7 +260,7 @@
     padding: 0;
     margin-right: 0;
     overflow-x: auto;
-    background: rgba(242,188,6,0.10);
+    background: rgba(0, 102, 255, 0.10);
     box-shadow: none;
   }
   .footer-twopane-menu-item {
@@ -278,9 +274,9 @@
   .footer-twopane-menu-item.active,
   .footer-twopane-menu-item:focus {
     border-left: none;
-    border-bottom: 3px solid #f2bc06;
+    border-bottom: 3px solid #0066FF;
     background: #053355;
-    color: #f2bc06;
+    color: #38BDF8;
   }
   .footer-twopane-submenu {
     flex-direction: row;
@@ -301,9 +297,9 @@
   .footer-twopane-submenu-item.active,
   .footer-twopane-submenu-item:focus {
     border-left: none;
-    border-bottom: 2px solid #f2bc06;
+    border-bottom: 2px solid #0066FF;
     background: #03243a;
-    color: #f2bc06;
+    color: #38BDF8;
   }
   .footer-twopane-right {
     border-radius: 0 0 10px 10px;
@@ -350,7 +346,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: #f2bc06;
+  background: #0066FF;
   transition: width 0.3s;
 }
 .footer-twopane-list a:hover::after {
@@ -369,13 +365,14 @@
   align-items: center;
   width: 36px;
   height: 36px;
-  border: 1px solid #f2bc06;
+  border: 1px solid #38BDF8;
   border-radius: 50%;
   transition: all 0.3s;
 }
 .footer-social-icons a:hover {
-  background: #f2bc06;
-  color: #053355;
+  background: #0066FF;
+  border-color: #0066FF;
+  color: #FFFFFF;
 }
 .footer-heading-row {
   display: flex;

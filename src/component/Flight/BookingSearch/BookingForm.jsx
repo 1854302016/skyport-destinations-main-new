@@ -389,29 +389,59 @@ const BookingForm = () => {
   useEffect(() => {
     setEndDate(active2 ? moment().add(2, "days") : null);
   }, [active2]);
-  const [focusedInput, setFocusedInput] = useState(null);
+  const [focusedInput, setFocusedInput] = useState("startDate");
   const [calVisible, setCalVisible] = useState(false);
+
+  // Refs for click outside handling across all dropdowns/selectors
+  const fromContainerRef = useRef(null);
+  const toContainerRef = useRef(null);
+  const dateContainerRef = useRef(null);
+  const returnContainerRef = useRef(null);
+  const travellerContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (fromContainerRef.current && !fromContainerRef.current.contains(event.target)) {
+        SetClickDestination(false);
+      }
+      if (toContainerRef.current && !toContainerRef.current.contains(event.target)) {
+        SetClickDestination2(false);
+      }
+      const isInsideDate =
+        (dateContainerRef.current && dateContainerRef.current.contains(event.target)) ||
+        (returnContainerRef.current && returnContainerRef.current.contains(event.target));
+      if (!isInsideDate) {
+        setCalVisible(false);
+      }
+      if (travellerContainerRef.current && !travellerContainerRef.current.contains(event.target)) {
+        setLabelClicked(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const isSameDay = (date1, date2) => date1.isSame(date2, "day");
 
   const renderDayContents = (day) => {
-    // const fare = fares.find((item) => isSameDay(day, item.date));
     const isStartDate = startDate && isSameDay(day, startDate);
     const isEndDate = endDate && isSameDay(day, endDate);
     const isInRange =
       startDate && endDate && day.isBetween(startDate, endDate, "day", "[]");
+    const isToday = day.isSame(moment(), "day");
 
-    let classNames = ["DayPicker-Day"];
-    if (isStartDate) classNames.push("DayPicker-Day--start");
-    if (isEndDate) classNames.push("DayPicker-Day--end");
-    if (isInRange) classNames.push("DayPicker-Day--range");
+    let classNames = ["cal-day-inner"];
+    if (isStartDate) classNames.push("cal-day-start");
+    if (isEndDate) classNames.push("cal-day-end");
+    if (isInRange) classNames.push("cal-day-range");
+    if (isToday && !isStartDate && !isEndDate && !isInRange) classNames.push("cal-day-today");
 
     return (
       <div className={classNames.join(" ")}>
-        <span style={{ fontWeight: "600", fontSize: "13px" }}>
-          {day.format("D")}
-        </span>
-        <br />
+        <span className="cal-day-num">{day.format("D")}</span>
       </div>
     );
   };
@@ -419,26 +449,33 @@ const BookingForm = () => {
   const handleDatesChange = ({ startDate, endDate }) => {
     setStartDate(startDate);
     setEndDate(endDate);
-    if (startDate && endDate) {
-      setFocusedInput(null);
-      setCalVisible(false);
-    } else if (startDate) {
-      setFocusedInput("endDate");
+    if (active2) {
+      if (startDate && endDate) {
+        setFocusedInput(null);
+        setCalVisible(false);
+      } else if (startDate) {
+        setFocusedInput("endDate");
+      }
+    } else {
+      if (startDate) {
+        setCalVisible(false);
+      }
     }
   };
 
   const toggleCalendar = (input) => {
-    setCalVisible(!calVisible);
-    if (!calVisible) {
-      if (input === "startDate") {
-        setFocusedInput("startDate");
-      } else if (input === "endDate") {
-        setFocusedInput("endDate");
+    if (calVisible) {
+      if (input && focusedInput !== input) {
+        setFocusedInput(input);
       } else {
-        setCalVisible(!calVisible);
-        if (!calVisible) setFocusedInput("startDate");
-        else setFocusedInput(null);
+        setCalVisible(false);
       }
+    } else {
+      setCalVisible(true);
+      setFocusedInput(input || "startDate");
+      SetClickDestination(false);
+      SetClickDestination2(false);
+      setLabelClicked(false);
     }
   };
 
@@ -1112,65 +1149,66 @@ const BookingForm = () => {
               data-cy="flightSW"
               className="fltWidgetSection appendBottom40 primaryTraveler "
             >
-              <div className="searchtabslist">
-                <ul className=" search_tabs">
-                  <li className="tab-link active">
-                    <Link className="tab-button" to="/">
-                      <FaPlane style={{ fontSize: "15px" }} /> Flight
-                    </Link>
-                  </li>
-                  {/* <li className="tab-link">
-                    <Link className="tab-button" to="/hotel">
-                      <FaBuilding style={{ fontSize: "15px" }} /> Hotel
-                    </Link>
-                  </li>
-                  <li className="tab-link">
-                    <Link className="tab-button" to="/tour">
-                      <FaUmbrellaBeach style={{ fontSize: "15px" }} /> Holidays
-                    </Link>
-                  </li> */}
-                </ul>
-              </div>
+              <div className="widget-top-nav-bar">
+                <div className="searchtabslist">
+                  <ul className="search_tabs">
+                    <li className="tab-link active">
+                      <Link className="tab-button" to="/">
+                        <FaPlane style={{ fontSize: "15px" }} /> Flight
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className="trip-switch-header">
-                <div className="sfp-change-trip">
-                  <div
-                    onClick={handleSearchFlight}
-                    className={`sfp-trip ${active ? "active oneway-active" : ""}`}
-                  >
-                    One Way
-                  </div>
-                  <div
-                    onClick={handleSearchFlightRound}
-                    className={`sfp-trip ${active2 ? "active round-active" : ""}`}
-                  >
-                    Round Trip
+                <div className="trip-switch-header">
+                  <div className="trip-segmented-switch">
+                    <button
+                      type="button"
+                      onClick={handleSearchFlight}
+                      className={`trip-switch-btn ${active ? "active" : ""}`}
+                    >
+                      One Way
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleSearchFlightRound}
+                      className={`trip-switch-btn ${active2 ? "active" : ""}`}
+                    >
+                      Round Trip
+                    </button>
                   </div>
                 </div>
               </div>
               <div className="fsw ">
                 <div className="fsw_inner returnPersuasion">
-                  <div className="flt_fsw_inputBox searchCity">
-                    <label htmlFor="fromCity">
+                  <div
+                    ref={fromContainerRef}
+                    className={`flt_fsw_inputBox searchCity ${clickDestination ? "is-focused" : ""}`}
+                    onClick={() => {
+                      if (clickDestination) {
+                        SetClickDestination(false);
+                      } else {
+                        setSearchInput("");
+                        setSearchedAirport("");
+                        SetClickDestination(true);
+                        setCities2(topAirports);
+                        setIsItemSelected(false);
+                        SetClickDestination2(false);
+                        setCalVisible(false);
+                        setLabelClicked(false);
+                      }
+                    }}
+                  >
+                    <label>
                       <span className="lbl_input">FROM</span>
                       <input
                         data-cy="fromCity"
                         id="fromCity"
                         type="text"
                         className="fsw_inputField"
-                        defaultValue="Georgetown (GEO)"
+                        placeholder="Where from?"
                         value={searchInput}
                         autoComplete="off"
-                        onFocus={() => {
-                          setSearchInput("");
-                          setSearchedAirport("");
-                          SetClickDestination(true);
-                          setCities2(topAirports);
-                          setIsItemSelected(false);
-                        }}
-                        onBlur={() => {
-                          if (isItemSelected) SetClickDestination(false);
-                        }}
                         onChange={(e) => handleInputChange(e.target.value)}
                       />
                       <p className="code makeRelative" title="GEO, Cheddi Jagan International Airport">
@@ -1179,7 +1217,7 @@ const BookingForm = () => {
                         </span>
                       </p>
                     </label>
-                    <div style={{ position: "relative" }}>
+                    <div style={{ position: "relative" }} onClick={(e) => e.stopPropagation()}>
                       <div
                         className="cityselect"
                         style={{
@@ -1289,8 +1327,25 @@ const BookingForm = () => {
                     <AiOutlineSwap size={18} />
                   </div>
 
-                  <div className="flt_fsw_inputBox searchToCity">
-                    <label htmlFor="toCity">
+                  <div
+                    ref={toContainerRef}
+                    className={`flt_fsw_inputBox searchToCity ${clickDestination2 ? "is-focused" : ""}`}
+                    onClick={() => {
+                      if (clickDestination2) {
+                        SetClickDestination2(false);
+                      } else {
+                        setSearchInput2("");
+                        setSearchedAirport2("");
+                        SetClickDestination2(true);
+                        setCities22(topAirports);
+                        setIsItemSelected2(false);
+                        SetClickDestination(false);
+                        setCalVisible(false);
+                        setLabelClicked(false);
+                      }
+                    }}
+                  >
+                    <label>
                       <span className="lbl_input">TO</span>
                       <input
                         data-cy="toCity"
@@ -1300,16 +1355,6 @@ const BookingForm = () => {
                         placeholder="Where to?"
                         autoComplete="off"
                         value={searchInput2}
-                        onFocus={() => {
-                          setSearchInput2("");
-                          setSearchedAirport2("");
-                          SetClickDestination2(true);
-                          setCities22(topAirports);
-                          setIsItemSelected2(false);
-                        }}
-                        onBlur={() => {
-                          if (isItemSelected2) SetClickDestination2(false);
-                        }}
                         onChange={(e) => handleInputChange2(e.target.value)}
                       />
                       <p className="code makeRelative" title={searchedAirport2 || "Choose destination airport"}>
@@ -1318,7 +1363,7 @@ const BookingForm = () => {
                         </span>
                       </p>
                     </label>
-                    <div style={{ position: "relative" }}>
+                    <div style={{ position: "relative" }} onClick={(e) => e.stopPropagation()}>
                       <div
                         className="cityselect"
                         style={{
@@ -1438,8 +1483,23 @@ const BookingForm = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flt_fsw_inputBox dates" onClick={toggleCalendar}>
-                    <label htmlFor="departure">
+
+                  <div
+                    ref={dateContainerRef}
+                    className={`flt_fsw_inputBox dates ${calVisible && focusedInput === "startDate" ? "is-focused" : ""}`}
+                    onClick={() => {
+                      if (calVisible && focusedInput === "startDate") {
+                        setCalVisible(false);
+                      } else {
+                        setCalVisible(true);
+                        setFocusedInput("startDate");
+                        SetClickDestination(false);
+                        SetClickDestination2(false);
+                        setLabelClicked(false);
+                      }
+                    }}
+                  >
+                    <label>
                       <span className="lbl_input">DEPARTURE</span>
                       <div className="main-date-display">
                         {startDate ? startDate.format("MM/DD/YYYY") : "08/09/2026"}
@@ -1449,10 +1509,9 @@ const BookingForm = () => {
                       </div>
                     </label>
                     <div
-                      style={{
-                        position: "absolute",
-                        zIndex: "2000",
-                      }}
+                      className="calendar-dropdown-wrapper"
+                      onClick={(e) => e.stopPropagation()}
+                      style={{ display: calVisible ? "block" : "none" }}
                     >
                       {active2
                         ? calVisible && (
@@ -1465,10 +1524,13 @@ const BookingForm = () => {
                             }
                             focusedInput={focusedInput}
                             onFocusChange={(focused) =>
-                              setFocusedInput(focused)
+                              setFocusedInput(focused || "startDate")
                             }
                             renderDayContents={renderDayContents}
                             numberOfMonths={numberOfMonths}
+                            daySize={42}
+                            hideKeyboardShortcutsPanel={true}
+                            noBorder={true}
                           />
                         )
                         : calVisible && (
@@ -1488,17 +1550,37 @@ const BookingForm = () => {
                             }}
                             renderDayContents={renderDayContents}
                             numberOfMonths={numberOfMonths}
+                            daySize={42}
+                            hideKeyboardShortcutsPanel={true}
+                            noBorder={true}
                           />
                         )}
                     </div>
                   </div>
 
                   <div
-                    className="flt_fsw_inputBox dates reDates"
+                    ref={returnContainerRef}
+                    className={`flt_fsw_inputBox dates reDates ${calVisible && focusedInput === "endDate" ? "is-focused" : ""}`}
                     style={{ opacity: active2 ? "1" : "0.55" }}
                     onClick={() => {
-                      handleSearchFlightRound();
-                      toggleCalendar("endDate");
+                      if (!active2) {
+                        handleSearchFlightRound();
+                        setCalVisible(true);
+                        setFocusedInput("endDate");
+                        SetClickDestination(false);
+                        SetClickDestination2(false);
+                        setLabelClicked(false);
+                      } else {
+                        if (calVisible && focusedInput === "endDate") {
+                          setCalVisible(false);
+                        } else {
+                          setCalVisible(true);
+                          setFocusedInput("endDate");
+                          SetClickDestination(false);
+                          SetClickDestination2(false);
+                          setLabelClicked(false);
+                        }
+                      }
                     }}
                   >
                     <label>
@@ -1515,11 +1597,20 @@ const BookingForm = () => {
                   </div>
 
                   <div
+                    ref={travellerContainerRef}
                     data-cy="flightTraveller"
-                    className="flt_fsw_inputBox flightTravllers"
-                    onClick={() => setLabelClicked(!labelClicked)}
+                    className={`flt_fsw_inputBox flightTravllers ${labelClicked ? "is-focused" : ""}`}
+                    onClick={() => {
+                      const next = !labelClicked;
+                      setLabelClicked(next);
+                      if (next) {
+                        SetClickDestination(false);
+                        SetClickDestination2(false);
+                        setCalVisible(false);
+                      }
+                    }}
                   >
-                    <label htmlFor="travellers">
+                    <label>
                       <span className="lbl_input">
                         TRAVELLERS &amp; CLASS
                       </span>
@@ -1531,270 +1622,174 @@ const BookingForm = () => {
                       </div>
                     </label>
                     <div
-                      className="onlytraveller normaltraveller"
+                      className="onlytraveller normaltraveller modern-traveller-card"
+                      onClick={(e) => e.stopPropagation()}
                       style={{
                         display: labelClicked ? "block" : "none",
                       }}
                     >
-                      <ul className="traveller_list">
-                        <li>
-                          <div className="list-persons-count">
-                            <div id="roomshtml">
-                              <div className="box" id="divroom1">
-                                <div className="roomTxt">
-                                  <span>Room 1:</span>
-                                </div>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    marginTop: "10px",
-                                  }}
-                                >
-                                  <div className="">
-                                    <div className="txt">
-                                      <span id="Label7">Adult</span>
-                                      <div style={{ fontSize: "10px" }}>
-                                        <em>(12+ years)</em>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="right pull-right">
-                                    <div
-                                      id="field1"
-                                      className="right PlusMinusRow"
-                                    >
-                                      <Link
-                                        type="button"
-                                        id="Adults_room_1_1_minus"
-                                        className="sub hoteladultclass"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "adults",
-                                            Math.max(rooms[0].adults - 1, 1)
-                                          )
-                                        }
-                                      >
-                                        -
-                                      </Link>
-                                      <span
-                                        id="Adults_room_1_1"
-                                        className="PlusMinus_number"
-                                      >
-                                        {rooms[0].adults}
-                                      </span>
-                                      <Link
-                                        type="button"
-                                        id="Adults_room_1_1_plus"
-                                        className="add hoteladultclass"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "adults",
-                                            rooms[0].adults + 1 <=
-                                              9 - rooms[0].children
-                                              ? rooms[0].adults + 1
-                                              : rooms[0].adults
-                                          )
-                                        }
-                                      >
-                                        +
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="spacer"></div>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <div className="">
-                                    <span className="txt">
-                                      <div id="Label9">
-                                        Child <br />
-                                        <div style={{ fontSize: "10px" }}>
-                                          <em>(2-12 years)</em>
-                                        </div>
-                                      </div>
-                                    </span>
-                                  </div>
-                                  <div className="right">
-                                    <div
-                                      id="field2"
-                                      className="right PlusMinusRow"
-                                    >
-                                      <Link
-                                        type="button"
-                                        id="Children_room_1_1_minus"
-                                        className="sub hotelchildclass"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "children",
-                                            Math.max(rooms[0].children - 1, 0)
-                                          )
-                                        }
-                                      >
-                                        -
-                                      </Link>
-                                      <span
-                                        id="Children_room_1_1"
-                                        className="PlusMinus_number"
-                                      >
-                                        {rooms[0].children}
-                                      </span>
-                                      <Link
-                                        type="button"
-                                        id="Children_room_1_1_plus"
-                                        className="add hotelchildclassss"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "children",
-                                            rooms[0].children + 1 <=
-                                              9 - rooms[0].adults
-                                              ? rooms[0].children + 1
-                                              : rooms[0].children
-                                          )
-                                        }
-                                      >
-                                        +
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="spacer"></div>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    marginTop: "5px",
-                                  }}
-                                >
-                                  <div className="">
-                                    <span className="txt">
-                                      <div id="Label9">
-                                        Infant
-                                        <div style={{ fontSize: "10px" }}>
-                                          <em>(0-2 years)</em>
-                                        </div>
-                                      </div>
-                                    </span>
-                                  </div>
-                                  <div className="right pull-right">
-                                    <div
-                                      id="field2"
-                                      className="right PlusMinusRow"
-                                    >
-                                      <Link
-                                        type="button"
-                                        id="Children_room_1_1_minus"
-                                        className="sub hotelchildclass"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "infants",
-                                            Math.max(rooms[0].infants - 1, 0)
-                                          )
-                                        }
-                                      >
-                                        -
-                                      </Link>
-                                      <span
-                                        id="Children_room_1_1"
-                                        className="PlusMinus_number"
-                                      >
-                                        {rooms[0].infants}
-                                      </span>
-                                      <Link
-                                        type="button"
-                                        id="Children_room_1_1_plus"
-                                        className="add hotelchildclass"
-                                        onClick={() =>
-                                          updateRoom(
-                                            0,
-                                            "infants",
-                                            Math.min(
-                                              rooms[0].infants + 1,
-                                              rooms[0].adults
-                                            )
-                                          )
-                                        }
-                                      >
-                                        +
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="clear"></div>
+                      <div className="tc-card-header">
+                        <span className="tc-title">TRAVELLERS</span>
+                      </div>
 
-                                <div className="clear"></div>
-                              </div>
-                            </div>
-                            <hr />
-                            <div className="makeFlex hrtlCenter appendBottom20 flightFare">
-                              <div className="specialFareContainer relative makeFlex flex-column centerContainer">
-                                <div className="makeFlex flex-column">
-                                  {[
-                                    "Economy",
-                                    "First Class",
-                                    "Premium Economy",
-                                    "Business",
-                                  ].map((clas, index) => (
-                                    <div
-                                      className="fareCardItem_class"
-                                      key={index}
-                                    >
-                                      <div>
-                                        <span className="customRadioBtn sizeSm primary">
-                                          <input
-                                            type="radio"
-                                            name="clas"
-                                            value={clas}
-                                            checked={selectedClass === clas}
-                                            onClick={() =>
-                                              handleClassSelect(clas)
-                                            }
-                                          />
-                                          <span className="outer">
-                                            <span className="inner" />
-                                          </span>
-                                        </span>
-                                      </div>
-                                      <div>
-                                        <div
-                                          className="white-space-no-wrap blackText lineHeight18 darkGreyText appendBottom3"
-                                          style={{
-                                            color:
-                                              selectedClass === clas
-                                                ? "rgb(0, 140, 255)"
-                                                : "rgb(74, 74, 74)",
-                                          }}
-                                        >
-                                          {clas}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-                            <Link
-                              className="apply_btn"
-                              to="#"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                setLabelClicked(false);
-                              }}
-                            >
-                              Done
-                            </Link>
+                      {/* Adults Row */}
+                      <div className="tc-row">
+                        <div className="tc-label-group">
+                          <span className="tc-main-label">Adults</span>
+                          <span className="tc-sub-label">12+ years</span>
+                        </div>
+                        <div className="tc-counter">
+                          <button
+                            type="button"
+                            className={`tc-btn-minus ${rooms[0].adults <= 1 ? "disabled" : ""}`}
+                            disabled={rooms[0].adults <= 1}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "adults",
+                                Math.max(rooms[0].adults - 1, 1)
+                              )
+                            }
+                          >
+                            -
+                          </button>
+                          <span className="tc-count-num">{rooms[0].adults}</span>
+                          <button
+                            type="button"
+                            className={`tc-btn-plus ${rooms[0].adults >= 9 - rooms[0].children ? "disabled" : ""}`}
+                            disabled={rooms[0].adults >= 9 - rooms[0].children}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "adults",
+                                rooms[0].adults + 1 <= 9 - rooms[0].children
+                                  ? rooms[0].adults + 1
+                                  : rooms[0].adults
+                              )
+                            }
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Children Row */}
+                      <div className="tc-row">
+                        <div className="tc-label-group">
+                          <span className="tc-main-label">Children</span>
+                          <span className="tc-sub-label">2-12 years</span>
+                        </div>
+                        <div className="tc-counter">
+                          <button
+                            type="button"
+                            className={`tc-btn-minus ${rooms[0].children <= 0 ? "disabled" : ""}`}
+                            disabled={rooms[0].children <= 0}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "children",
+                                Math.max(rooms[0].children - 1, 0)
+                              )
+                            }
+                          >
+                            -
+                          </button>
+                          <span className="tc-count-num">{rooms[0].children}</span>
+                          <button
+                            type="button"
+                            className={`tc-btn-plus ${rooms[0].children >= 9 - rooms[0].adults ? "disabled" : ""}`}
+                            disabled={rooms[0].children >= 9 - rooms[0].adults}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "children",
+                                rooms[0].children + 1 <= 9 - rooms[0].adults
+                                  ? rooms[0].children + 1
+                                  : rooms[0].children
+                              )
+                            }
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Infants Row */}
+                      <div className="tc-row">
+                        <div className="tc-label-group">
+                          <span className="tc-main-label">Infants</span>
+                          <span className="tc-sub-label">under 2 years</span>
+                        </div>
+                        <div className="tc-counter">
+                          <button
+                            type="button"
+                            className={`tc-btn-minus ${rooms[0].infants <= 0 ? "disabled" : ""}`}
+                            disabled={rooms[0].infants <= 0}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "infants",
+                                Math.max(rooms[0].infants - 1, 0)
+                              )
+                            }
+                          >
+                            -
+                          </button>
+                          <span className="tc-count-num">{rooms[0].infants}</span>
+                          <button
+                            type="button"
+                            className={`tc-btn-plus ${rooms[0].infants >= rooms[0].adults ? "disabled" : ""}`}
+                            disabled={rooms[0].infants >= rooms[0].adults}
+                            onClick={() =>
+                              updateRoom(
+                                0,
+                                "infants",
+                                Math.min(rooms[0].infants + 1, rooms[0].adults)
+                              )
+                            }
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="tc-divider" />
+
+                      {/* Cabin Class Header */}
+                      <div className="tc-card-header">
+                        <span className="tc-title">CABIN CLASS</span>
+                      </div>
+
+                      {/* Cabin Class Grid */}
+                      <div className="tc-class-grid">
+                        {[
+                          { id: "Economy", label: "Economy" },
+                          { id: "Premium Economy", label: "Premium Economy" },
+                          { id: "Business", label: "Business" },
+                          { id: "First Class", label: "First Class" },
+                        ].map((item) => (
+                          <div
+                            key={item.id}
+                            className={`tc-class-chip ${selectedClass === item.id ? "active" : ""}`}
+                            onClick={() => handleClassSelect(item.id)}
+                          >
+                            <span className="tc-class-chip-radio" />
+                            <span className="tc-class-chip-text">{item.label}</span>
                           </div>
-                        </li>
-                      </ul>
+                        ))}
+                      </div>
+
+                      {/* Apply Button */}
+                      <button
+                        type="button"
+                        className="tc-apply-btn"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setLabelClicked(false);
+                        }}
+                      >
+                        DONE
+                      </button>
                     </div>
                     {/* <div className="introGBFlt">
                       <div className="introGBFltTooltip whiteText">

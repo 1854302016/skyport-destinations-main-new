@@ -134,14 +134,16 @@ const FeaturedCategories = () => {
           ))}
         </Swiper>
         <div
-          className="custom-next4"
+          className="feat-cat-next"
           onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next slide"
         >
           <FaChevronRight />
         </div>
         <div
-          className="custom-prev4"
+          className="feat-cat-prev"
           onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous slide"
         >
           <FaChevronLeft />
         </div>

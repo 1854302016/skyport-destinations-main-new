@@ -109,38 +109,55 @@
   background: #0066FF;
 }
 
-.custom-next4,
-.custom-prev4 {
+.featured-categories-modern .swiper-pagination-bullet-active {
+  background: #0066FF !important;
+  width: 24px !important;
+  border-radius: 6px !important;
+}
+
+.feat-cat-next,
+.feat-cat-prev {
   position: absolute;
-  top: 52%;
+  top: 48%;
+  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   background: #FFFFFF;
   border: 1.5px solid #E2E8F0;
-  box-shadow: 0 6px 20px rgba(11, 37, 69, 0.08);
+  box-shadow: 0 6px 20px rgba(11, 37, 69, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.25s ease;
-  color: #0B2545;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #0066FF;
+  font-size: 15px;
 }
 
-.custom-next4:hover,
-.custom-prev4:hover {
+.feat-cat-next:hover,
+.feat-cat-prev:hover {
   background: #0066FF;
   border-color: #0066FF;
   color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.4);
 }
 
-.custom-prev4 {
+.feat-cat-prev {
   left: -20px;
 }
 
-.custom-next4 {
+.feat-cat-next {
   right: -20px;
+}
+
+@media (max-width: 768px) {
+  .feat-cat-prev {
+    left: 2px;
+  }
+  .feat-cat-next {
+    right: 2px;
+  }
 }

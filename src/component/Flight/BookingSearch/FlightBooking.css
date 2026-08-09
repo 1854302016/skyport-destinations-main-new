@@ -613,28 +613,20 @@
   z-index: 999999;
 }
 
-.sfp-change-trip {
+.flightbooking-wrap .sfp-change-trip {
   position: relative;
   width: 318px;
   height: 30px;
   border-radius: 5px;
-  /* border-radius: 15px; */
   box-sizing: border-box;
-  /* padding: 4px; */
-  padding: 0px 0px 0px 0px;
-  background-color: #f73030;
-  /* background: #d32f2f; */
-  background: #053355 ;
+  padding: 0px;
+  background: #053355;
   display: flex;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  /* margin-bottom: 20px; */
 }
 
-.sfp-change-trip .sfp-trip {
+.flightbooking-wrap .sfp-change-trip .sfp-trip {
   position: relative;
   flex: 1;
   z-index: 5;
@@ -642,19 +634,16 @@
   font-size: 14px;
   line-height: 22px;
   transition: all 0.2s linear;
-  letter-spacing: 0.5;
+  letter-spacing: 0.5px;
   font-weight: 400;
   padding: 5px;
-
   color: #fff;
 }
 
-.sfp-change-trip .sfp-trip.active {
+.flightbooking-wrap .sfp-change-trip .sfp-trip.active {
   font-weight: 700;
   color: #fff !important;
-  /* color: #d32f2f; */
   border-radius: 5px;
-  /* border-radius: 12px; */
   background-color: #efbf04;
   transition: all 0.2s linear;
 }
@@ -693,69 +682,64 @@
   color: white !important;
 }
 
-.CalendarMonth_caption {
+.flightbooking-wrap .CalendarMonth_caption {
   background-color: #053355;
 }
 
-.DayPicker strong {
+.flightbooking-wrap .DayPicker strong {
   color: #fff !important;
 }
 
-.DayPickerNavigation_button__default {
+.flightbooking-wrap .DayPickerNavigation_button__default {
   background-color: #053355 !important;
   color: white;
   border: 1px solid #053355 !important;
 }
-.DayPickerNavigation_button__horizontalDefault {
+.flightbooking-wrap .DayPickerNavigation_button__horizontalDefault {
   top: 0px !important;
 }
-.DayPicker small {
+.flightbooking-wrap .DayPicker small {
   color: white !important;
 }
 
-.DayPickerNavigation_svg__horizontal {
+.flightbooking-wrap .DayPickerNavigation_svg__horizontal {
   fill: white !important;
 }
 
-/* .CalendarDay__default {
-  border: 1px solid white !important;
-  color: white !important;
-  background: #17194e !important;
-} */
-.CalendarDay__selected,
-.CalendarDay__selected:active,
-.CalendarDay__selected:hover {
+.flightbooking-wrap .CalendarDay__selected,
+.flightbooking-wrap .CalendarDay__selected:active,
+.flightbooking-wrap .CalendarDay__selected:hover {
   background-color: #053355 !important;
   color: white;
   border: 1px solid white !important;
 }
 
-.CalendarDay__selected_span {
+.flightbooking-wrap .CalendarDay__selected_span {
   background-color: #053355 !important;
   color: white;
   border: 1px solid white !important;
 }
 
-.CalendarDay__selected span,
-.CalendarDay__selected span:active,
-.CalendarDay__selected span:hover {
+.flightbooking-wrap .CalendarDay__selected span,
+.flightbooking-wrap .CalendarDay__selected span:active,
+.flightbooking-wrap .CalendarDay__selected span:hover {
   color: white !important;
 }
 
-.CalendarDay__selected_span span {
+.flightbooking-wrap .CalendarDay__selected_span span {
   color: white !important;
 }
 
-.DayPickerKeyboardShortcuts_show__bottomRight::before {
+.flightbooking-wrap .DayPickerKeyboardShortcuts_show__bottomRight::before {
   border-right: 33px solid #053355 !important;
 }
 
-.CalendarMonth_caption {
+.flightbooking-wrap .CalendarMonth_caption {
   padding-top: 12px !important;
   padding-bottom: 27px !important;
 }
 
-.DayPicker_weekHeader {
+.flightbooking-wrap .DayPicker_weekHeader {
   top: 42px !important;
 }
 

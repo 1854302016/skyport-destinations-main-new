@@ -95,15 +95,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F59E0B;
+  color: #0066FF;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(11, 37, 69, 0.1);
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .favorite-btn:hover {
+  background: #0066FF;
+  color: #FFFFFF;
+  border-color: #0066FF;
   transform: scale(1.1);
-  color: #D97706;
+  box-shadow: 0 6px 18px rgba(0, 102, 255, 0.35);
 }
 
 .card-media-wrapper {

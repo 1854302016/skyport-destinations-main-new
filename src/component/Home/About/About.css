@@ -21,11 +21,12 @@
 }
 
 
-/* New AStyling  */
+/* New Styling  */
 .text-primary {
-    color: #efbf04 !important;
+    color: #0066FF !important;
     opacity: 1;
-}.display-6 {
+}
+.display-6 {
     font-size: 38px;
     font-weight: 700;
 }
