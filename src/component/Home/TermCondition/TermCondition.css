@@ -6,7 +6,6 @@
 .terms-page-wrapper {
   background-color: #F8FAFC;
   color: #1E293B;
-  overflow-x: hidden;
   font-family: inherit;
 }
 
@@ -81,12 +80,23 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 8px 22px;
   border-radius: 9999px;
-  font-size: 13px;
+  font-size: 13.5px;
   color: #E2E8F0;
+}
+
+.terms-meta-strip strong {
+  color: #FFFFFF !important;
+  font-weight: 800;
+}
+
+.terms-meta-strip .meta-dot {
+  color: #38BDF8;
+  font-weight: bold;
 }
 
 /* ==========================================================================
@@ -97,8 +107,10 @@
 }
 
 .terms-sticky-sidebar {
-  position: sticky;
-  top: 110px;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100px !important;
+  z-index: 20 !important;
   background: #FFFFFF;
   border: 1.5px solid #E2E8F0;
   border-radius: 24px;

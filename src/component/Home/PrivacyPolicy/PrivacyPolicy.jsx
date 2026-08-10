@@ -59,11 +59,11 @@ const PrivacyPolicy = () => {
             <p className="legal-hero-subtitle">
               Trade Fare Destinations is committed to protecting your personal information and handling your data with full transparency, security, and integrity.
             </p>
-            <div className="legal-meta-strip">
+            {/* <div className="legal-meta-strip">
               <span><strong>Effective Date:</strong> January 2026</span>
               <span className="meta-dot">•</span>
               <span><strong>Version:</strong> 2.4 (GDPR &amp; Global Compliant)</span>
-            </div>
+            </div> */}
           </div>
         </Container>
       </section>

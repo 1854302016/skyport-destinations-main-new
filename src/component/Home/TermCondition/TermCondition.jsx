@@ -59,11 +59,11 @@ const TermCondition = () => {
             <p className="terms-hero-subtitle">
               Please review these terms carefully before booking flights or using Trade Fare Destinations services.
             </p>
-            <div className="terms-meta-strip">
+            {/* <div className="terms-meta-strip">
               <span><strong>Effective Date:</strong> January 2026</span>
               <span className="meta-dot">•</span>
               <span><strong>Governing Law:</strong> International Air Transport &amp; Applicable Laws</span>
-            </div>
+            </div> */}
           </div>
         </Container>
       </section>
