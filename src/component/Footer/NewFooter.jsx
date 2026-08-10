@@ -287,7 +287,7 @@ const NewFooter = () => {
               GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201
               and Canada Office at Unit 201-7743 128 street West newton, surrey Bc V3w1L4.
               For any inquiries, you can reach us at +91-9646747171 / +1-778-240-4599 or email us at
-              explore@skyportdestinations.com.
+              info@trustedfare.com.
             </p>
             <p>
               All users agree to SKYPORT DESTINATIONS's{" "}

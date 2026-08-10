@@ -66,7 +66,7 @@ const SupportSection = () => {
                         alt="Email"
                       />
                     </span>
-                    explore@skyportdestinations.com
+                    info@trustedfare.com
                   </motion.a>
                 </div>
               </div>

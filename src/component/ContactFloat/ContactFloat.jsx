@@ -58,7 +58,7 @@ const ContactFloat = () => {
       id: "email",
       icon: <FiMail />,
       label: "Email Us",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=explore@skyportdestinations.com&su=Inquiry%20-%20YOUR%20FRIEND&body=Hello%20YOUR%20FRIEND%20Team,",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=info@trustedfare.com&su=Inquiry%20-%20YOUR%20FRIEND&body=Hello%20YOUR%20FRIEND%20Team,",
       external: true,
       className: "email",
     },

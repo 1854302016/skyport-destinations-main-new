@@ -439,7 +439,7 @@ const FullDetail = ({ data }) => {
                           <span>Call Us:</span>+592 615 8808
                         </p>
                         <p>
-                          <span>Mail Us:</span> explore@skyportdestinations.com
+                          <span>Mail Us:</span> info@trustedfare.com
                         </p>
                       </div>
                     </div>
