@@ -32,7 +32,7 @@ const BannerSection = () => {
     const fetchDestinations = async () => {
       try {
         const response = await fetch(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/destinations"
+          "https://admin.trustedfare.com/api/HolidayPackages/destinations"
         );
         const result = await response.json();
         if (result.success) {

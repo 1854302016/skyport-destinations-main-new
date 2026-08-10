@@ -96,7 +96,7 @@ const Lists = () => {
     const fetchDestinations = async () => {
       try {
         const res = await fetch(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/destinations"
+          "https://admin.trustedfare.com/api/HolidayPackages/destinations"
         );
         const json = await res.json();
         if (json.success) {
@@ -143,7 +143,7 @@ const Lists = () => {
 
   const fetchData = async () => {
     const res = await axios.get(
-      `https://admin.skyportdestinations.com/api/HolidayPackages/destinations/${pack}`
+      `https://admin.trustedfare.com/api/HolidayPackages/destinations/${pack}`
     );
     if (res && res.data.data.length) {
       setMainData(res.data);
@@ -164,7 +164,7 @@ const Lists = () => {
     }
     try {
       const rescity = await axios.get(
-        "https://admin.skyportdestinations.com/api/HolidayPackages/depcities"
+        "https://admin.trustedfare.com/api/HolidayPackages/depcities"
       );
       if (rescity && rescity.data.data.length) {
         const depcities = rescity.data.data
@@ -180,7 +180,7 @@ const Lists = () => {
   const fetchModifiedSearch = async () => {
     try {
       const resx = await axios.post(
-        "https://admin.skyportdestinations.com/api/HolidayPackages/ModifySearch",
+        "https://admin.trustedfare.com/api/HolidayPackages/ModifySearch",
         {
           fromLocation,
           toLocation: toLocation.toLowerCase(),
@@ -208,7 +208,7 @@ const Lists = () => {
     }
 
     // try {
-    //   const rescity = await axios.get("https://admin.skyportdestinations.com/api/HolidayPackages/depcities");
+    //   const rescity = await axios.get("https://admin.trustedfare.com/api/HolidayPackages/depcities");
     //   if (rescity && rescity.data.data.length) {
 
     //     const depcities = rescity.data.data.map(c => c.name?.trim()).filter(Boolean);

@@ -54,7 +54,7 @@ const FlightBookingTicket = () => {
   const [exchangeRate2, setExchangeRate2] = useState(null);
 
   useEffect(() => {
-    const URL = `https://admin.skyportdestinations.com/api/currency_convert/${fromCurrency}/${toCurrency}`;
+    const URL = `https://admin.trustedfare.com/api/currency_convert/${fromCurrency}/${toCurrency}`;
     const getExchangeRate = async () => {
       try {
         const response = await axios.get(URL);
@@ -73,7 +73,7 @@ const FlightBookingTicket = () => {
   }, []);
 
   useEffect(() => {
-    const URL = `https://admin.skyportdestinations.com/api/currency_convert/${fromCurrency2}/${toCurrency2}`;
+    const URL = `https://admin.trustedfare.com/api/currency_convert/${fromCurrency2}/${toCurrency2}`;
     const getExchangeRate = async () => {
       try {
         const response = await axios.get(URL);
@@ -164,7 +164,7 @@ const FlightBookingTicket = () => {
         let responseP;
         if (srdvIdx === "SrdvP") {
           responseP = await fetch(
-            "https://admin.skyportdestinations.com/api/air_bookingdata",
+            "https://admin.trustedfare.com/api/air_bookingdata",
             {
               method: "POST",
               headers: {
@@ -184,7 +184,7 @@ const FlightBookingTicket = () => {
             bookingId: bookingIdTJ,
           });
           responseTJ = await fetch(
-            "https://admin.skyportdestinations.com/api/flight_booking_details",
+            "https://admin.trustedfare.com/api/flight_booking_details",
             {
               method: "POST",
               headers: {
@@ -200,7 +200,7 @@ const FlightBookingTicket = () => {
         let response;
         if (srdvIdx === "undefined") {
           response = await fetch(
-            "https://admin.skyportdestinations.com/api/flight-booking-details",
+            "https://admin.trustedfare.com/api/flight-booking-details",
             {
               method: "POST",
               headers: {
@@ -221,7 +221,7 @@ const FlightBookingTicket = () => {
         // let response2;
         // if (firstname2) {
         //   response2 = await fetch(
-        //     "https://admin.skyportdestinations.com/api/flight-booking-details",
+        //     "https://admin.trustedfare.com/api/flight-booking-details",
         //     {
         //       method: "POST",
         //       headers: {

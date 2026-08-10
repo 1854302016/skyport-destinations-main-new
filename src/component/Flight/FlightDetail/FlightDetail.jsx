@@ -257,7 +257,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
     const fetchSSRTBO = async () => {
       try {
         const response3 = await axios.post(
-          "https://admin.skyportdestinations.com/api/flightSsr-lcc",
+          "https://admin.trustedfare.com/api/flightSsr-lcc",
           {
             EndUserIp: "192.168.11.58",
             TraceId: traceId,
@@ -276,7 +276,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
     const fetchSSRTBORound = async () => {
       try {
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/flightSsr-lcc",
+          "https://admin.trustedfare.com/api/flightSsr-lcc",
           {
             EndUserIp: "192.168.11.58",
             TraceId: traceId,
@@ -307,7 +307,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
         console.log("TBO Request payload", payload);
 
         const fareQuoteRes = await axios.post(
-          "https://admin.skyportdestinations.com/api/flight-fare-quote",
+          "https://admin.trustedfare.com/api/flight-fare-quote",
           payload,
         );
 
@@ -365,7 +365,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
         console.log("Round trip payload:", payloadQuote1);
 
         const resQuote1 = await axios.post(
-          "https://admin.skyportdestinations.com/api/flight-fare-quote",
+          "https://admin.trustedfare.com/api/flight-fare-quote",
           payloadQuote1,
         );
 
@@ -411,7 +411,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
 
       try {
         const res = await axios.post(
-          "https://admin.skyportdestinations.com/api/Mistify/Revalidate",
+          "https://admin.trustedfare.com/api/Mistify/Revalidate",
           revalidatePayload,
         );
 
@@ -510,7 +510,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
   //     };
 
   //     const response = await axios.post(
-  //       "https://admin.skyportdestinations.com/api/flight-fare-rule",
+  //       "https://admin.trustedfare.com/api/flight-fare-rule",
   //       payload
   //     );
   //     console.log(
@@ -555,7 +555,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
         };
 
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/flight-fare-rule",
+          "https://admin.trustedfare.com/api/flight-fare-rule",
           payload,
         );
 
@@ -578,7 +578,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
       } else if (srdvIdx === "EwebM") {
         // Mistify (SkyPortDestinations) API
         const responseM = await axios.post(
-          "https://admin.skyportdestinations.com/api/Mistify/FareRules",
+          "https://admin.trustedfare.com/api/Mistify/FareRules",
           {
             FareSourceCode: latestFareSourceCode || decodedIndex,
             ConversationId: storedConversationId,
@@ -1247,7 +1247,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
       setOpenPayBtn(false);
       // STEP 1: Create Razorpay order
       const { data: orderData } = await axios.post(
-        "https://admin.skyportdestinations.com/api/create-order",
+        "https://admin.trustedfare.com/api/create-order",
         {
           amount: Math.round(
             flight2
@@ -1290,7 +1290,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
           try {
             // STEP 3: Verify payment
             const { data: verifyData } = await axios.post(
-              "https://admin.skyportdestinations.com/api/verify-payment",
+              "https://admin.trustedfare.com/api/verify-payment",
               {
                 paymentId: response.razorpay_payment_id,
                 orderId: response.razorpay_order_id,
@@ -1556,7 +1556,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
       let bookingResponse;
       // if (flight.IsLCC === false) {
       //   const res = await fetch(
-      //     "https://admin.skyportdestinations.com/api/flight-book",
+      //     "https://admin.trustedfare.com/api/flight-book",
       //     {
       //       method: "POST",
       //       headers: { "Content-Type": "application/json" },
@@ -1573,7 +1573,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
       //   const { PNR, BookingId } = bookingResponse.data.Response;
 
       //   const ticketRes = await fetch(
-      //     "https://admin.skyportdestinations.com/api/flight-ticket",
+      //     "https://admin.trustedfare.com/api/flight-ticket",
       //     {
       //       method: "POST",
       //       headers: { "Content-Type": "application/json" },
@@ -1603,7 +1603,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
 
       // {
       const res = await fetch(
-        "https://admin.skyportdestinations.com/api/flight-ticket",
+        "https://admin.trustedfare.com/api/flight-ticket",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -1979,10 +1979,10 @@ const validatePassengerAgeByType = (dob, passengerType) => {
     console.log("requestData2", requestData);
 
     // Make the API call
-    const apiUrl = "https://admin.skyportdestinations.com/api/flight-ticket";
+    const apiUrl = "https://admin.trustedfare.com/api/flight-ticket";
     // const apiUrl = flight2.IsLCC
-    //   ? "https://admin.skyportdestinations.com/api/flight-ticket"
-    //   : "https://admin.skyportdestinations.com/api/flight-book";
+    //   ? "https://admin.trustedfare.com/api/flight-ticket"
+    //   : "https://admin.trustedfare.com/api/flight-book";
 
     // flight2 &&
     //   flight2.IsLCC &&
@@ -2033,7 +2033,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
         //   // Extract PNR and BookingId
         //   const { PNR, BookingId } = data2.data.Response;
         //   // Make API call to get flight2 ticket
-        //   fetch("https://admin.skyportdestinations.com/api/flight-ticket", {
+        //   fetch("https://admin.trustedfare.com/api/flight-ticket", {
         //     method: "POST",
         //     headers: {
         //       "Content-Type": "application/json",
@@ -2153,7 +2153,7 @@ const validatePassengerAgeByType = (dob, passengerType) => {
 
       // API call using axios
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/Mistify/Book",
+        "https://admin.trustedfare.com/api/Mistify/Book",
         requestData,
         { headers: { "Content-Type": "application/json" } },
       );

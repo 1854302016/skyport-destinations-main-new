@@ -103,7 +103,7 @@ const BusPreBook = () => {
     if (action === "block") {
       try {
         const blockResponse = await axios.post(
-          "https://admin.skyportdestinations.com/api/Bus/Block",
+          "https://admin.trustedfare.com/api/Bus/Block",
           requestData
         );
 
@@ -124,7 +124,7 @@ const BusPreBook = () => {
     if (action === "book" && blockRequestData) {
       try {
         const bookResponse = await axios.post(
-          "https://admin.skyportdestinations.com/api/Bus/Book",
+          "https://admin.trustedfare.com/api/Bus/Book",
           blockRequestData
         );
 

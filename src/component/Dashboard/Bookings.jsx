@@ -82,19 +82,19 @@ export default function Bookings({ flights, hotels, cabs, buses }) {
 
       switch (type) {
         case "flight":
-          apiUrl = "https://admin.skyportdestinations.com/api/FlightDownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/FlightDownloadTicket";
           payload = { BookingId: id };
           break;
         case "hotel":
-          apiUrl = "https://admin.skyportdestinations.com/api/Hotel/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Hotel/DownloadTicket";
           payload = { BookingId: id };
           break;
         case "bus":
-          apiUrl = "https://admin.skyportdestinations.com/api/Bus/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Bus/DownloadTicket";
           payload = { PNR: id };
           break;
         case "cab":
-          apiUrl = "https://admin.skyportdestinations.com/api/Cab/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Cab/DownloadTicket";
           payload = { OrderNo: id };
           break;
         default:
@@ -135,22 +135,22 @@ export default function Bookings({ flights, hotels, cabs, buses }) {
 
     switch (cancelType) {
       case "flight":
-        apiUrl = "https://admin.skyportdestinations.com/api/Flight/Cancel";
+        apiUrl = "https://admin.trustedfare.com/api/Flight/Cancel";
         payload = { BookingId: cancelId, Remarks: remarks };
         break;
 
       case "hotel":
-        apiUrl = "https://admin.skyportdestinations.com/api/Hotel/Cancel";
+        apiUrl = "https://admin.trustedfare.com/api/Hotel/Cancel";
         payload = { BookingId: cancelId, Remarks: remarks };
         break;
 
       case "bus":
-        apiUrl = "https://admin.skyportdestinations.com/api/Bus/Cancel";
+        apiUrl = "https://admin.trustedfare.com/api/Bus/Cancel";
         payload = { PNR: cancelId, Remarks: remarks };
         break;
 
       case "cab":
-        apiUrl = "https://admin.skyportdestinations.com/api/Cab/Cancel";
+        apiUrl = "https://admin.trustedfare.com/api/Cab/Cancel";
         payload = { OrderNo: cancelId, Remarks: remarks };
         break;
     }

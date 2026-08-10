@@ -129,7 +129,7 @@ const TicketBooking = () => {
   //     try {
   //       if (srdvIdx === "undefined") {
   //         const response = await axios.post(
-  //           "https://admin.skyportdestinations.com/api/flight-booking-details",
+  //           "https://admin.trustedfare.com/api/flight-booking-details",
   //           {
   //             EndUserIp: "192.168.11.58",
   //             PNRIB: parsedPnr2,
@@ -207,7 +207,7 @@ const TicketBooking = () => {
 
           if (tripId) {
             const response = await axios.get(
-              `https://admin.skyportdestinations.com/api/Mistify/TripDetails/${tripId}`,
+              `https://admin.trustedfare.com/api/Mistify/TripDetails/${tripId}`,
               {
                 params: {
                   bookingid: bookingid,
@@ -233,7 +233,7 @@ const TicketBooking = () => {
           const traceId = sessionStorage.getItem("traceId");
 
           const response = await axios.post(
-            "https://admin.skyportdestinations.com/api/flight-booking-details",
+            "https://admin.trustedfare.com/api/flight-booking-details",
             {
               EndUserIp: "192.168.11.58",
               PNRIB: parsedPnr2,

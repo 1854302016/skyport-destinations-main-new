@@ -513,7 +513,7 @@ export default Footer;
 //   const phonePePayment = async () => {
 //     try {
 //       const phonePeResponse = await axios.post(
-//         "https://admin.skyportdestinations.com/api/phonepe",
+//         "https://admin.trustedfare.com/api/phonepe",
 //         {
 //           payment_method: "phonepe",
 //           Amount: flight.totalPriceInfo.totalFareDetail.fC.TF,
@@ -555,7 +555,7 @@ export default Footer;
 
 //           console.log("Flight booking request data", requestData);
 
-//           const apiUrl = "https://admin.skyportdestinations.com/api/flight_booking";
+//           const apiUrl = "https://admin.trustedfare.com/api/flight_booking";
 //           const bookingResponse = await axios.post(apiUrl, requestData, {
 //             headers: {
 //               "Content-Type": "application/json",
@@ -608,7 +608,7 @@ export default Footer;
 //     while (attempts < maxAttempts) {
 //       try {
 //         const statusResponse = await axios.get(
-//           "https://admin.skyportdestinations.com/api/check_payment_status",
+//           "https://admin.trustedfare.com/api/check_payment_status",
 //           {
 //             params: { bookingId: sessionStorage.getItem("BookingIdTJ") },
 //           }

@@ -600,7 +600,7 @@ const HotelSearchNew = () => {
     }
   };
   // const fetchDatas = (value) => {
-  //   fetch("https://admin.skyportdestinations.com/api/Hotel/CityList")
+  //   fetch("https://admin.trustedfare.com/api/Hotel/CityList")
   //     .then((response) => response.json())
   //     .then((json) => {
   //       console.log("json responseee", json);

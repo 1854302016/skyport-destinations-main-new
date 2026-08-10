@@ -222,7 +222,7 @@ const fetchDatas = async (value) => {
   const payload={
     city:value
   }
-    const response = await axios.post("https://admin.skyportdestinations.com/api/Bus/City",payload);
+    const response = await axios.post("https://admin.trustedfare.com/api/Bus/City",payload);
     const json = response.data;
 
     const results = json.data
@@ -292,7 +292,7 @@ const fetchDatass = async (value) => {
     city:value
   }
 
-    const response = await axios.post("https://admin.skyportdestinations.com/api/Bus/City", payload);
+    const response = await axios.post("https://admin.trustedfare.com/api/Bus/City", payload);
     const json = response.data;
 
     const results = json.data

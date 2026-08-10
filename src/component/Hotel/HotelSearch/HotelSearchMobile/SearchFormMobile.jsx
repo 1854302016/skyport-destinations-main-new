@@ -81,7 +81,7 @@ const SearchFormMobile = ({ onSearchComplete }) => {
     try {
       const requestData = { city: value };
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/Hotel/CityList",
+        "https://admin.trustedfare.com/api/Hotel/CityList",
         requestData,
       );
       const json = response.data;

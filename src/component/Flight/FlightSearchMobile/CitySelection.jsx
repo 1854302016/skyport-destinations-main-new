@@ -100,7 +100,7 @@ const CitySelection = ({
       };
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/airport",
+        "https://admin.trustedfare.com/api/airport",
         requestData
       );
 

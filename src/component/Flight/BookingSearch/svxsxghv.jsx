@@ -488,7 +488,7 @@ const njdvb = {
     // try {
     //   console.log(SearchData);
     //   const response = await axios.post(
-    //     "https://admin.skyportdestinations.com/api/flightSearch",
+    //     "https://admin.trustedfare.com/api/flightSearch",
     //     SearchData
     //     // {
     //     //   headers: {

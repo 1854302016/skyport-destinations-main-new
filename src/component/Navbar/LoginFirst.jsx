@@ -33,7 +33,7 @@ const LoginFirst = () => {
     setLoading(true); // Start loading
     try {
       const response = await fetch(
-        "https://admin.skyportdestinations.com/api/User/Login",
+        "https://admin.trustedfare.com/api/User/Login",
         {
           method: "POST",
           headers: {

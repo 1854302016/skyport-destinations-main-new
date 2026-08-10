@@ -100,7 +100,7 @@ const HotelPreBookMobile = () => {
     const fetchHotelPreBook = async () => {
       try {
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/Hotel/PreBook",
+          "https://admin.trustedfare.com/api/Hotel/PreBook",
           preBookRequestData
         );
 
@@ -282,7 +282,7 @@ const HotelPreBookMobile = () => {
 
     try {
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/Hotel/Book",
+        "https://admin.trustedfare.com/api/Hotel/Book",
         requestData
       );
       setHotelBookData(response.data);

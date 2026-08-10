@@ -8,8 +8,8 @@ import {
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const URL = "https://admin.skyportdestinations.com/api/multiauthenticate";
-const URL1 = "https://admin.skyportdestinations.com/api/wallet-balance";
+const URL = "https://admin.trustedfare.com/api/multiauthenticate";
+const URL1 = "https://admin.trustedfare.com/api/wallet-balance";
 
 export function login(id, password, navigate) {
   return async (dispatch) => {

@@ -51,7 +51,7 @@ const HotelListingNew = () => {
     console.log("searchquery", searchDataa);
     axios
       .post(
-        "https://admin.skyportdestinations.com/api/hotelTJ/search_list",
+        "https://admin.trustedfare.com/api/hotelTJ/search_list",
         searchDataa
       )
       .then((response) => {

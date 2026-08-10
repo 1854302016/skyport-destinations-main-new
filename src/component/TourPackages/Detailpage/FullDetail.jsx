@@ -93,7 +93,7 @@ const FullDetail = ({ data }) => {
 
     try {
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/HolidayPackages/package_enquiry",
+        "https://admin.trustedfare.com/api/HolidayPackages/package_enquiry",
         {
           name,
           email,

@@ -604,7 +604,7 @@ export const FlightList = () => {
     ) {
       console.log("tbo farerule called");
       const response1 = await axios.post(
-        "https://admin.skyportdestinations.com/api/flight-fare-rule",
+        "https://admin.trustedfare.com/api/flight-fare-rule",
         {
           EndUserIp: "192.168.11.58",
           TokenId: token,
@@ -620,7 +620,7 @@ export const FlightList = () => {
     } else if (SrdvIndex === "SrdvTJ") {
       console.log("tj farerule called");
       const responseTJ1 = await axios.post(
-        "https://admin.skyportdestinations.com/api/flight_farerule",
+        "https://admin.trustedfare.com/api/flight_farerule",
         {
           id: id,
           flowType: "SEARCH",
@@ -634,7 +634,7 @@ export const FlightList = () => {
     } else if (SrdvIndex === "SrdvP") {
       console.log("parto farerule called");
       const responseP1 = await axios.post(
-        "https://admin.skyportdestinations.com/api/air_rules",
+        "https://admin.trustedfare.com/api/air_rules",
         {
           SessionId: sessionId,
           FareSourceCode: id,
@@ -653,7 +653,7 @@ export const FlightList = () => {
       setLoadingFareRules(true);
 
       const responseM = await axios.post(
-        "https://admin.skyportdestinations.com/api/Mistify/FareRules",
+        "https://admin.trustedfare.com/api/Mistify/FareRules",
         {
           FareSourceCode: id,
           ConversationId: ConversationId,
@@ -889,7 +889,7 @@ export const FlightList = () => {
   const [cities2, setCities2] = useState([]);
   const [cities22, setCities22] = useState([]);
   const fetchDatas = (value) => {
-    fetch("https://admin.skyportdestinations.com/api/airport")
+    fetch("https://admin.trustedfare.com/api/airport")
       .then((response) => response.json())
       .then((json) => {
         const results = json.data
@@ -952,7 +952,7 @@ export const FlightList = () => {
     setIsItemSelected(false);
   };
   const fetchDatass = (value) => {
-    fetch("https://admin.skyportdestinations.com/api/airport")
+    fetch("https://admin.trustedfare.com/api/airport")
       .then((response) => response.json())
       .then((json) => {
         const results = json.data

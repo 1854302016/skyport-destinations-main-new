@@ -52,7 +52,7 @@ const BusListing = () => {
 
     //     const fetchBusDetails = async () => {
     //       const response = await axios.post(
-    //         "https://admin.skyportdestinations.com/api/Bus/Search",
+    //         "https://admin.trustedfare.com/api/Bus/Search",
     //         requestData
     //       );
     //       console.log("Bus search response:", response.data);
@@ -96,7 +96,7 @@ const BusListing = () => {
     const fetchBusDetails = async () => {
       try {
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/Bus/Search",
+          "https://admin.trustedfare.com/api/Bus/Search",
           requestData
         );
 
@@ -160,7 +160,7 @@ const BusListing = () => {
     };
 
     axios
-      .post("https://admin.skyportdestinations.com/api/Bus/SeatLayout", payload)
+      .post("https://admin.trustedfare.com/api/Bus/SeatLayout", payload)
       .then((response) => {
         const seatLayout =
           response.data?.data?.GetBusSeatLayOutResult?.SeatLayoutDetails;
@@ -180,7 +180,7 @@ const BusListing = () => {
 
           axios
             .post(
-              "https://admin.skyportdestinations.com/api/Bus/Boarding",
+              "https://admin.trustedfare.com/api/Bus/Boarding",
               payload
             )
             .then((response) => {
@@ -204,7 +204,7 @@ const BusListing = () => {
         }
       });
     // axios
-    //   .post("https://admin.skyportdestinations.com/api/Bus/Boarding", payload)
+    //   .post("https://admin.trustedfare.com/api/Bus/Boarding", payload)
     //   .then((response) => {
     //     const result = response.data;
     //     console.log("BUS BD DATA", result);

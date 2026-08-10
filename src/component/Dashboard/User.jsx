@@ -112,7 +112,7 @@ const User = () => {
     const fetchBookingData = async () => {
       try {
         const responseBooking = await axios.post(
-          "https://admin.skyportdestinations.com/api/details",
+          "https://admin.trustedfare.com/api/details",
           requestData
         );
 
@@ -143,7 +143,7 @@ const User = () => {
   //     const fetchBookingData = async () => {
   //       try {
   //         const responseBooking = await axios.post(
-  //           "https://admin.skyportdestinations.com/api/details",
+  //           "https://admin.trustedfare.com/api/details",
   //           requestData
   //         );
 
@@ -168,7 +168,7 @@ const User = () => {
   //   const fetchUserDetails = async () => {
   //     try {
   //       const response = await axios.post(
-  //         "https://admin.skyportdestinations.com/api/User/Detail",
+  //         "https://admin.trustedfare.com/api/User/Detail",
   //         {
   //           CountryCode: "91",
   //           PhoneNumber: UserId,
@@ -193,7 +193,7 @@ const User = () => {
     const fetchUserDetails = async () => {
       try {
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/User/Detail",
+          "https://admin.trustedfare.com/api/User/Detail",
           {
             CountryCode: "91",
             PhoneNumber: UserId,
@@ -254,7 +254,7 @@ const User = () => {
       }
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/User/EditProfile",
+        "https://admin.trustedfare.com/api/User/EditProfile",
         submitData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -343,7 +343,7 @@ const User = () => {
       console.log("passwordData", passwordData);
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/User/ChangePassword",
+        "https://admin.trustedfare.com/api/User/ChangePassword",
         requestData
       );
       const data = response.data;

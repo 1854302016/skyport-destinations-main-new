@@ -17,7 +17,7 @@ const BusCitySelection = ({
     const payload = {
       city: value,
     };
-    fetch("https://admin.skyportdestinations.com/api/Bus/City", payload)
+    fetch("https://admin.trustedfare.com/api/Bus/City", payload)
       .then((response) => response.json())
       .then((json) => {
         const results = json.data

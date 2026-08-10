@@ -31,7 +31,7 @@ const HotelDetail = () => {
     const fetchHotelDetails = async () => {
       try {
         const response = await axios.post(
-          "https://admin.skyportdestinations.com/api/hotelTJ/detail_search",
+          "https://admin.trustedfare.com/api/hotelTJ/detail_search",
           {
             id: id,
           }

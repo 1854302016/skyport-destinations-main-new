@@ -133,7 +133,7 @@ const FlightBooking = () => {
   const [exchangeRate, setExchangeRate] = useState(null);
 
   useEffect(() => {
-    const URL = `https://admin.skyportdestinations.com/api/currency_convert/${fromCurrency}/${toCurrency}`;
+    const URL = `https://admin.trustedfare.com/api/currency_convert/${fromCurrency}/${toCurrency}`;
     const getExchangeRate = async () => {
       try {
         const response = await axios.get(URL);
@@ -439,7 +439,7 @@ const FlightBooking = () => {
   const [cities2, setCities2] = useState([]);
   const [cities22, setCities22] = useState([]);
   const fetchDatas = (value) => {
-    fetch("https://admin.skyportdestinations.com/api/airport")
+    fetch("https://admin.trustedfare.com/api/airport")
       .then((response) => response.json())
       .then((json) => {
         const results = json.data
@@ -502,7 +502,7 @@ const FlightBooking = () => {
     setIsItemSelected(false);
   };
   const fetchDatass = (value) => {
-    fetch("https://admin.skyportdestinations.com/api/airport")
+    fetch("https://admin.trustedfare.com/api/airport")
       .then((response) => response.json())
       .then((json) => {
         const results = json.data
@@ -616,7 +616,7 @@ const FlightBooking = () => {
     const fetchFlightBookingData = async () => {
       try {
         const response = await axios.get(
-          "https://admin.skyportdestinations.com/api/details"
+          "https://admin.trustedfare.com/api/details"
         );
         console.log("dghfytdftyfv", response);
         if (response.data.success) {

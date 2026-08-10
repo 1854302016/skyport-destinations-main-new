@@ -17,7 +17,7 @@ const TopTrendingSection = () => {
     const fetchTrending = async () => {
       try {
         const response = await axios.get(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/destinations"
+          "https://admin.trustedfare.com/api/HolidayPackages/destinations"
         );
 
         if (

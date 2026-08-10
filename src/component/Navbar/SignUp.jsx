@@ -57,7 +57,7 @@ const SignUp = ({ show, handleClose, otpSent, setOtpSent, mode, setMode }) => {
                   };
 
         const response = await axios.post(
-            "https://admin.skyportdestinations.com/api/User/LoginOTP",
+            "https://admin.trustedfare.com/api/User/LoginOTP",
             payload
         );
 
@@ -95,7 +95,7 @@ const SignUp = ({ show, handleClose, otpSent, setOtpSent, mode, setMode }) => {
           };
 
     const response = await axios.post(
-      "https://admin.skyportdestinations.com/api/User/ValidateOTP",
+      "https://admin.trustedfare.com/api/User/ValidateOTP",
       payload
     );
 
@@ -160,7 +160,7 @@ const SignUp = ({ show, handleClose, otpSent, setOtpSent, mode, setMode }) => {
       setLoadingOtp(true);
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/User/Register",
+        "https://admin.trustedfare.com/api/User/Register",
         {
           FirstName: firstName,
           LastName: lastName,

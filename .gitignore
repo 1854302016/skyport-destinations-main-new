@@ -32,3 +32,4 @@ yarn.lock
 tmp/
 temp/
 .cache/
+*.zip

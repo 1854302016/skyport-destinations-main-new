@@ -30,7 +30,7 @@ const BestsellingPackages = () => {
     const fetchPackages = async () => {
       try {
         const response = await axios.get(
-          `https://admin.skyportdestinations.com/api/HolidayPackages/trending_packages`,
+          `https://admin.trustedfare.com/api/HolidayPackages/trending_packages`,
         );
         if (response.data) {
           setPackages(response.data.data);

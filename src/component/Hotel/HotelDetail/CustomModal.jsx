@@ -64,7 +64,7 @@ const CustomModal = ({ show, handleClose, roomGroup, id }) => {
 
     try {
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/hotelTJ/hotel_review",
+        "https://admin.trustedfare.com/api/hotelTJ/hotel_review",
         requestData
       );
       const data = response.data.data;

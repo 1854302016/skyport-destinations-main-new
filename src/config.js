@@ -1,1 +1,1 @@
-export const BASE_URL = "https://admin.skyportdestinations.com/api/";
+export const BASE_URL = "https://admin.trustedfare.com/api/";

@@ -780,14 +780,14 @@ const BookingForm = () => {
   };
 
   const fetchDatas = async (value) => {
-    // fetch("https://admin.skyportdestinations.com/api/airport")
+    // fetch("https://admin.trustedfare.com/api/airport")
     try {
       const requestData = {
         city: value,
       };
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/airport",
+        "https://admin.trustedfare.com/api/airport",
         requestData
       );
 
@@ -878,7 +878,7 @@ const BookingForm = () => {
       };
 
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/airport",
+        "https://admin.trustedfare.com/api/airport",
         requestData
       );
 
@@ -970,7 +970,7 @@ const BookingForm = () => {
   //   const fetchFlightBookingData = async () => {
   //     try {
   //       const response = await axios.get(
-  //         "https://admin.skyportdestinations.com/api/details"
+  //         "https://admin.trustedfare.com/api/details"
   //       );
   //       console.log("dghfytdftyfv", response);
   //       if (response.data.success) {

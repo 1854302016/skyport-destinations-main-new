@@ -31,7 +31,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://admin.skyportdestinations.com/api/User/Login",
+        "https://admin.trustedfare.com/api/User/Login",
         {
           method: "POST",
           headers: {

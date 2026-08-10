@@ -181,7 +181,7 @@ const HotelSearch = () => {
   };
 
   const fetchDatas = (value) => {
-    fetch("https://admin.skyportdestinations.com/api/hotelTJ/city_static_data")
+    fetch("https://admin.trustedfare.com/api/hotelTJ/city_static_data")
       .then((response) => response.json())
       .then((json) => {
         console.log("json responseee", json);

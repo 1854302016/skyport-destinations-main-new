@@ -27,7 +27,7 @@ const Detail = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    `https://admin.skyportdestinations.com/api/HolidayPackages/destinations/${pack}/${fullDetails}`
+                    `https://admin.trustedfare.com/api/HolidayPackages/destinations/${pack}/${fullDetails}`
                 );
                 if (res?.data?.data) {
                     setData(res.data.data);

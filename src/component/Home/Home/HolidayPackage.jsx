@@ -119,7 +119,7 @@ const HolidayPackages = () => {
     const fetchIndianDest = async () => {
       try {
         const response = await axios.get(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/IndianDestinations"
+          "https://admin.trustedfare.com/api/HolidayPackages/IndianDestinations"
         );
 
         if (

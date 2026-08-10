@@ -44,7 +44,7 @@ const FlightDoNotClose = () => {
         const total = params.get("total");
         const hash = params.get("hash");
         const data = params.get("data");
-		const res = await axios.post("https://admin.skyportdestinations.com/api/Mistify/Book/Finish", {
+		const res = await axios.post("https://admin.trustedfare.com/api/Mistify/Book/Finish", {
 		  bookingId: bookingId,
 		  status: status,
 		  hash: hash,

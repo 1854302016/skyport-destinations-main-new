@@ -11,10 +11,10 @@ import {
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const URLmulticurl = "https://admin.skyportdestinations.com/api/search";
-// const URLmulticurl = "https://admin.skyportdestinations.com/api/search";
-const URL = "https://admin.skyportdestinations.com/api/flight_search";
-const URLtjRound = "https://admin.skyportdestinations.com/api/roundTripSearch";
+const URLmulticurl = "https://admin.trustedfare.com/api/search";
+// const URLmulticurl = "https://admin.trustedfare.com/api/search";
+const URL = "https://admin.trustedfare.com/api/flight_search";
+const URLtjRound = "https://admin.trustedfare.com/api/roundTripSearch";
 
 export function flightSearch(searchData, isMulticurl, isRoundTJ, navigate) {
   console.log("searchdata in redux", searchData);

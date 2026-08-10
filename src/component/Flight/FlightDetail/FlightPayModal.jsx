@@ -88,7 +88,7 @@ const FlightPayModal = ({
   const sendOtp = async () => {
     try {
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/sendotp",
+        "https://admin.trustedfare.com/api/sendotp",
         {
           // email: walletData.Email,
           email: "seeyounextday493@gmail.com",
@@ -112,7 +112,7 @@ const FlightPayModal = ({
     try {
       console.log("otp eneterd", otp);
       const response = await axios.post(
-        "https://admin.skyportdestinations.com/api/validate-otp",
+        "https://admin.trustedfare.com/api/validate-otp",
         {
           otp: otp,
         }

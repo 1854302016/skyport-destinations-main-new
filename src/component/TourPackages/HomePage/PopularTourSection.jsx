@@ -17,7 +17,7 @@ const PopularTourSection = () => {
   useEffect(() => {
     const dataFetch = async () => {
       const datas = await axios.get(
-        `https://admin.skyportdestinations.com/api/HolidayPackages/trending_packages`
+        `https://admin.trustedfare.com/api/HolidayPackages/trending_packages`
       );
       if (datas) {
         setData(datas.data.data);

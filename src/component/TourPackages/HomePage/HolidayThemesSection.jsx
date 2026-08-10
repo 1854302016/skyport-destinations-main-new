@@ -16,7 +16,7 @@ const HolidayThemesSection = () => {
     const fetchThemes = async () => {
       try {
         const response = await axios.get(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/HolidayThemes"
+          "https://admin.trustedfare.com/api/HolidayPackages/HolidayThemes"
         );
         if (response.data.success) {
           setThemes(response.data.data);

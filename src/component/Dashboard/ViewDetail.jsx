@@ -60,7 +60,7 @@ const ViewDetail = () => {
     const fetchBookingData = async () => {
       try {
         const response = await axios.post(
-          `https://admin.skyportdestinations.com/api/details/${id}?service=${service}`,
+          `https://admin.trustedfare.com/api/details/${id}?service=${service}`,
         );
         const data = response.data?.data;
 
@@ -109,19 +109,19 @@ const ViewDetail = () => {
 
       switch (service) {
         case "flight":
-          apiUrl = "https://admin.skyportdestinations.com/api/FlightDownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/FlightDownloadTicket";
           payload = { BookingId: id };
           break;
         case "hotel":
-          apiUrl = "https://admin.skyportdestinations.com/api/Hotel/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Hotel/DownloadTicket";
           payload = { BookingId: id };
           break;
         case "bus":
-          apiUrl = "https://admin.skyportdestinations.com/api/Bus/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Bus/DownloadTicket";
           payload = { PNR: id };
           break;
         case "cab":
-          apiUrl = "https://admin.skyportdestinations.com/api/Cab/DownloadTicket";
+          apiUrl = "https://admin.trustedfare.com/api/Cab/DownloadTicket";
           payload = { OrderNo: id };
           break;
         default:

@@ -65,7 +65,7 @@ const EnquiryPopup = ({ destination }) => {
 
     try {
       const res = await axios.post(
-        "https://admin.skyportdestinations.com/api/HolidayPackages/quick_enquiry",
+        "https://admin.trustedfare.com/api/HolidayPackages/quick_enquiry",
         {
           name,
           email,

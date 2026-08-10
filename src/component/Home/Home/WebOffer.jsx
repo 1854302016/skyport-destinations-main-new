@@ -21,7 +21,7 @@
 //     const fetchOffers = async () => {
 //       try {
 //         const res = await axios.get(
-//           "https://admin.skyportdestinations.com/api/AllOffers"
+//           "https://admin.trustedfare.com/api/AllOffers"
 //         );
 //         if (res.data.success && res.data.data) {
 //           setOffers(res.data.data);
@@ -206,7 +206,7 @@ const WebOffer = () => {
     const fetchOffers = async () => {
       try {
         const res = await axios.get(
-          "https://admin.skyportdestinations.com/api/AllOffers"
+          "https://admin.trustedfare.com/api/AllOffers"
         );
         if (res.data.success && res.data.data) {
           setOffers(res.data.data);

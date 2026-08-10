@@ -14,7 +14,7 @@ const TopDestinationsCircular = () => {
     const fetchDestinations = async () => {
       try {
         const response = await axios.get(
-          "https://admin.skyportdestinations.com/api/HolidayPackages/destinations",
+          "https://admin.trustedfare.com/api/HolidayPackages/destinations",
         );
         if (response.data && response.data.success) {
           setDestinations(response.data.data);
