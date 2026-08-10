@@ -70,7 +70,7 @@ function ContactUs() {
                   <p className="contact-us">MAKE A QUOTE</p>
                   <h6>
                     <a href="mailto:info@trustedfare.com">
-                       info@trustedfare.com
+                      info@trustedfare.com
                     </a>
                   </h6>
                 </div>

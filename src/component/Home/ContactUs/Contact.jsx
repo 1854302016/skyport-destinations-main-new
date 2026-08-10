@@ -64,7 +64,7 @@ const Contact = () => {
                   <input
                     name="_token"
                     type="hidden"
-                    // value="MfZlYwP56qNhbfG5zRUgD64QYOLPQhJfjVq6dFJL"
+                  // value="MfZlYwP56qNhbfG5zRUgD64QYOLPQhJfjVq6dFJL"
                   />
                   <div className="form-group">
                     <input
@@ -109,7 +109,7 @@ const Contact = () => {
                   </div>
                   <div
                     className="g-recaptcha"
-                    // data-sitekey="6LdXVoAcAAAAABvtjJHkNflYKGeXp2CIaTMMA05x"
+                  // data-sitekey="6LdXVoAcAAAAABvtjJHkNflYKGeXp2CIaTMMA05x"
                   ></div>
                   <div className="contact_submit_btn">
                     <input
