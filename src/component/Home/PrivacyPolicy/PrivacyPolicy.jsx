@@ -1,347 +1,346 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaShieldHalved,
+  FaFileLines,
+  FaLock,
+  FaUserCheck,
+  FaEnvelope,
+  FaBuilding,
+  FaCircleCheck,
+  FaArrowRight,
+} from "react-icons/fa6";
+import "./PrivacyPolicy.css";
+
+const sections = [
+  { id: "sec-1", title: "1. Scope & Applicability" },
+  { id: "sec-2", title: "2. Data Categories Collected" },
+  { id: "sec-3", title: "3. Legal Grounds for Processing" },
+  { id: "sec-4", title: "4. Purpose of Data Processing" },
+  { id: "sec-5", title: "5. Automated Decision-Making" },
+  { id: "sec-6", title: "6. Third-Party Disclosures" },
+  { id: "sec-7", title: "7. International Data Transfers" },
+  { id: "sec-8", title: "8. Data Retention & Archiving" },
+  { id: "sec-9", title: "9. Your Data Subject Rights" },
+  { id: "sec-10", title: "10. Security & Encryption" },
+  { id: "sec-11", title: "11. Children’s Privacy" },
+  { id: "sec-12", title: "12. Cookies & Tracking" },
+  { id: "sec-13", title: "13. Marketing Communications" },
+  { id: "sec-14", title: "14. External Links" },
+  { id: "sec-15", title: "15. Limitation of Liability" },
+  { id: "sec-16", title: "16. Policy Amendments" },
+  { id: "sec-17", title: "17. Contact & DPO" },
+];
 
 const PrivacyPolicy = () => {
+  const [activeSection, setActiveSection] = useState("sec-1");
+
+  const scrollToSection = (id) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div>
-      <section className="bannerInner">
-        <Container>
-          <h1>
-            <b>Privacy Policy</b>
-          </h1>
+    <div className="legal-page-wrapper">
+      {/* 1. Hero Header */}
+      <section className="legal-hero-section">
+        <div className="legal-hero-bg-overlay"></div>
+        <Container className="position-relative z-index-2">
+          <div className="legal-hero-content text-center">
+            <div className="legal-hero-badge">
+              <FaShieldHalved className="me-2" /> TRUST &amp; DATA PRIVACY
+            </div>
+            <h1 className="legal-hero-title">
+              Privacy <span className="gradient-text">Policy</span>
+            </h1>
+            <p className="legal-hero-subtitle">
+              Trade Fare Destinations is committed to protecting your personal information and handling your data with full transparency, security, and integrity.
+            </p>
+            <div className="legal-meta-strip">
+              <span><strong>Effective Date:</strong> January 2026</span>
+              <span className="meta-dot">•</span>
+              <span><strong>Version:</strong> 2.4 (GDPR &amp; Global Compliant)</span>
+            </div>
+          </div>
         </Container>
       </section>
-      <section className="section_padding">
+
+      {/* 2. Main Policy Content Layout */}
+      <section className="legal-content-section py-6">
         <Container>
-          <p>
-            Trade Fare Destinations (“Trade Fare,” “we,” “us,” or “our”) is committed to protecting the privacy and confidentiality of all users who interact with our digital platforms and services. This Privacy Policy explains in a legally comprehensive, transparent, and structured manner how Trade Fare collects, processes, discloses, retains, and safeguards personal information in accordance with applicable data protection laws in Guyana and relevant international standards including the General Data Protection Regulation (EU) 2016/679 (GDPR), where applicable. <br />
-            This document is intended to ensure full legal compliance and to provide users with all necessary information regarding their rights, responsibilities, and the manner in which their data is managed.
+          <Row className="g-5">
+            {/* Sticky Table of Contents Sidebar */}
+            <Col lg={4} className="d-none d-lg-block">
+              <div className="legal-sticky-sidebar">
+                <div className="sidebar-header">
+                  <FaFileLines className="me-2 text-primary" /> Table of Contents
+                </div>
+                <ul className="sidebar-nav-list">
+                  {sections.map((sec) => (
+                    <li key={sec.id}>
+                      <button
+                        className={`sidebar-nav-btn ${activeSection === sec.id ? "active" : ""}`}
+                        onClick={() => scrollToSection(sec.id)}
+                      >
+                        {sec.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
 
-          </p>
-          <div className="terms_item">
-            <h2>1. Scope and Applicability</h2>
-            <p>
-              This Privacy Policy governs the collection and use of personal data by Trade Fare Destinations through its website, mobile applications, affiliated booking systems, customer service channels, and any digital or offline interaction directly involving Trade Fare. It applies to all users regardless of geographic location and covers
-              <ul>
-                <li>Individuals making bookings via Trade Fare</li>
-                <li>Visitors interacting with our platforms (with or without registration)</li>
-                <li>Customers receiving transactional, promotional, or support communications</li>
-                <li>Individuals participating in surveys, promotions, or contests</li>
-                <li>Recipients of marketing campaigns and newsletters</li>
+                <div className="sidebar-contact-card mt-4">
+                  <FaEnvelope className="card-icon" />
+                  <h5>Data Privacy Office</h5>
+                  <p>Have questions regarding your personal information?</p>
+                  <a href="mailto:explore@skyportdestinations.com" className="btn-sidebar-contact">
+                    Contact DPO <FaArrowRight className="ms-1" />
+                  </a>
+                </div>
+              </div>
+            </Col>
 
-              </ul>
-            </p>
-          </div>
+            {/* Main Policy Clauses */}
+            <Col lg={8}>
+              <div className="legal-clauses-wrapper">
+                {/* Intro Card */}
+                <div className="legal-intro-card">
+                  <p>
+                    <strong>Trade Fare Destinations</strong> (“Trade Fare,” “we,” “us,” or “our”) is committed to protecting the privacy and confidentiality of all users who interact with our digital platforms and services. This Privacy Policy explains in a legally comprehensive, transparent, and structured manner how Trade Fare collects, processes, discloses, retains, and safeguards personal information in accordance with applicable data protection laws and international best practices, including GDPR standards.
+                  </p>
+                </div>
 
-          <div className="terms_item">
-            <h2>2. Data Categories Collected</h2>
-            <p>
-              Trade Fare collects personal information that is necessary for the provision of travel booking services and legal compliance. The types of personal data collected are outlined below. <br />
-              <strong>a. Personal Identification Information -</strong> Full name, date of birth, gender - National ID/passport number, travel document details<br />
-              <strong>b. Contact and Account Information -</strong> Email address, telephone number, residential address - Account credentials (username, hashed passwords) <br />
-              <strong>c. Payment and Financial Information -</strong> Visa cardholder name, tokenized card details, billing address - Transaction amounts and payment confirmations (we do not store full card numbers)<br />
-              <strong>d. Travel and Booking Data -</strong> Departure and destination locations - Flight numbers, class, itinerary details, special service requests - Booking reference codes and historical booking data<br />
-              <strong>e. Technical and Device Information -</strong> IP address, device type, browser version, operating system - Session identifiers, geolocation (if permitted), referral URLs<br />
-              <strong>f. Communication Records -</strong> Customer support tickets and email logs - Call recordings (if consented or legally permitted) - Feedback forms, complaints, or reviews<br />
-              <strong>g. Usage and Behavioral Data -</strong> Website navigation and interaction logs - Cookies and similar tracking data (see Section 13) - Click behavior, bounce rate, time on page
-            </p>
-          </div>
+                {/* Section 1 */}
+                <div className="policy-clause-card" id="sec-1">
+                  <div className="clause-number-badge">01</div>
+                  <h3>1. Scope and Applicability</h3>
+                  <p>
+                    This Privacy Policy governs the collection and use of personal data by Trade Fare Destinations through its website, mobile applications, affiliated booking systems, customer service channels, and any digital or offline interaction directly involving Trade Fare. It applies to all users worldwide and covers:
+                  </p>
+                  <ul className="styled-policy-list">
+                    <li><FaCircleCheck className="list-icon" /> Individuals making flight bookings via Trade Fare</li>
+                    <li><FaCircleCheck className="list-icon" /> Visitors interacting with our platforms (with or without registration)</li>
+                    <li><FaCircleCheck className="list-icon" /> Customers receiving transactional, promotional, or support communications</li>
+                    <li><FaCircleCheck className="list-icon" /> Individuals participating in travel surveys, promotions, or contests</li>
+                    <li><FaCircleCheck className="list-icon" /> Recipients of our travel newsletters and fare alert campaigns</li>
+                  </ul>
+                </div>
 
-          <div className="terms_item">
-            <h2>3. Legal Grounds for Processing</h2>
-            <p>
-              Trade Fare processes your personal data based on the following lawful bases, as prescribed by Guyana’s data protection laws and international best practices: <br />
-              <ul>
-                <li><strong>Contractual Necessity:</strong> For the provision of flight bookings and confirmation services.</li>
-                <li><strong>Legal Obligation:</strong> Compliance with travel-related regulations (e.g., immigration, customs, tax, and anti-money laundering laws).</li>
-                <li><strong>Legitimate Interests:</strong> Fraud detection, service improvements, and maintaining platform integrity.</li>
-                <li><strong>Consent:</strong> For marketing, promotional engagement, and optional features.</li>
-                <li><strong>Vital Interests:</strong> Where processing is necessary to protect your life or that of another individual (e.g., emergency travel disruptions).</li>
+                {/* Section 2 */}
+                <div className="policy-clause-card" id="sec-2">
+                  <div className="clause-number-badge">02</div>
+                  <h3>2. Data Categories Collected</h3>
+                  <p>
+                    Trade Fare collects personal information necessary for the provision of flight reservations, ticket issuance, and legal compliance.
+                  </p>
+                  <div className="data-categories-grid">
+                    <div className="category-item">
+                      <strong>a. Personal Identification:</strong> Full name, date of birth, gender, passport and national travel document details.
+                    </div>
+                    <div className="category-item">
+                      <strong>b. Contact &amp; Account Info:</strong> Email address, phone number, billing address, encrypted account credentials.
+                    </div>
+                    <div className="category-item">
+                      <strong>c. Payment Information:</strong> Tokenized card details, cardholder name, and transaction receipts (we never store raw CVV codes).
+                    </div>
+                    <div className="category-item">
+                      <strong>d. Travel &amp; Booking Data:</strong> Departure/arrival airports, flight numbers, cabin class, passenger manifest details.
+                    </div>
+                    <div className="category-item">
+                      <strong>e. Technical &amp; Device Data:</strong> IP address, device model, browser version, operating system, and geolocation (if permitted).
+                    </div>
+                    <div className="category-item">
+                      <strong>f. Communication Records:</strong> Support tickets, call logs, email correspondence, and customer reviews.
+                    </div>
+                  </div>
+                </div>
 
-              </ul>
-            </p>
-          </div>
+                {/* Section 3 */}
+                <div className="policy-clause-card" id="sec-3">
+                  <div className="clause-number-badge">03</div>
+                  <h3>3. Legal Grounds for Processing</h3>
+                  <p>We process your personal data strictly under authorized lawful bases:</p>
+                  <ul className="styled-policy-list">
+                    <li><strong>Contractual Necessity:</strong> To fulfill your flight bookings, issue e-tickets, and deliver flight confirmations.</li>
+                    <li><strong>Legal Obligation:</strong> Compliance with aviation regulations, customs, tax, immigration, and anti-money laundering laws.</li>
+                    <li><strong>Legitimate Interests:</strong> Platform security, fraud prevention, service analytics, and customer support.</li>
+                    <li><strong>Consent:</strong> When you voluntarily opt into marketing newsletters and custom notifications.</li>
+                    <li><strong>Vital Interests:</strong> In emergency situations requiring immediate itinerary coordination or safety notifications.</li>
+                  </ul>
+                </div>
 
-          <div className="terms_item">
-            <h2>4. Purpose of Data Processing</h2>
-            <p>
-              Trade Fare uses personal information exclusively for the purposes outlined below, each of which is supported by a lawful basis:<br />
-              <ul>
-                <li>Facilitate flight bookings, cancellations, modifications, and confirmations</li>
-                <li>Process payments via authorized Visa payment gateways</li>
-                <li>Deliver receipts, tickets, invoices, and travel itineraries</li>
-                <li>Provide real-time customer support and service updates</li>
-                <li>Conduct risk analysis, fraud prevention, and security monitoring</li>
-                <li>Send service-related notices (transactional emails, disruption alerts)</li>
-                <li>Develop aggregate statistics to improve platform functionality</li>
-                <li>Conduct internal audits and fulfill financial reporting obligations</li>
-                <li>Comply with tax and regulatory laws, border control protocols, and airline requirements</li>
+                {/* Section 4 */}
+                <div className="policy-clause-card" id="sec-4">
+                  <div className="clause-number-badge">04</div>
+                  <h3>4. Purpose of Data Processing</h3>
+                  <ul className="styled-policy-list">
+                    <li><FaCircleCheck className="list-icon" /> Facilitate real-time flight bookings, modifications, and ticket delivery.</li>
+                    <li><FaCircleCheck className="list-icon" /> Process payments through verified, secure payment gateways.</li>
+                    <li><FaCircleCheck className="list-icon" /> Provide live 24/7 customer support and flight schedule alerts.</li>
+                    <li><FaCircleCheck className="list-icon" /> Perform continuous fraud screening and cybersecurity monitoring.</li>
+                    <li><FaCircleCheck className="list-icon" /> Comply with international civil aviation and border authority requirements.</li>
+                  </ul>
+                </div>
 
-              </ul>
-            </p>
-          </div>
+                {/* Section 5 */}
+                <div className="policy-clause-card" id="sec-5">
+                  <div className="clause-number-badge">05</div>
+                  <h3>5. Automated Decision-Making &amp; Profiling</h3>
+                  <p>
+                    Trade Fare employs limited automated systems for fraud prevention and fare search optimization. We guarantee that automated systems with legal or significant traveler impact are subject to human review upon request.
+                  </p>
+                </div>
 
-          <div className="terms_item">
-            <h2>5. Automated Decision-Making and Profiling</h2>
-            <p>
-              Trade Fare may implement limited profiling or automated decision-making mechanisms in areas such as fraud detection, promotional targeting, and booking pattern analysis. These systems are designed to:<br />
-              <ul>
-                <li>Detect abnormal or potentially malicious activity</li>
-                <li>Ensure secure access to customer accounts</li>
-                <li>Customize user experiences (e.g., remembering user preferences)</li>
-              </ul><br />
-              Trade Fare ensures all automated decisions with material consequences are subject to human oversight. You may request a manual review where such automated processing affects you legally or significantly.
+                {/* Section 6 */}
+                <div className="policy-clause-card" id="sec-6">
+                  <div className="clause-number-badge">06</div>
+                  <h3>6. Third-Party Disclosures</h3>
+                  <p>
+                    Trade Fare does not sell, rent, or trade your personal data. We disclose data solely to authorized third parties essential for flight fulfillment:
+                  </p>
+                  <div className="modern-table-responsive">
+                    <table className="modern-legal-table">
+                      <thead>
+                        <tr>
+                          <th>Recipient Category</th>
+                          <th>Purpose</th>
+                          <th>Safeguards</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Airlines &amp; Travel Operators</strong></td>
+                          <td>Booking fulfillment &amp; passenger manifest submission</td>
+                          <td>Binding data contracts &amp; TLS encryption</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Payment Service Providers</strong></td>
+                          <td>Payment authorization &amp; billing validation</td>
+                          <td>PCI-DSS compliance &amp; tokenization</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Government &amp; Aviation Authorities</strong></td>
+                          <td>Border control, immigration &amp; customs</td>
+                          <td>Statutory legal mandates &amp; data minimization</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Cloud &amp; Infrastructure Providers</strong></td>
+                          <td>Secure database hosting &amp; system uptime</td>
+                          <td>SOC2 Type II, encrypted cloud storage</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
 
-            </p>
-          </div>
+                {/* Section 7 */}
+                <div className="policy-clause-card" id="sec-7">
+                  <div className="clause-number-badge">07</div>
+                  <h3>7. International Data Transfers</h3>
+                  <p>
+                    Because international travel spans cross-border territories, your data may be transferred to global airline distribution systems. We enforce Standard Contractual Clauses (SCCs) and bank-grade encryption across all cross-border transactions.
+                  </p>
+                </div>
 
-          <div className="terms_item">
-            <h2>6.  Data Sharing and Third-Party Disclosures</h2>
-            <p>
-              Trade Fare does not sell, trade, or lease personal data. However, we may disclose data to the following categories of authorized third parties:<br />
-              <table className="table-auto border-collapse border border-gray-300 w-full text-sm">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Recipient Category
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Purpose of Disclosure
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Safeguards in Place
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Airlines and Travel Operators
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Booking fulfillment and passenger manifest submission
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Binding contracts, data encryption
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Payment Service Providers
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Visa payment processing and billing validation
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      PCI-DSS certified, data tokenization
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Legal and Government Authorities
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Immigration control, customs clearance, regulatory compliance
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Legal basis, data minimization
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      IT Infrastructure and Cloud Providers
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Hosting, analytics, software maintenance
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      DPAs, access control, audit logs
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Customer Relationship Vendors
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Helpdesk ticketing, chat support, feedback collection
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Confidentiality clauses, limited access
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </p>
-          </div>
+                {/* Section 8 */}
+                <div className="policy-clause-card" id="sec-8">
+                  <div className="clause-number-badge">08</div>
+                  <h3>8. Data Retention &amp; Archiving</h3>
+                  <div className="modern-table-responsive">
+                    <table className="modern-legal-table">
+                      <thead>
+                        <tr>
+                          <th>Data Type</th>
+                          <th>Retention Period</th>
+                          <th>Rationale</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Flight Booking Records</strong></td>
+                          <td>7 Years</td>
+                          <td>Aviation, tax, and statutory financial audits</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Payment Receipts</strong></td>
+                          <td>7 Years</td>
+                          <td>Anti-fraud, dispute &amp; chargeback protection</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Customer Communications</strong></td>
+                          <td>3 Years</td>
+                          <td>Quality assurance &amp; support continuity</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Technical Logs</strong></td>
+                          <td>12–24 Months</td>
+                          <td>Cybersecurity &amp; analytics optimization</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
 
-          <div className="terms_item">
-            <h2>7.  International Data Transfers</h2>
-            <p>
-              Where personal data is transferred to service providers or affiliates located outside Guyana, Trade Fare ensures: - Compliance with data export laws of Guyana - Implementation of Standard Contractual Clauses (SCCs) - Data transfer impact assessments (DTIAs), if required - Technical security measures such as encryption and geo-fencing<br />
-              Trade Fare will not transfer data to jurisdictions lacking adequate data protection frameworks unless appropriate legal safeguards are in place.
+                {/* Section 9 */}
+                <div className="policy-clause-card" id="sec-9">
+                  <div className="clause-number-badge">09</div>
+                  <h3>9. Your Data Subject Rights</h3>
+                  <p>Under international data protection frameworks, you have full control over your data:</p>
+                  <div className="rights-badge-grid">
+                    <div className="right-pill">✅ Right of Access</div>
+                    <div className="right-pill">✏️ Right to Rectification</div>
+                    <div className="right-pill">🗑️ Right to Erasure</div>
+                    <div className="right-pill">✋ Right to Restrict Processing</div>
+                    <div className="right-pill">📦 Right to Data Portability</div>
+                    <div className="right-pill">🚫 Right to Object</div>
+                  </div>
+                  <p className="mt-3">
+                    To exercise any of these rights, contact us at <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a>.
+                  </p>
+                </div>
 
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>8.  Data Retention and Archiving</h2>
-            <p>
-              Trade Fare retains personal data only for the duration necessary to achieve the purposes for which it was collected, or as required by applicable laws and industry standards.<br />
-              <table className="table-auto border-collapse border border-gray-300 w-full text-sm">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Data Type
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Retention Period
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">
-                      Rationale
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">Booking Records</td>
-                    <td className="border border-gray-300 px-4 py-2">7 years</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Legal, financial, and audit obligations
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Payment Information
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">7 years</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Anti-fraud, dispute resolution
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Customer Communications
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">3 years</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Service history, issue resolution
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Marketing Preferences
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Until withdrawn or 5 years
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Regulatory compliance
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Technical Logs
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      12–24 months
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Security and analytics purposes
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <br />After expiration, data is securely erased or irreversibly anonymized.
+                {/* Section 10 */}
+                <div className="policy-clause-card" id="sec-10">
+                  <div className="clause-number-badge">10</div>
+                  <h3>10. Data Security &amp; Encryption</h3>
+                  <p>
+                    We implement modern enterprise-grade security protocols, including 256-bit TLS encryption, strict role-based access control (RBAC), daily automated vulnerability assessments, and DDoS mitigation.
+                  </p>
+                </div>
 
+                {/* Section 11 - 17 Summary Grid */}
+                <div className="policy-clause-card" id="sec-11">
+                  <div className="clause-number-badge">11</div>
+                  <h3>11. Children’s Privacy</h3>
+                  <p>
+                    We do not knowingly collect personal information from individuals under 16 years without verified parental or legal guardian consent during flight booking.
+                  </p>
+                </div>
 
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>9. Your Rights</h2>
-            <p>
-              As a data subject, you have the following rights under applicable Guyanese data protection laws and internationally recognized privacy frameworks:<br />
-              <ul>
-                <li><strong>Right to Access:</strong> Obtain confirmation and a copy of personal data held</li>
-                <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete data</li>
-                <li><strong>Right to Erasure:</strong> Request deletion of data under certain conditions</li>
-                <li><strong>Right to Restrict Processing:</strong> Block further use while accuracy or legality is contested</li>
-                <li><strong>Right to Object:</strong> Challenge data processing for marketing or profiling</li>
-                <li><strong>Right to Withdraw Consent:</strong> Opt-out of optional processing without penalty</li>
-                <li><strong>Right to Data Portability:</strong> Request transmission in a machine-readable format</li>
-                <li><strong>Right to Lodge a Complaint:</strong> Submit a complaint to Guyana’s Data Protection Commissioner</li>
+                <div className="policy-clause-card" id="sec-12">
+                  <div className="clause-number-badge">12</div>
+                  <h3>12. Cookies &amp; Tracking</h3>
+                  <p>
+                    We use functional, analytical, and preference cookies to deliver a responsive booking experience. You can modify your cookie settings at any time via your browser.
+                  </p>
+                </div>
 
-              </ul><br />
-              All requests should be submitted in writing to <a href="mailto:privacy@Trade Faredestinations.com">privacy@Trade Faredestinations.com</a> with proof of identity. Trade Fare will respond within the legally mandated timeframe.
-
-
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>10. Data Security and Safeguards</h2>
-            <p>
-              Trade Fare employs best-in-class data security protocols, including: - Transport Layer Security (TLS 1.2+) - Role-based access controls and least-privilege policies - Secure hosting infrastructure with DDoS mitigation - Automated vulnerability scanning and patch management - Regular third-party penetration testing - Employee confidentiality training and access restrictions<br />
-              Breach notification protocols are in place and comply with applicable legal timelines for disclosure.
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>11. Children’s Privacy</h2>
-            <p>
-              Trade Fare does not knowingly collect or process personal data from individuals under the age of 16 without verifiable parental consent. Where such data is discovered, it is immediately deleted. Users must confirm their eligibility before proceeding with bookings.
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>12. Cookies and Tracking Technologies</h2>
-            <p>
-              Trade Fare uses cookies and equivalent tracking technologies for the following:<br />
-              <ul>
-                <li>Session authentication and site navigation</li>
-                <li>Preference storage and interface personalization</li>
-                <li>Analytics via tools such as Google Analytics</li>
-                <li>Targeted advertising (if consented)</li>
-              </ul><br />
-              Users may manage cookie preferences through their browser or opt-out via provided cookie banners. Disabling cookies may impair certain site functionalities.
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>13. Marketing Communications</h2>
-            <p>
-              Trade Fare may send marketing communications to users who have provided prior consent. This includes: - Flight offers, fare reductions, and seasonal promotions - Loyalty programs and referral bonuses - Newsletters and updates on service features<br />
-              Users may withdraw consent or opt-out at any time by clicking the unsubscribe link or contacting support.
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>14. External Links and Third-Party Services</h2>
-            <p>
-              The Trade Fare platform may contain links to third-party websites (e.g., airline portals, payment platforms). Trade Fare is not responsible for the privacy practices, data handling, or content of those entities. Users are advised to review external privacy policies before submitting data.
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>15. Limitation of Liability</h2>
-            <p>
-              Trade Fare shall not be held liable for: - Data misuse due to user negligence (e.g., shared passwords) - Actions of third-party processors acting outside of agreed scope - Force majeure events including internet outages, natural disasters, or cyberattacks - Data inaccuracies arising from user-provided information
-
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>16. Policy Amendments</h2>
-            <p>
-              Trade Fare reserves the right to modify this Privacy Policy at any time. Revisions will be effective upon posting with an updated effective date. Where significant changes occur, users will be notified through prominent notices or direct communications.
-            </p>
-          </div>
-          <div className="terms_item">
-            <h2>17. Contact and Complaints</h2>
-            <p>
-              <strong>Data Protection Officer</strong><br />
-              Trade Fare Destinations<br />
-              Georgetown, Guyana<br />
-              Email: <a href="mailto:explore@Trade Faredestinations.com">explore@Trade Faredestinations.com</a>
-            </p>
-          </div>
+                <div className="policy-clause-card" id="sec-17">
+                  <div className="clause-number-badge">17</div>
+                  <h3>17. Contact Our Data Protection Officer</h3>
+                  <div className="dpo-contact-box">
+                    <h4>Trade Fare Destinations</h4>
+                    <p><strong>Head Office:</strong> GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201</p>
+                    <p><strong>Canada Branch:</strong> Unit 201-7743 128 street West newton, Surrey BC, Canada V3W 1L4</p>
+                    <p><strong>Email:</strong> <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a></p>
+                    <p><strong>Helpline:</strong> <a href="tel:+919646747171">+91-9646747171</a> / <a href="tel:+17782404599">+1-778-240-4599</a></p>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </section>
     </div>

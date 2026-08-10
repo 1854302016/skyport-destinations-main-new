@@ -1,9 +1,9 @@
 /* ==========================================================================
-   TRADE FARE DESTINATIONS - MODERN TERMS & CONDITIONS STYLESHEET
+   TRADE FARE DESTINATIONS - MODERN LEGAL & PRIVACY POLICY STYLESHEET
    Color Scheme: Deep Midnight Navy (#0B2545) & Electric Blue (#0066FF)
    ========================================================================== */
 
-.terms-page-wrapper {
+.legal-page-wrapper {
   background-color: #F8FAFC;
   color: #1E293B;
   overflow-x: hidden;
@@ -13,7 +13,7 @@
 /* ==========================================================================
    1. HERO SECTION
    ========================================================================== */
-.terms-hero-section {
+.legal-hero-section {
   position: relative;
   background: linear-gradient(135deg, #051B33 0%, #0B2545 60%, #004FCE 100%);
   padding: 90px 0 80px 0;
@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-.terms-hero-bg-overlay {
+.legal-hero-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,12 +33,12 @@
   pointer-events: none;
 }
 
-.terms-hero-content {
+.legal-hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.terms-hero-badge {
+.legal-hero-badge {
   display: inline-flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.12);
@@ -54,7 +54,7 @@
   margin-bottom: 20px;
 }
 
-.terms-hero-title {
+.legal-hero-title {
   font-size: 46px;
   font-weight: 800;
   line-height: 1.18;
@@ -63,13 +63,13 @@
   margin-bottom: 18px;
 }
 
-.terms-hero-title .gradient-text {
+.legal-hero-title .gradient-text {
   background: linear-gradient(135deg, #38BDF8 0%, #FFFFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.terms-hero-subtitle {
+.legal-hero-subtitle {
   font-size: 16px;
   line-height: 1.6;
   color: #CBD5E1;
@@ -77,7 +77,7 @@
   margin: 0 auto 24px auto;
 }
 
-.terms-meta-strip {
+.legal-meta-strip {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -89,14 +89,18 @@
   color: #E2E8F0;
 }
 
+.meta-dot {
+  color: #38BDF8;
+}
+
 /* ==========================================================================
    2. STICKY SIDEBAR NAVIGATION
    ========================================================================== */
-.terms-content-section {
+.legal-content-section {
   padding: 70px 0 90px 0;
 }
 
-.terms-sticky-sidebar {
+.legal-sticky-sidebar {
   position: sticky;
   top: 110px;
   background: #FFFFFF;
@@ -156,16 +160,62 @@
   font-weight: 800;
 }
 
+.sidebar-contact-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.sidebar-contact-card .card-icon {
+  font-size: 24px;
+  color: #0066FF;
+  margin-bottom: 8px;
+}
+
+.sidebar-contact-card h5 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0B2545;
+  margin-bottom: 4px;
+}
+
+.sidebar-contact-card p {
+  font-size: 12px;
+  color: #64748B;
+  margin-bottom: 12px;
+}
+
+.btn-sidebar-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0066FF;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-sidebar-contact:hover {
+  background: #0B2545;
+  color: #FFFFFF;
+}
+
 /* ==========================================================================
-   3. TERMS CLAUSE CARDS
+   3. POLICY CARDS & CLAUSES
    ========================================================================== */
-.terms-clauses-wrapper {
+.legal-clauses-wrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.terms-intro-card {
+.legal-intro-card {
   background: linear-gradient(135deg, #EEF5FF 0%, #FFFFFF 100%);
   border: 1.5px solid #CCE2FF;
   border-radius: 20px;
@@ -175,7 +225,7 @@
   color: #1E293B;
 }
 
-.terms-clause-card {
+.policy-clause-card {
   background: #FFFFFF;
   border: 1.5px solid #E2E8F0;
   border-radius: 24px;
@@ -186,7 +236,7 @@
   transition: border-color 0.2s ease;
 }
 
-.terms-clause-card:hover {
+.policy-clause-card:hover {
   border-color: #CCE2FF;
 }
 
@@ -200,7 +250,7 @@
   letter-spacing: -1px;
 }
 
-.terms-clause-card h3 {
+.policy-clause-card h3 {
   font-size: 20px;
   font-weight: 800;
   color: #0B2545;
@@ -208,14 +258,14 @@
   padding-right: 40px;
 }
 
-.terms-clause-card p {
+.policy-clause-card p {
   font-size: 14.5px;
   line-height: 1.7;
   color: #475569;
   margin-bottom: 16px;
 }
 
-.styled-terms-list {
+.styled-policy-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -224,7 +274,7 @@
   gap: 10px;
 }
 
-.styled-terms-list li {
+.styled-policy-list li {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -240,69 +290,115 @@
   margin-top: 4px;
 }
 
-.terms-alert-box {
-  background: #FFFBEB;
-  border: 1.5px solid #FDE68A;
-  border-radius: 14px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  font-size: 13.5px;
-  color: #92400E;
-  line-height: 1.55;
-  margin-top: 14px;
-}
-
-.alert-icon {
-  font-size: 18px;
-  color: #D97706;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.terms-highlight-grid {
+.data-categories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 12px;
   margin-top: 14px;
 }
 
-.highlight-item {
+.category-item {
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 14px;
   font-size: 13.5px;
   color: #475569;
   line-height: 1.5;
 }
 
-.highlight-item strong {
+.category-item strong {
   color: #0B2545;
-  display: block;
-  margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {
-  .terms-highlight-grid {
+  .data-categories-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.terms-contact-footer {
+/* Modern Tables */
+.modern-table-responsive {
+  overflow-x: auto;
+  margin-top: 16px;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+}
+
+.modern-legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  background: #FFFFFF;
+}
+
+.modern-legal-table th {
+  background: #F8FAFC;
+  color: #0B2545;
+  font-weight: 800;
+  padding: 14px 18px;
+  border-bottom: 1px solid #E2E8F0;
+  text-align: left;
+}
+
+.modern-legal-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #F1F5F9;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.modern-legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Rights Badge Grid */
+.rights-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.right-pill {
+  background: #EEF5FF;
+  border: 1px solid #CCE2FF;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0066FF;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .rights-badge-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dpo-contact-box {
   background: #F8FAFC;
   border: 1.5px solid #E2E8F0;
   border-radius: 18px;
-  padding: 22px;
-  margin-top: 12px;
+  padding: 24px;
+  margin-top: 14px;
 }
 
-.terms-contact-footer p {
-  margin-bottom: 6px;
+.dpo-contact-box h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0B2545;
+  margin-bottom: 12px;
 }
 
-.terms-contact-footer a {
+.dpo-contact-box p {
+  font-size: 13.5px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.dpo-contact-box a {
   color: #0066FF;
   font-weight: 700;
   text-decoration: none;
