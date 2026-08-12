@@ -381,15 +381,18 @@ const BookingForm = () => {
     setRooms(updatedRooms);
   };
 
-  const [passengerName, setPassengerName] = useState(
-    () => localStorage.getItem("passengerName") || ""
-  );
-  const [passengerEmail, setPassengerEmail] = useState(
-    () => localStorage.getItem("passengerEmail") || ""
-  );
-  const [passengerPhone, setPassengerPhone] = useState(
-    () => localStorage.getItem("passengerPhone") || ""
-  );
+  // Intentionally NOT restored from localStorage: these fields must start
+  // blank on every page load/reload. localStorage is still written on
+  // change/submit below so FlightList.jsx etc. can fall back to it.
+  const [passengerName, setPassengerName] = useState("");
+  const [passengerEmail, setPassengerEmail] = useState("");
+  const [passengerPhone, setPassengerPhone] = useState("");
+
+  useEffect(() => {
+    localStorage.removeItem("passengerName");
+    localStorage.removeItem("passengerEmail");
+    localStorage.removeItem("passengerPhone");
+  }, []);
 
   const [startDate, setStartDate] = useState(moment().add(1, "days"));
 
@@ -741,13 +744,25 @@ const BookingForm = () => {
   const [staticAirportsData, setStaticAirportsData] = useState([]);
   const [searchTimeout, setSearchTimeout] = useState(null);
 
-  // Load static airports data on component mount
+  // Load static airports data on component mount.
+  // Lowercase search fields are precomputed once here (instead of on every
+  // keystroke in searchStaticData) since re-lowercasing ~4700 records per
+  // key press was the main cause of laggy typing in the From/To search.
   useEffect(() => {
     const loadStaticData = async () => {
       try {
         const response = await fetch("/Airports.json");
         const data = await response.json();
-        setStaticAirportsData(data);
+        const indexed = data.map((airport) => ({
+          ...airport,
+          _cityLower: (airport.CITYNAME || "").toLowerCase(),
+          _airportNameLower: (airport.AIRPORTNAME || "").toLowerCase(),
+          _cityCodeLower: (airport.CITYCODE || "").toLowerCase(),
+          _countryNameLower: (airport.COUNTRYNAME || "").toLowerCase(),
+          _countryCodeLower: (airport.COUNTRYCODE || "").toLowerCase(),
+          _airportCodeLower: (airport.AIRPORTCODE || "").toLowerCase(),
+        }));
+        setStaticAirportsData(indexed);
       } catch (error) {
         console.error("Error loading static airports data:", error);
       }
