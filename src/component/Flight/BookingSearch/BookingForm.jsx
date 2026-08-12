@@ -14,7 +14,7 @@ import { Container, Row, Col, Card, Form, Spinner } from "react-bootstrap";
 import { BsArrowLeftRight } from "react-icons/bs";
 // import FlightDeal from "../../../components/MainHome/Home/innerComponents/FlightDeal";
 import { MdFlight, MdOutlineFlight } from "react-icons/md";
-import { FaHotel, FaSuitcaseRolling, FaWallet, FaPlane, FaBuilding, FaUmbrellaBeach, FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaHotel, FaSuitcaseRolling, FaWallet, FaBuilding, FaUmbrellaBeach, FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import moment from "moment";
 import { BiSolidOffer } from "react-icons/bi";
 import { IoBagHandleOutline } from "react-icons/io5";
@@ -1185,16 +1185,6 @@ const BookingForm = () => {
               className="fltWidgetSection appendBottom40 primaryTraveler "
             >
               <div className="widget-top-nav-bar">
-                <div className="searchtabslist">
-                  <ul className="search_tabs">
-                    <li className="tab-link active">
-                      <Link className="tab-button" to="/">
-                        <FaPlane style={{ fontSize: "15px" }} /> Flight
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
                 <div className="trip-switch-header">
                   <div className="trip-segmented-switch">
                     <button
