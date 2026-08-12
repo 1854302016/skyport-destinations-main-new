@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Badge, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { FlightListInfo } from "./FlightListInfo";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown, FiChevronUp, FiX } from "react-icons/fi";
 import { MdFlightTakeoff, MdLuggage, MdEventSeat, MdWorkOutline } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
+import { BASE_URL } from "../../../config";
+
+const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
+const TRIP_TYPE_LABELS = { 1: "OneWay", 2: "RoundTrip", 3: "MultiCity" };
 
 export const formatDuration = (minutes) => {
   const hrs = String(Math.floor(minutes / 60)).padStart(2, "0");
@@ -68,14 +72,61 @@ const FlightListCard = ({
   handleClickPhone,
   activeFlightId,
   loadingFareRules,
-  indexx
+  indexx,
+  searchMeta,
 }) => {
   const [selectedFare, setSelectedFare] = useState(null);
-  const index = encodeURIComponent(e.ResultIndex);
-  const SrdvIndex = e.SrdvIndex ? encodeURIComponent(e.SrdvIndex) : null;
+  const [bookingStatus, setBookingStatus] = useState({});
 console.log("more fare",moreFare)
-  let url = `/flight-detail/${index}/null`;
-  if (SrdvIndex) url += `/${SrdvIndex}`;
+
+  const baseKey = e.SrdvIndex || e.ResultIndex;
+
+  const submitFlightBookEnquiry = async (key, { fare, fareSourceCode, fareType, refundable }) => {
+    if (bookingStatus[key] === "loading" || bookingStatus[key] === "done") return;
+
+    const name = localStorage.getItem("passengerName") || "";
+    const email = localStorage.getItem("passengerEmail") || "";
+    const phone = localStorage.getItem("passengerPhone") || "";
+
+    if (!name || !email || !phone) {
+      alert("Please enter your Name, Email and Phone in the search box above before booking.");
+      return;
+    }
+
+    setBookingStatus((prev) => ({ ...prev, [key]: "loading" }));
+
+    try {
+      const originSeg = e.Segments[0][0];
+      const destSeg = e.Segments[0][e.Segments[0].length - 1];
+      const depDate = originSeg.Origin.DepTime ? originSeg.Origin.DepTime.split("T")[0] : "";
+      const stops = e.Segments[0].length === 1 ? "Non-stop" : `${e.Segments[0].length - 1} Stop(s)`;
+
+      const payload = {
+        name,
+        email,
+        phone,
+        destination: `${originSeg.Origin.Airport.CityName} (${originSeg.Origin.Airport.AirportCode}) -> ${destSeg.Destination.Airport.CityName} (${destSeg.Destination.Airport.AirportCode})`,
+        date: depDate,
+        trip_type: TRIP_TYPE_LABELS[Number(searchMeta?.JourneyType)] || "OneWay",
+        cabin_class: CABIN_CLASS_LABELS[Number(searchMeta?.Segments?.[0]?.FlightCabinClass)] || "",
+        airline: originSeg.Airline.AirlineName,
+        flight_number: `${originSeg.Airline.AirlineCode}-${originSeg.Airline.FlightNumber}`,
+        fare,
+        adults: searchMeta?.AdultCount ? Number(searchMeta.AdultCount) : 1,
+        children: searchMeta?.ChildCount ? Number(searchMeta.ChildCount) : 0,
+        infants: searchMeta?.InfantCount ? Number(searchMeta.InfantCount) : 0,
+        fare_source_code: fareSourceCode || e.SrdvIndex || e.ResultIndex,
+        message: `${fareType || "Standard Fare"} - ${stops}${refundable ? " - Refundable" : ""}`,
+      };
+
+      await axios.post(`${BASE_URL}flight-book-enquiry`, payload);
+      setBookingStatus((prev) => ({ ...prev, [key]: "done" }));
+    } catch (error) {
+      console.error("Error submitting flight book enquiry:", error);
+      setBookingStatus((prev) => ({ ...prev, [key]: "error" }));
+      alert("Something went wrong while sending your request. Please try again.");
+    }
+  };
 
 
   useEffect(() => {
@@ -229,17 +280,21 @@ console.log("more fare",moreFare)
                       {Math.round(e.Fare.PublishedFare)}
                     </span>
                   </div>
-                  <Link to={url} className="text-decoration-none">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="btn premium-btn-book w-100 py-2 shadow-sm"
-                    >
-                      Book Now
-                    </motion.button>
-                  </Link>
-                  
-                 
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="btn premium-btn-book w-100 py-2 shadow-sm"
+                    disabled={bookingStatus[baseKey] === "loading" || bookingStatus[baseKey] === "done"}
+                    onClick={() =>
+                      submitFlightBookEnquiry(baseKey, { fare: Math.round(e.Fare.PublishedFare) })
+                    }
+                  >
+                    {bookingStatus[baseKey] === "loading"
+                      ? "Sending..."
+                      : bookingStatus[baseKey] === "done"
+                        ? "Request Sent ✓"
+                        : "Book Now"}
+                  </motion.button>
                 </div>
               </Col>
             </Row>
@@ -405,9 +460,19 @@ console.log("more fare",moreFare)
               {showModal === indexx ? "- Less Fare" : "+ More Fare"}
             </button>
           )}
-           <Link to={url} className="">
-            <button className="mobile-book-btn">Book Now</button>
-          </Link>
+           <button
+             className="mobile-book-btn"
+             disabled={bookingStatus[baseKey] === "loading" || bookingStatus[baseKey] === "done"}
+             onClick={() =>
+               submitFlightBookEnquiry(baseKey, { fare: Math.round(e.Fare.PublishedFare) })
+             }
+           >
+             {bookingStatus[baseKey] === "loading"
+               ? "Sending..."
+               : bookingStatus[baseKey] === "done"
+                 ? "Sent ✓"
+                 : "Book Now"}
+           </button>
          </div>
          
         </div>
@@ -466,12 +531,24 @@ console.log("more fare",moreFare)
                            <div className="mobile-fare-price mb-2 fw-bold">
                               $ {Math.round(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
                            </div>
-                           <Link 
-                            to={`/flight-detail/${encodeURIComponent(item.FareSourceCode)}/null/EwebM`}
+                           <button
                             className="btn btn-sm mobile-fare-book-btn px-3"
+                            disabled={bookingStatus[item.FareSourceCode] === "loading" || bookingStatus[item.FareSourceCode] === "done"}
+                            onClick={() =>
+                              submitFlightBookEnquiry(item.FareSourceCode, {
+                                fare: Math.round(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount),
+                                fareSourceCode: item.FareSourceCode,
+                                fareType: item.AirItineraryPricingInfo.FareType,
+                                refundable: item.AirItineraryPricingInfo.IsRefundable,
+                              })
+                            }
                            >
-                            Book Now
-                           </Link>
+                            {bookingStatus[item.FareSourceCode] === "loading"
+                              ? "Sending..."
+                              : bookingStatus[item.FareSourceCode] === "done"
+                                ? "Sent ✓"
+                                : "Book Now"}
+                           </button>
                         </Col>
                       </Row>
                     </div>
@@ -642,12 +719,29 @@ console.log("more fare",moreFare)
                             $ {Math.round(selectedFare?.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount || e.Fare.PublishedFare)}
                           </div>
                         </div>
-                        <Link
+                        <button
                           className="book-bt-nwap"
-                          to={selectedFare ? `/flight-detail/${encodeURIComponent(selectedFare.FareSourceCode)}/null/EwebM` : "#"}
+                          disabled={
+                            !selectedFare ||
+                            bookingStatus[selectedFare.FareSourceCode] === "loading" ||
+                            bookingStatus[selectedFare.FareSourceCode] === "done"
+                          }
+                          onClick={() =>
+                            selectedFare &&
+                            submitFlightBookEnquiry(selectedFare.FareSourceCode, {
+                              fare: Math.round(selectedFare.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount),
+                              fareSourceCode: selectedFare.FareSourceCode,
+                              fareType: selectedFare.AirItineraryPricingInfo.FareType,
+                              refundable: selectedFare.AirItineraryPricingInfo.IsRefundable,
+                            })
+                          }
                         >
-                          Book Now
-                        </Link>
+                          {selectedFare && bookingStatus[selectedFare.FareSourceCode] === "loading"
+                            ? "Sending..."
+                            : selectedFare && bookingStatus[selectedFare.FareSourceCode] === "done"
+                              ? "Request Sent ✓"
+                              : "Book Now"}
+                        </button>
                       </div>
                     </div>
                   </>

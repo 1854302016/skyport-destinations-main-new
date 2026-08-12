@@ -1243,6 +1243,7 @@ export const FlightList = () => {
                             handleClickPhone={handleClickPhone}
                             activeFlightId={activeFlightId}
                             indexx={indexx}
+                            searchMeta={dataSearch}
                           />
                           {indexx === 2 && (
                             <motion.div
