@@ -1,183 +1,662 @@
-/* ===== Trusted Fare footer — compact edition ===== */
+/* ==========================================================================
+   TRUSTED FARE - MODERN EXECUTIVE FOOTER STYLESHEET
+   Color Scheme: Deep Midnight Navy (#0B2545) & Electric Blue (#0066FF)
+   ========================================================================== */
+
 .ftr {
   position: relative;
-  background: #053355;
-  color: #fff;
+  background: #051B33;
+  color: #FFFFFF;
   width: 100%;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* ==========================================================================
+   1. FIRST SECTION WITH FULL COVERAGE SKYLINE BACKGROUND
+   ========================================================================== */
+.ftr-top {
+  position: relative;
+  padding: 64px 0 52px 0;
+  background: #051B33;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
-.ftr-skyline {
+/* Full coverage skyline background covering the ENTIRE first section */
+.ftr-skyline-bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 46px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("https://www.flightsmojo.in/images/footer_bg.png");
-  background-size: 560px auto;
-  background-position: center top;
-  background-repeat: repeat-x;
-  opacity: 0.35;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0.32;
+  pointer-events: none;
+  filter: brightness(1.7) contrast(1.15);
+  mix-blend-mode: overlay;
+}
+
+.ftr-top-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 27, 51, 0.75) 0%,
+    rgba(11, 37, 69, 0.85) 60%,
+    #051B33 100%
+  );
   pointer-events: none;
 }
 
 .ftr-container {
-  max-width: 1300px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ---- link grid ---- */
-.ftr-top {
-  position: relative;
-  padding: 28px 0 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0 24px;
 }
 
 .ftr-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 36px;
+  align-items: start;
 }
 
+/* Brand Column */
+.ftr-brand__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ftr-brand-logo-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0066FF 0%, #004FCE 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 19px;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.4);
+}
+
+.ftr-brand__name {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.ftr-brand__name .gradient-text {
+  background: linear-gradient(135deg, #38BDF8 0%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ftr-brand__tag {
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+.ftr-support-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 102, 255, 0.15);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  color: #38BDF8;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+}
+
+/* Social Media Buttons */
+.ftr-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ftr-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  color: #38BDF8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+}
+
+.ftr-social-btn:hover {
+  background: #0066FF;
+  border-color: #0066FF;
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+}
+
+/* Column Titles */
 .ftr-col__title {
-  margin: 0 0 12px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #38bdf8;
+  margin: 0 0 20px 0;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
   position: relative;
-  padding-bottom: 8px;
+  display: inline-block;
 }
 
-.ftr-col__title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 26px;
-  height: 2px;
-  background: #0066ff;
-  border-radius: 2px;
+.ftr-title-underline {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(90deg, #38BDF8 0%, #0066FF 100%);
+  border-radius: 9999px;
+  margin-top: 6px;
 }
 
+/* Link Lists */
 .ftr-list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.ftr-list li {
-  margin-bottom: 7px;
-}
-
-.ftr-list a {
-  color: rgba(255, 255, 255, 0.82);
-  text-decoration: none;
-  font-size: 0.82rem;
-  transition: color 0.2s;
-}
-
-.ftr-list a:hover {
-  color: #38bdf8;
-}
-
-.ftr-brand__name {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.ftr-brand__tag {
-  margin: 4px 0 14px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.ftr-social {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.ftr-social a {
+.ftr-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ftr-link-arrow,
+.ftr-route-icon {
+  font-size: 11px;
+  color: #38BDF8;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ftr-link-item:hover {
+  color: #38BDF8;
+  transform: translateX(4px);
+}
+
+.ftr-link-item:hover .ftr-link-arrow,
+.ftr-link-item:hover .ftr-route-icon {
+  opacity: 1;
+  transform: translateX(2px);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   2. UNIFIED EXECUTIVE GLOBAL HUBS DOCK BAR (REPLACING DISCONNECTED CARDS)
+   ========================================================================== */
+.ftr-offices-section {
+  padding: 38px 0;
+  background: linear-gradient(180deg, #031326 0%, #020D1B 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Single Unified Dock Container */
+.ftr-hubs-dock {
+  display: flex;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+}
+
+.ftr-hubs-dock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
+}
+
+/* Hub Column */
+.ftr-hub-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 16px;
+}
+
+.ftr-hub-item:first-child {
+  padding-left: 0;
+}
+
+.ftr-hub-item:last-child {
+  padding-right: 0;
+}
+
+.ftr-dock-divider {
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+  margin: 0 12px;
+}
+
+/* Header & Tags inside Hub Item */
+.ftr-hub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ftr-hub-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ftr-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ftr-hub-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+}
+
+.ftr-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #4ADE80;
+  letter-spacing: 0.5px;
+}
+
+.ftr-status-badge--blue {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.2);
+  color: #38BDF8;
+}
+
+.live-dot-green {
+  width: 6px;
+  height: 6px;
+  background: #4ADE80;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4ADE80;
+  animation: pulseGreen 2s infinite;
+}
+
+.live-dot-blue {
+  width: 6px;
+  height: 6px;
+  background: #38BDF8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: pulseBlue 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.35); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+@keyframes pulseBlue {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.35); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Hub Body & Addresses */
+.ftr-hub-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  height: 100%;
+}
+
+.ftr-hub-address {
+  margin: 0;
+  font-size: 12.8px;
+  line-height: 1.55;
+  color: #CBD5E1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ftr-hub-icon {
+  font-size: 15px;
+  color: #38BDF8;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.ftr-hub-action-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ftr-hub-hours {
+  font-size: 11px;
+  color: #94A3B8;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.ftr-hub-phone {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38BDF8 !important;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ftr-hub-phone:hover {
+  background: linear-gradient(135deg, #0066FF 0%, #004FCE 100%);
+  color: #FFFFFF !important;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.35);
+}
+
+/* Support Hub Styling */
+.ftr-hub-tag--support {
+  color: #38BDF8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.ftr-support-header-icon {
+  color: #38BDF8;
+  font-size: 15px;
+}
+
+.ftr-hub-support-desc {
+  margin: 0;
+  font-size: 12.8px;
+  line-height: 1.55;
+  color: #CBD5E1;
+}
+
+.ftr-hub-email-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #38bdf8;
-  border-radius: 50%;
-  color: #38bdf8;
-  font-size: 0.85rem;
-  transition: all 0.2s;
+  width: 100%;
+  background: linear-gradient(135deg, #0066FF 0%, #004FCE 100%);
+  color: #FFFFFF !important;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+  box-sizing: border-box;
 }
 
-.ftr-social a:hover {
-  background: #0066ff;
-  border-color: #0066ff;
-  color: #fff;
+.ftr-hub-email-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0072FF 0%, #0056E0 100%);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.55);
 }
 
-/* ---- legal / payments strip ---- */
+.ftr-btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.ftr-hub-email-btn:hover .ftr-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   3. CLEAN, UNIQUE BOTTOM SECTION
+   ========================================================================== */
 .ftr-bottom {
-  background: #03243a;
-  padding: 14px 0;
+  background: #020914;
+  padding: 32px 0 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.ftr-bottom__inner {
+.ftr-bottom-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  text-align: center;
+  gap: 24px;
 }
 
-.ftr-legal {
-  margin: 0;
-  font-size: 0.72rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 980px;
+.ftr-payments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
-.ftr-legal a {
-  color: #4ea6ff;
-  text-decoration: underline;
+.ftr-payments-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #38BDF8;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.ftr-payments-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+
+.ftr-payments-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 102, 255, 0.2);
 }
 
 .ftr-payments {
   max-width: 100%;
-  width: 760px;
+  width: 740px;
   height: auto;
-  margin: 10px 0 4px;
+  display: block;
+  filter: brightness(0.95) contrast(1.05);
 }
 
-.ftr-copyright {
-  margin: 0;
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.55);
+.ftr-legal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 13px;
+  color: #94A3B8;
 }
 
-/* ---- responsive ---- */
-@media (max-width: 900px) {
+.ftr-copyright strong {
+  color: #FFFFFF;
+}
+
+.ftr-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ftr-legal-links a {
+  color: #38BDF8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.ftr-legal-links a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.ftr-legal-links .dot {
+  color: #475569;
+}
+
+.ftr-dev-text a {
+  color: #60A5FA !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
   .ftr-grid {
     grid-template-columns: 1fr 1fr;
-    row-gap: 22px;
+    gap: 32px;
   }
-}
 
-@media (max-width: 560px) {
-  .ftr-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+  .ftr-hubs-dock {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
   }
-  .ftr-brand {
-    grid-column: 1 / -1;
-  }
-  .ftr-top {
-    padding: 22px 0 14px;
-  }
-  .ftr-payments {
+
+  .ftr-dock-divider {
     width: 100%;
+    height: 1px;
+    margin: 4px 0;
+  }
+
+  .ftr-hub-item {
+    padding: 0;
+  }
+
+  .ftr-legal-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .ftr-top {
+    padding: 44px 0 32px 0;
+  }
+
+  .ftr-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .ftr-brand {
+    text-align: center;
+  }
+
+  .ftr-brand__header {
+    justify-content: center;
+  }
+
+  .ftr-social {
+    justify-content: center;
+  }
+
+  .ftr-col__title {
+    margin-bottom: 14px;
+  }
+
+  .ftr-title-underline {
+    margin: 4px auto 0 auto;
+  }
+
+  .ftr-list {
+    align-items: center;
+  }
+
+  .ftr-hub-action-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ftr-hub-phone {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .ftr-payments-card {
+    padding: 8px 12px;
+  }
+
+  .ftr-legal-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ftr-legal-links .dot {
+    display: none;
   }
 }
