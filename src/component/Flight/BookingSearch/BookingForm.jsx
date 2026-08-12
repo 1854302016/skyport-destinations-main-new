@@ -783,47 +783,26 @@ const BookingForm = () => {
   const searchStaticData = (value) => {
     if (!staticAirportsData.length || value.length < 3) return [];
 
+    const needle = value.toLowerCase();
+
     const results = staticAirportsData
-      .filter((airport) => {
-        return (
-          airport &&
-          ((airport.CITYNAME &&
-            airport.CITYNAME.toLowerCase().includes(value.toLowerCase())) ||
-            (airport.AIRPORTNAME &&
-              airport.AIRPORTNAME.toLowerCase().includes(
-                value.toLowerCase()
-              )) ||
-            (airport.CITYCODE &&
-              airport.CITYCODE.toLowerCase().includes(value.toLowerCase())) ||
-            (airport.COUNTRYNAME &&
-              airport.COUNTRYNAME.toLowerCase().includes(
-                value.toLowerCase()
-              )) ||
-            (airport.COUNTRYCODE &&
-              airport.COUNTRYCODE.toLowerCase().includes(
-                value.toLowerCase()
-              )) ||
-            (airport.AIRPORTCODE &&
-              airport.AIRPORTCODE.toLowerCase().includes(value.toLowerCase())))
-        );
-      })
+      .filter(
+        (airport) =>
+          airport._cityLower.includes(needle) ||
+          airport._airportNameLower.includes(needle) ||
+          airport._cityCodeLower.includes(needle) ||
+          airport._countryNameLower.includes(needle) ||
+          airport._countryCodeLower.includes(needle) ||
+          airport._airportCodeLower.includes(needle)
+      )
       .map((airport) => {
         let priority = 3;
 
-        if (
-          airport.AIRPORTCODE &&
-          airport.AIRPORTCODE.toLowerCase().includes(value.toLowerCase())
-        ) {
+        if (airport._airportCodeLower.includes(needle)) {
           priority = 1; // Highest priority for airport code matches
-        } else if (
-          airport.CITYNAME &&
-          airport.CITYNAME.toLowerCase().includes(value.toLowerCase())
-        ) {
+        } else if (airport._cityLower.includes(needle)) {
           priority = 2; // Second priority for city name matches
-        } else if (
-          airport.COUNTRYNAME &&
-          airport.COUNTRYNAME.toLowerCase().includes(value.toLowerCase())
-        ) {
+        } else if (airport._countryNameLower.includes(needle)) {
           priority = 3; // Third priority for country name matches
         }
 
