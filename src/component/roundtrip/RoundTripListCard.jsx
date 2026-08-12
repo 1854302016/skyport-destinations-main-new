@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col, Badge } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { MdFlightTakeoff } from "react-icons/md";
+import axios from "axios";
 import { FlightListInfoInternational } from "../Flight/FlightInternational/FlightListInfoInternational";
 import { airlinesnames } from "../../Airlines";
+import { BASE_URL } from "../../config";
 import "../Flight/FlightList/FlightList.css";
 import "../Flight/FlightList/FlightListInfo.css";
+
+const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 
 const airlineName = (code) =>
   airlinesnames.find((a) => a.AirlineCode === code)?.AirlineName || code;
@@ -107,16 +111,74 @@ const RoundTripListCard = ({
   e,
   handleClick,
   activeId,
-  handlebookmodal,
   fareRules,
   isFareLoading,
   baggageRules,
   formatDuration,
+  searchMeta,
 }) => {
   const fareSourceCode = e.AirItineraryPricingInfo.FareSourceCode;
   const total = Math.round(e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount);
   const departureLeg = e.OriginDestinationOptions[0];
   const returnLeg = e.OriginDestinationOptions[1];
+
+  const [bookingStatus, setBookingStatus] = useState({});
+
+  const submitFlightBookEnquiry = async () => {
+    if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
+
+    const name = localStorage.getItem("passengerName") || "";
+    const email = localStorage.getItem("passengerEmail") || "";
+    const phone = localStorage.getItem("passengerPhone") || "";
+
+    if (!name || !email || !phone) {
+      alert("Please enter your Name, Email and Phone in the search box above before booking.");
+      return;
+    }
+
+    setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "loading" }));
+
+    try {
+      const outFirst = departureLeg.FlightSegments[0];
+      const outLast = departureLeg.FlightSegments[departureLeg.FlightSegments.length - 1];
+      const retFirst = returnLeg.FlightSegments[0];
+      const outStops = departureLeg.FlightSegments.length - 1;
+      const retStops = returnLeg.FlightSegments.length - 1;
+
+      const payload = {
+        name,
+        email,
+        phone,
+        destination: `${outFirst.SourceAirport?.city_name} (${outFirst.DepartureAirportLocationCode}) -> ${outLast.DestinationAirport?.city_name} (${outLast.ArrivalAirportLocationCode})`,
+        date: outFirst.DepartureDateTime ? outFirst.DepartureDateTime.split("T")[0] : "",
+        return_date: retFirst.DepartureDateTime ? retFirst.DepartureDateTime.split("T")[0] : "",
+        trip_type: "RoundTrip",
+        cabin_class: CABIN_CLASS_LABELS[Number(searchMeta?.Segments?.[0]?.FlightCabinClass)] || "",
+        airline: airlineName(outFirst.OperatingAirline.Code),
+        flight_number: `${outFirst.OperatingAirline.Code}-${outFirst.FlightNumber}`,
+        fare: total,
+        adults: searchMeta?.AdultCount ? Number(searchMeta.AdultCount) : 1,
+        children: searchMeta?.ChildCount ? Number(searchMeta.ChildCount) : 0,
+        infants: searchMeta?.InfantCount ? Number(searchMeta.InfantCount) : 0,
+        fare_source_code: fareSourceCode,
+        message: `Departure: ${outStops === 0 ? "Non-stop" : `${outStops} Stop(s)`} | Return: ${airlineName(retFirst.OperatingAirline.Code)} ${retFirst.OperatingAirline.Code}-${retFirst.FlightNumber} (${retStops === 0 ? "Non-stop" : `${retStops} Stop(s)`})${e.IsRefundable ? " - Refundable" : ""}`,
+      };
+
+      await axios.post(`${BASE_URL}flight-book-enquiry`, payload);
+      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "done" }));
+    } catch (error) {
+      console.error("Error submitting flight book enquiry:", error);
+      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "error" }));
+      alert("Something went wrong while sending your request. Please try again.");
+    }
+  };
+
+  const bookNowLabel =
+    bookingStatus[fareSourceCode] === "loading"
+      ? "Sending..."
+      : bookingStatus[fareSourceCode] === "done"
+        ? "Request Sent ✓"
+        : "Book Now";
 
   const cardVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -152,9 +214,10 @@ const RoundTripListCard = ({
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="btn premium-btn-book w-100 py-2 shadow-sm"
-                    onClick={() => handlebookmodal(fareSourceCode)}
+                    disabled={bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done"}
+                    onClick={submitFlightBookEnquiry}
                   >
-                    Book Now
+                    {bookNowLabel}
                   </motion.button>
                 </div>
               </Col>
@@ -270,8 +333,12 @@ const RoundTripListCard = ({
           <button className="mobile-details-btn" onClick={() => handleClick(fareSourceCode)}>
             Flight Details {activeId === fareSourceCode ? <FiChevronUp /> : <FiChevronDown />}
           </button>
-          <button className="mobile-book-btn" onClick={() => handlebookmodal(fareSourceCode)}>
-            Book Now
+          <button
+            className="mobile-book-btn"
+            disabled={bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done"}
+            onClick={submitFlightBookEnquiry}
+          >
+            {bookNowLabel}
           </button>
         </div>
 

@@ -686,10 +686,6 @@ const RoundTrips = () => {
     }
   };
 
-  const handlebookmodal = (idx) => {
-    navigate(`/flight-detail/${encodeURIComponent(idx)}/null/EwebM`);
-  };
-
   const [searchInput, setSearchInput] = useState(destinationCity);
   const [searchInput2, setSearchInput2] = useState(destinationCity2);
   const [cities2, setCities2] = useState([]);
@@ -947,11 +943,11 @@ const RoundTrips = () => {
                         e={e}
                         handleClick={handleClick}
                         activeId={activeId}
-                        handlebookmodal={handlebookmodal}
                         fareRules={fareRules}
                         isFareLoading={isFareLoading}
                         baggageRules={baggageRules}
                         formatDuration={formatDuration}
+                        searchMeta={dataSearch}
                       />
                     ))}
                 </div>
