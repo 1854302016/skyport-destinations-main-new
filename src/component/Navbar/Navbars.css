@@ -190,6 +190,17 @@
   transform: rotate(180deg);
 }
 
+.currency-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.currency-dropdown-item-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .currency-dropdown-menu {
   position: absolute;
   top: 100%;
