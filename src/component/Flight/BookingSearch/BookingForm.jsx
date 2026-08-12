@@ -14,7 +14,7 @@ import { Container, Row, Col, Card, Form, Spinner } from "react-bootstrap";
 import { BsArrowLeftRight } from "react-icons/bs";
 // import FlightDeal from "../../../components/MainHome/Home/innerComponents/FlightDeal";
 import { MdFlight, MdOutlineFlight } from "react-icons/md";
-import { FaHotel, FaSuitcaseRolling, FaWallet, FaPlane, FaBuilding, FaUmbrellaBeach } from "react-icons/fa";
+import { FaHotel, FaSuitcaseRolling, FaWallet, FaPlane, FaBuilding, FaUmbrellaBeach, FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import moment from "moment";
 import { BiSolidOffer } from "react-icons/bi";
 import { IoBagHandleOutline } from "react-icons/io5";
@@ -381,6 +381,16 @@ const BookingForm = () => {
     setRooms(updatedRooms);
   };
 
+  const [passengerName, setPassengerName] = useState(
+    () => localStorage.getItem("passengerName") || ""
+  );
+  const [passengerEmail, setPassengerEmail] = useState(
+    () => localStorage.getItem("passengerEmail") || ""
+  );
+  const [passengerPhone, setPassengerPhone] = useState(
+    () => localStorage.getItem("passengerPhone") || ""
+  );
+
   const [startDate, setStartDate] = useState(moment().add(1, "days"));
 
   const [endDate, setEndDate] = useState(
@@ -510,6 +520,14 @@ const BookingForm = () => {
       ChildCount: rooms[0].children,
       InfantCount: rooms[0].infants,
       JourneyType: tripType,
+      PassengerName: passengerName,
+      PassengerEmail: passengerEmail,
+      PassengerPhone: passengerPhone,
+      ContactInfo: {
+        name: passengerName,
+        email: passengerEmail,
+        phone: passengerPhone,
+      },
       Segments: [
         {
           Origin: extractBracketValue(searchInput),
@@ -531,26 +549,49 @@ const BookingForm = () => {
     ) {
       alert("Missing Search Data.");
     } else {
+      localStorage.setItem("passengerName", passengerName || "");
+      localStorage.setItem("passengerEmail", passengerEmail || "");
+      localStorage.setItem("passengerPhone", passengerPhone || "");
+      localStorage.setItem(
+        "userContactInfo",
+        JSON.stringify({ name: passengerName, email: passengerEmail, phone: passengerPhone })
+      );
+
       await insertSearchDataIntoCache({
         ...SearchData,
+        passengerName,
+        passengerEmail,
+        passengerPhone,
         originCountryCode:
           destination2?.COUNTRYCODE?.trim().toUpperCase() || "",
         destinationCountryCode:
           destination1?.COUNTRYCODE?.trim().toUpperCase() || "",
       });
 
+      const contactParam = `*nm_${encodeURIComponent(passengerName || "")}*em_${encodeURIComponent(passengerEmail || "")}*ph_${encodeURIComponent(passengerPhone || "")}`;
+
       if (active) {
         navigate(
           `/flightList/${encodeURIComponent(
-            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}`
-          )}`
+            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}${contactParam}`
+          )}`,
+          {
+            state: {
+              contactDetails: {
+                name: passengerName,
+                email: passengerEmail,
+                phone: passengerPhone,
+              },
+              searchData: SearchData,
+            },
+          }
         );
       }
 
       if (active2) {
         window.location.assign(
           `/international-round/${encodeURIComponent(
-            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}`
+            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}${contactParam}`
           )}`
         );
       }
@@ -1180,6 +1221,59 @@ const BookingForm = () => {
                 </div>
               </div>
               <div className="fsw ">
+                <div className="fsw_contact_strip">
+                  <div className="contact_field_box">
+                    <span className="lbl_input">PASSENGER NAME</span>
+                    <div className="contact_input_wrapper">
+                      <FaUser className="contact_field_icon" />
+                      <input
+                        type="text"
+                        className="contact_input_field"
+                        placeholder="Enter full name"
+                        value={passengerName}
+                        onChange={(e) => {
+                          setPassengerName(e.target.value);
+                          localStorage.setItem("passengerName", e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="contact_field_box">
+                    <span className="lbl_input">EMAIL ADDRESS</span>
+                    <div className="contact_input_wrapper">
+                      <FaEnvelope className="contact_field_icon" />
+                      <input
+                        type="email"
+                        className="contact_input_field"
+                        placeholder="name@example.com"
+                        value={passengerEmail}
+                        onChange={(e) => {
+                          setPassengerEmail(e.target.value);
+                          localStorage.setItem("passengerEmail", e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="contact_field_box">
+                    <span className="lbl_input">PHONE NUMBER</span>
+                    <div className="contact_input_wrapper">
+                      <FaPhoneAlt className="contact_field_icon" />
+                      <input
+                        type="tel"
+                        className="contact_input_field"
+                        placeholder="+1 (555) 000-0000"
+                        value={passengerPhone}
+                        onChange={(e) => {
+                          setPassengerPhone(e.target.value);
+                          localStorage.setItem("passengerPhone", e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 <div className="fsw_inner returnPersuasion">
                   <div
                     ref={fromContainerRef}

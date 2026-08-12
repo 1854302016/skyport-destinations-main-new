@@ -233,6 +233,75 @@
   box-sizing: border-box;
 }
 
+/* Contact Details Strip inside Search Widget */
+.fsw_contact_strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact_field_box {
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 10px 16px;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.02);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.contact_field_box:hover,
+.contact_field_box:focus-within {
+  background: #FFFFFF;
+  border-color: #0066FF;
+  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.12);
+}
+
+.contact_input_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.contact_field_icon {
+  font-size: 14px;
+  color: #0066FF;
+  flex-shrink: 0;
+}
+
+.contact_input_field {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0A1F44;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_input_field::placeholder {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .fsw_contact_strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
 .fsw .fsw_inner {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) auto minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(120px, 140px);

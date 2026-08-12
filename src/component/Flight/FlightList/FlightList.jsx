@@ -189,6 +189,19 @@ export const FlightList = () => {
       // console.log("Updated Search Data", updatedSearchData);
       // dispatch(flightSearch(updatedSearchData, navigate));
 
+      const passengerName =
+        updatedSearchData.PassengerName ||
+        localStorage.getItem("passengerName") ||
+        "";
+      const passengerEmail =
+        updatedSearchData.PassengerEmail ||
+        localStorage.getItem("passengerEmail") ||
+        "";
+      const passengerPhone =
+        updatedSearchData.PassengerPhone ||
+        localStorage.getItem("passengerPhone") ||
+        "";
+
       const searchdatamulticurl = {
         origin: updatedSearchData.Segments[0].Origin,
         destination: updatedSearchData.Segments[0].Destination,
@@ -200,6 +213,15 @@ export const FlightList = () => {
         cabin: parseInt(updatedSearchData.Segments[0].FlightCabinClass),
         tboToken: token,
         partocrsSession: sessionId,
+        name: passengerName,
+        email: passengerEmail,
+        phone: passengerPhone,
+        passengerName: passengerName,
+        passengerEmail: passengerEmail,
+        passengerPhone: passengerPhone,
+        userName: passengerName,
+        userEmail: passengerEmail,
+        userPhone: passengerPhone,
       };
 
       console.log("search data multicurl", searchdatamulticurl);
@@ -395,6 +417,15 @@ export const FlightList = () => {
           break;
         case "cbn":
           searchData.Segments[0].FlightCabinClass = value;
+          break;
+        case "nm":
+          searchData.PassengerName = value;
+          break;
+        case "em":
+          searchData.PassengerEmail = value;
+          break;
+        case "ph":
+          searchData.PassengerPhone = value;
           break;
         default:
           break;

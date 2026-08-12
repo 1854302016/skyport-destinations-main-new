@@ -296,6 +296,19 @@ const FlightInternational = () => {
         ],
       };
 
+      const passengerName =
+        updatedSearchData.PassengerName ||
+        localStorage.getItem("passengerName") ||
+        "";
+      const passengerEmail =
+        updatedSearchData.PassengerEmail ||
+        localStorage.getItem("passengerEmail") ||
+        "";
+      const passengerPhone =
+        updatedSearchData.PassengerPhone ||
+        localStorage.getItem("passengerPhone") ||
+        "";
+
       const searchDataInternational = {
         origin: updatedSearchData.Segments[0].Origin,
         destination: updatedSearchData.Segments[0].Destination,
@@ -308,6 +321,15 @@ const FlightInternational = () => {
         cabin: updatedSearchData.Segments[0].FlightCabinClass,
         tboToken: token,
         partocrsSession: sessionId,
+        name: passengerName,
+        email: passengerEmail,
+        phone: passengerPhone,
+        passengerName: passengerName,
+        passengerEmail: passengerEmail,
+        passengerPhone: passengerPhone,
+        userName: passengerName,
+        userEmail: passengerEmail,
+        userPhone: passengerPhone,
       };
 
       dispatch(flightSearch(searchDataInternational, false, true, navigate))
@@ -648,6 +670,15 @@ const FlightInternational = () => {
         case "cbn":
           searchData.Segments[0].FlightCabinClass = value;
           searchData.Segments[1].FlightCabinClass = value;
+          break;
+        case "nm":
+          searchData.PassengerName = value;
+          break;
+        case "em":
+          searchData.PassengerEmail = value;
+          break;
+        case "ph":
+          searchData.PassengerPhone = value;
           break;
         default:
           break;
