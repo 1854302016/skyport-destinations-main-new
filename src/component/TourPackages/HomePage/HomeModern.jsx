@@ -43,11 +43,11 @@ const HomeModern = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://skyportdestinations.com/tour"
+          content="https://trustedfare.com/tour"
         />
         <meta
           property="og:image"
-          content="https://skyportdestinations.com/logo.png"
+          content="https://trustedfare.com/logo.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -58,7 +58,7 @@ const HomeModern = () => {
           name="twitter:description"
           content="Discover the best tour packages and holiday deals worldwide with SkyPort Destinations."
         />
-        <link rel="canonical" href="https://skyportdestinations.com/tour" />
+        <link rel="canonical" href="https://trustedfare.com/tour" />
       </Helmet>
       <div
         style={{ overflowX: "hidden" }}

@@ -7,6 +7,7 @@ import axios from "axios";
 import { FlightListInfoInternational } from "../Flight/FlightInternational/FlightListInfoInternational";
 import { airlinesnames } from "../../Airlines";
 import { BASE_URL } from "../../config";
+import { useCurrency } from "../../context/CurrencyContext";
 import "../Flight/FlightList/FlightList.css";
 import "../Flight/FlightList/FlightListInfo.css";
 
@@ -123,6 +124,7 @@ const RoundTripListCard = ({
   const returnLeg = e.OriginDestinationOptions[1];
 
   const [bookingStatus, setBookingStatus] = useState({});
+  const { formatPrice } = useCurrency();
 
   const submitFlightBookEnquiry = async () => {
     if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
@@ -206,8 +208,7 @@ const RoundTripListCard = ({
                 <div className="text-end w-100">
                   <div className="price-tag mb-2">
                     <span className="final-price d-block lh-1 mb-1">
-                      <span className="currency-symbol">$</span>
-                      {total}
+                      {formatPrice(total)}
                     </span>
                   </div>
                   <motion.button
@@ -281,7 +282,7 @@ const RoundTripListCard = ({
               {airlineName(departureLeg.FlightSegments[0].OperatingAirline.Code)}
             </span>
           </div>
-          <div className="mobile-price-pill">${total}</div>
+          <div className="mobile-price-pill">{formatPrice(total)}</div>
         </div>
 
         {[

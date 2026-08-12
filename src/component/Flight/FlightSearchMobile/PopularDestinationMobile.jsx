@@ -18,7 +18,7 @@ const destinationsData = [
     {
         id: 1,
         name: "Dubai",
-        slug: `https://skyportdestinations.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         img: "https://images.pexels.com/photos/8612083/pexels-photo-8612083.jpeg",
         price: "78,500",
         tagline: "Vast Landscapes"
@@ -26,7 +26,7 @@ const destinationsData = [
     {
         id: 2,
         name: "Germany",
-        slug: `https://skyportdestinations.com/flightList/dest_FRA*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_FRA*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         img: "https://images.pexels.com/photos/31542272/pexels-photo-31542272.jpeg",
         price: "72,300",
         tagline: "Modern Heritage"
@@ -34,7 +34,7 @@ const destinationsData = [
     {
         id: 3,
         name: "Finland",
-        slug: `https://skyportdestinations.com/flightList/dest_RVN*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_RVN*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         img: "https://images.pexels.com/photos/31539348/pexels-photo-31539348.jpeg",
         price: "81,900",
         tagline: "Northern Lights"
@@ -42,7 +42,7 @@ const destinationsData = [
     {
         id: 4,
         name: "Denmark",
-        slug: `https://skyportdestinations.com/flightList/dest_CPH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_CPH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         img: "https://images.pexels.com/photos/17492661/pexels-photo-17492661.jpeg",
         price: "76,400",
         tagline: "Coastal Charm"
@@ -50,7 +50,7 @@ const destinationsData = [
     {
         id: 5,
         name: "Greece",
-        slug: `https://skyportdestinations.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         img: "https://images.pexels.com/photos/29986796/pexels-photo-29986796.jpeg",
         price: "69,500",
         tagline: "Ancient Beauty"

@@ -896,11 +896,6 @@ const FlightInternational = () => {
   const handleMoreFare = (idx) => {
     setShowModal(showModal === idx ? null : idx);
   };
-  const handlebookmodal = (idx) => {
-    navigate(`/flight-detail/${encodeURIComponent(idx)}/null/EwebM`);
-    setShowModal(false);
-  };
-
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     setVisible(scrollTop > 300);
@@ -1690,12 +1685,12 @@ const FlightInternational = () => {
                           // departureFlight={departureFlight}
                           // returnFlight={returnFlight}
                           formatTime={formatTime}
-                          handlebookmodal={handlebookmodal}
                           handleChnageCurrency={handleChnageCurrency}
                           handleChangeCurrency2={handleChangeCurrency2}
                           fareRules={fareRules}
                           isFareLoading={isFareLoading}
                           baggageRules={baggageRules}
+                          searchMeta={dataSearch}
                         />
                       );
                     })}

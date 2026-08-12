@@ -699,11 +699,11 @@ const HotelSearchNew = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://skyportdestinations.com/hotel"
+          content="https://trustedfare.com/hotel"
         />
         <meta
           property="og:image"
-          content="https://skyportdestinations.com/logo.png"
+          content="https://trustedfare.com/logo.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -714,7 +714,7 @@ const HotelSearchNew = () => {
           name="twitter:description"
           content="Book hotels online with exclusive deals and secure reservations at SkyPort Destinations."
         />
-        <link rel="canonical" href="https://skyportdestinations.com/hotel" />
+        <link rel="canonical" href="https://trustedfare.com/hotel" />
       </Helmet>
       <div style={{ position: "relative" }}>
         <Swiper

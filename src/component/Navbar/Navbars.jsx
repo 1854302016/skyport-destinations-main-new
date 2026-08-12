@@ -38,6 +38,7 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { loggedOut } from "../../redux/slices/login";
 import SideBar from "./SideBar";
+import { useCurrency } from "../../context/CurrencyContext";
 // import { useAuth } from "../../context/AuthContext";
 
 const useWindowWidth = () => {
@@ -97,6 +98,24 @@ const Navbars = () => {
   });
 
   const width = useWindowWidth();
+
+  const { currency, currencies, setCurrency } = useCurrency();
+  const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
+  const currencyDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleCurrencyClickOutside = (event) => {
+      if (
+        currencyDropdownRef.current &&
+        !currencyDropdownRef.current.contains(event.target)
+      ) {
+        setShowCurrencyDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleCurrencyClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleCurrencyClickOutside);
+  }, []);
 
   const handleCountrySelect = (country) => {
     setSelectedCountry(country);
@@ -231,6 +250,40 @@ const Navbars = () => {
             <Navbar.Brand as={Link} to="/" className="navbar-brand-clean">
               <img className="logo-main" src="/Images/TF_logo_horizontal.png" alt="Trusted Fare Logo" />
             </Navbar.Brand>
+          </div>
+
+          <div className="navbar-right-group">
+            <div className="currency-switcher-wrap" ref={currencyDropdownRef}>
+              <button
+                type="button"
+                className="btn-currency-toggle"
+                onClick={() => setShowCurrencyDropdown((prev) => !prev)}
+              >
+                <IoMdGlobe size={18} className="icon_blue" />
+                <span className="text">{currency}</span>
+                <FaChevronDown
+                  size={10}
+                  className={`chevron-icon ${showCurrencyDropdown ? "open" : ""}`}
+                />
+              </button>
+              {showCurrencyDropdown && (
+                <div className="currency-dropdown-menu">
+                  {currencies.map((cur) => (
+                    <div
+                      key={cur}
+                      className={`currency-dropdown-item ${currency === cur ? "active" : ""}`}
+                      onClick={() => {
+                        setCurrency(cur);
+                        setShowCurrencyDropdown(false);
+                      }}
+                    >
+                      <span>{cur === "INR" ? "₹ INR" : "$ USD"}</span>
+                      {currency === cur && <span style={{ color: "#0066FF" }}>✓</span>}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Right: In-Person Booking & My Account chip buttons (No Country Select) */}

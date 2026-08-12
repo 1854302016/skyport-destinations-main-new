@@ -151,6 +151,82 @@
   transition: color 0.2s ease !important;
 }
 
+/* Currency Switcher (INR / USD) */
+.currency-switcher-wrap {
+  position: relative;
+}
+
+.btn-currency-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  background: #F0F7FF !important;
+  border: 1.5px solid #CCE2FF !important;
+  border-radius: 50px !important;
+  color: #0066FF !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-currency-toggle:hover {
+  background: #0066FF !important;
+  color: #FFFFFF !important;
+  border-color: #0066FF !important;
+}
+
+.btn-currency-toggle:hover .icon_blue {
+  color: #FFFFFF !important;
+}
+
+.btn-currency-toggle .chevron-icon {
+  transition: transform 0.2s ease;
+}
+
+.btn-currency-toggle .chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.currency-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(11, 37, 69, 0.14);
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  padding: 6px;
+  min-width: 130px;
+  z-index: 1200;
+  animation: fadeInDown 0.25s ease;
+}
+
+.currency-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: #0B2545;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.currency-dropdown-item:hover {
+  background: #F0F7FF;
+}
+
+.currency-dropdown-item.active {
+  background: #F0F7FF;
+}
+
 /* Sign In / Account Pill Button */
 .btn-signin {
   display: inline-flex !important;

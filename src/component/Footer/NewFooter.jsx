@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./NewFooter.css";
-import { IoHeartSharp } from "react-icons/io5";
 
 // Get tomorrow's date in YYYY-MM-DD format
 const getTomorrowDate = () => {
@@ -22,165 +21,31 @@ const footerLinks = [
   { title: "Offers", link: "/offers" },
 ];
 
-// Domestic routes (Top Flight Routes from Georgetown)
+// Domestic routes (Top Flight Routes from Georgetown) — trimmed to a short list for the footer
 const domestic = [
-  {
-    ori: "Georgetown",
-    desti: "Port of Spain",
-    link: `/flightList/dest_POS*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Bridgetown",
-    link: `/flightList/dest_BGI*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Nassau",
-    link: `/flightList/dest_NAS*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "St. John’s",
-    link: `/flightList/dest_ANU*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Providenciales",
-    link: `/flightList/dest_PLS*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Willemstad",
-    link: `/flightList/dest_CUR*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Punta Cana",
-    link: `/flightList/dest_PUJ*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Panama City",
-    link: `/flightList/dest_PTY*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Oranjestad",
-    link: `/flightList/dest_AUA*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "São Paulo",
-    link: `/flightList/dest_GRU*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "New York",
-    link: `/flightList/dest_JFK*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Toronto",
-    link: `/flightList/dest_YYZ*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-];
+  { ori: "Georgetown", desti: "Port of Spain", code: "POS" },
+  { ori: "Georgetown", desti: "Bridgetown", code: "BGI" },
+  { ori: "Georgetown", desti: "Nassau", code: "NAS" },
+  { ori: "Georgetown", desti: "Providenciales", code: "PLS" },
+  { ori: "Georgetown", desti: "New York", code: "JFK" },
+  { ori: "Georgetown", desti: "Toronto", code: "YYZ" },
+].map((item) => ({
+  ...item,
+  link: `/flightList/dest_${item.code}*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
+}));
 
-// International routes – Trip of a Lifetime
+// International routes – Trip of a Lifetime — trimmed to a short list for the footer
 const international = [
-  {
-    ori: "Georgetown",
-    desti: "Dubai",
-    link: `/flightList/dest_DXB*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Mumbai",
-    link: `/flightList/dest_BOM*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Paris",
-    link: `/flightList/dest_CDG*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "London",
-    link: `/flightList/dest_LHR*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Rome",
-    link: `/flightList/dest_FCO*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Tokyo",
-    link: `/flightList/dest_HND*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Cape Town",
-    link: `/flightList/dest_CPT*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Bora Bora",
-    link: `/flightList/dest_BOB*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Beijing",
-    link: `/flightList/dest_PEK*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Santorini",
-    link: `/flightList/dest_JTR*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-  {
-    ori: "Georgetown",
-    desti: "Sydney",
-    link: `/flightList/dest_SYD*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-  },
-];
-
-// Menu structure
-const menuData = [
-  {
-    label: "About",
-    heading: "About",
-    links: footerLinks.map((item) => ({ text: item.title, href: item.link })),
-  },
-  {
-    label: "Top Flight Routes",
-    heading: "Top Flight Routes",
-    columns: [
-      domestic.slice(0, 6).map((item) => ({
-        text: `${item.ori} to ${item.desti} Flights`,
-        href: item.link,
-      })),
-      domestic.slice(6).map((item) => ({
-        text: `${item.ori} to ${item.desti} Flights`,
-        href: item.link,
-      })),
-    ],
-  },
-  {
-    label: "International Flight",
-    heading: "International Flight",
-    columns: [
-      international.slice(0, 6).map((item) => ({
-        text: `${item.ori} to ${item.desti} Flights`,
-        href: item.link,
-      })),
-      international.slice(6).map((item) => ({
-        text: `${item.ori} to ${item.desti} Flights`,
-        href: item.link,
-      })),
-    ],
-  },
-];
+  { ori: "Georgetown", desti: "Dubai", code: "DXB" },
+  { ori: "Georgetown", desti: "Mumbai", code: "BOM" },
+  { ori: "Georgetown", desti: "Paris", code: "CDG" },
+  { ori: "Georgetown", desti: "London", code: "LHR" },
+  { ori: "Georgetown", desti: "Tokyo", code: "HND" },
+  { ori: "Georgetown", desti: "Sydney", code: "SYD" },
+].map((item) => ({
+  ...item,
+  link: `/flightList/dest_${item.code}*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
+}));
 
 const socialIcons = [
   {
@@ -188,7 +53,11 @@ const socialIcons = [
     label: "Facebook",
     link: "https://www.facebook.com/share/16vgLnkcFf/",
   },
-  { icon: "fab fa-tiktok", label: "Tiktok", link: "https://www.tiktok.com/@skyport.destinati?_t=ZM-8z8JgE4VfSH&_r=1" },
+  {
+    icon: "fab fa-tiktok",
+    label: "Tiktok",
+    link: "https://www.tiktok.com/@skyport.destinati?_t=ZM-8z8JgE4VfSH&_r=1",
+  },
   {
     icon: "fab fa-instagram",
     label: "Instagram",
@@ -196,134 +65,105 @@ const socialIcons = [
   },
 ];
 
+const FooterColumn = ({ title, children }) => (
+  <div className="ftr-col">
+    <h4 className="ftr-col__title">{title}</h4>
+    {children}
+  </div>
+);
+
 const NewFooter = () => {
-  const [selected, setSelected] = useState(0);
-  const mainMenu = menuData[selected];
-
-  function renderLinksRight(section) {
-    return (
-      <div className="footer-twopane-right">
-        {section.heading && (
-          <div className="footer-twopane-title">{section.heading}</div>
-        )}
-        {section.columns ? (
-          <div
-            className={`footer-twopane-columns columns-${section.columns.length}`}
-          >
-            {section.columns.map((col, colIdx) => (
-              <ul className="footer-twopane-list" key={colIdx}>
-                {col.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.href}>{item.text}</Link>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
-        ) : (
-          <ul className="footer-twopane-list single-col">
-            {section.links?.map((item, idx) => (
-              <li key={idx}>
-                <Link to={item.href}>{item.text}</Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    );
-  }
-
   return (
-    <div style={{ background: "#053355" }}>
-      <footer className="footer-main twopane">
-        {/* Heading Row */}
-        <div className="footer-twopane-content" style={{ minHeight: "0px" }}>
-          <div className="footer-heading-row">
-            <div className="footer-heading-left">Easy Access</div>
-            <div className="footer-heading-right">
-              Connect with Us
-              <div className="footer-social-inline">
-                {socialIcons.map((icon, idx) => (
-                  <a key={idx} href={icon.link} target="_blank" rel="noopener noreferrer" aria-label={icon.label}>
-                    <i className={icon.icon}></i>
-                  </a>
-                ))}
-              </div>
+    <footer className="ftr">
+      <div className="ftr-skyline" aria-hidden="true" />
+
+      <div className="ftr-top">
+        <div className="ftr-container ftr-grid">
+          <div className="ftr-col ftr-brand">
+            <div className="ftr-brand__name">Trusted Fare</div>
+            <p className="ftr-brand__tag">Trusted journeys, better fares.</p>
+            <div className="ftr-social">
+              {socialIcons.map((icon, idx) => (
+                <a
+                  key={idx}
+                  href={icon.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={icon.label}
+                >
+                  <i className={icon.icon}></i>
+                </a>
+              ))}
             </div>
           </div>
+
+          <FooterColumn title="About">
+            <ul className="ftr-list">
+              {footerLinks.map((item, idx) => (
+                <li key={idx}>
+                  <Link to={item.link}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
+
+          <FooterColumn title="Top Flight Routes">
+            <ul className="ftr-list">
+              {domestic.map((item, idx) => (
+                <li key={idx}>
+                  <Link to={item.link}>
+                    {item.ori} to {item.desti}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
+
+          <FooterColumn title="International Flights">
+            <ul className="ftr-list">
+              {international.map((item, idx) => (
+                <li key={idx}>
+                  <Link to={item.link}>
+                    {item.ori} to {item.desti}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
         </div>
-        <div className="footer-twopane-content">
-          <div className="footer-twopane-left">
-            {menuData.map((menu, idx) => (
-              <div
-                key={menu.label}
-                className={`footer-twopane-menu-item${
-                  selected === idx ? " active" : ""
-                }`}
-                onClick={() => setSelected(idx)}
-                tabIndex={0}
-                role="button"
-                aria-label={menu.label}
-              >
-                {menu.label}
-              </div>
-            ))}
-          </div>
-          {renderLinksRight(mainMenu)}
-        </div>
-        {/* <div className="footer-twopane-content fpaystrip" style={{minHeight:"0px"}}>
-      <img src="https://c.fareportal.com/vd/coa/travel/r6/images/footer-logo-desktop.webp" width="1135" height="51" alt="partners logos" className="footer-logo-desktop"/>
       </div>
 
-      <div className="footer-copyright">
-        © 2024 SkyPort Destinations | All rights reserved
-      </div> */}
-      </footer>
-      <div className="footer_bottom">
-        <div className="container">
-          <div className="row">
-            <p>
-              YOUR FRIEND / TRUSTED FARE, with its Head Office located at
-              GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201
-              and Canada Office at Unit 201-7743 128 street West newton, surrey Bc V3w1L4.
-              For any inquiries, you can reach us at +91-9646747171 / +1-778-240-4599 or email us at
-              info@trustedfare.com.
-            </p>
-            <p>
-              All users agree to SKYPORT DESTINATIONS's{" "}
-              <a href="/terms-conditions">Terms &amp; Conditions</a> and &nbsp;
-              {/* <a href="/user-agreement">User Agreement</a> and{" "} */}
-              <a href="/privacy-policy">Privacy Policy</a>
-            </p>
-             <p style={{ paddingBottom: 6 }}>
-              Design & Developed By{" "}
-              <a href="https://www.eweblink.net/" target="_blank"> Eweblink Technology</a>
-              {/* <a href="/user-agreement">User Agreement</a> and{" "} */}
-              
-            </p>
-            {/* <p>
-              All users are subject to our{" "}
-              <a href="#">Cancellation &amp; Refund Policies</a>. Read our{" "}
-              <a href="#">Cookie Policy</a> for details.
-            </p> */}
-            <div className="footer_bottom_icon">
-              <div
-                className="footer-twopane-content fpaystrip"
-                style={{ minHeight: "0px" }}
-              >
-                <img
-                  src="https://c.fareportal.com/vd/coa/travel/r6/images/footer-logo-desktop.webp"
-                  width="1135"
-                  height="51"
-                  alt="partners logos"
-                  className="footer-logo-desktop"
-                />
-              </div>
-            </div>
-          </div>
+      <div className="ftr-bottom">
+        <div className="ftr-container ftr-bottom__inner">
+          <p className="ftr-legal">
+            YOUR FRIEND / TRUSTED FARE, Head Office: GROUND FLOOR, Shop No 32, Bus
+            Stand, Goniana Mandi Bathinda, Punjab, India - 151201 &middot; Canada
+            Office: Unit 201-7743 128 street West newton, Surrey, BC V3W1L4
+            &middot; +91-9646747171 / +1-778-240-4599 &middot;{" "}
+            <a href="mailto:info@trustedfare.com">info@trustedfare.com</a>
+          </p>
+          <p className="ftr-legal">
+            All users agree to SKYPORT DESTINATIONS's{" "}
+            <Link to="/terms-conditions">Terms &amp; Conditions</Link> and{" "}
+            <Link to="/privacy-policy">Privacy Policy</Link> &middot; Design &amp;
+            Developed by{" "}
+            <a href="https://www.eweblink.net/" target="_blank" rel="noopener noreferrer">
+              Eweblink Technology
+            </a>
+          </p>
+          <img
+            src="https://c.fareportal.com/vd/coa/travel/r6/images/footer-logo-desktop.webp"
+            width="1135"
+            height="51"
+            alt="partners logos"
+            className="ftr-payments"
+          />
+          <p className="ftr-copyright">
+            &copy; {new Date().getFullYear()} Trusted Fare. All rights reserved.
+          </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

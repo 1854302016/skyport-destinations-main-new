@@ -173,11 +173,11 @@ const InPersonBooking = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://skyportdestinations.com/in-person-booking"
+          content="https://trustedfare.com/in-person-booking"
         />
         <meta
           property="og:image"
-          content="https://skyportdestinations.com/logo.png"
+          content="https://trustedfare.com/logo.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -190,7 +190,7 @@ const InPersonBooking = () => {
         />
         <link
           rel="canonical"
-          href="https://skyportdestinations.com/in-person-booking"
+          href="https://trustedfare.com/in-person-booking"
         />
       </Helmet>
       <div className="content-wrapper">

@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from './redux/reducer';
+import { CurrencyProvider } from "./context/CurrencyContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const store = configureStore({
@@ -16,9 +17,11 @@ const store = configureStore({
 root.render(
   // <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <CurrencyProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </CurrencyProvider>
     </Provider>
   // </React.StrictMode>
 );

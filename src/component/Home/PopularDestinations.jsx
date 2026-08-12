@@ -16,7 +16,7 @@ const destinationsData = [
     {
         id: 1,
         name: "Dubai",
-        slug: `https://skyportdestinations.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/8612083/pexels-photo-8612083.jpeg",
         description: "Explore vast landscapes, iconic architecture, and rich cultural heritage across Dubai historic cities.",
@@ -26,7 +26,7 @@ const destinationsData = [
     {
         id: 2,
         name: "Germany",
-        slug: `https://skyportdestinations.com/flightList/dest_FRA*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_FRA*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/31542272/pexels-photo-31542272.jpeg",
         description: "Experience Germany’s blend of modern cities, medieval towns, and world-renowned culture.",
@@ -36,7 +36,7 @@ const destinationsData = [
     {
         id: 3,
         name: "Finland",
-        slug: `https://skyportdestinations.com/flightList/dest_RVN*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_RVN*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/31539348/pexels-photo-31539348.jpeg",
         description: "Discover serene lakes, northern lights, and the peaceful charm of Finland’s Nordic lifestyle.",
@@ -46,7 +46,7 @@ const destinationsData = [
     {
         id: 4,
         name: "Denmark",
-        slug: `https://skyportdestinations.com/flightList/dest_CPH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_CPH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/17492661/pexels-photo-17492661.jpeg",
         description: "Visit Denmark for its scenic coastlines, cycling culture, and timeless Scandinavian design.",
@@ -56,7 +56,7 @@ const destinationsData = [
     {
         id: 5,
         name: "Georgia",
-        slug: `https://skyportdestinations.com/flightList/dest_TBS*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_TBS*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/33133738/pexels-photo-33133738.jpeg",
         description: "Explore mountains, ancient churches, and vibrant traditions in the crossroads of Europe and Asia.",
@@ -66,7 +66,7 @@ const destinationsData = [
     {
         id: 6,
         name: "Greece",
-        slug: `https://skyportdestinations.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/29986796/pexels-photo-29986796.jpeg",
         description: "Travel through ancient history, stunning islands, and Mediterranean beauty in Greece.",
@@ -76,7 +76,7 @@ const destinationsData = [
     {
         id: 7,
         name: "Austria",
-        slug: `https://skyportdestinations.com/flightList/dest_VIE*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_VIE*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/20807992/pexels-photo-20807992.jpeg",
         description: "Enjoy alpine landscapes, classical music heritage, and elegant cities across Austria.",
@@ -86,7 +86,7 @@ const destinationsData = [
     {
         id: 8,
         name: "Europe",
-        slug: `https://skyportdestinations.com/flightList/dest_LHR*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_LHR*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/34431003/pexels-photo-34431003.jpeg",
         description: "Explore the diverse cultures, iconic landmarks, and unforgettable journeys across Europe.",
@@ -96,7 +96,7 @@ const destinationsData = [
     {
         id: 9,
         name: "Azerbaijan",
-        slug: `https://skyportdestinations.com/flightList/dest_GYD*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_GYD*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/33516982/pexels-photo-33516982.jpeg",
         description: "Discover the Land of Fire with its modern skyline, ancient history, and unique cultural blend.",
@@ -106,7 +106,7 @@ const destinationsData = [
     {
         id: 10,
         name: "France",
-        slug: `https://skyportdestinations.com/flightList/dest_CDG*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_CDG*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/32734935/pexels-photo-32734935.jpeg",
         description: "Visit France for its world-famous cuisine, art, fashion, and timeless romantic charm.",
@@ -116,7 +116,7 @@ const destinationsData = [
     {
         id: 11,
         name: "Japan",
-        slug: `https://skyportdestinations.com/flightList/dest_HND*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+        slug: `https://trustedfare.com/flightList/dest_HND*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
         category: "International",
         img: "https://images.pexels.com/photos/36495795/pexels-photo-36495795.jpeg",
         description: "Explore Japan’s perfect blend of tradition and technology, from temples to futuristic cities.",

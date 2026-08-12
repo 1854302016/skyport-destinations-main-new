@@ -7,6 +7,7 @@ import { MdFlightTakeoff, MdLuggage, MdEventSeat, MdWorkOutline } from "react-ic
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
 import { BASE_URL } from "../../../config";
+import { useCurrency } from "../../../context/CurrencyContext";
 
 const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 const TRIP_TYPE_LABELS = { 1: "OneWay", 2: "RoundTrip", 3: "MultiCity" };
@@ -77,6 +78,7 @@ const FlightListCard = ({
 }) => {
   const [selectedFare, setSelectedFare] = useState(null);
   const [bookingStatus, setBookingStatus] = useState({});
+  const { formatPrice } = useCurrency();
 console.log("more fare",moreFare)
 
   const baseKey = e.SrdvIndex || e.ResultIndex;
@@ -276,8 +278,7 @@ console.log("more fare",moreFare)
                 <div className="text-end">
                   <div className="price-tag mb-2">
                     <span className="final-price d-block lh-1 mb-1">
-                      <span className="currency-symbol">$</span>
-                      {Math.round(e.Fare.PublishedFare)}
+                      {formatPrice(e.Fare.PublishedFare)}
                     </span>
                   </div>
                   <motion.button
@@ -377,7 +378,7 @@ console.log("more fare",moreFare)
             </span>
           </div>
           <div className="mobile-price-pill">
-            ${Math.round(e.Fare.PublishedFare)}
+            {formatPrice(e.Fare.PublishedFare)}
           </div>
         </div>
 
@@ -529,7 +530,7 @@ console.log("more fare",moreFare)
                         </Col>
                         <Col xs={4} className="text-end">
                            <div className="mobile-fare-price mb-2 fw-bold">
-                              $ {Math.round(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
+                              {formatPrice(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
                            </div>
                            <button
                             className="btn btn-sm mobile-fare-book-btn px-3"
@@ -669,7 +670,7 @@ console.log("more fare",moreFare)
                                   {item.AirItineraryPricingInfo.FareType}
                                 </div>
                                 <div className="prce_mn">
-                                  $ {Math.round(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
+                                  {formatPrice(item.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
                                 </div>
 
                                 <div className="faclty">
@@ -716,7 +717,7 @@ console.log("more fare",moreFare)
                         <div className="_nhyuop">
                           <div className="_prgty">Grand Total</div>
                           <div className="_finpric">
-                            $ {Math.round(selectedFare?.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount || e.Fare.PublishedFare)}
+                            {formatPrice(selectedFare?.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount || e.Fare.PublishedFare)}
                           </div>
                         </div>
                         <button

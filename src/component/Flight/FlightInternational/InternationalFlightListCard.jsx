@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import axios from "axios";
 import "./FlightInternational.css";
 import { FlightListInfo } from "../FlightList/FlightListInfo";
 import { FlightListInfoInternational } from "./FlightListInfoInternational";
 // import { PropagateLoader } from "react-spinners";
 import { airlinesnames } from "../../../Airlines";
+import { BASE_URL } from "../../../config";
+import { useCurrency } from "../../../context/CurrencyContext";
+
+const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 
 export const formatLayoverTime = (arrivalTime, nextDepartureTime) => {
   const arrival = new Date(arrivalTime);
@@ -53,14 +58,77 @@ const InternationalFlightListCard = ({
   showModal,
   setShowModal,
   formatTime,
-  handlebookmodal,
   handleChnageCurrency,
   handleChangeCurrency2,
   fareRules,
   isFareLoading,
   baggageRules,
   formatDuration,
+  searchMeta,
 }) => {
+  const { formatPrice } = useCurrency();
+  const fareSourceCode = e.AirItineraryPricingInfo.FareSourceCode;
+  const [bookingStatus, setBookingStatus] = useState({});
+
+  const submitFlightBookEnquiry = async () => {
+    if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
+
+    const name = localStorage.getItem("passengerName") || "";
+    const email = localStorage.getItem("passengerEmail") || "";
+    const phone = localStorage.getItem("passengerPhone") || "";
+
+    if (!name || !email || !phone) {
+      alert("Please enter your Name, Email and Phone in the search box above before booking.");
+      return;
+    }
+
+    setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "loading" }));
+
+    try {
+      const departureLeg = e.OriginDestinationOptions[0];
+      const returnLeg = e.OriginDestinationOptions[1];
+      const outFirst = departureLeg.FlightSegments[0];
+      const outLast = departureLeg.FlightSegments[departureLeg.FlightSegments.length - 1];
+      const retFirst = returnLeg.FlightSegments[0];
+      const outStops = departureLeg.FlightSegments.length - 1;
+      const retStops = returnLeg.FlightSegments.length - 1;
+      const total = e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount;
+
+      const payload = {
+        name,
+        email,
+        phone,
+        destination: `${outFirst.SourceAirport?.city_name} (${outFirst.DepartureAirportLocationCode}) -> ${outLast.DestinationAirport?.city_name} (${outLast.ArrivalAirportLocationCode})`,
+        date: outFirst.DepartureDateTime ? outFirst.DepartureDateTime.split("T")[0] : "",
+        return_date: retFirst.DepartureDateTime ? retFirst.DepartureDateTime.split("T")[0] : "",
+        trip_type: "RoundTrip",
+        cabin_class: CABIN_CLASS_LABELS[Number(searchMeta?.Segments?.[0]?.FlightCabinClass)] || "",
+        airline: airlinesnames.find((a) => a.AirlineCode === outFirst.OperatingAirline.Code)?.AirlineName || outFirst.OperatingAirline.Code,
+        flight_number: `${outFirst.OperatingAirline.Code}-${outFirst.FlightNumber}`,
+        fare: total,
+        adults: searchMeta?.AdultCount ? Number(searchMeta.AdultCount) : 1,
+        children: searchMeta?.ChildCount ? Number(searchMeta.ChildCount) : 0,
+        infants: searchMeta?.InfantCount ? Number(searchMeta.InfantCount) : 0,
+        fare_source_code: fareSourceCode,
+        message: `Departure: ${outStops === 0 ? "Non-stop" : `${outStops} Stop(s)`} | Return: ${retStops === 0 ? "Non-stop" : `${retStops} Stop(s)`}${e.IsRefundable ? " - Refundable" : ""}`,
+      };
+
+      await axios.post(`${BASE_URL}flight-book-enquiry`, payload);
+      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "done" }));
+    } catch (error) {
+      console.error("Error submitting flight book enquiry:", error);
+      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "error" }));
+      alert("Something went wrong while sending your request. Please try again.");
+    }
+  };
+
+  const bookNowLabel =
+    bookingStatus[fareSourceCode] === "loading"
+      ? "Sending..."
+      : bookingStatus[fareSourceCode] === "done"
+        ? "Request Sent ✓"
+        : "Book Now";
+
   return (
     <div className="card_styling_flight_listt card_styling_flight_listt_inter">
       {e.OriginDestinationOptions && (
@@ -152,25 +220,18 @@ const InternationalFlightListCard = ({
                       <button
                         id="BK_20"
                         className="ng-scope"
-                        onClick={() =>
-                          handlebookmodal(
-                            e.AirItineraryPricingInfo.FareSourceCode,
-                          )
-                        }
+                        disabled={bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done"}
+                        onClick={submitFlightBookEnquiry}
                       >
-                        Book Now
+                        {bookNowLabel}
                       </button>
                     </div>
 
                     <div className="freflex">
                       <div className="fare_rt">
                         <div className="rtintfre ng-scope">
-                          {/* <i className="CurrncyCD_Rs" /> */}$
                           <span className="ng-binding ng-scope">
-                            {
-                              e.AirItineraryPricingInfo.ItinTotalFare.TotalFare
-                                .Amount
-                            }
+                            {formatPrice(e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
                           </span>
                         </div>
                       </div>
@@ -597,9 +658,7 @@ const InternationalFlightListCard = ({
         <div className="mobile_international_cont">
           <div
             className="managlist"
-            onClick={() =>
-              handlebookmodal(e.AirItineraryPricingInfo.FareSourceCode)
-            }
+            onClick={submitFlightBookEnquiry}
           >
             <label
               className="check-box"
@@ -691,11 +750,12 @@ const InternationalFlightListCard = ({
 
                   <span className="ti_prc_new ng-scope">
                     <span className="ttl_b_amt CurrncyCD_Rs">
-                      {" "}
-                      $
-                      {e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount}
+                      {formatPrice(e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount)}
                     </span>
                   </span>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#0066FF", marginTop: 2 }}>
+                    {bookNowLabel}
+                  </div>
                 </div>
                 {/* <div className="dicappl ng-binding ng-scope">
                   Rs.5250 Discount Applied

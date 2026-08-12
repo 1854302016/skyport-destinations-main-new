@@ -20,42 +20,42 @@ const Gallery = () => {
     {
       img: "https://images.pexels.com/photos/33669490/pexels-photo-33669490.jpeg",
       title: "Dubai",
-      slug: `https://skyportdestinations.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_DXB*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/5720170/pexels-photo-5720170.jpeg",
       title: "Japan",
-      slug: `https://skyportdestinations.com/flightList/dest_HND*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_HND*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/26470917/pexels-photo-26470917.jpeg",
       title: "Paris",
-      slug: `https://skyportdestinations.com/flightList/dest_CDG*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_CDG*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/33619996/pexels-photo-33619996.jpeg",
       title: "New York",
-      slug: `https://skyportdestinations.com/flightList/dest_JFK*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_JFK*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/33622091/pexels-photo-33622091.jpeg",
       title: "Cape Town",
-      slug: `https://skyportdestinations.com/flightList/dest_CPT*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_CPT*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
      {
       img: "https://images.pexels.com/photos/36983267/pexels-photo-36983267.jpeg",
       title: "Sydney",
-      slug: `https://skyportdestinations.com/flightList/dest_SYD*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_SYD*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/29986796/pexels-photo-29986796.jpeg",
       title: "Greece",
-      slug: `https://skyportdestinations.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_ATH*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
     {
       img: "https://images.pexels.com/photos/36370031/pexels-photo-36370031.jpeg",
       title: "Italy",
-      slug: `https://skyportdestinations.com/flightList/dest_FCO*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
+      slug: `https://trustedfare.com/flightList/dest_FCO*org_GEO*dep_${formattedDate}*arr_${formattedDate}*px_1-0-0*jt_1*cbn_2`,
     },
   ];
 
