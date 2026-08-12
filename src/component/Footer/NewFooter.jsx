@@ -36,30 +36,16 @@ const footerLinks = [
   { title: "Offers", link: "/offers" },
 ];
 
-// Domestic routes (Top Flight Routes from Georgetown)
-const domestic = [
-  { ori: "Georgetown", desti: "Port of Spain", code: "POS" },
-  { ori: "Georgetown", desti: "Bridgetown", code: "BGI" },
-  { ori: "Georgetown", desti: "Nassau", code: "NAS" },
-  { ori: "Georgetown", desti: "Providenciales", code: "PLS" },
-  { ori: "Georgetown", desti: "New York", code: "JFK" },
-  { ori: "Georgetown", desti: "Toronto", code: "YYZ" },
-].map((item) => ({
-  ...item,
-  link: `/flightList/dest_${item.code}*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
-}));
-
-// International routes – Trip of a Lifetime
+// International routes – Trip of a Lifetime (Delhi to US & Europe)
 const international = [
-  { ori: "Georgetown", desti: "Dubai", code: "DXB" },
-  { ori: "Georgetown", desti: "Mumbai", code: "BOM" },
-  { ori: "Georgetown", desti: "Paris", code: "CDG" },
-  { ori: "Georgetown", desti: "London", code: "LHR" },
-  { ori: "Georgetown", desti: "Tokyo", code: "HND" },
-  { ori: "Georgetown", desti: "Sydney", code: "SYD" },
+  { ori: "Delhi", desti: "London", code: "LHR" },
+  { ori: "Delhi", desti: "Paris", code: "CDG" },
+  { ori: "Delhi", desti: "Frankfurt", code: "FRA" },
+  { ori: "Delhi", desti: "Amsterdam", code: "AMS" },
+  { ori: "Delhi", desti: "Rome", code: "FCO" },
 ].map((item) => ({
   ...item,
-  link: `/flightList/dest_${item.code}*org_GEO*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
+  link: `/flightList/dest_${item.code}*org_DEL*dep_${tomorrowDate}*arr_${tomorrowDate}*px_1-0-0*jt_1*cbn_2`,
 }));
 
 const socialIcons = [
@@ -140,22 +126,6 @@ const NewFooter = () => {
                     <Link to={item.link} className="ftr-link-item">
                       <FaChevronRight className="ftr-link-arrow" />
                       <span>{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </FooterColumn>
-
-            {/* Top Flight Routes Column */}
-            <FooterColumn title="Top Flight Routes">
-              <ul className="ftr-list">
-                {domestic.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.link} className="ftr-link-item">
-                      <FaPlaneDeparture className="ftr-route-icon" />
-                      <span>
-                        {item.ori} to {item.desti}
-                      </span>
                     </Link>
                   </li>
                 ))}

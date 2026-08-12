@@ -11,6 +11,7 @@ import {
   FaFire,
 } from "react-icons/fa6";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import { useCurrency } from "../../../context/CurrencyContext";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -115,6 +116,7 @@ const images = [
 const Gallery = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { formatPrice } = useCurrency();
 
   return (
     <section className="sky-gallery-wrap">
@@ -192,7 +194,9 @@ const Gallery = () => {
                         <h3 className="gallery-dest-name">{item.title}</h3>
                         <div className="gallery-price-pill">
                           <span className="price-label">FROM</span>
-                          <span className="price-val">${item.price}/-</span>
+                          <span className="price-val">
+                            {formatPrice(Number(item.price.replace(/,/g, "")), "INR")}
+                          </span>
                         </div>
                       </div>
 

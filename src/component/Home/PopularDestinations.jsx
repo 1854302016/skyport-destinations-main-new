@@ -11,6 +11,7 @@ import {
   FaClock,
 } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCurrency } from "../../context/CurrencyContext";
 import "./HomeHeroRefined.css";
 
 const date = new Date();
@@ -165,6 +166,7 @@ const destinationsData = [
 
 const PopularDestinations = () => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
   const [activeCategory, setActiveCategory] = useState("ALL DESTINATIONS");
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -303,7 +305,9 @@ const PopularDestinations = () => {
                     <h1 className="motion-spotlight-title">{currentDest.name}</h1>
                     <div className="motion-price-badge">
                       <span className="price-label">FLIGHTS FROM</span>
-                      <span className="price-val">${currentDest.price}/-</span>
+                      <span className="price-val">
+                        {formatPrice(Number(currentDest.price.replace(/,/g, "")), "INR")}
+                      </span>
                     </div>
                   </div>
 
@@ -375,7 +379,9 @@ const PopularDestinations = () => {
                     <div className="motion-reel-info">
                       <span className="motion-reel-country">{item.country}</span>
                       <h4 className="motion-reel-name">{item.name}</h4>
-                      <span className="motion-reel-price">From ${item.price}/-</span>
+                      <span className="motion-reel-price">
+                        From {formatPrice(Number(item.price.replace(/,/g, "")), "INR")}
+                      </span>
                     </div>
 
                     {isActive && <div className="motion-reel-active-glow" />}

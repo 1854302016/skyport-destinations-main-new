@@ -144,29 +144,29 @@ const domesticDealsData = {
 };
 
 const internationalDealsData = {
-  Mumbai: [
-    { id: 101, airline: "Etihad Airways", code: "EY", orgCode: "BOM", orgName: "Mumbai", destCode: "BCN", destName: "Barcelona", date: "02 Oct 2026", trip: "One Way", price: 28626, priceCurrency: "INR" },
-    { id: 102, airline: "Lufthansa", code: "LH", orgCode: "BOM", orgName: "Mumbai", destCode: "MAD", destName: "Madrid", date: "03 Dec 2026", trip: "One Way", price: 30955, priceCurrency: "INR" },
-    { id: 103, airline: "Saudia", code: "SV", orgCode: "BOM", orgName: "Mumbai", destCode: "IAD", destName: "Washington", date: "05 Jan 2027", trip: "One Way", price: 59563, priceCurrency: "INR" },
-    { id: 104, airline: "Air India", code: "AI", orgCode: "BOM", orgName: "Mumbai", destCode: "CMB", destName: "Colombo", date: "20 Nov 2026", trip: "One Way", price: 10003, priceCurrency: "INR" },
-    { id: 105, airline: "Emirates", code: "EK", orgCode: "BOM", orgName: "Mumbai", destCode: "YYZ", destName: "Toronto", date: "17 Sept 2026", trip: "One Way", price: 52014, priceCurrency: "INR" },
-    { id: 106, airline: "Air Canada", code: "AC", orgCode: "BOM", orgName: "Mumbai", destCode: "EWR", destName: "Newark", date: "29 Aug 2026", trip: "One Way", price: 59335, priceCurrency: "INR" },
-    { id: 107, airline: "Swiss Air", code: "SG", orgCode: "BOM", orgName: "Mumbai", destCode: "VIE", destName: "Vienna", date: "01 Jan 2027", trip: "One Way", price: 35278, priceCurrency: "INR" },
-    { id: 108, airline: "IndiGo", code: "6E", orgCode: "BOM", orgName: "Mumbai", destCode: "DPS", destName: "Denpasar Bali", date: "04 Sept 2026", trip: "One Way", price: 22977, priceCurrency: "INR" },
-    { id: 109, airline: "Emirates", code: "EK", orgCode: "BOM", orgName: "Mumbai", destCode: "LON", destName: "London", date: "13 Dec 2026", trip: "One Way", price: 19808, priceCurrency: "INR" },
-    { id: 110, airline: "Emirates", code: "EK", orgCode: "BOM", orgName: "Mumbai", destCode: "LHR", destName: "London", date: "01 Dec 2026", trip: "One Way", price: 19563, priceCurrency: "INR" }
-  ],
   Delhi: [
-    { id: 111, airline: "Emirates", code: "EK", orgCode: "DEL", orgName: "Delhi", destCode: "DXB", destName: "Dubai", date: "10 Sept 2026", trip: "One Way", price: 16450, priceCurrency: "INR" },
-    { id: 112, airline: "Lufthansa", code: "LH", orgCode: "DEL", orgName: "Delhi", destCode: "FRA", destName: "Frankfurt", date: "15 Oct 2026", trip: "One Way", price: 34800, priceCurrency: "INR" },
-    { id: 113, airline: "Air India", code: "AI", orgCode: "DEL", orgName: "Delhi", destCode: "JFK", destName: "New York", date: "05 Nov 2026", trip: "One Way", price: 54200, priceCurrency: "INR" },
-    { id: 114, airline: "Singapore Airlines", code: "6E", orgCode: "DEL", orgName: "Delhi", destCode: "SIN", destName: "Singapore", date: "22 Sept 2026", trip: "One Way", price: 18900, priceCurrency: "INR" }
-  ],
-  Georgetown: [
-    { id: 115, airline: "American Airlines", code: "AC", orgCode: "GEO", orgName: "Georgetown", destCode: "MIA", destName: "Miami", date: "12 Sept 2026", trip: "One Way", price: 345, priceCurrency: "USD" },
-    { id: 116, airline: "Caribbean Airlines", code: "6E", orgCode: "GEO", orgName: "Georgetown", destCode: "JFK", destName: "New York", date: "18 Oct 2026", trip: "One Way", price: 420, priceCurrency: "USD" },
-    { id: 117, airline: "Copa Airlines", code: "EY", orgCode: "GEO", orgName: "Georgetown", destCode: "PTY", destName: "Panama City", date: "24 Aug 2026", trip: "One Way", price: 280, priceCurrency: "USD" },
-    { id: 118, airline: "British Airways", code: "LH", orgCode: "GEO", orgName: "Georgetown", destCode: "LGW", destName: "London Gatwick", date: "10 Nov 2026", trip: "One Way", price: 680, priceCurrency: "USD" }
+    // Europe
+    { id: 111, airline: "British Airways", code: "LH", orgCode: "DEL", orgName: "Delhi", destCode: "LHR", destName: "London", date: "13 Dec 2026", trip: "One Way", price: 55420, priceCurrency: "INR" },
+    { id: 112, airline: "Air France", code: "AI", orgCode: "DEL", orgName: "Delhi", destCode: "CDG", destName: "Paris", date: "02 Oct 2026", trip: "One Way", price: 51890, priceCurrency: "INR" },
+    { id: 113, airline: "Lufthansa", code: "LH", orgCode: "DEL", orgName: "Delhi", destCode: "FRA", destName: "Frankfurt", date: "15 Oct 2026", trip: "One Way", price: 48310, priceCurrency: "INR" },
+    { id: 114, airline: "KLM", code: "6E", orgCode: "DEL", orgName: "Delhi", destCode: "AMS", destName: "Amsterdam", date: "04 Sept 2026", trip: "One Way", price: 49975, priceCurrency: "INR" },
+    { id: 117, airline: "ITA Airways", code: "AZ", orgCode: "DEL", orgName: "Delhi", destCode: "FCO", destName: "Rome", date: "18 Nov 2026", trip: "One Way", price: 53210, priceCurrency: "INR" },
+    { id: 118, airline: "Iberia", code: "IB", orgCode: "DEL", orgName: "Delhi", destCode: "MAD", destName: "Madrid", date: "22 Sept 2026", trip: "One Way", price: 54680, priceCurrency: "INR" },
+    { id: 119, airline: "Swiss Air", code: "LX", orgCode: "DEL", orgName: "Delhi", destCode: "ZRH", destName: "Zurich", date: "07 Jan 2027", trip: "One Way", price: 58940, priceCurrency: "INR" },
+    { id: 120, airline: "Austrian Airlines", code: "OS", orgCode: "DEL", orgName: "Delhi", destCode: "VIE", destName: "Vienna", date: "11 Dec 2026", trip: "One Way", price: 52370, priceCurrency: "INR" },
+    { id: 121, airline: "Lufthansa", code: "LH", orgCode: "DEL", orgName: "Delhi", destCode: "MUC", destName: "Munich", date: "26 Oct 2026", trip: "One Way", price: 47950, priceCurrency: "INR" },
+    { id: 122, airline: "Vueling", code: "VY", orgCode: "DEL", orgName: "Delhi", destCode: "BCN", destName: "Barcelona", date: "09 Nov 2026", trip: "One Way", price: 56120, priceCurrency: "INR" },
+    // United States
+    { id: 115, airline: "Air India", code: "AI", orgCode: "DEL", orgName: "Delhi", destCode: "JFK", destName: "New York", date: "05 Nov 2026", trip: "One Way", price: 64200, priceCurrency: "INR" },
+    { id: 116, airline: "United Airlines", code: "UA", orgCode: "DEL", orgName: "Delhi", destCode: "ORD", destName: "Chicago", date: "29 Aug 2026", trip: "One Way", price: 71850, priceCurrency: "INR" },
+    { id: 123, airline: "United Airlines", code: "UA", orgCode: "DEL", orgName: "Delhi", destCode: "LAX", destName: "Los Angeles", date: "14 Dec 2026", trip: "One Way", price: 79430, priceCurrency: "INR" },
+    { id: 124, airline: "Air India", code: "AI", orgCode: "DEL", orgName: "Delhi", destCode: "SFO", destName: "San Francisco", date: "03 Oct 2026", trip: "One Way", price: 82190, priceCurrency: "INR" },
+    { id: 125, airline: "Saudia", code: "SV", orgCode: "DEL", orgName: "Delhi", destCode: "IAD", destName: "Washington DC", date: "20 Nov 2026", trip: "One Way", price: 69560, priceCurrency: "INR" },
+    { id: 126, airline: "United Airlines", code: "UA", orgCode: "DEL", orgName: "Delhi", destCode: "BOS", destName: "Boston", date: "17 Sept 2026", trip: "One Way", price: 74280, priceCurrency: "INR" },
+    { id: 127, airline: "Delta Air Lines", code: "DL", orgCode: "DEL", orgName: "Delhi", destCode: "SEA", destName: "Seattle", date: "08 Jan 2027", trip: "One Way", price: 85670, priceCurrency: "INR" },
+    { id: 128, airline: "Qatar Airways", code: "QR", orgCode: "DEL", orgName: "Delhi", destCode: "IAH", destName: "Houston", date: "25 Aug 2026", trip: "One Way", price: 76340, priceCurrency: "INR" },
+    { id: 129, airline: "United Airlines", code: "UA", orgCode: "DEL", orgName: "Delhi", destCode: "EWR", destName: "Newark", date: "12 Dec 2026", trip: "One Way", price: 65780, priceCurrency: "INR" },
+    { id: 130, airline: "Delta Air Lines", code: "DL", orgCode: "DEL", orgName: "Delhi", destCode: "ATL", destName: "Atlanta", date: "01 Nov 2026", trip: "One Way", price: 77450, priceCurrency: "INR" }
   ]
 };
 
@@ -195,12 +195,12 @@ const TopCities = () => {
   const navigate = useNavigate();
   const { formatPrice } = useCurrency();
   const [selectedDomesticOrigin, setSelectedDomesticOrigin] = useState("Delhi");
-  const [selectedInternationalOrigin, setSelectedInternationalOrigin] = useState("Mumbai");
+  const [selectedInternationalOrigin, setSelectedInternationalOrigin] = useState("Delhi");
   const [isDomesticOpen, setIsDomesticOpen] = useState(false);
   const [isInternationalOpen, setIsInternationalOpen] = useState(false);
 
   const domesticList = domesticDealsData[selectedDomesticOrigin] || domesticDealsData["Delhi"];
-  const internationalList = internationalDealsData[selectedInternationalOrigin] || internationalDealsData["Mumbai"];
+  const internationalList = internationalDealsData[selectedInternationalOrigin] || internationalDealsData["Delhi"];
 
   const handleCardClick = (item) => {
     // Generate flight search navigation URL
