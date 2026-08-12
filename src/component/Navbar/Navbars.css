@@ -238,6 +238,35 @@
   background: #F0F7FF;
 }
 
+/* Get Support Header Button */
+.btn-header-support {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.25);
+  margin-left: 12px;
+}
+
+.btn-header-support:hover {
+  background: linear-gradient(135deg, #0052CC 0%, #003D99 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.35);
+  color: #FFFFFF !important;
+}
+
+.support-btn-icon {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
 /* Sign In / Account Pill Button */
 .btn-signin {
   display: inline-flex !important;

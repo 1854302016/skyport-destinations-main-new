@@ -288,6 +288,11 @@ const Navbars = () => {
                 </div>
               )}
             </div>
+
+            <Link to="/contact" className="btn-header-support">
+              <FaPhoneVolume className="support-btn-icon" />
+              <span>Get Support</span>
+            </Link>
           </div>
 
           {/* Right: In-Person Booking & My Account chip buttons (No Country Select) */}

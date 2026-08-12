@@ -3,89 +3,210 @@
    Matches the attached screenshot with luxury precision & clean elegance
    ========================================================================== */
 
-/* Hero Banner Container */
+/* Creative Motion Flight Stage (No Image Slider) */
 .bookimg_form_containerrr {
   position: relative;
   width: 100%;
 }
 
-.bookimg_form_containerrr .mySwiper {
-  height: 480px !important;
-}
-
-.backgroundBanner.banner.banner-image {
+.creative-hero-stage {
   position: relative;
   width: 100%;
-  height: 480px;
-  background-position: center;
-  background-size: cover;
+  height: 580px;
+  background: #061833 !important;
+  background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1.2px, transparent 0) !important;
+  background-size: 32px 32px !important;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #FFFFFF !important;
 }
 
-.banner-overlay-gradient {
+/* Ambient Glowing Orbs */
+.hero-light-glow-1 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -120px;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.35) 0%, transparent 65%) !important;
+  pointer-events: none;
+}
+
+.hero-light-glow-2 {
+  position: absolute;
+  bottom: -120px;
+  right: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 65%) !important;
+  pointer-events: none;
+}
+
+/* High-Tech Clean World Map Graphic Overlay */
+.hero-world-map-overlay {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(6, 26, 51, 0.68) 0%, rgba(11, 37, 69, 0.85) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
   z-index: 1;
 }
 
+.hero-world-map-img {
+  width: 92%;
+  max-width: 1150px;
+  height: auto;
+  opacity: 0.12;
+  filter: invert(70%) sepia(90%) saturate(1200%) hue-rotate(180deg) brightness(130%);
+}
+
+/* Background Kinetic SVG Flight Arc Trails */
+.hero-flight-trails-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animated-flight-arc {
+  stroke-dashoffset: 200;
+  animation: dashFlight 12s linear infinite;
+}
+
+.arc-delay {
+  animation-delay: -6s;
+}
+
+@keyframes dashFlight {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-route-node {
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+}
+
+.svg-route-node:hover {
+  transform: scale(1.08);
+}
+
+.svg-route-node rect {
+  filter: drop-shadow(0px 8px 16px rgba(0, 102, 255, 0.4));
+  transition: all 0.3s ease;
+}
+
+.svg-route-node:hover rect {
+  stroke: #38BDF8;
+  fill: rgba(0, 102, 255, 0.95);
+}
+
+@keyframes floatPill {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Hero Content Box - Relaxed Spacing & High Contrast */
 .banner-hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 900px;
+  z-index: 5;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 20px 100px 20px;
+  padding: 20px 20px 145px 20px;
   text-align: center;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .banner-hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0, 102, 255, 0.2);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  backdrop-filter: blur(8px);
-  color: #38BDF8;
-  padding: 6px 18px;
-  border-radius: 50px;
-  font-size: 13px;
-  font-weight: 700;
+  gap: 6px;
+  background: rgba(0, 102, 255, 0.25) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  backdrop-filter: blur(10px);
+  color: #38BDF8 !important;
+  padding: 7px 20px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 18px rgba(0, 102, 255, 0.3);
 }
 
 .banner-hero-title {
-  font-size: 42px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  font-size: 48px !important;
+  font-weight: 950 !important;
+  letter-spacing: -1.2px;
+  color: #FFFFFF !important;
+  margin-bottom: 16px !important;
+  line-height: 1.15 !important;
 }
 
-.banner-hero-title span {
-  background: linear-gradient(135deg, #38BDF8 0%, #0066FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-gradient-text {
+  background: linear-gradient(135deg, #38BDF8 0%, #0066FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .banner-hero-subtitle {
-  font-size: 18px;
-  color: #E2E8F0;
-  font-weight: 500;
-  max-width: 650px;
-  margin: 0 auto;
+  font-size: 17px !important;
+  color: #94A3B8 !important;
+  font-weight: 500 !important;
+  max-width: 680px;
+  margin: 0 auto 30px auto !important;
+  line-height: 1.6 !important;
+}
+
+/* Live Flight Stats Bar */
+.hero-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(14px);
+  padding: 12px 30px;
+  border-radius: 9999px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  white-space: nowrap;
+}
+
+.stat-icon {
+  font-size: 15px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.22) !important;
 }
 
 /* Flight Search Widget Section */
 .flightWidgetSection {
-  margin-top: -155px;
+  margin-top: -105px;
   position: relative;
   z-index: 20;
   padding-bottom: 30px;

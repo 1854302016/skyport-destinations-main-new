@@ -66,17 +66,17 @@ const socialIcons = [
   {
     icon: <FaFacebookF />,
     label: "Facebook",
-    link: "https://www.facebook.com/share/16vgLnkcFf/",
+    link: "#",
   },
   {
     icon: <FaTiktok />,
     label: "TikTok",
-    link: "https://www.tiktok.com/@skyport.destinati?_t=ZM-8z8JgE4VfSH&_r=1",
+    link: "#",
   },
   {
     icon: <FaInstagram />,
     label: "Instagram",
-    link: "https://www.instagram.com/skyport.destinations",
+    link: "#",
   },
 ];
 
@@ -121,9 +121,8 @@ const NewFooter = () => {
                 {socialIcons.map((item, idx) => (
                   <a
                     key={idx}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
                     aria-label={item.label}
                     className="ftr-social-btn"
                   >

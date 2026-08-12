@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 // import required modules
 import "./BookingForm.css";
@@ -35,7 +36,7 @@ import axios from "axios";
 import { CountriesArray } from "./CountriesArray";
 import HeroCarousel from "../../Home/HeroCarousel";
 import RecentBookings from "../../Home/RecentBookings";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { AiOutlineSwap } from "react-icons/ai";
 import Deals from "../FlightSearchMobile/Deals";
@@ -1137,43 +1138,59 @@ const BookingForm = () => {
     //   width: "100%",
     // }}
     >
-      <div style={{ position: "relative" }}>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay, Pagination]}
-          className="mySwiper"
-          style={{ height: "500px" }}
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="backgroundBanner banner banner-image"
-                style={{
-                  backgroundImage: `url(${slide.backgroundImage})`,
-                }}
-              >
-                <div className="banner-overlay-gradient"></div>
-                <div className="banner-hero-content">
-                  <div className="banner-hero-badge">
-                    <span>✈️ Trusted Journeys, Better Fares</span>
-                  </div>
-                  <h1 className="banner-hero-title">
-                    Discover Your Next Adventure with <span>Trusted Fare</span>
-                  </h1>
-                  <p className="banner-hero-subtitle">
-                    Book flights, luxury hotels, and personalized travel packages with instant confirmation and 24/7 dedicated assistance.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      {/* Creative Motion Flight Stage (No Image Slider) */}
+      <div className="creative-hero-stage">
+        {/* Ambient Glowing Lighting Grids */}
+        <div className="hero-light-glow-1" aria-hidden="true" />
+        <div className="hero-light-glow-2" aria-hidden="true" />
+
+        {/* High-Tech Clean World Map Graphic Image Overlay */}
+        <div className="hero-world-map-overlay" aria-hidden="true">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
+            alt="World Map Network"
+            className="hero-world-map-img"
+          />
+        </div>
+
+        {/* Center Hero Content */}
+        <div className="banner-hero-content">
+          <div className="banner-hero-badge">
+            <span className="badge-sparkle me-1">✨</span>
+            <span>TRUSTED JOURNEYS &bull; UNBEATABLE FARES</span>
+          </div>
+
+          <h1 className="banner-hero-title">
+            Discover Your Next Adventure with <span className="hero-gradient-text">Trusted Fare</span>
+          </h1>
+
+          <p className="banner-hero-subtitle">
+            Book flights, luxury hotels, and personalized travel packages with instant confirmation and 24/7 dedicated assistance.
+          </p>
+
+          {/* Live Flight Stats Bar */}
+          <div className="hero-stats-bar">
+            <div className="stat-item">
+              <span className="stat-icon">✈️</span>
+              <span className="stat-text">500+ Airlines</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-icon">🌍</span>
+              <span className="stat-text">120+ Destinations</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-icon">🔒</span>
+              <span className="stat-text">100% Price Lock</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-icon">🎧</span>
+              <span className="stat-text">24/7 Support</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Container>
