@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
                   <FaEnvelope className="card-icon" />
                   <h5>Data Privacy Office</h5>
                   <p>Have questions regarding your personal information?</p>
-                  <a href="mailto:explore@skyportdestinations.com" className="btn-sidebar-contact">
+                  <a href="mailto:info@trustedfare.com" className="btn-sidebar-contact">
                     Contact DPO <FaArrowRight className="ms-1" />
                   </a>
                 </div>
@@ -297,7 +297,7 @@ const PrivacyPolicy = () => {
                     <div className="right-pill">🚫 Right to Object</div>
                   </div>
                   <p className="mt-3">
-                    To exercise any of these rights, contact us at <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a>.
+                    To exercise any of these rights, contact us at <a href="mailto:info@trustedfare.com">info@trustedfare.com</a>.
                   </p>
                 </div>
 
@@ -334,7 +334,7 @@ const PrivacyPolicy = () => {
                     <h4>Trade Fare Destinations</h4>
                     <p><strong>Head Office:</strong> GROUND FLOOR, Shop No 32, Bus Stand, Goniana Mandi Bathinda, Punjab, India - 151201</p>
                     <p><strong>Canada Branch:</strong> Unit 201-7743 128 street West newton, Surrey BC, Canada V3W 1L4</p>
-                    <p><strong>Email:</strong> <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@trustedfare.com">info@trustedfare.com</a></p>
                     <p><strong>Helpline:</strong> <a href="tel:+919646747171">+91-9646747171</a> / <a href="tel:+17782404599">+1-778-240-4599</a></p>
                   </div>
                 </div>

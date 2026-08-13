@@ -95,8 +95,8 @@ const ContactUs = () => {
                   <h4>Email Support</h4>
                   <p>Send us your flight requests or itinerary feedback anytime.</p>
                   <div className="quick-links">
-                    <a href="mailto:explore@skyportdestinations.com" className="mail-link">
-                      explore@skyportdestinations.com
+                    <a href="mailto:info@trustedfare.com" className="mail-link">
+                      info@trustedfare.com
                     </a>
                   </div>
                 </div>

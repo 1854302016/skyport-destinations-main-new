@@ -95,7 +95,7 @@ const TermCondition = () => {
                   <FaEnvelope className="card-icon" />
                   <h5>Legal Inquiries</h5>
                   <p>Need clarification on fare rules, refunds, or terms?</p>
-                  <a href="mailto:explore@skyportdestinations.com" className="btn-sidebar-contact">
+                  <a href="mailto:info@trustedfare.com" className="btn-sidebar-contact">
                     Contact Support <FaArrowRight className="ms-1" />
                   </a>
                 </div>
@@ -267,7 +267,7 @@ const TermCondition = () => {
                   <div className="terms-contact-footer">
                     <p>For any questions regarding these Terms &amp; Conditions or booking assistance, please contact:</p>
                     <p><strong>Trade Fare Destinations</strong></p>
-                    <p>📧 Email: <a href="mailto:explore@skyportdestinations.com">explore@skyportdestinations.com</a></p>
+                    <p>📧 Email: <a href="mailto:info@trustedfare.com">info@trustedfare.com</a></p>
                     <p>📞 Phone: <a href="tel:+919646747171">+91-9646747171</a> (India) | <a href="tel:+17782404599">+1-778-240-4599</a> (Canada)</p>
                   </div>
                 </div>
