@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
 import { BASE_URL } from "../../../config";
 import { useCurrency } from "../../../context/CurrencyContext";
+import PassengerContactModal from "../PassengerContactModal";
 
 const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 const TRIP_TYPE_LABELS = { 1: "OneWay", 2: "RoundTrip", 3: "MultiCity" };
@@ -78,22 +79,17 @@ const FlightListCard = ({
 }) => {
   const [selectedFare, setSelectedFare] = useState(null);
   const [bookingStatus, setBookingStatus] = useState({});
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [pendingBooking, setPendingBooking] = useState(null);
   const { formatPrice } = useCurrency();
 console.log("more fare",moreFare)
 
   const baseKey = e.SrdvIndex || e.ResultIndex;
 
-  const submitFlightBookEnquiry = async (key, { fare, fareSourceCode, fareType, refundable }) => {
+  const proceedBooking = async (key, { fare, fareSourceCode, fareType, refundable }, contact) => {
     if (bookingStatus[key] === "loading" || bookingStatus[key] === "done") return;
 
-    const name = localStorage.getItem("passengerName") || "";
-    const email = localStorage.getItem("passengerEmail") || "";
-    const phone = localStorage.getItem("passengerPhone") || "";
-
-    if (!name || !email || !phone) {
-      alert("Please enter your Name, Email and Phone in the search box above before booking.");
-      return;
-    }
+    const { name, email, phone } = contact;
 
     setBookingStatus((prev) => ({ ...prev, [key]: "loading" }));
 
@@ -127,6 +123,34 @@ console.log("more fare",moreFare)
       console.error("Error submitting flight book enquiry:", error);
       setBookingStatus((prev) => ({ ...prev, [key]: "error" }));
       alert("Something went wrong while sending your request. Please try again.");
+    }
+  };
+
+  const submitFlightBookEnquiry = (key, options) => {
+    if (bookingStatus[key] === "loading" || bookingStatus[key] === "done") return;
+
+    const name = localStorage.getItem("passengerName") || "";
+    const email = localStorage.getItem("passengerEmail") || "";
+    const phone = localStorage.getItem("passengerPhone") || "";
+
+    if (!name || !email || !phone) {
+      setPendingBooking({ key, options });
+      setShowContactModal(true);
+      return;
+    }
+
+    proceedBooking(key, options, { name, email, phone });
+  };
+
+  const handleContactSubmit = (contact) => {
+    localStorage.setItem("passengerName", contact.name);
+    localStorage.setItem("passengerEmail", contact.email);
+    localStorage.setItem("passengerPhone", contact.phone);
+    setShowContactModal(false);
+
+    if (pendingBooking) {
+      proceedBooking(pendingBooking.key, pendingBooking.options, contact);
+      setPendingBooking(null);
     }
   };
 
@@ -758,6 +782,12 @@ console.log("more fare",moreFare)
         </motion.div>
       )}
     </AnimatePresence>
+
+    <PassengerContactModal
+      show={showContactModal}
+      onClose={() => setShowContactModal(false)}
+      onSubmit={handleContactSubmit}
+    />
     </>
   );
 };

@@ -11,6 +11,7 @@ import { FlightListInfoInternational } from "./FlightListInfoInternational";
 import { airlinesnames } from "../../../Airlines";
 import { BASE_URL } from "../../../config";
 import { useCurrency } from "../../../context/CurrencyContext";
+import PassengerContactModal from "../PassengerContactModal";
 
 const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 
@@ -69,18 +70,12 @@ const InternationalFlightListCard = ({
   const { formatPrice } = useCurrency();
   const fareSourceCode = e.AirItineraryPricingInfo.FareSourceCode;
   const [bookingStatus, setBookingStatus] = useState({});
+  const [showContactModal, setShowContactModal] = useState(false);
 
-  const submitFlightBookEnquiry = async () => {
+  const proceedBooking = async (contact) => {
     if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
 
-    const name = localStorage.getItem("passengerName") || "";
-    const email = localStorage.getItem("passengerEmail") || "";
-    const phone = localStorage.getItem("passengerPhone") || "";
-
-    if (!name || !email || !phone) {
-      alert("Please enter your Name, Email and Phone in the search box above before booking.");
-      return;
-    }
+    const { name, email, phone } = contact;
 
     setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "loading" }));
 
@@ -122,6 +117,29 @@ const InternationalFlightListCard = ({
     }
   };
 
+  const submitFlightBookEnquiry = () => {
+    if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
+
+    const name = localStorage.getItem("passengerName") || "";
+    const email = localStorage.getItem("passengerEmail") || "";
+    const phone = localStorage.getItem("passengerPhone") || "";
+
+    if (!name || !email || !phone) {
+      setShowContactModal(true);
+      return;
+    }
+
+    proceedBooking({ name, email, phone });
+  };
+
+  const handleContactSubmit = (contact) => {
+    localStorage.setItem("passengerName", contact.name);
+    localStorage.setItem("passengerEmail", contact.email);
+    localStorage.setItem("passengerPhone", contact.phone);
+    setShowContactModal(false);
+    proceedBooking(contact);
+  };
+
   const bookNowLabel =
     bookingStatus[fareSourceCode] === "loading"
       ? "Sending..."
@@ -130,6 +148,7 @@ const InternationalFlightListCard = ({
         : "Book Now";
 
   return (
+    <>
     <div className="card_styling_flight_listt card_styling_flight_listt_inter">
       {e.OriginDestinationOptions && (
         <div className="internationtrip_search">
@@ -1057,6 +1076,13 @@ const InternationalFlightListCard = ({
         </div>
       )}
     </div>
+
+    <PassengerContactModal
+      show={showContactModal}
+      onClose={() => setShowContactModal(false)}
+      onSubmit={handleContactSubmit}
+    />
+    </>
   );
 };
 
