@@ -31,6 +31,7 @@ const ChargesOneWay = ({
   totalBaggagePrice,
   totalMealPrice,
   handlePayment,
+  handleConfirmPendingBooking,
   handleTicketBookMistifly
 }) => {
   let totalMealCharges = passengerMealPreferences.reduce((total, meal) => {
@@ -298,7 +299,7 @@ const ChargesOneWay = ({
                       {reviewPageDone ? (
                         <div
                           style={{ marginLeft: "-15px", marginRight: "-15px" }}
-                          onClick={handlePayment}
+                          onClick={() => handleConfirmPendingBooking(true)}
                         >
                           {" "}
                           <button className="ewalletbtn">
@@ -504,7 +505,7 @@ const ChargesOneWay = ({
                       {reviewPageDone ? (
                         <div
                           style={{ marginLeft: "-15px", marginRight: "-15px" }}
-                          onClick={handlePayment}
+                          onClick={() => handleConfirmPendingBooking(true)}
                         >
                           {" "}
                           <button className="ewalletbtn">

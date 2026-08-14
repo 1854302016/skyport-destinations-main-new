@@ -1,19 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import axios from "axios";
 import "./FlightInternational.css";
 import { FlightListInfo } from "../FlightList/FlightListInfo";
 import { FlightListInfoInternational } from "./FlightListInfoInternational";
 // import { PropagateLoader } from "react-spinners";
 import { airlinesnames } from "../../../Airlines";
-import { BASE_URL } from "../../../config";
 import { useCurrency } from "../../../context/CurrencyContext";
-import PassengerContactModal from "../PassengerContactModal";
-
-const CABIN_CLASS_LABELS = { 2: "Economy", 3: "Premium Economy", 4: "Business", 6: "First Class" };
 
 export const formatLayoverTime = (arrivalTime, nextDepartureTime) => {
   const arrival = new Date(arrivalTime);
@@ -68,84 +62,9 @@ const InternationalFlightListCard = ({
   searchMeta,
 }) => {
   const { formatPrice } = useCurrency();
+  const navigate = useNavigate();
   const fareSourceCode = e.AirItineraryPricingInfo.FareSourceCode;
-  const [bookingStatus, setBookingStatus] = useState({});
-  const [showContactModal, setShowContactModal] = useState(false);
-
-  const proceedBooking = async (contact) => {
-    if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
-
-    const { name, email, phone } = contact;
-
-    setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "loading" }));
-
-    try {
-      const departureLeg = e.OriginDestinationOptions[0];
-      const returnLeg = e.OriginDestinationOptions[1];
-      const outFirst = departureLeg.FlightSegments[0];
-      const outLast = departureLeg.FlightSegments[departureLeg.FlightSegments.length - 1];
-      const retFirst = returnLeg.FlightSegments[0];
-      const outStops = departureLeg.FlightSegments.length - 1;
-      const retStops = returnLeg.FlightSegments.length - 1;
-      const total = e.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount;
-
-      const payload = {
-        name,
-        email,
-        phone,
-        destination: `${outFirst.SourceAirport?.city_name} (${outFirst.DepartureAirportLocationCode}) -> ${outLast.DestinationAirport?.city_name} (${outLast.ArrivalAirportLocationCode})`,
-        date: outFirst.DepartureDateTime ? outFirst.DepartureDateTime.split("T")[0] : "",
-        return_date: retFirst.DepartureDateTime ? retFirst.DepartureDateTime.split("T")[0] : "",
-        trip_type: "RoundTrip",
-        cabin_class: CABIN_CLASS_LABELS[Number(searchMeta?.Segments?.[0]?.FlightCabinClass)] || "",
-        airline: airlinesnames.find((a) => a.AirlineCode === outFirst.OperatingAirline.Code)?.AirlineName || outFirst.OperatingAirline.Code,
-        flight_number: `${outFirst.OperatingAirline.Code}-${outFirst.FlightNumber}`,
-        fare: total,
-        adults: searchMeta?.AdultCount ? Number(searchMeta.AdultCount) : 1,
-        children: searchMeta?.ChildCount ? Number(searchMeta.ChildCount) : 0,
-        infants: searchMeta?.InfantCount ? Number(searchMeta.InfantCount) : 0,
-        fare_source_code: fareSourceCode,
-        message: `Departure: ${outStops === 0 ? "Non-stop" : `${outStops} Stop(s)`} | Return: ${retStops === 0 ? "Non-stop" : `${retStops} Stop(s)`}${e.IsRefundable ? " - Refundable" : ""}`,
-      };
-
-      await axios.post(`${BASE_URL}flight-book-enquiry`, payload);
-      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "done" }));
-    } catch (error) {
-      console.error("Error submitting flight book enquiry:", error);
-      setBookingStatus((prev) => ({ ...prev, [fareSourceCode]: "error" }));
-      alert("Something went wrong while sending your request. Please try again.");
-    }
-  };
-
-  const submitFlightBookEnquiry = () => {
-    if (bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done") return;
-
-    const name = localStorage.getItem("passengerName") || "";
-    const email = localStorage.getItem("passengerEmail") || "";
-    const phone = localStorage.getItem("passengerPhone") || "";
-
-    if (!name || !email || !phone) {
-      setShowContactModal(true);
-      return;
-    }
-
-    proceedBooking({ name, email, phone });
-  };
-
-  const handleContactSubmit = (contact) => {
-    localStorage.setItem("passengerName", contact.name);
-    localStorage.setItem("passengerEmail", contact.email);
-    localStorage.setItem("passengerPhone", contact.phone);
-    setShowContactModal(false);
-    proceedBooking(contact);
-  };
-
-  const bookNowLabel =
-    bookingStatus[fareSourceCode] === "loading"
-      ? "Sending..."
-      : bookingStatus[fareSourceCode] === "done"
-        ? "Request Sent ✓"
-        : "Book Now";
+  const url = `/flight-detail/${encodeURIComponent(fareSourceCode)}/null/EwebM`;
 
   return (
     <>
@@ -236,14 +155,11 @@ const InternationalFlightListCard = ({
                 <div className="fg-wrr" style={{ position: "relative" }}>
                   <div className="flgi-rm">
                     <div className="flgi-rm3 intButton">
-                      <button
-                        id="BK_20"
-                        className="ng-scope"
-                        disabled={bookingStatus[fareSourceCode] === "loading" || bookingStatus[fareSourceCode] === "done"}
-                        onClick={submitFlightBookEnquiry}
-                      >
-                        {bookNowLabel}
-                      </button>
+                      <Link to={url} className="text-decoration-none">
+                        <button id="BK_20" className="ng-scope">
+                          Book Now
+                        </button>
+                      </Link>
                     </div>
 
                     <div className="freflex">
@@ -677,7 +593,7 @@ const InternationalFlightListCard = ({
         <div className="mobile_international_cont">
           <div
             className="managlist"
-            onClick={submitFlightBookEnquiry}
+            onClick={() => navigate(url)}
           >
             <label
               className="check-box"
@@ -773,7 +689,7 @@ const InternationalFlightListCard = ({
                     </span>
                   </span>
                   <div style={{ fontSize: 11, fontWeight: 600, color: "#0066FF", marginTop: 2 }}>
-                    {bookNowLabel}
+                    Book Now
                   </div>
                 </div>
                 {/* <div className="dicappl ng-binding ng-scope">
@@ -1076,12 +992,6 @@ const InternationalFlightListCard = ({
         </div>
       )}
     </div>
-
-    <PassengerContactModal
-      show={showContactModal}
-      onClose={() => setShowContactModal(false)}
-      onSubmit={handleContactSubmit}
-    />
     </>
   );
 };

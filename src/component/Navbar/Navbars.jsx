@@ -41,6 +41,12 @@ import SideBar from "./SideBar";
 import { useCurrency } from "../../context/CurrencyContext";
 // import { useAuth } from "../../context/AuthContext";
 
+const CURRENCY_META = {
+  INR: { flag: "🇮🇳", label: "₹ INR" },
+  USD: { flag: "🇺🇸", label: "$ USD" },
+  CAD: { flag: "🇨🇦", label: "C$ CAD" },
+};
+
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -260,7 +266,7 @@ const Navbars = () => {
                 onClick={() => setShowCurrencyDropdown((prev) => !prev)}
               >
                 <IoMdGlobe size={18} className="icon_blue" />
-                <span className="currency-flag">{currency === "INR" ? "🇮🇳" : "🇺🇸"}</span>
+                <span className="currency-flag">{CURRENCY_META[currency]?.flag}</span>
                 <span className="text">{currency}</span>
                 <FaChevronDown
                   size={10}
@@ -279,8 +285,8 @@ const Navbars = () => {
                       }}
                     >
                       <span className="currency-dropdown-item-label">
-                        <span className="currency-flag">{cur === "INR" ? "🇮🇳" : "🇺🇸"}</span>
-                        <span>{cur === "INR" ? "₹ INR" : "$ USD"}</span>
+                        <span className="currency-flag">{CURRENCY_META[cur]?.flag}</span>
+                        <span>{CURRENCY_META[cur]?.label}</span>
                       </span>
                       {currency === cur && <span style={{ color: "#0066FF" }}>✓</span>}
                     </div>

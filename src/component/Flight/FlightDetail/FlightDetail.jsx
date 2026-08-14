@@ -1260,6 +1260,14 @@ const validatePassengerAgeByType = (dob, passengerType) => {
     }
   };
 
+  // Used in place of the VISA/MMG "Select Payment Gateway" popup: skip the gateway
+  // choice and create the real (pending) Mistifly booking directly, so it shows up
+  // in the B2C Booking admin table as "Pending" until payment is completed.
+  const handleConfirmPendingBooking = async (shouldShow) => {
+    if (!shouldShow) return;
+    await handleTicketBookMistifly("wipay");
+  };
+
   const handlePayment = async () => {
     setLoading(true); // Start loading
 
@@ -3203,7 +3211,7 @@ const validatePassengerAge = () => {
                                   marginLeft: "-15px",
                                   marginRight: "-15px",
                                 }}
-                                onClick={handlePayment}
+                                onClick={() => handleConfirmPendingBooking(true)}
                               >
                                 {" "}
                                 <div className="con_tgg">
@@ -3280,6 +3288,7 @@ const validatePassengerAge = () => {
                   totalMealPrice={totalMealPrice}
                   totalBaggagePrice={totalBaggagePrice}
                   handlePayment={handlePayment}
+                  handleConfirmPendingBooking={handleConfirmPendingBooking}
                 />
               )}
 
@@ -3307,6 +3316,7 @@ const validatePassengerAge = () => {
                   reviewPageDone={reviewPageDone}
                   totalBaggagePrice={totalBaggagePrice}
                   handlePayment={handlePayment}
+                  handleConfirmPendingBooking={handleConfirmPendingBooking}
                   // fetchSSRTBORound={fetchSSRTBORound}
                   // fetchSSRTBO={fetchSSRTBO}
                 />
@@ -3427,7 +3437,7 @@ const validatePassengerAge = () => {
               openPayBtn={openPayBtn}
               setOpenPayBtn={setOpenPayBtn}
               setPaymentGateway={setPaymentGateway}
-              setShowPaymentPopup={setShowPaymentPopup}
+              setShowPaymentPopup={handleConfirmPendingBooking}
               validatePassportExpiry={validatePassportExpiry}
               validatePassengerAge={validatePassengerAge}
             />
@@ -3464,7 +3474,7 @@ const validatePassengerAge = () => {
               flight={flight}
               handleContinueClick={handleContinueClick}
               setPaymentGateway={setPaymentGateway}
-              setShowPaymentPopup={setShowPaymentPopup}
+              setShowPaymentPopup={handleConfirmPendingBooking}
               setPageFixed={setPageFixed}
               srdvIdx={srdvIdx}
               type="Departure"
@@ -3857,7 +3867,7 @@ const validatePassengerAge = () => {
                                 marginLeft: "-15px",
                                 marginRight: "-15px",
                               }}
-                              onClick={handlePayment}
+                              onClick={() => handleConfirmPendingBooking(true)}
                             >
                               {" "}
                               <div className="con_tgg">
@@ -3919,6 +3929,7 @@ const validatePassengerAge = () => {
                   totalMealPrice={totalMealPrice}
                   totalBaggagePrice={totalBaggagePrice}
                   handlePayment={handlePayment}
+                  handleConfirmPendingBooking={handleConfirmPendingBooking}
                   handleTicketBookMistifly={handleTicketBookMistifly}
                 />
               )}
@@ -3947,6 +3958,7 @@ const validatePassengerAge = () => {
                   reviewPageDone={reviewPageDone}
                   totalBaggagePrice={totalBaggagePrice}
                   handlePayment={handlePayment}
+                  handleConfirmPendingBooking={handleConfirmPendingBooking}
                   handleTicketBookMistifly={handleTicketBookMistifly}
                   // fetchSSRTBORound={fetchSSRTBORound}
                   // fetchSSRTBO={fetchSSRTBO}
@@ -4067,7 +4079,7 @@ const validatePassengerAge = () => {
               openPayBtn={openPayBtn}
               setOpenPayBtn={setOpenPayBtn}
               setPaymentGateway={setPaymentGateway}
-              setShowPaymentPopup={setShowPaymentPopup}
+              setShowPaymentPopup={handleConfirmPendingBooking}
               handleTicketBookMistifly={handleTicketBookMistifly}
               validatePassportExpiry={validatePassportExpiry}
               validatePassengerAge={validatePassengerAge}
@@ -4137,7 +4149,7 @@ const validatePassengerAge = () => {
               setPageFixed={setPageFixed}
               handleContinueClick={handleContinueClick}
               setPaymentGateway={setPaymentGateway}
-              setShowPaymentPopup={setShowPaymentPopup}
+              setShowPaymentPopup={handleConfirmPendingBooking}
               srdvIdx={srdvIdx}
               type="Departure"
               formData={formData}
