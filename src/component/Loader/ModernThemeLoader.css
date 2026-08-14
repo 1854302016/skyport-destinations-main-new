@@ -1,0 +1,191 @@
+/* Ultra-Clean Globe Loader with Locations Under Globe */
+
+.clean-globe-loader-stage {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(248, 250, 252, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #0F172A;
+  padding: 32px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Ambient Radial Glows */
+.globe-glow-1 {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.globe-glow-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 25%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Main Center Stage */
+.globe-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: stagePop 0.4s ease;
+}
+
+@keyframes stagePop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Hero 3D Globe Canvas */
+.hero-globe-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.hero-globe-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.rotating-outer-ticks {
+  transform-origin: center;
+  animation: tickSpin 28s linear infinite;
+}
+
+@keyframes tickSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spherical-globe-grid {
+  transform-origin: center;
+  animation: globeRotate 20s linear infinite;
+}
+
+@keyframes globeRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animated-globe-arc {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: fillGlobeArc 3.2s ease-in-out infinite;
+}
+
+.animated-globe-arc-2 {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: fillGlobeArc 3.2s ease-in-out infinite 1.6s;
+}
+
+@keyframes fillGlobeArc {
+  0% { stroke-dashoffset: 240; }
+  65%, 100% { stroke-dashoffset: 0; }
+}
+
+/* Central Floating Jetliner Emblem */
+.globe-jetliner-emblem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #0066FF 0%, #004FCE 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 36px rgba(0, 102, 255, 0.45);
+  z-index: 5;
+}
+
+.emblem-plane {
+  font-size: 32px;
+  color: #FFFFFF;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  animation: planeFloat 3s ease-in-out infinite;
+}
+
+@keyframes planeFloat {
+  0%, 100% { transform: rotate(-45deg) translateY(0); }
+  50% { transform: rotate(-45deg) translateY(-4px); }
+}
+
+/* FROM and TO Route Pill Rendered Just Under Globe */
+.under-globe-route-pill {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(11, 37, 69, 0.08);
+  box-shadow: 0 14px 40px rgba(11, 37, 69, 0.08), 0 4px 12px rgba(0, 102, 255, 0.04);
+  padding: 12px 28px;
+  border-radius: 9999px;
+}
+
+.route-location-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-code {
+  font-size: 17px;
+  font-weight: 950;
+  color: #0B2545;
+  letter-spacing: 0.5px;
+}
+
+.location-city {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.route-flight-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0066FF;
+}
+
+.flight-dot {
+  width: 5px;
+  height: 5px;
+  background: #38BDF8;
+  border-radius: 50%;
+}
+
+.flight-connector-arrow {
+  font-size: 14px;
+  color: #0066FF;
+}

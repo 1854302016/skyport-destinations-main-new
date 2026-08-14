@@ -1202,79 +1202,25 @@ const BookingForm = () => {
               className="fltWidgetSection appendBottom40 primaryTraveler "
             >
               <div className="widget-top-nav-bar">
-                <div className="trip-switch-header">
-                  <div className="trip-segmented-switch">
-                    <button
-                      type="button"
-                      onClick={handleSearchFlight}
-                      className={`trip-switch-btn ${active ? "active" : ""}`}
-                    >
-                      One Way
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handleSearchFlightRound}
-                      className={`trip-switch-btn ${active2 ? "active" : ""}`}
-                    >
-                      Round Trip
-                    </button>
-                  </div>
+                <div className="trip-segmented-switch">
+                  <button
+                    type="button"
+                    onClick={handleSearchFlight}
+                    className={`trip-switch-btn ${active ? "active" : ""}`}
+                  >
+                    One Way
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleSearchFlightRound}
+                    className={`trip-switch-btn ${active2 ? "active" : ""}`}
+                  >
+                    Round Trip
+                  </button>
                 </div>
               </div>
+
               <div className="fsw ">
-                <div className="fsw_contact_strip">
-                  <div className="contact_field_box">
-                    <span className="lbl_input">PASSENGER NAME</span>
-                    <div className="contact_input_wrapper">
-                      <FaUser className="contact_field_icon" />
-                      <input
-                        type="text"
-                        className="contact_input_field"
-                        placeholder="Enter full name"
-                        value={passengerName}
-                        onChange={(e) => {
-                          setPassengerName(e.target.value);
-                          localStorage.setItem("passengerName", e.target.value);
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="contact_field_box">
-                    <span className="lbl_input">EMAIL ADDRESS</span>
-                    <div className="contact_input_wrapper">
-                      <FaEnvelope className="contact_field_icon" />
-                      <input
-                        type="email"
-                        className="contact_input_field"
-                        placeholder="name@example.com"
-                        value={passengerEmail}
-                        onChange={(e) => {
-                          setPassengerEmail(e.target.value);
-                          localStorage.setItem("passengerEmail", e.target.value);
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="contact_field_box">
-                    <span className="lbl_input">PHONE NUMBER</span>
-                    <div className="contact_input_wrapper">
-                      <FaPhoneAlt className="contact_field_icon" />
-                      <input
-                        type="tel"
-                        className="contact_input_field"
-                        placeholder="+1 (555) 000-0000"
-                        value={passengerPhone}
-                        onChange={(e) => {
-                          setPassengerPhone(e.target.value);
-                          localStorage.setItem("passengerPhone", e.target.value);
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-
                 <div className="fsw_inner returnPersuasion">
                   <div
                     ref={fromContainerRef}
@@ -1896,6 +1842,60 @@ const BookingForm = () => {
                     <button className="mat-stroked-button" type="submit">
                       SEARCH
                     </button>
+                  </div>
+                </div>
+
+                {/* Passenger Contact Information Strip (Shifted Under Flight Section inside Card) */}
+                <div className="fsw_contact_strip">
+                  <div className="contact_field_box">
+                    <span className="lbl_input">PASSENGER NAME</span>
+                    <div className="contact_input_wrapper">
+                      <FaUser className="contact_field_icon" />
+                      <input
+                        type="text"
+                        className="contact_input_field"
+                        placeholder="Enter full name"
+                        value={passengerName}
+                        onChange={(e) => {
+                          setPassengerName(e.target.value);
+                          localStorage.setItem("passengerName", e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="contact_field_box">
+                    <span className="lbl_input">EMAIL ADDRESS</span>
+                    <div className="contact_input_wrapper">
+                      <FaEnvelope className="contact_field_icon" />
+                      <input
+                        type="email"
+                        className="contact_input_field"
+                        placeholder="name@example.com"
+                        value={passengerEmail}
+                        onChange={(e) => {
+                          setPassengerEmail(e.target.value);
+                          localStorage.setItem("passengerEmail", e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="contact_field_box">
+                    <span className="lbl_input">PHONE NUMBER</span>
+                    <div className="contact_input_wrapper">
+                      <FaPhoneAlt className="contact_field_icon" />
+                      <input
+                        type="tel"
+                        className="contact_input_field"
+                        placeholder="+1 (555) 000-0000"
+                        value={passengerPhone}
+                        onChange={(e) => {
+                          setPassengerPhone(e.target.value);
+                          localStorage.setItem("passengerPhone", e.target.value);
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
 
