@@ -1229,6 +1229,37 @@ const validatePassengerAgeByType = (dob, passengerType) => {
     });
   };
 
+  const savePendingBooking = async (totalAmount) => {
+    try {
+      const leadPassenger = formData?.[0];
+      const originSeg = flight?.Segments?.[0]?.[0];
+      const destSeg = flight?.Segments?.[0]?.[flight.Segments[0].length - 1];
+
+      await axios.post("https://admin.trustedfare.com/api/flight-book-enquiry", {
+        name: leadPassenger
+          ? `${leadPassenger.title || ""} ${leadPassenger.firstName || ""} ${leadPassenger.lastName || ""}`.trim()
+          : "",
+        email: bookingDetails?.email || email || "",
+        phone: bookingDetails?.mobile || mobile || "",
+        destination:
+          originSeg && destSeg
+            ? `${originSeg.Origin?.Airport?.CityName || ""} (${originSeg.Origin?.Airport?.AirportCode || ""}) -> ${destSeg.Destination?.Airport?.CityName || ""} (${destSeg.Destination?.Airport?.AirportCode || ""})`
+            : "",
+        date: originSeg?.Origin?.DepTime ? originSeg.Origin.DepTime.split("T")[0] : "",
+        trip_type: flight2 ? "RoundTrip" : "OneWay",
+        fare: totalAmount,
+        adults: formData?.length || 0,
+        children: childData?.length || 0,
+        infants: infant?.length || 0,
+        fare_source_code: decodedIndex,
+        status: "pending",
+        message: "Pending - payment not yet completed",
+      });
+    } catch (error) {
+      console.error("Error saving pending booking:", error);
+    }
+  };
+
   const handlePayment = async () => {
     setLoading(true); // Start loading
 
@@ -1245,25 +1276,32 @@ const validatePassengerAgeByType = (dob, passengerType) => {
 
     try {
       setOpenPayBtn(false);
+
+      const totalAmount = Math.round(
+        flight2
+          ? flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare
+              .TotalFare.Amount +
+              flight2.PricedItineraries[0].AirItineraryPricingInfo
+                .ItinTotalFare.TotalFare.Amount +
+              totalSeatPrice +
+              totalMealPrice +
+              totalBaggagePrice
+          : flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare
+              .TotalFare.Amount +
+              totalSeatPrice +
+              totalMealPrice +
+              totalBaggagePrice,
+      );
+
+      // Save a pending record BEFORE opening the payment gateway.
+      // The real ticket (PNR) is only issued after payment succeeds, in handleTicketBook.
+      await savePendingBooking(totalAmount);
+
       // STEP 1: Create Razorpay order
       const { data: orderData } = await axios.post(
         "https://admin.trustedfare.com/api/create-order",
         {
-          amount: Math.round(
-            flight2
-              ? flight.PricedItineraries[0].AirItineraryPricingInfo
-                  .ItinTotalFare.TotalFare.Amount +
-                  flight2.PricedItineraries[0].AirItineraryPricingInfo
-                    .ItinTotalFare.TotalFare.Amount +
-                  totalSeatPrice +
-                  totalMealPrice +
-                  totalBaggagePrice
-              : flight.PricedItineraries[0].AirItineraryPricingInfo
-                  .ItinTotalFare.TotalFare.Amount +
-                  totalSeatPrice +
-                  totalMealPrice +
-                  totalBaggagePrice,
-          ),
+          amount: totalAmount,
         },
       );
 
