@@ -1101,11 +1101,33 @@
   flex-direction: column;
 }
 
+.morefarediv .pls_bxs:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.15);
+  transform: translateY(-2px);
+}
+
 .morefarediv .pls_bxs.actve {
   border-color: #2563eb;
   background-color: #f0f7ff;
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 14px 30px -8px rgba(37, 99, 235, 0.2);
   transform: translateY(-4px);
+}
+
+.morefarediv .swiper-slide:first-child .pls_bxs::before {
+  content: "RECOMMENDED";
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
 }
 
 .morefarediv .optn_head {
@@ -1132,13 +1154,25 @@
 
 .morefarediv ._fcltechdt {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-bottom: 15px;
 }
 
+.morefarediv ._fcltechdt i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  background: #eff6ff;
+  border-radius: 10px;
+}
+
 .morefarediv ._fcltechdt i img {
-  width: 20px;
-  opacity: 0.7;
+  width: 18px;
+  opacity: 0.85;
 }
 
 .morefarediv ._tpbldtle {
@@ -1279,10 +1313,17 @@
   transform: rotate(45deg);
 }
 
-/* .morefarediv .swiper {
-  padding: 20px 0 40px;
+.morefarediv .mySwiper {
+  padding: 18px 4px 30px;
+}
 
-} */
+.morefarediv .swiper-slide {
+  height: auto;
+}
+
+.morefarediv ._bxses {
+  height: 100%;
+}
 
 .flightBookingMoreFare_desktop{
     font-size: 13px;
@@ -1384,233 +1425,6 @@
     border-radius: 100px;
     font-weight: 600;
     display: inline-block;
-}
-
-.morefarediv ._bxses {
-  overflow-x: auto;
-  
-  width: 300px;
-  /* margin-top: 12px; */
-  height: calc(100vh - 300px);
-}
-
-.morefarediv .al_flx_opt {
-  width: 100%;
-  display: flex;
-}
-
-.morefarediv label {
-  font-weight: unset;
-}
-
-.morefarediv .al_flx_opt label {
-  display: flex;
-  flex: 0 0 32%;
-  border: none;
-  margin-right: 15px;
-}
-
-.morefarediv .al_flx_opt label:last-child {
-  margin-right: 0;
-}
-
-.morefarediv .pls_bxs {
-  width: 100%;
-  border: 1px solid #e6ecef;
-  border-radius: 8px;
-  position: relative;
-  min-height: 360px;
-}
-
-.morefarediv .actve {
-  border: 1px solid #053355 !important;
-  background: #f8fbfd;
-}
-
-.morefarediv .upr_sctn {
-  border-bottom: 1px solid #dcdcdc;
-  padding: 5px 15px;
-}
-
-.morefarediv .flx_p {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.morefarediv .dtl_plus {
-  width: 80%;
-}
-
-.morefarediv .optn_head {
-  width: 100%;
-  display: flex;
-}
-
-.morefarediv .optn_head span {
-  font-size: 15px;
-  font-weight: 600;
-  color: #053355;
-  text-transform: uppercase;
-}
-
-.morefarediv .acntr {
-  align-items: center;
-}
-
-.morefarediv .fflx {
-  display: flex;
-}
-
-.morefarediv .prce_mn {
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.morefarediv .prce_mn {
-  font-size: 20px;
-  color: #000;
-  font-weight: 600;
-}
-
-.morefarediv .discbxd {
-  display: inline-block;
-  font-size: 12px;
-  padding: 0px 5px;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #02bb91;
-  float: left;
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-.morefarediv .slct_optn {
-  width: 13%;
-}
-
-.morefarediv .conta-radio {
-  position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  color: #d63b05;
-  font-size: 16px;
-  user-select: none;
-  margin-left: 8px;
-}
-
-.morefarediv .al_flx_opt label {
-  display: flex;
-  flex: 0 0 32%;
-  border: none;
-  margin-right: 15px;
-}
-
-.morefarediv .al_flx_opt label:last-child {
-  margin-right: 0;
-}
-
-.morefarediv input[type="checkbox"],
-.morefarediv input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.morefarediv input[type="checkbox"],
-.morefarediv input[type="radio"] {
-  line-height: normal;
-  margin: 4px 0 0;
-}
-
-.morefarediv .conta-radio input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.morefarediv .checkk-radio {
-  position: absolute;
-  top: 6px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  right: 0px;
-  border: 2px solid #e6ecef;
-}
-
-.morefarediv .conta-radio input:checked ~ .checkk-radio {
-  background-color: #ffffff;
-  border: 1px solid #053355;
-}
-
-.morefarediv .checkk-radio:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.morefarediv .conta-radio .checkk-radio:after {
-  top: 2px;
-  left: 2px;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  background: #053355;
-}
-
-.morefarediv .conta-radio input:checked ~ .checkk-radio:after {
-  display: block;
-}
-
-.morefarediv .faclty {
-  width: 100%;
-  padding: 10px 15px 0;
-  height: 245px;
-  overflow-y: auto;
-}
-
-.morefarediv .fjsb {
-  justify-content: space-between;
-}
-
-.morefarediv ._fcltechdt {
-  margin-bottom: 10px;
-}
-
-.morefarediv ._fcltechdt i {
-  width: 30px;
-}
-
-.morefarediv ._dsrcp_rpt {
-  width: 90%;
-}
-
-.morefarediv .fclm {
-  flex-direction: column;
-}
-
-.morefarediv ._tpbldtle {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.morefarediv .faclty ul {
-  margin: 0px 0 0 15px;
-  padding: 0;
-}
-
-.morefarediv ._cabinfcnl {
-  font-size: 12px;
-  font-weight: normal;
-}
-
-.morefarediv .faclty ul li {
-  list-style: circle;
-  font-size: 12px;
 }
 
 /* Premium Flight List Card Styles - COMPACT */
@@ -1769,105 +1583,6 @@
 
 .promo-banner-wrapper:hover {
   transform: scale(1.01);
-}
-
-.morefarediv .al_flx_opt {
-  width: 100%;
-  display: flex;
-}
-
-.morefarediv .pd15 {
-  padding: 0 15px;
-}
-
-.morefarediv .sclted_bt {
-  width: 90%;
-  position: absolute;
-  bottom: 13px;
-  left: 15px;
-}
-
-.morefarediv .sclted_bt a {
-  color: #fff;
-  display: block;
-  padding: 7px;
-  border-radius: 25px;
-  background: #053355;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-}
-
-.morefarediv ._btmftrdv {
-  width: 75%;
-  margin-top: 25px;
-  position: fixed;
-  bottom: 0;
-}
-
-.morefarediv ._emtfxder {
-  padding: 10px 20px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 -5px 4px -4px #ccc;
-  display: flex;
-  justify-content: space-between;
-}
-
-.morefarediv ._btnm {
-  width: 100%;
-  display: flex;
-}
-
-.morefarediv ._nhyuop {
-  width: 40%;
-  display: flex;
-  align-items: center;
-}
-
-.morefarediv ._prgty {
-  color: #2f2f2f;
-  font-size: 14px;
-  margin-right: 10px;
-}
-
-.morefarediv .f30 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #053355;
-}
-
-.morefarediv .marg-left {
-  /* margin-left: auto; */
-}
-
-.morefarediv .book-bt-nwap {
-  background-color: #053355;
-  text-shadow: none;
-  color: #fff;
-  outline: none;
-  text-align: center;
-  padding: 10px 35px;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  display: block;
-}
-
-.morefarediv .clr {
-  clear: both;
-}
-
-.morefarediv ._rfndle {
-  color: #2dca1c;
-  border: 1px solid #2dca1c;
-  font-size: 10px;
-  font-weight: 500;
-  padding: 2px 5px;
-  display: inline-block;
-  border-radius: 40px;
 }
 
 .flightListPage .pag1 {

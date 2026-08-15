@@ -560,6 +560,8 @@ const BookingForm = () => {
       SearchData.Segments[0].PreferredDepartureTime === null
     ) {
       alert("Missing Search Data.");
+    } else if (!passengerName.trim() || !passengerEmail.trim() || !passengerPhone.trim()) {
+      alert("Please enter passenger name, email and phone number.");
     } else {
       localStorage.setItem("passengerName", passengerName || "");
       localStorage.setItem("passengerEmail", passengerEmail || "");
@@ -771,7 +773,11 @@ const BookingForm = () => {
   const [cities2, setCities2] = useState([]);
   const [cities22, setCities22] = useState([]);
   const [staticAirportsData, setStaticAirportsData] = useState([]);
-  const [searchTimeout, setSearchTimeout] = useState(null);
+  // Separate debounce timers per field (refs, not state) so typing in FROM
+  // doesn't cancel/clash with TO's debounce, and so setting a timer ID
+  // doesn't itself trigger an extra re-render of this large form on every keystroke.
+  const fromDebounceRef = useRef(null);
+  const toDebounceRef = useRef(null);
 
   // Load static airports data on component mount.
   // Lowercase search fields are precomputed once here (instead of on every
@@ -799,14 +805,13 @@ const BookingForm = () => {
     loadStaticData();
   }, []);
 
-  // Cleanup timeout on component unmount
+  // Cleanup timeouts on component unmount
   useEffect(() => {
     return () => {
-      if (searchTimeout) {
-        clearTimeout(searchTimeout);
-      }
+      if (fromDebounceRef.current) clearTimeout(fromDebounceRef.current);
+      if (toDebounceRef.current) clearTimeout(toDebounceRef.current);
     };
-  }, [searchTimeout]);
+  }, []);
 
   // Function to search static data first
   const searchStaticData = (value) => {
@@ -913,24 +918,24 @@ const BookingForm = () => {
     setIsItemSelected(false);
 
     // Clear previous timeout
-    if (searchTimeout) {
-      clearTimeout(searchTimeout);
+    if (fromDebounceRef.current) {
+      clearTimeout(fromDebounceRef.current);
     }
 
     if (value.length === 0) {
       setCities2(topAirports);
     } else if (value.length >= 3) {
-      // First check static data immediately
-      const staticResults = searchStaticData(value.toLowerCase());
-      if (staticResults.length > 0) {
-        setCities2(staticResults);
-      } else {
-        // If no results in static data, make API call with debounce
-        const timeout = setTimeout(() => {
+      // Debounce the filter itself (not just the API fallback) — scanning
+      // ~4700 airports on every single keystroke while typing fast is what
+      // was still making the box feel laggy even with lowercased fields precomputed.
+      fromDebounceRef.current = setTimeout(() => {
+        const staticResults = searchStaticData(value.toLowerCase());
+        if (staticResults.length > 0) {
+          setCities2(staticResults);
+        } else {
           fetchDatas(value.toLowerCase());
-        }, 300); // 300ms debounce
-        setSearchTimeout(timeout);
-      }
+        }
+      }, 150);
     } else {
       setCities2([]);
     }
@@ -1005,24 +1010,21 @@ const BookingForm = () => {
     setIsItemSelected2(false);
 
     // Clear previous timeout
-    if (searchTimeout) {
-      clearTimeout(searchTimeout);
+    if (toDebounceRef.current) {
+      clearTimeout(toDebounceRef.current);
     }
 
     if (value.length === 0) {
       setCities22(topAirports);
     } else if (value.length >= 3) {
-      // First check static data immediately
-      const staticResults = searchStaticData(value.toLowerCase());
-      if (staticResults.length > 0) {
-        setCities22(staticResults);
-      } else {
-        // If no results in static data, make API call with debounce
-        const timeout = setTimeout(() => {
+      toDebounceRef.current = setTimeout(() => {
+        const staticResults = searchStaticData(value.toLowerCase());
+        if (staticResults.length > 0) {
+          setCities22(staticResults);
+        } else {
           fetchDatass(value.toLowerCase());
-        }, 300); // 300ms debounce
-        setSearchTimeout(timeout);
-      }
+        }
+      }, 150);
     } else {
       setCities22([]);
     }
@@ -1903,6 +1905,7 @@ const BookingForm = () => {
                         className="contact_input_field"
                         placeholder="Enter full name"
                         value={passengerName}
+                        required
                         onChange={(e) => {
                           setPassengerName(e.target.value);
                           localStorage.setItem("passengerName", e.target.value);
@@ -1920,6 +1923,7 @@ const BookingForm = () => {
                         className="contact_input_field"
                         placeholder="name@example.com"
                         value={passengerEmail}
+                        required
                         onChange={(e) => {
                           setPassengerEmail(e.target.value);
                           localStorage.setItem("passengerEmail", e.target.value);
@@ -1937,6 +1941,9 @@ const BookingForm = () => {
                         className="contact_input_field"
                         placeholder="+1 (555) 000-0000"
                         value={passengerPhone}
+                        required
+                        pattern="[0-9+\-\s()]{7,20}"
+                        title="Enter a valid phone number"
                         onChange={(e) => {
                           setPassengerPhone(e.target.value);
                           localStorage.setItem("passengerPhone", e.target.value);

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import "./FlightList.css";
@@ -73,6 +73,51 @@ const flightClassDefaultValue = (flightCabinClass) => {
   }
 };
 
+// Different fare sources (e.g. "ECONOMY" vs "ECOVALU") can return the exact
+// same physical flight (same flight number, same leg-1 dep/arr times) with
+// slightly different reported Duration values. That makes two cards for what
+// looks like an identical flight show different durations. Group results by
+// flight signature and force every member of a group to use the duration
+// reported by whichever one appears first, so the UI is consistent.
+const normalizeSegmentDurations = (flights) => {
+  if (!Array.isArray(flights) || flights.length === 0) return flights;
+
+  const signatureOf = (flight) =>
+    (flight.Segments?.[0] || [])
+      .map(
+        (seg) =>
+          `${seg.Airline?.AirlineCode}${seg.Airline?.FlightNumber}_${seg.Origin?.DepTime}_${seg.Destination?.ArrTime}`,
+      )
+      .join("|");
+
+  const canonicalDurations = new Map();
+  flights.forEach((flight) => {
+    const sig = signatureOf(flight);
+    if (!canonicalDurations.has(sig)) {
+      canonicalDurations.set(
+        sig,
+        (flight.Segments?.[0] || []).map((seg) => seg.Duration),
+      );
+    }
+  });
+
+  return flights.map((flight) => {
+    const sig = signatureOf(flight);
+    const durations = canonicalDurations.get(sig);
+    if (!durations || !flight.Segments?.[0]) return flight;
+    return {
+      ...flight,
+      Segments: [
+        flight.Segments[0].map((seg, i) => ({
+          ...seg,
+          Duration: durations[i] ?? seg.Duration,
+        })),
+        ...flight.Segments.slice(1),
+      ],
+    };
+  });
+};
+
 const sliderItems = [
   { date: "Oct 03", price: "7845" },
   { date: "Oct 04", price: "5954" },
@@ -114,6 +159,10 @@ export const FlightList = () => {
   const { data: routeParams } = useParams();
   const dispatch = useDispatch();
   const search = useSelector((state) => state.flight.search);
+  const normalizedSearchResults = useMemo(
+    () => (search && search[0] ? normalizeSegmentDurations(search[0]) : []),
+    [search],
+  );
   const [sliderValue, setSliderValue] = useState([0, 0]);
   const [isLoading, setIsLoading] = useState(false);
   const [dataSearch, setDataSearch] = useState(null);
@@ -144,7 +193,7 @@ export const FlightList = () => {
   const [deptimeRange, setdepTimeRange] = useState([0, 0]);
   const [arrtimeRange, setarrTimeRange] = useState([0, 0]);
   const [filteredData, setFilteredData] = useState(
-    search && search.length > 0 ? search[0] : [],
+    search && search.length > 0 ? normalizedSearchResults : [],
   );
   const traceId = String(sessionStorage.getItem("traceId"));
   const [airlines, setAirlines] = useState([]);
@@ -257,9 +306,9 @@ export const FlightList = () => {
 
   useEffect(() => {
     if (search && search.length > 0) {
-      setFilteredData(search[0]);
+      setFilteredData(normalizedSearchResults);
     }
-  }, [search]);
+  }, [search, normalizedSearchResults]);
   const [airlineCodes, setAirlineCodes] = useState([]);
   useEffect(() => {
     if (search && search[0]) {
@@ -365,7 +414,9 @@ export const FlightList = () => {
 
   useEffect(() => {
     if (search && search.length > 0) {
-      const fares = search[0].map((flight) => flight.Fare.PublishedFare);
+      const fares = normalizedSearchResults.map(
+        (flight) => flight.Fare.PublishedFare,
+      );
 
       const minFare = Math.min(...fares);
       const maxFare = Math.max(...fares);
@@ -374,7 +425,7 @@ export const FlightList = () => {
 
       setSliderValue([minFare, maxFare]);
 
-      const durations = search[0].map((flight) =>
+      const durations = normalizedSearchResults.map((flight) =>
         flight.Segments[0].reduce((sum, seg) => sum + seg.Duration, 0),
       );
       const minDuration = Math.min(...durations);
@@ -384,12 +435,13 @@ export const FlightList = () => {
 
       setDurationSliderValue([minDuration, maxDuration]);
     }
-  }, [search]);
+  }, [search, normalizedSearchResults]);
 
   useEffect(() => {
     applyFilters();
   }, [
     search,
+    normalizedSearchResults,
     sliderValue,
     deptimeRange,
     arrtimeRange,
@@ -812,7 +864,7 @@ export const FlightList = () => {
     let newFilteredData =
       search &&
       search[0] &&
-      search[0].filter((e) => {
+      normalizedSearchResults.filter((e) => {
         const fareInRange =
           e.Fare.PublishedFare >= sliderValue[0] &&
           e.Fare.PublishedFare <= sliderValue[1];
