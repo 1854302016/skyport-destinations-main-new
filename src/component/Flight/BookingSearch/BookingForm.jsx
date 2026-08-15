@@ -1946,6 +1946,12 @@ const BookingForm = () => {
                   </div>
                 </div>
 
+                <div className="search_flight_bookingsss centered_search_row">
+                  <button className="mat-stroked-button" type="submit">
+                    SEARCH
+                  </button>
+                </div>
+
                 {/* <div
                   className={`makeFlex hrtlCenter ${
                     showContent ? "" : "appendBottom10"

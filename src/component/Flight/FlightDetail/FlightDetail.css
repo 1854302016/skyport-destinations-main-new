@@ -4858,3 +4858,78 @@ label {
   overflow: hidden;
   border: 1px solid #eef1f6;
 }
+
+/* ---- Round 2: bolder pass, same rules apply (cosmetic only, scoped) ---- */
+
+.flightBookingMainMain {
+  background: #eef5ff;
+  border-radius: 20px;
+}
+
+.flightBookingMainMain .block-content-2.custom_block_content {
+  transition: box-shadow 0.2s ease;
+}
+
+.flightBookingMainMain .block-content-2.custom_block_content:hover {
+  box-shadow: 0 16px 40px rgba(11, 37, 69, 0.16);
+}
+
+.flightBookingMainMain .flight_name img {
+  border-radius: 50%;
+  border: 2px solid #eef5ff;
+  box-shadow: 0 4px 10px rgba(11, 37, 69, 0.15);
+  background: #fff;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.flightBookingMainMain .flight_time strong {
+  font-size: 22px !important;
+  color: #0b2545 !important;
+  letter-spacing: -0.3px;
+}
+
+.flightBookingMainMain .paxd .traveller_info,
+.flightBookingMainMain .flightBookingsecDiv {
+  position: relative;
+}
+
+.flightBookingMainMain .paxd .traveller_info::before,
+.flightBookingMainMain .flightBookingsecDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0066ff, #38bdf8, #0066ff);
+}
+
+.flightBookingMainMain .paxd .traveller_info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b2545;
+  padding-left: 14px;
+  border-left: 4px solid #0066ff;
+}
+
+.flightBookingMainMain .flightBookingsecDiv .lbl {
+  font-weight: 500;
+}
+
+.flightBookingMainMain .flightBookingsecDivRow .val {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #0066ff !important;
+}
+
+.flightBookingMainMain .ewalletbtn {
+  font-size: 16px !important;
+  padding: 14px !important;
+}
+
+.flightBookingMainMain .ewalletbtn::after {
+  content: "\2192";
+  margin-left: 8px;
+  font-weight: 700;
+}
