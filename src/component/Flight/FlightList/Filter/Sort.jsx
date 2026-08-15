@@ -104,6 +104,22 @@ function Sort({
                 </div>
               </Col>
             </Row>
+
+            <Row className="sort-row">
+              <Col className="sort-option" onClick={() => setSortType("duration")}>
+                <input
+                  type="radio"
+                  name="sort"
+                  id="sort-duration"
+                  checked={sortType === "duration"}
+                  onChange={() => setSortType("duration")}
+                />
+                <div className="sort-label">
+                  <span className="sort-title">Duration</span>
+                  <div className="sort-subtitle">Shortest First</div>
+                </div>
+              </Col>
+            </Row>
           </Container>
 
           <div className="text-wrapper">

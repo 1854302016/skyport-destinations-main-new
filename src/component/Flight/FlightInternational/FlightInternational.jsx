@@ -1696,7 +1696,12 @@ const FlightInternational = () => {
                     })}
                 </div>
               ) : (
-                <FlightListSkeleton />
+                <FlightListSkeleton
+                  fromCode={dataSearch?.Segments?.[0]?.Origin}
+                  fromCity={destination1?.CITYNAME}
+                  toCode={dataSearch?.Segments?.[0]?.Destination}
+                  toCity={destination2?.CITYNAME}
+                />
                 // <div className="d-flex flex-column gap-3">
                 //   <FlightListSkeleton />
                 //   <FlightListSkeleton />

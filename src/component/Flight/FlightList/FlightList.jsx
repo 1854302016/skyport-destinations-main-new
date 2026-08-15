@@ -150,6 +150,9 @@ export const FlightList = () => {
   const [airlines, setAirlines] = useState([]);
   const [minFare, setMinFare] = useState(0);
   const [maxFare, setMaxFare] = useState(0);
+  const [minDuration, setMinDuration] = useState(0);
+  const [maxDuration, setMaxDuration] = useState(0);
+  const [durationSliderValue, setDurationSliderValue] = useState([0, 0]);
   const [selectedOption, setSelectedOption] = useState();
   const [sortType, setSortType] = useState("price");
 
@@ -370,6 +373,16 @@ export const FlightList = () => {
       setMaxFare(maxFare);
 
       setSliderValue([minFare, maxFare]);
+
+      const durations = search[0].map((flight) =>
+        flight.Segments[0].reduce((sum, seg) => sum + seg.Duration, 0),
+      );
+      const minDuration = Math.min(...durations);
+      const maxDuration = Math.max(...durations);
+      setMinDuration(minDuration);
+      setMaxDuration(maxDuration);
+
+      setDurationSliderValue([minDuration, maxDuration]);
     }
   }, [search]);
 
@@ -383,6 +396,7 @@ export const FlightList = () => {
     airlines,
     checkedStops,
     sortType,
+    durationSliderValue,
   ]);
 
   const parseSearchParams = (data) => {
@@ -759,6 +773,10 @@ export const FlightList = () => {
     setSliderValue(value);
   };
 
+  const handleDurationSliderChange = (value) => {
+    setDurationSliderValue(value);
+  };
+
   const handleCheckedstops = (stopType) => {
     if (checkedStops.includes(stopType)) {
       setCheckedStops(checkedStops.filter((stop) => stop !== stopType));
@@ -824,12 +842,18 @@ export const FlightList = () => {
           (checkedStops.includes("1-stop") && stopCount === 1) ||
           (checkedStops.includes("2-stop") && stopCount >= 2);
 
+        const durationInRange =
+          (durationSliderValue[0] === 0 && durationSliderValue[1] === 0) ||
+          (getTotalDuration(e.Segments[0]) >= durationSliderValue[0] &&
+            getTotalDuration(e.Segments[0]) <= durationSliderValue[1]);
+
         return (
           fareInRange &&
           depTimeInRange &&
           arrTimeInRange &&
           isAirlineSelected &&
-          stopMatch
+          stopMatch &&
+          durationInRange
         );
       });
 
@@ -848,7 +872,7 @@ export const FlightList = () => {
       );
     }
 
-    if (sortType === "fastest") {
+    if (sortType === "fastest" || sortType === "duration") {
       newFilteredData.sort(
         (a, b) =>
           getTotalDuration(a.Segments[0]) - getTotalDuration(b.Segments[0]),
@@ -905,6 +929,7 @@ export const FlightList = () => {
 
   const clearAllFilters = () => {
     setSliderValue([minFare, maxFare]);
+    setDurationSliderValue([minDuration, maxDuration]);
     setdepTimeRange([0, 0]);
     setarrTimeRange([0, 0]);
     setCheckedStops([]);
@@ -1140,6 +1165,10 @@ export const FlightList = () => {
               minFare={minFare}
               maxFare={maxFare}
               sliderValue={sliderValue}
+              minDuration={minDuration}
+              maxDuration={maxDuration}
+              durationSliderValue={durationSliderValue}
+              handleDurationSliderChange={handleDurationSliderChange}
               clearAllFilters={clearAllFilters}
               handleSliderChange={handleSliderChange}
               handledepTimeFilter={handledepTimeFilter}
@@ -1268,7 +1297,12 @@ export const FlightList = () => {
                 </motion.div>
               ) : (
                 <div className="d-flex flex-column gap-3">
-                  <FlightListSkeleton />
+                  <FlightListSkeleton
+                    fromCode={dataSearch?.Segments?.[0]?.Origin}
+                    fromCity={destination1?.CITYNAME}
+                    toCode={dataSearch?.Segments?.[0]?.Destination}
+                    toCity={destination2?.CITYNAME}
+                  />
                   {/* <FlightListSkeleton />
                   <FlightListSkeleton />
                   <FlightListSkeleton /> */}
@@ -1328,6 +1362,10 @@ export const FlightList = () => {
             minFare={minFare}
             maxFare={maxFare}
             sliderValue={sliderValue}
+            minDuration={minDuration}
+            maxDuration={maxDuration}
+            durationSliderValue={durationSliderValue}
+            handleDurationSliderChange={handleDurationSliderChange}
             clearAllFilters={clearAllFilters}
             handleSliderChange={handleSliderChange}
             handledepTimeFilter={handledepTimeFilter}

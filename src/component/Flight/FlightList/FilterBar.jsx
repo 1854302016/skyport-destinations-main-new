@@ -11,11 +11,21 @@ import { MdFlight } from "react-icons/md";
 import Slider from "rc-slider";
 import { motion } from "framer-motion";
 
+const formatDurationLabel = (minutes) => {
+  const hrs = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  return `${hrs}h ${mins}m`;
+};
+
 const FilterBar = ({
   showFilter,
   minFare,
   maxFare,
   sliderValue,
+  minDuration,
+  maxDuration,
+  durationSliderValue,
+  handleDurationSliderChange,
   clearAllFilters,
   handleSliderChange,
   handledepTimeFilter,
@@ -113,6 +123,50 @@ const FilterBar = ({
             </div>
           </Card>
         </motion.div>
+
+        {/* Duration Filter */}
+        {maxDuration > 0 && (
+          <motion.div variants={itemVariants} className="filter-group mb-4">
+            <Card className="border-0 bg-white p-3 rounded-1">
+              <div className="group-title mb-3 d-flex align-items-center text-muted fw-700 small">
+                <FiClock className="me-2" /> FLIGHT DURATION
+              </div>
+              <div className="px-2">
+                <Slider
+                  range
+                  min={minDuration}
+                  max={maxDuration}
+                  value={durationSliderValue}
+                  onChange={handleDurationSliderChange}
+                  trackStyle={[{ backgroundColor: "#3b82f6" }]}
+                  handleStyle={[
+                    {
+                      borderColor: "#3b82f6",
+                      backgroundColor: "#ffffff",
+                      opacity: 1,
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                    },
+                    {
+                      borderColor: "#3b82f6",
+                      backgroundColor: "#ffffff",
+                      opacity: 1,
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                    },
+                  ]}
+                  railStyle={{ backgroundColor: "#f1f5f9" }}
+                />
+                <div className="d-flex justify-content-between mt-3">
+                  <div className="price-box p-2 bg-light rounded text-center small fw-bold flex-grow-1 me-2">
+                    {formatDurationLabel(durationSliderValue[0])}
+                  </div>
+                  <div className="price-box p-2 bg-light rounded text-center small fw-bold flex-grow-1">
+                    {formatDurationLabel(durationSliderValue[1])}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        )}
 
         {/* Stops Filter */}
         <motion.div variants={itemVariants} className="filter-group mb-4">

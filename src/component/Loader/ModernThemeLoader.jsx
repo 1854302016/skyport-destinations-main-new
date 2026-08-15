@@ -3,12 +3,8 @@ import { FaPlane } from "react-icons/fa";
 import { FaRightLong } from "react-icons/fa6";
 import "./ModernThemeLoader.css";
 
-const ModernThemeLoader = ({
-  fromCode = "GEO",
-  fromCity = "Georgetown",
-  toCode = "DXB",
-  toCity = "Dubai",
-}) => {
+const ModernThemeLoader = ({ fromCode, fromCity, toCode, toCity }) => {
+  const hasRoute = Boolean(fromCode && toCode);
   return (
     <div className="clean-globe-loader-stage" id="Loader">
       {/* Soft Ambient Radial Backdrop Glows */}
@@ -73,23 +69,25 @@ const ModernThemeLoader = ({
         </div>
 
         {/* FROM and TO Location Destinations Rendered Just Under the Globe */}
-        <div className="under-globe-route-pill">
-          <div className="route-location-box">
-            <span className="location-code">{fromCode}</span>
-            <span className="location-city">{fromCity}</span>
-          </div>
+        {hasRoute && (
+          <div className="under-globe-route-pill">
+            <div className="route-location-box">
+              <span className="location-code">{fromCode}</span>
+              <span className="location-city">{fromCity}</span>
+            </div>
 
-          <div className="route-flight-divider">
-            <div className="flight-dot" />
-            <FaRightLong className="flight-connector-arrow" />
-            <div className="flight-dot" />
-          </div>
+            <div className="route-flight-divider">
+              <div className="flight-dot" />
+              <FaRightLong className="flight-connector-arrow" />
+              <div className="flight-dot" />
+            </div>
 
-          <div className="route-location-box">
-            <span className="location-code">{toCode}</span>
-            <span className="location-city">{toCity}</span>
+            <div className="route-location-box">
+              <span className="location-code">{toCode}</span>
+              <span className="location-city">{toCity}</span>
+            </div>
           </div>
-        </div>
+        )}
 
       </div>
     </div>

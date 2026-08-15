@@ -4652,6 +4652,112 @@ label {
   color: #FFFFFF !important;
 }
 
+/* Booking Details ("send to") card — BDSend.jsx */
+.bdSendCard {
+  background: #FFFFFF;
+  border: 1px solid #E7EDF5;
+  border-radius: 14px;
+  padding: 20px 20px 24px;
+  box-shadow: 0 4px 16px rgba(6, 26, 51, 0.05);
+}
+
+.bdSendHeader {
+  margin-bottom: 16px;
+}
+
+.bdSendTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #061A33;
+  margin: 0 0 2px;
+}
+
+.bdSendSubtitle {
+  font-size: 12.5px;
+  color: #7A8699;
+}
+
+.bdSendFieldsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.bdSendField {
+  display: flex;
+  align-items: center;
+  flex: 1 1 240px;
+  border: 1px solid #DCE3EC;
+  border-radius: 10px;
+  padding: 0 14px;
+  height: 48px;
+  background: #FAFBFD;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.bdSendField:focus-within {
+  border-color: #0066FF;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.12);
+}
+
+.bdSendFieldIcon {
+  color: #8A97A8;
+  font-size: 14px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.bdSendField:focus-within .bdSendFieldIcon {
+  color: #0066FF;
+}
+
+.bdSendCountrySelect {
+  border: none;
+  background: transparent;
+  outline: 0;
+  font-size: 14px;
+  color: #4A4A4A;
+  max-width: 90px;
+  flex-shrink: 0;
+}
+
+.bdSendDivider {
+  width: 1px;
+  height: 22px;
+  background: #DCE3EC;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+.bdSendInput {
+  border: none;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+.bdSendInput::placeholder {
+  color: #9AA5B4;
+}
+
+@media (max-width: 767px) {
+  .bdSendCard {
+    padding: 16px 16px 20px;
+    border-radius: 12px;
+  }
+  .bdSendFieldsRow {
+    flex-direction: column;
+  }
+  .bdSendField {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
 /* Addon Tabs & Badges */
 .ssr-tab-btn.active,
 .trip-secure-badge {
@@ -4659,4 +4765,96 @@ label {
   color: #0066FF !important;
   border-color: #CCE2FF !important;
   font-weight: 800 !important;
+}
+
+/* ==========================================================================
+   REVIEW BOOKING PAGE - VISUAL REFRESH
+   Scoped entirely under .flightBookingMainMain (the Review Booking page's own
+   wrapper, not used elsewhere) so nothing outside this page is affected.
+   Cosmetic only: no display/position/width/float changes, so layout and
+   functionality are untouched.
+   ========================================================================== */
+
+.flightBookingMainMain .booking_title {
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.flightBookingMainMain .block-content-2.custom_block_content {
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 34px rgba(11, 37, 69, 0.08);
+  border: 1px solid #eef1f6;
+  border-top: none;
+}
+
+.flightBookingMainMain .flight_tags span {
+  background: linear-gradient(135deg, #0066ff 0%, #0b2545 100%);
+  box-shadow: 0 3px 8px rgba(0, 102, 255, 0.3);
+}
+
+.flightBookingMainMain .refundable {
+  display: inline-block;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff !important;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+.flightBookingMainMain .componentContainer {
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 34px rgba(11, 37, 69, 0.08) !important;
+  border: 1px solid #eef1f6;
+}
+
+.flightBookingMainMain .flightBookingsecDiv {
+  border-radius: 18px !important;
+  overflow: hidden;
+  border: 1px solid #eef1f6;
+  box-shadow: 0 12px 36px rgba(11, 37, 69, 0.1) !important;
+}
+
+.flightBookingMainMain .flightBookingsecDiv .lbl {
+  color: #4a5568;
+}
+
+.flightBookingMainMain .flightBookingsecDiv .val {
+  color: #0b2545;
+  font-weight: 600;
+}
+
+.flightBookingMainMain .flightBookingsecDivRow {
+  background: linear-gradient(135deg, #eef5ff 0%, #f3f7ff 100%) !important;
+  border-radius: 10px;
+  margin-inline: 8px;
+  padding-inline: 8px !important;
+}
+
+.flightBookingMainMain .flightBookingsecDivRow .lbl,
+.flightBookingMainMain .flightBookingsecDivRow .val {
+  color: #0b2545;
+  font-size: 16px;
+}
+
+.flightBookingMainMain .ewalletbtn {
+  background: linear-gradient(135deg, #0066ff 0%, #0b2545 100%) !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.flightBookingMainMain .ewalletbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 102, 255, 0.4);
+}
+
+.flightBookingMainMain .offer_promoContainers_desktop {
+  border-radius: 18px !important;
+  overflow: hidden;
+  border: 1px solid #eef1f6;
 }

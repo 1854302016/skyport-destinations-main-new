@@ -23,6 +23,43 @@
   color: #FFFFFF !important;
 }
 
+/* Background Flight Image Slider */
+.hero-bg-slider {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-bg-slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-slide-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 24, 51, 0.86) 0%,
+    rgba(6, 24, 51, 0.82) 45%,
+    rgba(6, 24, 51, 0.92) 100%
+  ) !important;
+  pointer-events: none;
+}
+
 /* Ambient Glowing Orbs */
 .hero-light-glow-1 {
   position: absolute;
@@ -32,6 +69,7 @@
   height: 600px;
   background: radial-gradient(circle, rgba(0, 102, 255, 0.35) 0%, transparent 65%) !important;
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero-light-glow-2 {
@@ -42,6 +80,7 @@
   height: 600px;
   background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 65%) !important;
   pointer-events: none;
+  z-index: 2;
 }
 
 /* High-Tech Clean World Map Graphic Overlay */
@@ -54,7 +93,7 @@
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 .hero-world-map-img {
@@ -72,7 +111,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 4;
 }
 
 .animated-flight-arc {

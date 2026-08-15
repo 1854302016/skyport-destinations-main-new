@@ -5,9 +5,16 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import ModernThemeLoader from "../../Loader/ModernThemeLoader";
 import "./FlightListInfo.css";
 
-const FlightListSkeleton = ({ message, subMessage }) => {
+const FlightListSkeleton = ({ message, subMessage, fromCode, fromCity, toCode, toCity }) => {
   return (
-    <ModernThemeLoader message={message} subMessage={subMessage} />
+    <ModernThemeLoader
+      message={message}
+      subMessage={subMessage}
+      fromCode={fromCode}
+      fromCity={fromCity}
+      toCode={toCode}
+      toCity={toCity}
+    />
   );
 
   /* Preserved Legacy Loader Markup:

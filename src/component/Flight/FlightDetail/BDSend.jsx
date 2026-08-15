@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { countryCodeNum } from "../../../CountryCodeNum";
 
 const BDSend = ({ walletData, onDataChange }) => {
   const [formData, setFormData] = useState({
-    countryCode: "+592",
-    isoCode: "GY",
+    countryCode: "+91",
+    isoCode: "IN",
     mobile: "",
     email: "",
     gstChecked: false,
@@ -33,118 +34,99 @@ const BDSend = ({ walletData, onDataChange }) => {
   }, [formData, onDataChange]);
 
   return (
-    <div className="componentContainer componentContainerAnother componentContainerAnother_BD_Send">
+    <div className="componentContainer componentContainerAnother componentContainerAnother_BD_Send bdSendCard">
       <Row>
         <Col sm={2}></Col>
         <Col sm={10}>
-          <div className="bookingDetailsForm" id="contactDetails">
-            <p className="fontSize14 boldFont appendBottom15">
-              Booking details will be sent to
-            </p>
+          <div className="bdSendHeader" id="contactDetails">
+            <p className="bdSendTitle">Booking details will be sent to</p>
+            <span className="bdSendSubtitle">
+              We'll use these details to confirm your booking
+            </span>
           </div>
-          <Row className="adultItemRow">
-            <Col sm={2} xs={4}>
-              <div className="adultItem" id="Country Code">
-                <div className="selectItem relative">
-                  <div className="dropdown__control css-yk16xz-control">
-                    <div className="dropdown__single-value css-1uccc91-singleValue">
-                      <select
-                        name="countryCode"
-                        id="countryCode"
-                        value={formData.countryCode}
-                        onChange={handleCountryChange}
-                        style={{
-                          border: "none",
-                          padding: "0px",
-                          height: "20px",
-                          fontSize: "14px",
-                          width: "155px",
-                          background: "transparent"
-                        }}
-                      >
-                        {countryCodeNum.map((item, index) => (
-                          <option key={index} value={item.dial_code}>
-                            {item.name} ({item.dial_code})
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col sm={5} xs={8}>
-              <div className="adultItem flightBookingFirstName1">
-                <div className="relative">
-                  <input
-                    className="tvlrInput"
-                    type="text"
-                    placeholder="Contact No"
-                    value={formData.mobile}
-                    onChange={(e) => {
-                      const val = e.target.value.replace(/\D/g, "");
-                      handleInputChange("mobile", val);
-                    }}
-                  />
-                </div>
-              </div>
-            </Col>
-            <Col sm={5} xs={12}>
-              <div className="adultItem flightBookingFirstName1">
-                <div className="relative">
-                  <input
-                    className="tvlrInput"
-                    type="text"
-                    placeholder="Enter Email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                  />
-                </div>
-              </div>
-            </Col>
 
-            <div className="padding20" id="gstDetails">
-              {formData.gstChecked && (
-                <div className="appendTop15">
-                  <div className="adultItemRow">
-                    <div
-                      className="adultItem"
-                      style={{ width: "30%", marginRight: "20px" }}
-                    >
-                      <div className="relative">
-                        <label style={{ fontSize: "14px" }}>Company Name</label>
-                        <input
-                          autoComplete="none"
-                          placeholder="Company Name"
-                          className="tvlrInput"
-                          type="text"
-                          value={formData.companyName}
-                          onChange={(e) =>
-                            handleInputChange("companyName", e.target.value)
-                          }
-                        />
-                      </div>
+          <div className="bdSendFieldsRow">
+            <div className="bdSendField bdSendPhoneField">
+              <FaPhoneAlt className="bdSendFieldIcon" />
+              <select
+                name="countryCode"
+                id="countryCode"
+                className="bdSendCountrySelect"
+                value={formData.countryCode}
+                onChange={handleCountryChange}
+              >
+                {countryCodeNum.map((item, index) => (
+                  <option key={index} value={item.dial_code}>
+                    {item.code} ({item.dial_code})
+                  </option>
+                ))}
+              </select>
+              <span className="bdSendDivider" />
+              <input
+                className="bdSendInput"
+                type="text"
+                placeholder="Contact No"
+                value={formData.mobile}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, "");
+                  handleInputChange("mobile", val);
+                }}
+              />
+            </div>
+
+            <div className="bdSendField">
+              <FaEnvelope className="bdSendFieldIcon" />
+              <input
+                className="bdSendInput"
+                type="email"
+                placeholder="Enter Email"
+                value={formData.email}
+                onChange={(e) => handleInputChange("email", e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div className="padding20" id="gstDetails">
+            {formData.gstChecked && (
+              <div className="appendTop15">
+                <div className="adultItemRow">
+                  <div
+                    className="adultItem"
+                    style={{ width: "30%", marginRight: "20px" }}
+                  >
+                    <div className="relative">
+                      <label style={{ fontSize: "14px" }}>Company Name</label>
+                      <input
+                        autoComplete="none"
+                        placeholder="Company Name"
+                        className="tvlrInput"
+                        type="text"
+                        value={formData.companyName}
+                        onChange={(e) =>
+                          handleInputChange("companyName", e.target.value)
+                        }
+                      />
                     </div>
-                    <div className="adultItem" style={{ width: "30%" }}>
-                      <div className="relative">
-                        <label style={{ fontSize: "14px" }}>GST No</label>
-                        <input
-                          autoComplete="none"
-                          placeholder="Gst No"
-                          className="tvlrInput"
-                          type="text"
-                          value={formData.registrationNo}
-                          onChange={(e) =>
-                            handleInputChange("registrationNo", e.target.value)
-                          }
-                        />
-                      </div>
+                  </div>
+                  <div className="adultItem" style={{ width: "30%" }}>
+                    <div className="relative">
+                      <label style={{ fontSize: "14px" }}>GST No</label>
+                      <input
+                        autoComplete="none"
+                        placeholder="Gst No"
+                        className="tvlrInput"
+                        type="text"
+                        value={formData.registrationNo}
+                        onChange={(e) =>
+                          handleInputChange("registrationNo", e.target.value)
+                        }
+                      />
                     </div>
                   </div>
                 </div>
-              )}
-            </div>
-          </Row>
+              </div>
+            )}
+          </div>
         </Col>
       </Row>
     </div>

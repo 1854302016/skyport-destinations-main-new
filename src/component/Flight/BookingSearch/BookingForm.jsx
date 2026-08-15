@@ -59,6 +59,14 @@ export const data = [
   },
 ];
 
+export const heroBgSlides = [
+  "https://images.pexels.com/photos/723240/pexels-photo-723240.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+];
+
 export var settings = {
   dots: false,
   autoplay: true,
@@ -573,6 +581,26 @@ const BookingForm = () => {
       });
 
       const contactParam = `*nm_${encodeURIComponent(passengerName || "")}*em_${encodeURIComponent(passengerEmail || "")}*ph_${encodeURIComponent(passengerPhone || "")}`;
+
+      // Fire a lead/enquiry record for this search. Best-effort — must not
+      // block or break the actual flight search/navigation below.
+      axios
+        .post("https://admin.trustedfare.com/api/flight-book-enquiry", {
+          name: passengerName || "",
+          email: passengerEmail || "",
+          phone: passengerPhone || "",
+          destination: `${SearchData.Segments[0].Origin || ""} -> ${SearchData.Segments[0].Destination || ""}`,
+          date: SearchData.Segments[0].PreferredDepartureTime || "",
+          trip_type: active ? "OneWay" : "RoundTrip",
+          adults: SearchData.AdultCount,
+          children: SearchData.ChildCount,
+          infants: SearchData.InfantCount,
+          status: "pending",
+          message: "Search enquiry - flight not yet booked",
+        })
+        .catch((error) => {
+          console.error("Error saving search enquiry:", error);
+        });
 
       if (active) {
         navigate(
@@ -1138,8 +1166,32 @@ const BookingForm = () => {
     //   width: "100%",
     // }}
     >
-      {/* Creative Motion Flight Stage (No Image Slider) */}
+      {/* Creative Motion Flight Stage */}
       <div className="creative-hero-stage">
+        {/* Background Flight Image Slider */}
+        <Swiper
+          modules={[Autoplay, EffectFade]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          loop={true}
+          allowTouchMove={false}
+          speed={1200}
+          className="hero-bg-slider"
+        >
+          {heroBgSlides.map((img, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="hero-bg-slide-img"
+                style={{ backgroundImage: `url(${img})` }}
+                role="img"
+                aria-label="Flight background"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="hero-bg-overlay" aria-hidden="true" />
+
         {/* Ambient Glowing Lighting Grids */}
         <div className="hero-light-glow-1" aria-hidden="true" />
         <div className="hero-light-glow-2" aria-hidden="true" />
@@ -1837,11 +1889,6 @@ const BookingForm = () => {
                         Save on bookings with more than 9 travellers
                       </div>
                     </div> */}
-                  </div>
-                  <div className="search_flight_bookingsss">
-                    <button className="mat-stroked-button" type="submit">
-                      SEARCH
-                    </button>
                   </div>
                 </div>
 

@@ -294,7 +294,11 @@ const RoundList = ({
       ) : (
         // <RoundTripSkeleton />
         <div>
-          {errors ? <div>Loading................</div> : <FlightListSkeleton />}
+          {errors ? (
+            <div>Loading................</div>
+          ) : (
+            <FlightListSkeleton fromCode={destinationCity} toCode={destinationCity2} />
+          )}
         </div>
       )}
     </Col>

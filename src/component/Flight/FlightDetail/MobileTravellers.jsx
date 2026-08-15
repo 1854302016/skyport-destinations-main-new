@@ -112,8 +112,8 @@ const MobileTravellers = ({
     expirydate: "",
   });
   const [formDatas, setFormDatas] = useState({
-    countryCode: "+592",
-    isoCode: "GY",
+    countryCode: "+91",
+    isoCode: "IN",
     mobile: "",
     email: "",
     gstChecked: false,

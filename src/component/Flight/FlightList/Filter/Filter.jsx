@@ -12,12 +12,22 @@ import "./Filter.css";
 import { RxCross2 } from "react-icons/rx";
 import Slider from "rc-slider";
 import { MdFlight } from "react-icons/md";
+const formatDurationLabel = (minutes) => {
+  const hrs = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  return `${hrs}h ${mins}m`;
+};
+
 function Filter({
   showFilter,
   closeFilter,
   minFare,
   maxFare,
   sliderValue,
+  minDuration,
+  maxDuration,
+  durationSliderValue,
+  handleDurationSliderChange,
   clearAllFilters,
   handleSliderChange,
   handledepTimeFilter,
@@ -114,6 +124,33 @@ function Filter({
                 </div>
               </div>
               <div className="line"></div>
+
+              {/* Duration Filter */}
+              {maxDuration > 0 && (
+                <>
+                  <div className="filter-heading ">Flight Duration</div>
+                  <div>
+                    <div className="box-content">
+                      <div className="slider-dragable-range slider-range-price">
+                        <Slider
+                          range
+                          min={minDuration}
+                          max={maxDuration}
+                          value={durationSliderValue}
+                          onChange={handleDurationSliderChange}
+                          className="custom-slider"
+                        />
+                        <div className="slider-value">
+                          <span>{formatDurationLabel(durationSliderValue[0])}</span>{" "}
+                          <span>-</span>{" "}
+                          <span>{formatDurationLabel(durationSliderValue[1])}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="line"></div>
+                </>
+              )}
 
               {/* Departure Details */}
 

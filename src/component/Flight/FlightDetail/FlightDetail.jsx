@@ -2219,12 +2219,19 @@ const validatePassengerAgeByType = (dob, passengerType) => {
         bookingResponse.data.Data.UniqueID
       ); */
 
-      const checkouturl = bookingResponse?.data?.Response?.url;
-      console.log("Checkout url", checkouturl);
-       window.location.href = checkouturl;
-      // Redirect to ticket page
-    //  navigate("/flight-do-not-close/241");
-      // navigate(`/flight-ticket/${encodeURIComponent(srdvIdx)}`);
+      // Booking is created in "Pending" status on the backend. Do NOT redirect
+      // to the payment gateway checkout page — just confirm to the customer
+      // that the booking request has been received.
+      Swal.fire({
+        icon: "success",
+        title: "Booking Received!",
+        html: `
+          <p>Your booking request has been received and is <strong>pending</strong>.</p>
+          <p>Our team will contact you shortly to complete the payment and confirm your ticket.</p>
+        `,
+      }).then(() => {
+        navigate("/");
+      });
     } catch (error) {
       console.error("Booking Error:", error);
       Swal.fire({
