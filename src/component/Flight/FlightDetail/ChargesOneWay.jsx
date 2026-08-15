@@ -6,6 +6,7 @@ import FlightDetailSide from "./FlightDetailSide";
 import { useNavigate } from "react-router-dom";
 
 import PromoCode from "./PromoCode";
+import { useCurrency } from "../../../context/CurrencyContext";
 
 const ChargesOneWay = ({
   srdvIdx,
@@ -34,6 +35,7 @@ const ChargesOneWay = ({
   handleConfirmPendingBooking,
   handleTicketBookMistifly
 }) => {
+  const { formatPrice } = useCurrency();
   let totalMealCharges = passengerMealPreferences.reduce((total, meal) => {
     if (meal && meal.Price) {
       total += meal.Price;
@@ -139,8 +141,7 @@ const ChargesOneWay = ({
                               {flight.FareBreakdown[0].PassengerCount} x Adult
                             </span>{" "}
                             <span className="val">
-                              {/* {flight.FareBreakdown[0].Currency} */}$
-                              {Math.round(
+                              {formatPrice(
                                 flight.FareBreakdown[0].BaseFare +
                                   flight2.FareBreakdown[0].BaseFare
                               )}
@@ -153,8 +154,7 @@ const ChargesOneWay = ({
                                 Children
                               </span>{" "}
                               <span className="val">
-                                $
-                                {Math.round(
+                                {formatPrice(
                                   flight.FareBreakdown[1].BaseFare +
                                     flight2.FareBreakdown[1].BaseFare
                                 )}
@@ -168,8 +168,7 @@ const ChargesOneWay = ({
                                 Infants
                               </span>{" "}
                               <span className="val">
-                                {/* {flight.FareBreakdown[2].Currency} */}$
-                                {Math.round(
+                                {formatPrice(
                                   flight.FareBreakdown[2].BaseFare +
                                     flight2.FareBreakdown[1].BaseFare
                                 )}
@@ -187,8 +186,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Base Fare</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.BaseFare + flight2.Fare.BaseFare
                             )}
                           </span>
@@ -204,8 +202,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Taxes & Surcharges</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(flight.Fare.Tax + flight2.Fare.Tax + flight2.Fare.OtherCharges + flight.Fare.OtherCharges)}
+                            {formatPrice(flight.Fare.Tax + flight2.Fare.Tax + flight2.Fare.OtherCharges + flight.Fare.OtherCharges)}
                           </span>
                         </Col>
                       </Row>
@@ -221,8 +218,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Meals</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalMealPrice)}
+                              {formatPrice(totalMealPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -238,8 +234,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Baggage</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalBaggagePrice)}
+                              {formatPrice(totalBaggagePrice)}
                             </span>
                           </Col>
                         </Row>
@@ -255,8 +250,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Seats</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalSeatPrice)}
+                              {formatPrice(totalSeatPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -270,8 +264,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Discount</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.Discount + flight2.Fare.Discount
                             )}
                           </span>
@@ -285,8 +278,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">You Pay:</span> -{" "}
                           <span className="val">
-                            $
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.PublishedFare +
                                 flight2.Fare.PublishedFare +
                                 totalSeatPrice +
@@ -360,8 +352,7 @@ const ChargesOneWay = ({
                               {flight.FareBreakdown[0].PassengerCount} x Adult
                             </span>{" "}
                             <span className="val">
-                              {/* {flight.FareBreakdown[0].Currency} */}$
-                              {Math.round(flight.FareBreakdown[0].BaseFare)}
+                              {formatPrice(flight.FareBreakdown[0].BaseFare)}
                             </span>
                           </Col>
                           {flight.FareBreakdown[1] && (
@@ -371,8 +362,7 @@ const ChargesOneWay = ({
                                 Children
                               </span>{" "}
                               <span className="val">
-                                {/* {flight.FareBreakdown[1].Currency} */}$
-                                {Math.round(flight.FareBreakdown[1].BaseFare)}
+                                {formatPrice(flight.FareBreakdown[1].BaseFare)}
                               </span>
                             </Col>
                           )}
@@ -383,8 +373,7 @@ const ChargesOneWay = ({
                                 Infants
                               </span>{" "}
                               <span className="val">
-                                {/* {flight.FareBreakdown[2].Currency} */}$
-                                {Math.round(flight.FareBreakdown[2].BaseFare)}
+                                {formatPrice(flight.FareBreakdown[2].BaseFare)}
                               </span>
                             </Col>
                           )}
@@ -399,8 +388,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Base Fare</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(flight.Fare.BaseFare)}
+                            {formatPrice(flight.Fare.BaseFare)}
                           </span>
                         </Col>
                       </Row>
@@ -415,8 +403,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Meals</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalMealPrice)}
+                              {formatPrice(totalMealPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -432,8 +419,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Baggage</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalBaggagePrice)}
+                              {formatPrice(totalBaggagePrice)}
                             </span>
                           </Col>
                         </Row>
@@ -449,8 +435,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Seats</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalSeatPrice)}
+                              {formatPrice(totalSeatPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -464,8 +449,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Taxes & Surcharges</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(flight.Fare.Tax + flight.Fare.OtherCharges)}
+                            {formatPrice(flight.Fare.Tax + flight.Fare.OtherCharges)}
                           </span>
                         </Col>
                       </Row>
@@ -479,8 +463,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Discount</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}$
-                            {Math.round(flight.Fare.Discount)}
+                            {formatPrice(flight.Fare.Discount)}
                           </span>
                         </Col>
                       </Row>
@@ -492,8 +475,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">You Pay:</span> -{" "}
                           <span className="val">
-                            $
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.PublishedFare +
                                 totalSeatPrice +
                                 totalMealPrice +
@@ -560,8 +542,7 @@ const ChargesOneWay = ({
                       </span>{" "}
                       <FaAngleDown onClick={() => setShowdetail(!showdetail)} />{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}  */}$
-                        {handleChangeCurrency(
+                        {formatPrice(
                           flight.totalPriceInfo.totalFareDetail.fC.BF
                         )}
                       </span>
@@ -577,8 +558,7 @@ const ChargesOneWay = ({
                           {flight.searchQuery.paxInfo.ADULT} x Adult
                         </span>{" "}
                         <span className="val">
-                          {/* {flight.FareBreakdown[0].Currency} */}$
-                          {handleChangeCurrency(
+                          {formatPrice(
                             flight.tripInfos[0].totalPriceList[0].fd.ADULT.fC.BF
                           )}
                         </span>
@@ -589,8 +569,7 @@ const ChargesOneWay = ({
                             {flight.searchQuery.paxInfo.CHILD} x Children
                           </span>{" "}
                           <span className="val">
-                            {/* {flight.FareBreakdown[1].Currency} */}$
-                            {handleChangeCurrency(
+                            {formatPrice(
                               flight.tripInfos[0].totalPriceList[0].fd.CHILD.fC
                                 .BF
                             )}
@@ -603,8 +582,7 @@ const ChargesOneWay = ({
                             {flight.searchQuery.paxInfo.INFANT} x Infants
                           </span>{" "}
                           <span className="val">
-                            {/* {flight.FareBreakdown[2].Currency} */}$
-                            {handleChangeCurrency(
+                            {formatPrice(
                               flight.tripInfos[0].totalPriceList[0].fd.INFANT.fC
                                 .BF
                             )}
@@ -622,8 +600,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Taxes & Surcharges</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency} */}$
-                        {flight.totalPriceInfo.totalFareDetail.fC.TAF}
+                        {formatPrice(flight.totalPriceInfo.totalFareDetail.fC.TAF)}
                       </span>
                     </Col>
                   </Row>
@@ -636,8 +613,8 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Discount</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency} */}$
-                        {/* {handleChangeCurrency(flight.Fare.Discount)} */}0
+                        {/* {handleChangeCurrency(flight.Fare.Discount)} */}
+                        {formatPrice(0)}
                       </span>
                     </Col>
                   </Row>
@@ -650,8 +627,8 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Service Fee</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}  */}$
-                        {/* {handleChangeCurrency(flight.Fare.ServiceFee)} */}0
+                        {/* {handleChangeCurrency(flight.Fare.ServiceFee)} */}
+                        {formatPrice(0)}
                       </span>
                     </Col>
                   </Row>
@@ -664,8 +641,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Excess Baggage (0KG )</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(totalBaggageWithCharges)}
+                        {formatPrice(totalBaggageWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -678,8 +654,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Meal (0)</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(totalMealWithCharges)}
+                        {formatPrice(totalMealWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -692,8 +667,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Seat Charges</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(totalSeatWithCharges)}
+                        {formatPrice(totalSeatWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -704,8 +678,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Total Fare</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
+                        {formatPrice(
                           flight.totalPriceInfo.totalFareDetail.fC.TF
                         )}
                       </span>
@@ -715,8 +688,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">You Pay:</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
+                        {formatPrice(
                           flight.totalPriceInfo.totalFareDetail.fC.TF
                         )}
                       </span>
@@ -945,12 +917,9 @@ const ChargesOneWay = ({
                       </span>{" "}
                       <FaAngleDown onClick={() => setShowdetail(!showdetail)} />{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}  */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(
-                            flight.AirItineraryPricingInfo.ItinTotalFare
-                              .BaseFare
-                          )
+                        {formatPrice(
+                          flight.AirItineraryPricingInfo.ItinTotalFare
+                            .BaseFare
                         )}
                       </span>
                     </Col>
@@ -969,12 +938,9 @@ const ChargesOneWay = ({
                           x Adult
                         </span>{" "}
                         <span className="val">
-                          {/* {flight.FareBreakdown[0].Currency} */}$
-                          {handleChangeCurrency(
-                            handleChangeCurrency2(
-                              flight.AirItineraryPricingInfo.PtcFareBreakdown[0]
-                                .PassengerFare.BaseFare
-                            )
+                          {formatPrice(
+                            flight.AirItineraryPricingInfo.PtcFareBreakdown[0]
+                              .PassengerFare.BaseFare
                           )}
                         </span>
                       </Col>
@@ -988,12 +954,9 @@ const ChargesOneWay = ({
                             x Children
                           </span>{" "}
                           <span className="val">
-                            {/* {flight.FareBreakdown[1].Currency} */}$
-                            {handleChangeCurrency(
-                              handleChangeCurrency2(
-                                flight.AirItineraryPricingInfo
-                                  .PtcFareBreakdown[1].PassengerFare.BaseFare
-                              )
+                            {formatPrice(
+                              flight.AirItineraryPricingInfo
+                                .PtcFareBreakdown[1].PassengerFare.BaseFare
                             )}
                           </span>
                         </Col>
@@ -1008,12 +971,9 @@ const ChargesOneWay = ({
                             x Infants
                           </span>{" "}
                           <span className="val">
-                            {/* {flight.FareBreakdown[2].Currency} */}$
-                            {handleChangeCurrency(
-                              handleChangeCurrency2(
-                                flight.AirItineraryPricingInfo
-                                  .PtcFareBreakdown[2].PassengerFare.BaseFare
-                              )
+                            {formatPrice(
+                              flight.AirItineraryPricingInfo
+                                .PtcFareBreakdown[2].PassengerFare.BaseFare
                             )}
                           </span>
                         </Col>
@@ -1029,14 +989,11 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Taxes & Surcharges</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(
+                        {formatPrice(
+                          flight.AirItineraryPricingInfo.ItinTotalFare
+                            .ServiceTax +
                             flight.AirItineraryPricingInfo.ItinTotalFare
-                              .ServiceTax +
-                              flight.AirItineraryPricingInfo.ItinTotalFare
-                                .TotalTax
-                          )
+                              .TotalTax
                         )}
                       </span>
                     </Col>
@@ -1050,8 +1007,8 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Discount</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency} */}$
-                        {/* {handleChangeCurrency(flight.Fare.Discount)} */}0
+                        {/* {handleChangeCurrency(flight.Fare.Discount)} */}
+                        {formatPrice(0)}
                       </span>
                     </Col>
                   </Row>
@@ -1064,8 +1021,8 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Service Fee</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}  */}$
-                        {/* {handleChangeCurrency(flight.Fare.ServiceFee)} */} 0
+                        {/* {handleChangeCurrency(flight.Fare.ServiceFee)} */}
+                        {formatPrice(0)}
                       </span>
                     </Col>
                   </Row>
@@ -1078,10 +1035,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Excess Baggage (0KG )</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(totalBaggageWithCharges)
-                        )}
+                        {formatPrice(totalBaggageWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -1094,10 +1048,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Meal (0)</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(totalMealWithCharges)
-                        )}
+                        {formatPrice(totalMealWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -1110,10 +1061,7 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Seat Charges</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(totalSeatWithCharges)
-                        )}
+                        {formatPrice(totalSeatWithCharges)}
                       </span>
                     </Col>
                   </Row>
@@ -1124,12 +1072,9 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">Total Fare</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(
-                            flight.AirItineraryPricingInfo.ItinTotalFare
-                              .TotalFare
-                          )
+                        {formatPrice(
+                          flight.AirItineraryPricingInfo.ItinTotalFare
+                            .TotalFare
                         )}
                       </span>
                     </Col>
@@ -1138,12 +1083,9 @@ const ChargesOneWay = ({
                     <Col xs={12} md={12}>
                       <span className="lbl">You Pay:</span> -{" "}
                       <span className="val">
-                        {/* {flight.Fare.Currency}{" "} */}$
-                        {handleChangeCurrency(
-                          handleChangeCurrency2(
-                            flight.AirItineraryPricingInfo.ItinTotalFare
-                              .TotalFare
-                          )
+                        {formatPrice(
+                          flight.AirItineraryPricingInfo.ItinTotalFare
+                            .TotalFare
                         )}
                       </span>
                     </Col>
@@ -1240,8 +1182,7 @@ const ChargesOneWay = ({
                               {flight.FareBreakdown[0].PassengerCount} x Adult
                             </span>{" "}
                             <span className="val">
-                              {/* {flight.FareBreakdown[0].Currency} */}$
-                              {Math.round(
+                              {formatPrice(
                                 flight.FareBreakdown[0].BaseFare +
                                   flight2.FareBreakdown[0].BaseFare
                               )}
@@ -1254,8 +1195,7 @@ const ChargesOneWay = ({
                                 Children
                               </span>{" "}
                               <span className="val">
-                                $
-                                {Math.round(
+                                {formatPrice(
                                   flight.FareBreakdown[1].BaseFare +
                                     flight2.FareBreakdown[1].BaseFare
                                 )}
@@ -1269,8 +1209,7 @@ const ChargesOneWay = ({
                                 Infants
                               </span>{" "}
                               <span className="val">
-                                {/* {flight.FareBreakdown[2].Currency} */}$
-                                {Math.round(
+                                {formatPrice(
                                   flight.FareBreakdown[2].BaseFare +
                                     flight2.FareBreakdown[1].BaseFare
                                 )}
@@ -1288,9 +1227,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Base Fare</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}
-                            $
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.BaseFare + flight2.Fare.BaseFare
                             )}
                           </span>
@@ -1306,9 +1243,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Taxes & Surcharges</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}
-                            $
-                            {Math.round(flight.Fare.Tax + flight2.Fare.Tax + flight2.Fare.OtherCharges + flight.Fare.OtherCharges)}
+                            {formatPrice(flight.Fare.Tax + flight2.Fare.Tax + flight2.Fare.OtherCharges + flight.Fare.OtherCharges)}
                           </span>
                         </Col>
                       </Row>
@@ -1324,8 +1259,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Meals</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalMealPrice)}
+                              {formatPrice(totalMealPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -1341,9 +1275,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Baggage</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}
-                              $
-                              {Math.round(totalBaggagePrice)}
+                              {formatPrice(totalBaggagePrice)}
                             </span>
                           </Col>
                         </Row>
@@ -1359,8 +1291,7 @@ const ChargesOneWay = ({
                           <Col xs={12} md={12}>
                             <span className="lbl">Seats</span> -{" "}
                             <span className="val">
-                              {/* {flight.Fare.Currency}{" "} */}$
-                              {Math.round(totalSeatPrice)}
+                              {formatPrice(totalSeatPrice)}
                             </span>
                           </Col>
                         </Row>
@@ -1374,9 +1305,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Discount</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}
-                            $
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.Discount + flight2.Fare.Discount
                             )}
                           </span>
@@ -1390,8 +1319,7 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">You Pay:</span> -{" "}
                           <span className="val">
-                            $
-                            {Math.round(
+                            {formatPrice(
                               flight.Fare.PublishedFare +
                                 flight2.Fare.PublishedFare +
                                 totalSeatPrice +
@@ -1504,8 +1432,9 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Base Fare</span> -{" "}
                           <span className="val">
-                          $
-                            {flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.EquivFare.Amount}
+                            {formatPrice(
+                              flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.EquivFare.Amount
+                            )}
                           </span>
                         </Col>
                       </Row>
@@ -1569,14 +1498,14 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">Taxes & Surcharges</span> -{" "}
                           <span className="val">
-                            {/* {flight.Fare.Currency} */}
-                            $
-                            {flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalTax.Amount }
+                            {formatPrice(
+                              flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalTax.Amount
+                            )}
                           </span>
                         </Col>
                       </Row>
 
-                    
+
 
                       <Row
                         className="flightBookingsecDivRow"
@@ -1585,8 +1514,9 @@ const ChargesOneWay = ({
                         <Col xs={12} md={12}>
                           <span className="lbl">You Pay:</span> -{" "}
                           <span className="val">
-                            $
-                            {flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount}
+                            {formatPrice(
+                              flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount
+                            )}
                           </span>
                         </Col>
                       </Row>

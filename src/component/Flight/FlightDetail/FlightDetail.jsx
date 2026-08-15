@@ -50,7 +50,9 @@ import WhyBook from "./WhyBook";
 import MobileTravellers from "./MobileTravellers";
 import FlightSSR from "./FlightSSR.jsx";
 import ReviewPassneger from "./ReviewPassneger.jsx";
+import { useCurrency } from "../../../context/CurrencyContext";
 const FlightDetail = () => {
+  const { formatPrice } = useCurrency();
   const [fromCurrency, setFromCurrency] = useState("INR");
   const [toCurrency, setToCurrency] = useState("USD");
   const [exchangeRate, setExchangeRate] = useState(null);
@@ -3335,14 +3337,13 @@ const validatePassengerAge = () => {
 
                   {/* <span id="spnGrndTotal" className="CurrncyCD_Rs newfnt" /> */}
                   <span className="newfnt ng-binding">
-                    ₹{" "}
                     {flight && flight2
-                      ? Math.round(
+                      ? formatPrice(
                           flight &&
                             flight.Fare.PublishedFare + flight2 &&
                             flight2.Fare.PublishedFare,
                         )
-                      : Math.round(flight && flight.Fare.PublishedFare)}
+                      : formatPrice(flight && flight.Fare.PublishedFare)}
                   </span>
                   <a className="fr_icn ovhdn" />
                 </div>
@@ -3977,10 +3978,11 @@ const validatePassengerAge = () => {
                   <p>Grand Total</p>
 
                   <span className="newfnt ng-binding">
-                    ${" "}
                     {flight &&
-                      flight.PricedItineraries[0].AirItineraryPricingInfo
-                        .ItinTotalFare.TotalFare.Amount}
+                      formatPrice(
+                        flight.PricedItineraries[0].AirItineraryPricingInfo
+                          .ItinTotalFare.TotalFare.Amount,
+                      )}
                   </span>
                   <a className="fr_icn ovhdn" />
                 </div>

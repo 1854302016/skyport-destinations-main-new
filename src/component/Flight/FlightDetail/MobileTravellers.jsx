@@ -10,6 +10,7 @@ import "dayjs/locale/en-gb";
 import { toast } from "react-toastify";
 import MobileSsr from "./MobileSsr/MobileSsr";
 import { countryCodeNum } from "../../../CountryCodeNum";
+import { useCurrency } from "../../../context/CurrencyContext";
 export const formatDuration = (minutes) => {
   const hrs = String(Math.floor(minutes / 60)).padStart(2, "0");
   const mins = String(minutes % 60).padStart(2, "0");
@@ -47,6 +48,7 @@ const MobileTravellers = ({
   console.log("flightsss", flight);
   console.log("flightsss2", flight2);
   console.log("flightsss3", flight3);
+  const { formatPrice } = useCurrency();
   const formatTime = (arrTime) => {
     const date = new Date(arrTime);
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -1215,18 +1217,15 @@ const MobileTravellers = ({
 
             <span className="newfnt ng-binding">
               {" "}
-              ${" "}
-              {flight2
-                ? 
-                    flight.PricedItineraries[0].AirItineraryPricingInfo
+              {formatPrice(
+                flight2
+                  ? flight.PricedItineraries[0].AirItineraryPricingInfo
                       .ItinTotalFare.TotalFare.Amount +
                       flight2.PricedItineraries[0].AirItineraryPricingInfo
                         .ItinTotalFare.TotalFare.Amount
-                  
-                :
-                    flight.PricedItineraries[0].AirItineraryPricingInfo
+                  : flight.PricedItineraries[0].AirItineraryPricingInfo
                       .ItinTotalFare.TotalFare.Amount
-                  }
+              )}
             </span>
             <a className="fr_icn ovhdn" />
           </div>

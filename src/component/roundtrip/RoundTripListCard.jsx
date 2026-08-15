@@ -17,7 +17,7 @@ const legTime = (dateTimeStr) =>
   new Date(dateTimeStr).toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
+    hour12: true,
   });
 
 const legDate = (dateTimeStr) =>
@@ -27,13 +27,12 @@ const legDate = (dateTimeStr) =>
     month: "short",
   });
 
+// Sums each leg's own flight-time (JourneyDuration, in minutes) instead of
+// diffing local departure/arrival timestamps, which gives a wrong result
+// whenever origin and destination are in different timezones.
 const legDuration = (formatDuration, segments) =>
   formatDuration(
-    Math.floor(
-      (new Date(segments[segments.length - 1].ArrivalDateTime) -
-        new Date(segments[0].DepartureDateTime)) /
-        (1000 * 60),
-    ),
+    segments.reduce((sum, segment) => sum + (segment.JourneyDuration || 0), 0),
   );
 
 const JourneyRow = ({ label, badgeColor, leg, formatDuration }) => {

@@ -4,6 +4,7 @@ import "./MobileSsr.css";
 import { FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { Row } from "react-bootstrap";
+import { useCurrency } from "../../../../context/CurrencyContext";
 
 const getSeatTypeText = (type) => {
   switch (type) {
@@ -32,6 +33,7 @@ const MobileSsr = ({
   onMealChange,
   handlePayment,
 }) => {
+  const { formatPrice } = useCurrency();
   const [activeTab, setActiveTab] = useState("seats");
   const [activeTabs, setActiveTabs] = useState("ssr");
   const [activeSegmentIndex, setActiveSegmentIndex] = useState(0);
@@ -1127,12 +1129,11 @@ const MobileSsr = ({
 
           <span className="newfnt ng-binding">
             {" "}
-            ${" "}
              {flight2
-                ? Math.round(
+                ? formatPrice(
                     flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount + flight2.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount
                   )
-                : Math.round(
+                : formatPrice(
                     flight.PricedItineraries[0].AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount
                   )}
           </span>

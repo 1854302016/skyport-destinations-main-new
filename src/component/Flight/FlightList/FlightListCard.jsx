@@ -15,17 +15,11 @@ export const formatDuration = (minutes) => {
 };
 
 
-const newformatDuration = (segments) => {
-  const totalMinutes = segments.reduce(
-    (sum, segment) => sum + Number(segment.Duration || 0),
-    0
-  );
-
-  const hrs = Math.floor(totalMinutes / 60);
-  const mins = totalMinutes % 60;
-
-  return `${hrs}h ${mins}m`;
-};
+// Sums each leg's own flight-time (in minutes) instead of diffing local
+// departure/arrival timestamps, which gives a wrong result whenever origin
+// and destination are in different timezones (e.g. international routes).
+const getSegmentsDuration = (segments) =>
+  segments.reduce((sum, segment) => sum + Number(segment.Duration || 0), 0);
 
 const formatDateTimeWithBreak = (dateTimeStr) => {
   if (!dateTimeStr) return null;
@@ -41,7 +35,7 @@ const formatDateTimeWithBreak = (dateTimeStr) => {
   const formattedTime = date.toLocaleTimeString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
+    hour12: true,
   });
 
   return (
@@ -154,7 +148,7 @@ console.log("more fare",moreFare)
                       ).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
-                        hour12: false,
+                        hour12: true,
                       })}
                     </div>
                     <div className="city-name text-dark">
@@ -167,18 +161,7 @@ console.log("more fare",moreFare)
 
                   <div className="duration-visual flex-grow-1 px-3 text-center">
                     <div className="duration-pill mb-1">
-                       {formatDuration(
-                        Math.floor(
-                          (new Date(
-                            e.Segments[0][e.Segments[0].length - 1].Destination
-                              .ArrTime,
-                          ) -
-                            new Date(e.Segments[0][0].Origin.DepTime)) /
-                            (1000 * 60),
-                        ),
-                      )}{" "}
-                        {/* {newformatDuration(e.Segments[0])} */}
-                      {" "}
+                       {formatDuration(getSegmentsDuration(e.Segments[0]))}{" "}
                     </div>
                     <div className="path-line">
                       <div className="origin-dot"></div>
@@ -205,7 +188,7 @@ console.log("more fare",moreFare)
                       ).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
-                        hour12: false,
+                        hour12: true,
                       })}
                     </div>
                     <div className="city-name text-dark">
@@ -342,15 +325,7 @@ console.log("more fare",moreFare)
           <div className="mobile-duration-center">
             <span className="mobile-duration-text">
               {" "}
-              {formatDuration(
-                Math.floor(
-                  (new Date(
-                    e.Segments[0][e.Segments[0].length - 1].Destination.ArrTime,
-                  ) -
-                    new Date(e.Segments[0][0].Origin.DepTime)) /
-                    (1000 * 60),
-                ),
-              )}{" "}
+              {formatDuration(getSegmentsDuration(e.Segments[0]))}{" "}
             </span>
             <div className="mobile-path-line">
               <div className="mobile-path-dot"></div>
@@ -546,9 +521,9 @@ console.log("more fare",moreFare)
                               {e.Segments[0][0].Origin.Airport.CityName} - {e.Segments[0][e.Segments[0].length-1].Destination.Airport.CityName}
                             </span>
                             {e.Segments[0][0].Airline.AirlineName} • {new Date(e.Segments[0][0].Origin.DepTime).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })} • Departure at <strong>
-                              {new Date(e.Segments[0][0].Origin.DepTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false })}
+                              {new Date(e.Segments[0][0].Origin.DepTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true })}
                             </strong> - Arrival at <strong>
-                              {new Date(e.Segments[0][e.Segments[0].length-1].Destination.ArrTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false })}
+                              {new Date(e.Segments[0][e.Segments[0].length-1].Destination.ArrTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true })}
                             </strong>
                           </div>
                         </div>

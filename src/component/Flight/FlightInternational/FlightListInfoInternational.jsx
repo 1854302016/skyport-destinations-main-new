@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FiClock, FiMapPin, FiInfo, FiCalendar, FiTag, FiFileText } from "react-icons/fi";
 import { airlinesnames } from "../../../Airlines";
 import { Spinner } from "react-bootstrap";
+import { useCurrency } from "../../../context/CurrencyContext";
 import "../FlightList/FlightListInfo.css";
 
 export const formatTime = (time) => {
@@ -46,6 +47,7 @@ export const FlightListInfoInternational = ({
   formatDuration
 }) => {
   const [value, setValue] = useState("1");
+  const { formatPrice } = useCurrency();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -279,10 +281,10 @@ export const FlightListInfoInternational = ({
                                  {fare.PassengerTypeQuantity.Code === "ADT" ? "Adult" : fare.PassengerTypeQuantity.Code === "CHD" ? "Child" : "Infant"} (x{fare.PassengerTypeQuantity.Quantity})
                                </div>
                                <div className="text-light text-opacity-50" style={{fontSize: '9px'}}>
-                                  Base: ${Math.round(fare.PassengerFare.BaseFare.Amount)} • Tax: ${Math.round(fare.PassengerFare.Taxes.reduce((sum, tax) => sum + parseFloat(tax.Amount), 0))}
+                                  Base: {formatPrice(fare.PassengerFare.BaseFare.Amount)} • Tax: {formatPrice(fare.PassengerFare.Taxes.reduce((sum, tax) => sum + parseFloat(tax.Amount), 0))}
                                </div>
                             </div>
-                            <div className="fw-bold align-self-center">${Math.round(fare.PassengerFare.TotalFare.Amount)}</div>
+                            <div className="fw-bold align-self-center">{formatPrice(fare.PassengerFare.TotalFare.Amount)}</div>
                           </div>
                         ))
                      ) : (
@@ -290,9 +292,9 @@ export const FlightListInfoInternational = ({
                            <div key={fIdx} className="d-flex justify-content-between mb-2 pb-2 border-bottom border-secondary border-opacity-25 small">
                              <div>
                                <div className="fw-bold">{fIdx === 0 ? "Adult" : fIdx === 1 ? "Child" : "Infant"} (x{fb.PassengerCount})</div>
-                               <div className="text-light text-opacity-50" style={{fontSize: '9px'}}>Base: ${Math.round(fb.BaseFare)} • Tax: ${Math.round(fb.Tax)}</div>
+                               <div className="text-light text-opacity-50" style={{fontSize: '9px'}}>Base: {formatPrice(fb.BaseFare)} • Tax: {formatPrice(fb.Tax)}</div>
                              </div>
-                             <div className="fw-bold align-self-center">${Math.round(fb.BaseFare + fb.Tax)}</div>
+                             <div className="fw-bold align-self-center">{formatPrice(fb.BaseFare + fb.Tax)}</div>
                            </div>
                         ))
                      )}
@@ -301,7 +303,7 @@ export const FlightListInfoInternational = ({
                      <span className="text-light text-opacity-75 small">Total</span>
                      <div className="text-end">
                         <div className="h4 fw-bold mb-0 text-white">
-                          ${Math.round(flight.AirItineraryPricingInfo ? flight.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount : flight.Fare.PublishedFare)}
+                          {formatPrice(flight.AirItineraryPricingInfo ? flight.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount : flight.Fare.PublishedFare)}
                         </div>
                      </div>
                    </div>

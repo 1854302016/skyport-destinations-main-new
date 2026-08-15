@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiClock, FiMapPin, FiCalendar, FiTag, FiAlertCircle, FiRefreshCw } from "react-icons/fi";
 import { MdFlightTakeoff, MdFlightLand } from "react-icons/md";
+import { useCurrency } from "../../../context/CurrencyContext";
 import "./FlightListInfo.css";
 
 export const formatTime = (time) => {
@@ -30,6 +31,7 @@ export const formatLayoverTime = (arrivalTime, nextDepartureTime) => {
 
 export const FlightListInfo = ({ flight, formatDuration }) => {
   const [activeTab, setActiveTab] = useState("details");
+  const { formatPrice } = useCurrency();
 
   return (
     <motion.div
@@ -97,7 +99,7 @@ export const FlightListInfo = ({ flight, formatDuration }) => {
                   <div className="fli-airport fli-origin">
                     <div className="fli-time">
                       {new Date(segment.Origin.DepTime).toLocaleTimeString([], {
-                        hour: "2-digit", minute: "2-digit", hour12: false,
+                        hour: "2-digit", minute: "2-digit", hour12: true,
                       })}
                     </div>
                     <div className="fli-city">{segment.Origin.Airport.CityName}</div>
@@ -141,7 +143,7 @@ export const FlightListInfo = ({ flight, formatDuration }) => {
                   <div className="fli-airport fli-destination">
                     <div className="fli-time">
                       {new Date(segment.Destination.ArrTime).toLocaleTimeString([], {
-                        hour: "2-digit", minute: "2-digit", hour12: false,
+                        hour: "2-digit", minute: "2-digit", hour12: true,
                       })}
                     </div>
                     <div className="fli-city">{segment.Destination.Airport.CityName}</div>
@@ -243,16 +245,16 @@ export const FlightListInfo = ({ flight, formatDuration }) => {
                         <span className="fli-pax-count">×{fb.PassengerCount}</span>
                       </div>
                       <div className="fli-fare-breakdown-small">
-                        Base ${Math.round(fb.BaseFare)} · Tax ${Math.round(fb.Tax)}
+                        Base {formatPrice(fb.BaseFare)} · Tax {formatPrice(fb.Tax)}
                       </div>
                     </div>
-                    <div className="fli-fare-amount">${Math.round(fb.BaseFare + fb.Tax)}</div>
+                    <div className="fli-fare-amount">{formatPrice(fb.BaseFare + fb.Tax)}</div>
                   </div>
                 ))}
               </div>
               <div className="fli-fare-total">
                 <span>Total Fare</span>
-                <span className="fli-grand-total">${Math.round(flight.Fare.PublishedFare)}</span>
+                <span className="fli-grand-total">{formatPrice(flight.Fare.PublishedFare)}</span>
               </div>
             </div>
 

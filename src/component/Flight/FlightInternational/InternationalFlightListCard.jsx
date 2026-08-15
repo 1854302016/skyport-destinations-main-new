@@ -33,7 +33,7 @@ const formatDateTimeWithBreak = (dateTimeStr) => {
   const formattedTime = date.toLocaleTimeString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
+    hour12: true,
   });
 
   return (
@@ -224,7 +224,7 @@ const InternationalFlightListCard = ({
                                           ).toLocaleTimeString([], {
                                             hour: "2-digit",
                                             minute: "2-digit",
-                                            hour12: false,
+                                            hour12: true,
                                           })}
                                           
                                         </span>
@@ -248,27 +248,12 @@ const InternationalFlightListCard = ({
                                 <div className="stp">
                                   <span className="ng-binding">
                                     {" "}
-                                    {/* {formatDuration(
-                                      e.OriginDestinationOptions[0]
-                                        .FlightSegments[0].JourneyDuration,
-                                    )}{" "} */}
-                                    {/* {formatDuration(
-  e.OriginDestinationOptions[0].FlightSegments
-    .reduce((sum, segment) => sum + (segment.JourneyDuration || 0), 0)
-)}{" "} */}
-{formatDuration(
-  Math.floor(
-    (new Date(
-      e.OriginDestinationOptions[0].FlightSegments[
-        e.OriginDestinationOptions[0].FlightSegments.length - 1
-      ].ArrivalDateTime
-    ) -
-      new Date(
-        e.OriginDestinationOptions[0].FlightSegments[0].DepartureDateTime
-      )) /
-      (1000 * 60)
-  )
-)}{" "}
+                                    {formatDuration(
+                                      e.OriginDestinationOptions[0].FlightSegments.reduce(
+                                        (sum, segment) => sum + (segment.JourneyDuration || 0),
+                                        0,
+                                      ),
+                                    )}{" "}
                                   </span>{" "}
                                   <span className="n"> | </span>
                                   <span className="n ng-scope">
@@ -322,7 +307,7 @@ const InternationalFlightListCard = ({
                                       ).toLocaleTimeString([], {
                                         hour: "2-digit",
                                         minute: "2-digit",
-                                        hour12: false,
+                                        hour12: true,
                                       })}
                                     </span>
                                   </strong>{" "}
@@ -411,7 +396,7 @@ const InternationalFlightListCard = ({
                                           ).toLocaleTimeString([], {
                                             hour: "2-digit",
                                             minute: "2-digit",
-                                            hour12: false,
+                                            hour12: true,
                                           })}
                                         </span>
                                       </strong>
@@ -435,18 +420,11 @@ const InternationalFlightListCard = ({
                                   <span className="ng-binding">
                                     {" "}
                                    {formatDuration(
-  Math.floor(
-    (new Date(
-      e.OriginDestinationOptions[1].FlightSegments[
-        e.OriginDestinationOptions[1].FlightSegments.length - 1
-      ].ArrivalDateTime
-    ) -
-      new Date(
-        e.OriginDestinationOptions[1].FlightSegments[0].DepartureDateTime
-      )) /
-      (1000 * 60)
-  )
-)}{" "}
+                                      e.OriginDestinationOptions[1].FlightSegments.reduce(
+                                        (sum, segment) => sum + (segment.JourneyDuration || 0),
+                                        0,
+                                      ),
+                                    )}{" "}
                                   </span>{" "}
                                   <span className="n"> | </span>
                                   <span className="n ng-scope">
@@ -504,7 +482,7 @@ const InternationalFlightListCard = ({
                                       ).toLocaleTimeString([], {
                                         hour: "2-digit",
                                         minute: "2-digit",
-                                        hour12: false,
+                                        hour12: true,
                                       })}
                                     </span>
                                   </strong>{" "}
@@ -717,7 +695,7 @@ const InternationalFlightListCard = ({
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
-                      hour12: false,
+                      hour12: true,
                     })} */}
                     {formatDateTimeWithBreak(
                                         e.OriginDestinationOptions[0]
@@ -744,28 +722,12 @@ const InternationalFlightListCard = ({
                   <div className="duratn-bdr text-center append_bottom10">
                     <span className="gray_dot--solid sml-dot-l" />
                     <span className="text_gray text-center ng-binding">
-                      {/* {formatDuration(
-                        e.OriginDestinationOptions[0].FlightSegments[0]
-                          .JourneyDuration,
-                      )} */}
-                      {/* {formatDuration(
-  e.OriginDestinationOptions[0].FlightSegments
-    .reduce((sum, segment) => sum + (segment.JourneyDuration || 0), 0)
-)}{" "} */}
-{formatDuration(
-  Math.floor(
-    (new Date(
-      e.OriginDestinationOptions[0].FlightSegments[
-        e.OriginDestinationOptions[0].FlightSegments.length - 1
-      ]?.ArrivalDateTime
-    ) -
-      new Date(
-        e.OriginDestinationOptions[0].FlightSegments[0]?.DepartureDateTime
-      )) /
-      (1000 * 60)
-  )
-)}{" "}
-                     
+                      {formatDuration(
+                        e.OriginDestinationOptions[0].FlightSegments.reduce(
+                          (sum, segment) => sum + (segment.JourneyDuration || 0),
+                          0,
+                        ),
+                      )}{" "}
                     </span>
                     <span className="gray_dot--solid sml-dot-r" />
                   </div>
@@ -789,7 +751,7 @@ const InternationalFlightListCard = ({
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
-                      hour12: false,
+                      hour12: true,
 
                     })} */}
                     {
@@ -808,7 +770,7 @@ const InternationalFlightListCard = ({
                                       ).toLocaleTimeString([], {
                                         hour: "2-digit",
                                         minute: "2-digit",
-                                        hour12: false,
+                                        hour12: true,
                                       })} */}
                   </span>
                   <span className="fl_sctr ng-binding">
@@ -853,7 +815,7 @@ const InternationalFlightListCard = ({
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
-                      hour12: false,
+                      hour12: true,
                     })} */}
                     {
                       formatDateTimeWithBreak(
@@ -881,23 +843,12 @@ const InternationalFlightListCard = ({
                   <div className="duratn-bdr text-center append_bottom10">
                     <span className="gray_dot--solid sml-dot-l" />
                     <span className="text_gray text-center ng-binding">
-                      {/* {formatDuration(
-                        e.OriginDestinationOptions[1].FlightSegments[0]
-                          .JourneyDuration,
-                      )} */}
                       {formatDuration(
-  Math.floor(
-    (new Date(
-      e.OriginDestinationOptions[1].FlightSegments[
-        e.OriginDestinationOptions[1].FlightSegments.length - 1
-      ].ArrivalDateTime
-    ) -
-      new Date(
-        e.OriginDestinationOptions[1].FlightSegments[0].DepartureDateTime
-      )) /
-      (1000 * 60)
-  )
-)}{" "}
+                        e.OriginDestinationOptions[1].FlightSegments.reduce(
+                          (sum, segment) => sum + (segment.JourneyDuration || 0),
+                          0,
+                        ),
+                      )}{" "}
                      
                      
                     </span>
@@ -926,7 +877,7 @@ const InternationalFlightListCard = ({
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
-                      hour12: false,
+                      hour12: true,
                     })} */}
                      {/* {new Date(
                                         e.OriginDestinationOptions[1]
@@ -937,7 +888,7 @@ const InternationalFlightListCard = ({
                                       ).toLocaleTimeString([], {
                                         hour: "2-digit",
                                         minute: "2-digit",
-                                        hour12: false,
+                                        hour12: true,
                                       })} */}
                                       {
                                         formatDateTimeWithBreak(e.OriginDestinationOptions[1]
@@ -979,7 +930,7 @@ const InternationalFlightListCard = ({
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
-                      hour12: false,
+                      hour12: true,
                     })}
                   </span>
                   

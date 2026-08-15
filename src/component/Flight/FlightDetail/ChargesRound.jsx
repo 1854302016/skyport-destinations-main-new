@@ -4,6 +4,7 @@ import { FaAngleDown } from "react-icons/fa";
 import FlightDetailSide from "./FlightDetailSide";
 import { HiMiniMinusSmall } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { useCurrency } from "../../../context/CurrencyContext";
 
 const ChargesRound = ({
   srdvIdx,
@@ -16,6 +17,7 @@ const ChargesRound = ({
   setOpenPayBtn,
   openPayBtn,
 }) => {
+  const { formatPrice } = useCurrency();
   return (
     <Col md={3}>
       <Row>
@@ -37,8 +39,7 @@ const ChargesRound = ({
                   </span>{" "}
                   <FaAngleDown onClick={() => setShowdetail(!showdetail)} />{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}  */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.BaseFare + flight2.Fare.BaseFare
                     )}
                   </span>
@@ -54,8 +55,7 @@ const ChargesRound = ({
                       {flight.FareBreakdown[0].PassengerCount} x Adult
                     </span>{" "}
                     <span className="val">
-                      {/* {flight.FareBreakdown[0].Currency} */}₹
-                      {handleChangeCurrency(
+                      {formatPrice(
                         flight.FareBreakdown[0].BaseFare +
                           flight2.FareBreakdown[0].BaseFare
                       )}
@@ -67,8 +67,7 @@ const ChargesRound = ({
                         {flight.FareBreakdown[1].PassengerCount} x Children
                       </span>{" "}
                       <span className="val">
-                        {/* {flight.FareBreakdown[1].Currency} */}₹
-                        {handleChangeCurrency(
+                        {formatPrice(
                           flight.FareBreakdown[1].BaseFare +
                             flight2.FareBreakdown[1].BaseFare
                         )}
@@ -81,8 +80,7 @@ const ChargesRound = ({
                         {flight.FareBreakdown[2].PassengerCount} x Infants
                       </span>{" "}
                       <span className="val">
-                        {/* {flight.FareBreakdown[2].Currency} */}₹
-                        {handleChangeCurrency(
+                        {formatPrice(
                           flight.FareBreakdown[2].BaseFare +
                             flight2.FareBreakdown[2].BaseFare
                         )}
@@ -100,8 +98,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Taxes & Surcharges</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency} */}₹
-                    {handleChangeCurrency(flight.Fare.Tax + flight2.Fare.Tax)}
+                    {formatPrice(flight.Fare.Tax + flight2.Fare.Tax)}
                   </span>
                 </Col>
               </Row>
@@ -114,8 +111,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Discount</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.Discount + flight2.Fare.Discount
                     )}
                   </span>
@@ -130,8 +126,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Service Fee</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}  */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.ServiceFee + flight2.Fare.ServiceFee
                     )}
                   </span>
@@ -146,8 +141,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Excess Baggage (0KG )</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}{" "} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.TotalBaggageCharges +
                         flight2.Fare.TotalBaggageCharges
                     )}
@@ -163,8 +157,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Meal (0)</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}{" "} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.TotalMealCharges +
                         flight2.Fare.TotalMealCharges
                     )}
@@ -180,8 +173,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Seat Charges</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}{" "} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.TotalSeatCharges +
                         flight2.Fare.TotalSeatCharges
                     )}
@@ -195,8 +187,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">Total Fare</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}{" "} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.PublishedFare -
                         flight.Fare.Discount +
                         flight.Fare.ServiceFee +
@@ -217,8 +208,7 @@ const ChargesRound = ({
                 <Col xs={12} md={12}>
                   <span className="lbl">You Pay:</span> -{" "}
                   <span className="val">
-                    {/* {flight.Fare.Currency}{" "} */}₹
-                    {handleChangeCurrency(
+                    {formatPrice(
                       flight.Fare.PublishedFare -
                         flight.Fare.Discount +
                         flight.Fare.ServiceFee +
