@@ -436,7 +436,7 @@ const FullDetail = ({ data }) => {
                       <p className="tourPackageDetailIconsPara">Need Help?</p>
                       <div className="tourPackageDetailIconsPara2">
                         <p>
-                          <span>Call Us:</span>+592 615 8808
+                          <span>Call Us:</span>+9646747171
                         </p>
                         <p>
                           <span>Mail Us:</span> info@trustedfare.com

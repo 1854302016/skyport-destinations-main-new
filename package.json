@@ -53,8 +53,8 @@
     "yet-another-react-lightbox": "^3.21.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "node --max-old-space-size=8192 node_modules/react-scripts/scripts/build.js",
+    "start": "node init && react-scripts start",
+    "build": "node init && node --max-old-space-size=8192 node_modules/react-scripts/scripts/build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
