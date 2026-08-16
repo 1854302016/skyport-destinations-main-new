@@ -118,6 +118,20 @@ const normalizeSegmentDurations = (flights) => {
   });
 };
 
+// Door-to-door duration for one leg's segments: flight time + layovers
+// between them. Kept in sync with getTotalJourneyDuration in FlightListCard.jsx
+// so the duration shown on cards matches what the duration filter/sort use.
+const getJourneyDurationWithLayover = (segments) => {
+  const flightMinutes = segments.reduce((sum, seg) => sum + seg.Duration, 0);
+  let layoverMinutes = 0;
+  for (let i = 0; i < segments.length - 1; i++) {
+    const arr = new Date(segments[i].Destination.ArrTime);
+    const dep = new Date(segments[i + 1].Origin.DepTime);
+    layoverMinutes += Math.round((dep - arr) / 60000);
+  }
+  return flightMinutes + layoverMinutes;
+};
+
 const sliderItems = [
   { date: "Oct 03", price: "7845" },
   { date: "Oct 04", price: "5954" },
@@ -426,7 +440,7 @@ export const FlightList = () => {
       setSliderValue([minFare, maxFare]);
 
       const durations = normalizedSearchResults.map((flight) =>
-        flight.Segments[0].reduce((sum, seg) => sum + seg.Duration, 0),
+        getJourneyDurationWithLayover(flight.Segments[0]),
       );
       const minDuration = Math.min(...durations);
       const maxDuration = Math.max(...durations);
@@ -858,8 +872,7 @@ export const FlightList = () => {
       .filter((airline) => airline.selected)
       .map((airline) => airline.name);
 
-    const getTotalDuration = (segments) =>
-      segments.reduce((sum, seg) => sum + seg.Duration, 0);
+    const getTotalDuration = getJourneyDurationWithLayover;
 
     let newFilteredData =
       search &&

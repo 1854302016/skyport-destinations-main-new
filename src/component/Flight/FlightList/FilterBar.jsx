@@ -60,8 +60,7 @@ const FilterBar = ({
   return (
     <Col
       md={3}
-      className={`filter-sidebar-premium ${showFilter ? "mobile-visible" : ""}`}
-      style={{ position: "sticky", top: "20px", height: "fit-content" }}
+      className={`filter-sidebar-premium filter-sidebar-scroll ${showFilter ? "mobile-visible" : ""}`}
     >
       <motion.div
         variants={containerVariants}
@@ -215,20 +214,20 @@ const FilterBar = ({
                 { label: "Afternoon", sub: "12 PM - 6 PM", range: [12, 18] },
                 { label: "Evening", sub: "After 6 PM", range: [18, 24] },
               ].map((time, idx) => (
-                <div key={idx} className="col-6">
+                <div key={idx} className="col-12">
                   <button
                     onClick={() => handledepTimeFilter(time.range)}
-                    className={`time-pill w-100 border-0 p-2 rounded-3 text-start transition-all ${
+                    className={`time-pill w-100 border-0 p-2 rounded-3 text-start transition-all d-flex justify-content-between align-items-center ${
                       deptimeRange[0] === time.range[0] &&
                       deptimeRange[1] === time.range[1]
                         ? "bg-dark text-white shadow-sm"
                         : "bg-light text-dark shadow-none"
                     }`}
                   >
-                    <div className="small fw-bold">{time.label}</div>
-                    <div className="text-muted" style={{ fontSize: "7px" }}>
+                    <span className="small fw-bold">{time.label}</span>
+                    <span className="text-muted" style={{ fontSize: "10px" }}>
                       {time.sub}
-                    </div>
+                    </span>
                   </button>
                 </div>
               ))}
@@ -249,20 +248,20 @@ const FilterBar = ({
                 { label: "Afternoon", sub: "12 PM - 6 PM", range: [12, 18] },
                 { label: "Evening", sub: "After 6 PM", range: [18, 24] },
               ].map((time, idx) => (
-                <div key={idx} className="col-6">
+                <div key={idx} className="col-12">
                   <button
                     onClick={() => handlearrTimeFilter(time.range)}
-                    className={`time-pill w-100 border-0 p-2 rounded-3 text-start transition-all ${
+                    className={`time-pill w-100 border-0 p-2 rounded-3 text-start transition-all d-flex justify-content-between align-items-center ${
                       arrtimeRange[0] === time.range[0] &&
                       arrtimeRange[1] === time.range[1]
                         ? "bg-dark text-white shadow-sm"
                         : "bg-light text-dark shadow-none"
                     }`}
                   >
-                    <div className="small fw-bold">{time.label}</div>
-                    <div className="text-muted" style={{ fontSize: "7px" }}>
+                    <span className="small fw-bold">{time.label}</span>
+                    <span className="text-muted" style={{ fontSize: "10px" }}>
                       {time.sub}
-                    </div>
+                    </span>
                   </button>
                 </div>
               ))}

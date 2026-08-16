@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Badge, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FlightListInfo } from "./FlightListInfo";
+import { FlightListInfo, formatLayoverTime } from "./FlightListInfo";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown, FiChevronUp, FiX } from "react-icons/fi";
 import { MdFlightTakeoff, MdLuggage, MdEventSeat, MdWorkOutline } from "react-icons/md";
@@ -20,6 +20,45 @@ export const formatDuration = (minutes) => {
 // and destination are in different timezones (e.g. international routes).
 const getSegmentsDuration = (segments) =>
   segments.reduce((sum, segment) => sum + Number(segment.Duration || 0), 0);
+
+// Ground time between consecutive legs (both timestamps are at the same
+// airport, so a plain diff is safe here even though it isn't for
+// cross-timezone leg durations above).
+const getLayoverMinutes = (segments) => {
+  if (!segments || segments.length <= 1) return 0;
+  let total = 0;
+  for (let i = 0; i < segments.length - 1; i++) {
+    const arr = new Date(segments[i].Destination.ArrTime);
+    const dep = new Date(segments[i + 1].Origin.DepTime);
+    total += Math.round((dep - arr) / 60000);
+  }
+  return total;
+};
+
+// Door-to-door duration = flight time + layovers. This is what the
+// duration pill should show, not just flying time, otherwise a long
+// layover makes the itinerary look shorter than it actually is.
+const getTotalJourneyDuration = (segments) =>
+  getSegmentsDuration(segments) + getLayoverMinutes(segments);
+
+// Short "1h 25m in Delhi (DEL)" style summary of every layover in the
+// itinerary, so the collapsed card explains what's eating the total duration
+// instead of just showing a stop count.
+const getLayoverSummary = (segments) => {
+  if (!segments || segments.length <= 1) return null;
+  return segments
+    .slice(0, -1)
+    .map((segment, i) => {
+      const layoverTime = formatLayoverTime(
+        segment.Destination.ArrTime,
+        segments[i + 1].Origin.DepTime,
+      );
+      const city = segment.Destination.Airport.CityName;
+      const code = segment.Destination.Airport.AirportCode;
+      return `${layoverTime} in ${city} (${code})`;
+    })
+    .join(", ");
+};
 
 const formatDateTimeWithBreak = (dateTimeStr) => {
   if (!dateTimeStr) return null;
@@ -161,7 +200,7 @@ console.log("more fare",moreFare)
 
                   <div className="duration-visual flex-grow-1 px-3 text-center">
                     <div className="duration-pill mb-1">
-                       {formatDuration(getSegmentsDuration(e.Segments[0]))}{" "}
+                       {formatDuration(getTotalJourneyDuration(e.Segments[0]))}{" "}
                     </div>
                     <div className="path-line">
                       <div className="origin-dot"></div>
@@ -178,6 +217,15 @@ console.log("more fare",moreFare)
                         ? "Non-stop"
                         : `${e.Segments[0].length - 1} Stop(s)`}
                     </div>
+                    {e.Segments[0].length > 1 && (
+                      <div
+                        className="layover-info small text-secondary"
+                        style={{ fontSize: "11px" }}
+                        title={getLayoverSummary(e.Segments[0])}
+                      >
+                        {getLayoverSummary(e.Segments[0])}
+                      </div>
+                    )}
                   </div>
 
                   <div className="arrival-time text-end">
@@ -325,7 +373,7 @@ console.log("more fare",moreFare)
           <div className="mobile-duration-center">
             <span className="mobile-duration-text">
               {" "}
-              {formatDuration(getSegmentsDuration(e.Segments[0]))}{" "}
+              {formatDuration(getTotalJourneyDuration(e.Segments[0]))}{" "}
             </span>
             <div className="mobile-path-line">
               <div className="mobile-path-dot"></div>
@@ -337,6 +385,14 @@ console.log("more fare",moreFare)
                 ? "Non-stop"
                 : `${e.Segments[0].length - 1} Stop(s)`}
             </span>
+            {e.Segments[0].length > 1 && (
+              <div
+                className="mobile-layover-info"
+                style={{ fontSize: "10px", color: "#6c757d", marginTop: "2px" }}
+              >
+                {getLayoverSummary(e.Segments[0])}
+              </div>
+            )}
           </div>
 
           <div className="text-end">
