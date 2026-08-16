@@ -295,40 +295,38 @@
     border-radius: 5px;
     box-sizing: border-box;
     /* margin: auto; */
-    padding: 4px;
-    background-color: #f0f0ff;
-    background: linear-gradient(20deg, rgb(239 191 4 / 48%) 20%, #efbf0457 100%);
-    /* background: linear-gradient(20deg, rgb(247 48 48 / 55%) 20%, rgb(29 72 159 / 68%) 100%); */
-    /* background: linear-gradient(
-      20deg,
-      rgb(247 48 48 / 14%) 20%,
-      rgb(29 72 159 / 55%) 100%
-    ); */
+    padding: 3px;
+    background: linear-gradient(20deg, rgb(0 102 255 / 12%) 20%, rgb(0 82 204 / 12%) 100%);
     display: flex;
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
     /* margin-bottom: 20px; */
   }
+  .sfp-change-trip .sfp-trip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    color: #3d5a80;
+    font-weight: 600;
+  }
   .sfp-change-trip .sfp-trip.active {
     font-weight: 700;
-    color: #d32f2f;
-    border-radius: 5px;
+    color: #0052cc;
+    border-radius: 4px;
     background-color: #fff;
     transition: all 0.2s linear;
   }
   .hotelsearchmobile .pd20_n {
-    background: #fdd03717 !important;
+    background: rgba(0, 102, 255, 0.05) !important;
     padding: 10px 10px;
     display: block;
   }
   .hotelsearchmobile .fs_btn {
-    /* background: linear-gradient(
-      20deg,
-      rgb(240 45 45) 14%,
-      rgb(0 52 158) 80%
-    ) !important; */
-     background: #efbf04 !important;
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%) !important;
     border-radius: 50px !important;
     color: #fff !important;
     width: 100% !important;
@@ -355,6 +353,59 @@
   .hotelsearchmobile .swap_icn {
     top: 30px;
   }
+}
+
+.mobile_contact_strip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  clear: both;
+}
+
+.mobile_contact_field_box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile_contact_label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mobile_contact_input_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.mobile_contact_icon {
+  color: #0066ff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.mobile_contact_input_field {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  background: transparent;
+}
+
+.mobile_contact_input_field::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .search-filter {

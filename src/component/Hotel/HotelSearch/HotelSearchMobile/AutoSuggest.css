@@ -11,7 +11,7 @@
 
 .hotelsearchmobile .autosugst_newblock {
   width: 100%;
-  background: #efbf04;
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
   height: auto;
   padding: 14px 0;
   position: fixed;
@@ -84,8 +84,8 @@
 
 .hotelsearchmobile .act-sr {
   width: 100% !important;
-  background: #efbf0433 !important;
-  color: #000;
+  background: rgba(0, 102, 255, 0.12) !important;
+  color: #0052cc;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 7px 20px !important;

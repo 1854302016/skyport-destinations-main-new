@@ -10,6 +10,8 @@ import moment from "moment";
 import { useLocation, useNavigate } from "react-router-dom";
 import Deals from "./Deals";
 import RecentSearch from "../BookingSearch/RecentSearch";
+import axios from "axios";
+import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 
 
@@ -198,6 +200,18 @@ const FlightSearchForm = ({
 
   const [rooms, setRooms] = useState([{ adults: 1, children: 0, infants: 0 }]);
 
+  // Intentionally NOT restored from localStorage: these fields must start
+  // blank on every page load/reload, matching the desktop BookingForm.
+  const [passengerName, setPassengerName] = useState("");
+  const [passengerEmail, setPassengerEmail] = useState("");
+  const [passengerPhone, setPassengerPhone] = useState("");
+
+  useEffect(() => {
+    localStorage.removeItem("passengerName");
+    localStorage.removeItem("passengerEmail");
+    localStorage.removeItem("passengerPhone");
+  }, []);
+
   const updateRoom = (index, field, value) => {
     const updatedRooms = [...rooms];
     updatedRooms[index][field] = value;
@@ -264,6 +278,11 @@ const FlightSearchForm = ({
   };
 
   const handleFlightSearchLogic = async () => {
+    if (!passengerName.trim() || !passengerEmail.trim() || !passengerPhone.trim()) {
+      alert("Please enter passenger name, email and phone number.");
+      return;
+    }
+
     const tripType = active ? 1 : active2 ? 2 : 3;
     const directFlight = selectedOption === "direct";
     const resultFareType =
@@ -283,6 +302,14 @@ const FlightSearchForm = ({
       JourneyType: tripType,
       DirectFlight: directFlight,
       ResultFareType: resultFareType,
+      PassengerName: passengerName,
+      PassengerEmail: passengerEmail,
+      PassengerPhone: passengerPhone,
+      ContactInfo: {
+        name: passengerName,
+        email: passengerEmail,
+        phone: passengerPhone,
+      },
       Segments: [
         {
           Origin: departureCity.code,
@@ -297,7 +324,36 @@ const FlightSearchForm = ({
       ],
     };
     console.log("SearchData", SearchData);
-    
+
+    localStorage.setItem("passengerName", passengerName || "");
+    localStorage.setItem("passengerEmail", passengerEmail || "");
+    localStorage.setItem("passengerPhone", passengerPhone || "");
+    localStorage.setItem(
+      "userContactInfo",
+      JSON.stringify({ name: passengerName, email: passengerEmail, phone: passengerPhone })
+    );
+
+    const contactParam = `*nm_${encodeURIComponent(passengerName || "")}*em_${encodeURIComponent(passengerEmail || "")}*ph_${encodeURIComponent(passengerPhone || "")}`;
+
+    // Best-effort lead capture, must not block or break the actual search/navigation below.
+    axios
+      .post("https://admin.trustedfare.com/api/flight-book-enquiry", {
+        name: passengerName || "",
+        email: passengerEmail || "",
+        phone: passengerPhone || "",
+        destination: `${SearchData.Segments[0].Origin || ""} -> ${SearchData.Segments[0].Destination || ""}`,
+        date: SearchData.Segments[0].PreferredDepartureTime || "",
+        trip_type: active ? "OneWay" : "RoundTrip",
+        adults: SearchData.AdultCount,
+        children: SearchData.ChildCount,
+        infants: SearchData.InfantCount,
+        status: "pending",
+        message: "Search enquiry - flight not yet booked",
+      })
+      .catch((error) => {
+        console.error("Error saving search enquiry:", error);
+      });
+
     await insertSearchDataIntoCache({
       ...SearchData,
       originCountryCode: destination1?.COUNTRYCODE?.trim().toUpperCase() || "",
@@ -307,8 +363,18 @@ const FlightSearchForm = ({
     if (active) {
       navigate(
         `/flightList/${encodeURIComponent(
-          `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}*rft_${SearchData.ResultFareType}*dr_${SearchData.DirectFlight}`
-        )}`
+          `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}*rft_${SearchData.ResultFareType}*dr_${SearchData.DirectFlight}${contactParam}`
+        )}`,
+        {
+          state: {
+            contactDetails: {
+              name: passengerName,
+              email: passengerEmail,
+              phone: passengerPhone,
+            },
+            searchData: SearchData,
+          },
+        }
       );
       if (onSearchComplete) onSearchComplete();
     }
@@ -323,7 +389,7 @@ const FlightSearchForm = ({
 
         window.location.assign(
           `/international-round/${encodeURIComponent(
-            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}*rft_${SearchData.ResultFareType}*dr_${SearchData.DirectFlight}`
+            `dest_${SearchData.Segments[0].Destination}*org_${SearchData.Segments[0].Origin}*dep_${SearchData.Segments[0].PreferredDepartureTime}*arr_${SearchData.Segments[0].PreferredArrivalTime}*px_${SearchData.AdultCount}-${SearchData.ChildCount}-${SearchData.InfantCount}*jt_${SearchData.JourneyType}*cbn_${SearchData.Segments[0].FlightCabinClass}*rft_${SearchData.ResultFareType}*dr_${SearchData.DirectFlight}${contactParam}`
           )}`
         );
         if (onSearchComplete) onSearchComplete();
@@ -555,66 +621,53 @@ const FlightSearchForm = ({
               <div className="clr" />
             </div>
           </div>
-          <div>
-            <Row>
-              <Col className="mobile_video_formSearch">
-                <label htmlFor="nonStop">
-                  <input
-                    type="checkbox"
-                    id="directFlight"
-                    checked={selectedOption === "direct"}
-                    onChange={() => handleFareCheckbox("direct")}
-                  />
-                  <span style={{ marginLeft: "8px", fontSize: "14px" }}>
-                    Direct Flights
-                  </span>
-                </label>
-              </Col>
+          <div className="mobile_contact_strip">
+            <div className="mobile_contact_field_box">
+              <span className="mobile_contact_label">Passenger Name</span>
+              <div className="mobile_contact_input_wrapper">
+                <FaUser className="mobile_contact_icon" />
+                <input
+                  type="text"
+                  className="mobile_contact_input_field"
+                  placeholder="Enter full name"
+                  value={passengerName}
+                  required
+                  onChange={(e) => setPassengerName(e.target.value)}
+                />
+              </div>
+            </div>
 
-              <Col className="mobile_video_formSearch">
-                <label htmlFor="student">
-                  <input
-                    type="checkbox"
-                    id="student"
-                    checked={selectedOption === "student"}
-                    onChange={() => handleFareCheckbox("student")}
-                  />
-                  <span style={{ marginLeft: "8px", fontSize: "14px" }}>
-                    Student Fare
-                  </span>
-                </label>
-              </Col>
-            </Row>
+            <div className="mobile_contact_field_box">
+              <span className="mobile_contact_label">Email Address</span>
+              <div className="mobile_contact_input_wrapper">
+                <FaEnvelope className="mobile_contact_icon" />
+                <input
+                  type="email"
+                  className="mobile_contact_input_field"
+                  placeholder="name@example.com"
+                  value={passengerEmail}
+                  required
+                  onChange={(e) => setPassengerEmail(e.target.value)}
+                />
+              </div>
+            </div>
 
-            <Row>
-              <Col>
-                <label htmlFor="armed">
-                  <input
-                    type="checkbox"
-                    id="armed"
-                    checked={selectedOption === "armed"}
-                    onChange={() => handleFareCheckbox("armed")}
-                  />
-                  <span style={{ marginLeft: "8px", fontSize: "14px" }}>
-                    Armed Force
-                  </span>
-                </label>
-              </Col>
-
-              <Col>
-                <label htmlFor="senior">
-                  <input
-                    type="checkbox"
-                    id="senior"
-                    checked={selectedOption === "senior"}
-                    onChange={() => handleFareCheckbox("senior")}
-                  />
-                  <span style={{ marginLeft: "8px", fontSize: "14px" }}>
-                    Senior Citizen
-                  </span>
-                </label>
-              </Col>
-            </Row>
+            <div className="mobile_contact_field_box">
+              <span className="mobile_contact_label">Phone Number</span>
+              <div className="mobile_contact_input_wrapper">
+                <FaPhoneAlt className="mobile_contact_icon" />
+                <input
+                  type="tel"
+                  className="mobile_contact_input_field"
+                  placeholder="+1 (555) 000-0000"
+                  value={passengerPhone}
+                  required
+                  pattern="[0-9+\-\s()]{7,20}"
+                  title="Enter a valid phone number"
+                  onChange={(e) => setPassengerPhone(e.target.value)}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="clr" />
