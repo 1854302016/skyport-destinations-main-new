@@ -1935,7 +1935,7 @@
   }
   .menuItem_TG_List_head {
     padding: 10px 20px;
-    background: #e5b807;
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
     color: #fff;
   }
   .imglistslider_TG {

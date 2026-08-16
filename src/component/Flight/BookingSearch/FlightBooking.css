@@ -853,13 +853,13 @@
 }
 
 @media (max-width: 525px) {
-  .sfp-change-trip .sfp-trip {
+  .flightbooking-wrap .sfp-change-trip .sfp-trip {
     padding: 0px !important;
     color: #fff;
     font-weight: 700;
     /* color: #333333; */
   }
-  .sfp-change-trip .sfp-trip.active {
+  .flightbooking-wrap .sfp-change-trip .sfp-trip.active {
     color: #002543 !important;
   }
 }

@@ -64,9 +64,9 @@
 
 /* Active State - Premium Look */
 .hotelsearchmobile .active-product {
-  background: #efbf04;
-  border-color: #efbf04;
-  box-shadow: 0 4px 12px rgba(5, 51, 85, 0.15);
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  border-color: #0052CC;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
 }
 
 .hotelsearchmobile .active-product .icon-container {
