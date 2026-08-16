@@ -485,8 +485,8 @@
   }
 
   .flight-card-mobile .mobile-price-pill {
-    background: #f2bc0614;
-    color: #f2bc06;
+    background: rgba(0, 102, 255, 0.1);
+    color: #0052cc;
     font-size: 14px;
     font-weight: 900;
     padding: 4px 12px;
@@ -586,9 +586,7 @@
 
   .flight-card-mobile .mobile-book-btn {
     background: none;
-    /* background: linear-gradient(135deg, #e8ba06, #efbf04); */
-    /* background: linear-gradient(135deg, #053355, #0a4a7a); */
-    color: #e8ba06;
+    color: #0052cc;
     font-size: 12px;
     font-weight: 700;
     padding: 7px 18px;

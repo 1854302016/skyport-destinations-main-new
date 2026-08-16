@@ -9,7 +9,6 @@ import "../../Hotel/HotelSearch/HotelSearchMobile/ListProduct.css";
 import "../../Hotel/HotelSearch/HotelSearchMobile/OffersAndDeals.css";
 import "../../Hotel/HotelSearch/HotelSearchMobile/PopularDestinations.css";
 import "../../Hotel/HotelSearch/HotelSearchMobile/RoomSelectionComponent.css";
-import ListProduct from "../../Hotel/HotelSearch/HotelSearchMobile/ListProduct";
 import Sections from "../../Home/Home/Sections";
 import Advantage from "../../Home/Home/Advantage";
 import OfferSection from "./OfferSection";
@@ -50,10 +49,6 @@ const FlightSearchMobile = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div variants={itemVariants}>
-        <ListProduct active="flight" /> 
-      </motion.div>
-
       <motion.div variants={itemVariants}>
         <FlightSearchForm />
       </motion.div>
